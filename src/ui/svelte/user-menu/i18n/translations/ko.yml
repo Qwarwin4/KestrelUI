@@ -16,6 +16,6 @@ profile:
   open_onedrive: OneDrive 디렉터리 열기
   open_user_folder: 사용자 디렉토리 열기
 seelen_options:
-  open_installation_folder: Seelen 설정 폴더 열기
-  open_log_folder: Seelen 로그 폴더 열기
-  title: Seelen 디렉토리
+  open_installation_folder: WinUIRev 설정 폴더 열기
+  open_log_folder: WinUIRev 로그 폴더 열기
+  title: WinUIRev 디렉토리

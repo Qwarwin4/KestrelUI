@@ -9,6 +9,13 @@ use windows::Win32::UI::Shell::FOLDERID_Windows;
 
 use crate::{app::get_app_handle, windows_api::WindowsApi};
 
+/// Minisign public key of the release signer (base64), set by CI via `WINUIREV_PUBKEY`.
+/// Empty in local builds: updates and bundle signature checks are skipped then.
+pub const PUB_KEY: &str = match option_env!("WINUIREV_PUBKEY") {
+    Some(k) => k,
+    None => "",
+};
+
 pub static SEELEN_COMMON: LazyLock<Arc<SeelenCommon>> =
     LazyLock::new(|| Arc::new(SeelenCommon::new()));
 
@@ -47,7 +54,7 @@ impl SeelenCommon {
         let temp_dir = resolver
             .temp_dir()
             .expect("Failed to get temp dir")
-            .join("com.seelen.seelen-ui");
+            .join("com.qwarwin.winuirev");
 
         let system_dir =
             WindowsApi::known_folder(FOLDERID_Windows).expect("Failed to get system dir");

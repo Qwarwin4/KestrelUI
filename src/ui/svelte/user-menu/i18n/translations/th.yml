@@ -16,6 +16,6 @@ profile:
   open_onedrive: เปิดไดเรกทอรี OneDrive
   open_user_folder: เปิดไดเร็กทอรีผู้ใช้
 seelen_options:
-  open_installation_folder: เปิดโฟลเดอร์การตั้งค่า Seelen
-  open_log_folder: เปิดโฟลเดอร์บันทึก Seelen
-  title: ไดเร็กทอรี Seelen
+  open_installation_folder: เปิดโฟลเดอร์การตั้งค่า WinUIRev
+  open_log_folder: เปิดโฟลเดอร์บันทึก WinUIRev
+  title: ไดเร็กทอรี WinUIRev

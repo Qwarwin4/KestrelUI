@@ -1,11 +1,11 @@
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/eythaann/Seelen-UI/812f64d29162fe49da6f621d5e2a3e4852b8b8b1/documentation/images/logo.svg" width="44" align="top" alt="Seelen UI Logo" />
-  Seelen UI Library
+  <img src="https://raw.githubusercontent.com/eythaann/Seelen-UI/812f64d29162fe49da6f621d5e2a3e4852b8b8b1/documentation/images/logo.svg" width="44" align="top" alt="WinUIRev Logo" />
+  WinUIRev Library
 </h1>
 
-The **Seelen UI Library** is the core library for [Seelen UI](https://github.com/eythaann/seelen-ui), a highly
+The **WinUIRev Library** is the core library for [WinUIRev](https://github.com/eythaann/seelen-ui), a highly
 customizable desktop UI. This library provides the necessary tools and types to create and manage widgets, plugins, and
-themes for the Seelen UI application. It's a hybrid library with a Rust core and TypeScript/Deno bindings, designed for
+themes for the WinUIRev application. It's a hybrid library with a Rust core and TypeScript/Deno bindings, designed for
 performance and type safety.
 
 ## Installation

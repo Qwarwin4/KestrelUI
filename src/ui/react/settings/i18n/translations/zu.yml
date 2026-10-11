@@ -37,7 +37,7 @@ apps_configurations:
   export: Thumela kwamanye amazwe
   export_full: Thumela Amasethingi okuthumela ngaphandle ngesicelo
   extra_info: >-
-    I-Seelen UI isebenzisa kuphela isikhombi esisodwa sohlelo lokusebenza
+    I-WinUIRev isebenzisa kuphela isikhombi esisodwa sohlelo lokusebenza
     ngalunye (umdlalo wokuqala otholakala) ngakho-ke i-oda lokuthi libalulekile
     kanjani, njengoba itafula lakamuva lizobekwa phambili, njengoba inothi
     lihlelwe ngokuzenzakalela kusuka kwakamuva kuya kwakamuva kuya kwakamuva.
@@ -82,7 +82,7 @@ devtools:
   enable: Nika amandla amathuluzi onjiniyela
   enable_description: >-
     Ivula amathuluzi athuthukile okuhlola nokulungisa amaphutha abangaphakathi
-    kwe-Seelen UI. Ayihloselwe ukusetshenziswa njalo.
+    kwe-WinUIRev. Ayihloselwe ukusetshenziswa njalo.
   icons: Izithonjana Ezigciniwe
   install_folder: Ifolda yokufaka
   load: Thwala
@@ -121,7 +121,7 @@ devtools:
     widget_id: I-ID Yewijethi
 discord_banner:
   message: >-
-    Xhumana nabanye abasebenzisi be-Seelen UI, thola usizo, yabelana
+    Xhumana nabanye abasebenzisi be-WinUIRev, thola usizo, yabelana
     ngezindikimba, futhi uhlale unolwazi lwakamuva ngezindaba zakamuva.
   title: Joyina umphakathi wethu
 extras:
@@ -174,7 +174,7 @@ general:
     plugged: Ixhunyiwe noma ishaja
   polling_interval: Isikhathi sokuvota sesistimu
   polling_interval_description: >-
-    Kukangaki (ngemizuzwana) i-Seelen UI ihlola izinsiza zesistimu njenge-CPU,
+    Kukangaki (ngemizuzwana) i-WinUIRev ihlola izinsiza zesistimu njenge-CPU,
     i-RAM, inethiwekhi, nomsebenzi wediski. Inombolo encane isho izibuyekezo
     ezivame kakhulu, kodwa ukusetshenziswa kwensiza ephakeme kancane.
   saturday: NgoMgqibelo
@@ -230,7 +230,7 @@ reset_configurations: Setha kabusha ukucupha
 reset_to_default: Setha kabusha ngenani elizenzakalelayo
 resources:
   affected_widgets: Amawijethi Athintekile
-  app_outdated: Lesi sisetshenziswa sidinga uhlobo olusha lweSeelen UI ukusebenza kahle.
+  app_outdated: Lesi sisetshenziswa sidinga uhlobo olusha lweWinUIRev ukusebenza kahle.
   coming_soon: Kuyeza maduze
   corrupted_wallpaper: >-
     Yehlulekile ukukhipha isithonjana - ifomethi yevidiyo eyonakele noma
@@ -244,7 +244,7 @@ resources:
   modified: Kulungisiwe
   open_folder: Ifolda Yezisetshenziswa
   outdated: >-
-    Lo mthombo wenzelwe inguqulo endala yeSeelen UI futhi ingahle isebenze
+    Lo mthombo wenzelwe inguqulo endala yeWinUIRev futhi ingahle isebenze
     kahle.
   see_on_website: Bona kuwebhusayithi
   update_now: Buyekeza
@@ -253,7 +253,7 @@ resources:
 review_request:
   not_now: Hhayi manje
   sure: Impela!
-  title: Ujabulela i-Seelen UI?
+  title: Ujabulela i-WinUIRev?
 save: Hlenga
 save_and_restart: Gcina futhi Qalisa kabusha
 search: Sesha
@@ -262,7 +262,7 @@ security:
   perms:
     kill_processes: Phoqa izinhlelo zokusebenza ezivaliwe
     manage_app_windows: Lawula amawindi ezinye izinhlelo zokusebenza
-    modify_configuration: Lungisa ukucushwa kwe-Seelen UI
+    modify_configuration: Lungisa ukucushwa kwe-WinUIRev
     open_file: Vula amafayela
     run: Qalisa izinhlelo
 see_more: Buka Okuningi
@@ -282,7 +282,7 @@ shortcuts:
   enable: Nika amandla uhlelo lwezinqamuleli ezakhelwe ngaphakathi
   enable_tooltip: >-
     Khubaza uma uzosebenzisa uhlelo lwakho lwezinqamuleli usebenzisa iklayenti
-    le-Seelen UI
+    le-WinUIRev
   labels:
     create_new_workspace: Dala indawo yokusebenza entsha
     create_new_workspace_row: Dala Umugqa Wendawo Yokusebenzela Entsha
@@ -447,15 +447,15 @@ weg:
 welcome:
   give_a_review: Nikeza Isibuyekezo
   message: >-
-    I-Seelen UI iyindawo yamahhala nevulekile yedeskithophu yeWindows. Lapha
+    I-WinUIRev iyindawo yamahhala nevulekile yedeskithophu yeWindows. Lapha
     unokulawula okugcwele kokuthi ideskithophu yakho ibukeka futhi iziphatha
     kanjani, okukuvumela ukuthi wenze ngendlela oyifisayo yonke imininingwane
     ukuze ihambisane nokuhamba komsebenzi wakho nesitayela.
   ok: Ake siqale!
   review: >-
-    Uma uthanda ukusebenzisa i-Seelen UI, cabanga ukushiya isibuyekezo esitolo —
+    Uma uthanda ukusebenzisa i-WinUIRev, cabanga ukushiya isibuyekezo esitolo —
     impendulo yakho isiza iphrojekthi ukuthi ikhule futhi ithuthuke.
-  title: Siyakwamukela ku-Seelen UI!
+  title: Siyakwamukela ku-WinUIRev!
 widget:
   default_instance: Isimo Esizenzakalelayo
   default_instance_hint: Ihlala isebenza, isebenzisa ukulungiselelwa kwewijethi yempande

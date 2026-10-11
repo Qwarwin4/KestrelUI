@@ -16,6 +16,6 @@ profile:
   open_onedrive: 打开 OneDrive 目录
   open_user_folder: 打开用户目录
 seelen_options:
-  open_installation_folder: 打开 Seelen 设置文件夹
-  open_log_folder: 打开 Seelen 日志文件夹
-  title: Seelen 目录
+  open_installation_folder: 打开 WinUIRev 设置文件夹
+  open_log_folder: 打开 WinUIRev 日志文件夹
+  title: WinUIRev 目录

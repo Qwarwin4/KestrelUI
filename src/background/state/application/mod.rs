@@ -78,7 +78,7 @@ static USER_RESOURCES_WATCHER: OnceLock<Debouncer<ReadDirectoryChangesWatcher, F
     OnceLock::new();
 
 pub fn initialize_user_resources_watcher() -> Result<()> {
-    log::trace!("Starting Seelen UI Files Watcher");
+    log::trace!("Starting WinUIRev Files Watcher");
     let mut debouncer = new_debouncer(
         Duration::from_millis(100),
         None,
@@ -201,7 +201,7 @@ async fn process_changes(changed: &HashSet<PathBuf>) -> Result<()> {
     // important: settings changed should be the last one to avoid use unexisting state
     // like new recently added theme, plugin, widget, etc
     /* if settings_changed {
-        log::info!("Seelen Settings changed");
+        log::info!("Settings changed");
         self.read_settings();
         self.emit_settings()?;
     } */

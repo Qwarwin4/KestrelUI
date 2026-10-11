@@ -12,10 +12,10 @@ const packageJson: BuildOptions["package"] = {
   license,
   repository: {
     type: "git",
-    url: "git+https://github.com/eythaann/Seelen-UI.git",
+    url: "git+https://github.com/Qwarwin4/WinUIRev.git",
   },
   bugs: {
-    url: "https://github.com/eythaann/Seelen-UI/issues",
+    url: "https://github.com/Qwarwin4/WinUIRev/issues",
   },
 };
 

@@ -27,13 +27,13 @@ apps_configurations:
     workspace: 工作区
     workspace_placeholder: 无
   bundled_msg: 这些内置配置不可编辑，旨在让您无需自定义即可获得最佳体验。它们会自动为您配置最常用的应用。
-  bundled_title: Seelen 内置的应用配置
+  bundled_title: WinUIRev 内置的应用配置
   confirm_delete: 确定要删除所选的配置吗？
   confirm_delete_title: 确认删除
   delete: 删除
   export: 导出
   export_full: 按应用导出设置
-  extra_info: Seelen UI 对每个应用只使用一个标识符（第一个匹配到的），因此指定顺序很重要：最后添加的优先。请注意，表格默认按从新到旧排序。
+  extra_info: WinUIRev 对每个应用只使用一个标识符（第一个匹配到的），因此指定顺序很重要：最后添加的优先。请注意，表格默认按从新到旧排序。
   identifier:
     add_block: 添加块
     and: 与
@@ -69,7 +69,7 @@ devtools:
   custom_config_file: 加载自定义配置文件
   data_folder: 数据文件夹
   enable: 启用开发者工具
-  enable_description: 解锁用于检查和调试 Seelen UI 内部的高级工具。不适合日常使用。
+  enable_description: 解锁用于检查和调试 WinUIRev 内部的高级工具。不适合日常使用。
   icons: 缓存图标
   install_folder: 安装文件夹
   load: 加载
@@ -102,7 +102,7 @@ devtools:
     tab: 部件
     widget_id: 部件 ID
 discord_banner:
-  message: 与其他 Seelen UI 用户联系、获取帮助、分享主题并了解最新消息。
+  message: 与其他 WinUIRev 用户联系、获取帮助、分享主题并了解最新消息。
   title: 加入我们的社区
 extras:
   backup_group: 云备份
@@ -141,7 +141,7 @@ general:
       minimal: 最小
     plugged: 插电或充电时
   polling_interval: 系统轮询间隔
-  polling_interval_description: Seelen UI 检查 CPU、RAM、网络和磁盘活动等系统资源的频率（单位为秒）。数值越小更新越频繁，但资源占用会稍高。
+  polling_interval_description: WinUIRev 检查 CPU、RAM、网络和磁盘活动等系统资源的频率（单位为秒）。数值越小更新越频繁，但资源占用会稍高。
   saturday: 星期六
   start_of_week: 每周起始日
   startup: 开机自启
@@ -192,7 +192,7 @@ reset_configurations: 重置配置
 reset_to_default: 重置为默认值
 resources:
   affected_widgets: 受影响的部件
-  app_outdated: 该资源需要较新版本的 Seelen UI 才能正常使用。
+  app_outdated: 该资源需要较新版本的 WinUIRev 才能正常使用。
   coming_soon: 即将推出
   corrupted_wallpaper: 无法提取缩略图：视频格式已损坏或不受支持
   delete: 删除资源
@@ -203,7 +203,7 @@ resources:
   included_plugins: 包含的插件
   modified: 修改的
   open_folder: 打开资源文件夹
-  outdated: 此资源是为旧版本的 Seelen UI 设计的，可能无法正常使用。
+  outdated: 此资源是为旧版本的 WinUIRev 设计的，可能无法正常使用。
   see_on_website: 在网站上查看
   update_now: 更新
   updates_available: 可用更新
@@ -211,7 +211,7 @@ resources:
 review_request:
   not_now: 暂不
   sure: 当然
-  title: 喜欢 Seelen UI 吗？
+  title: 喜欢 WinUIRev 吗？
 save: 保存
 save_and_restart: 保存并重启
 search: 搜索
@@ -220,7 +220,7 @@ security:
   perms:
     kill_processes: 强制关闭应用程序
     manage_app_windows: 控制其他应用程序的窗口
-    modify_configuration: 修改Seelen UI配置
+    modify_configuration: 修改WinUIRev配置
     open_file: 打开文件
     run: 运行程序
 see_more: 查看更多
@@ -235,7 +235,7 @@ shortcuts:
   duplicate_error: 检测到冲突的快捷键
   duplicate_error_hint: 部分快捷键被分配给了多个操作。禁用其中一个冲突的部件，或重新分配重复的按键绑定即可解决。
   enable: 启用内置快捷键系统
-  enable_tooltip: 如果您要用 Seelen UI 客户端实现自己的快捷键系统，请禁用此项。
+  enable_tooltip: 如果您要用 WinUIRev 客户端实现自己的快捷键系统，请禁用此项。
   labels:
     create_new_workspace: 创建工作区
     create_new_workspace_row: 新建工作区行
@@ -391,10 +391,10 @@ weg:
   width: 宽度
 welcome:
   give_a_review: 写评价
-  message: Seelen UI 是一款面向 Windows 的免费开源桌面环境。 您可以完全掌控桌面的外观与行为，自定义每一处细节，以契合您的工作流程与风格。
+  message: WinUIRev 是一款面向 Windows 的免费开源桌面环境。 您可以完全掌控桌面的外观与行为，自定义每一处细节，以契合您的工作流程与风格。
   ok: 开始使用
-  review: 如果您喜欢使用 Seelen UI，欢迎在商店留下评价——您的反馈有助于项目成长和改进。
-  title: 欢迎使用 Seelen UI
+  review: 如果您喜欢使用 WinUIRev，欢迎在商店留下评价——您的反馈有助于项目成长和改进。
+  title: 欢迎使用 WinUIRev
 widget:
   default_instance: 默认实例
   default_instance_hint: 始终处于活动状态，使用根部件配置

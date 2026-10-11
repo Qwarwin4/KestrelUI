@@ -1,14 +1,8 @@
-auth:
-  login_failed_body: >-
-    লগইন করার সময় কিছু ভুল হয়েছে। যদি এটি অব্যাহত থাকে, নিশ্চিত করুন যে
-    Windows 'Credential Manager' পরিষেবা (VaultSvc) সক্রিয় এবং চলমান আছে, তারপর
-    আবার চেষ্টা করুন৷
-  login_failed_title: লগইন ব্যর্থ হয়েছে
 cancel: বাতিল
 done: সম্পন্ন
 elevated:
   description: >-
-    Seelen UI প্রশাসকের বিশেষাধিকারের সাথে চলছে।
+    WinUIRev প্রশাসকের বিশেষাধিকারের সাথে চলছে।
 
     এটি কোনও বৈশিষ্ট্য যুক্ত বা উন্নত করে না এবং এটি একটি নিরাপত্তা ঝুঁকি তৈরি
     করতে পারে।
@@ -25,9 +19,6 @@ resource:
   downloading: সম্পদ ডাউনলোড করা ...
   downloading_body: এটি কয়েক সেকেন্ড সময় নিতে পারে, দয়া করে উইন্ডোটি বন্ধ করবেন না।
   enable: সক্ষম করুন
-  login_required_action: সাইন ইন করুন
-  login_required_body: এই সম্পদ ডাউনলোড করতে আপনাকে সাইন ইন করতে হবে।
-  login_required_title: সাইন ইন আবশ্যক
 runtime:
   corrupted_data: দূষিত ডেটা
   corrupted_file: পরিবর্তে ডিফল্ট মানগুলি ব্যবহার করে একটি কনফিগারেশন ফাইল দূষিত হয়।
@@ -39,18 +30,18 @@ runtime:
     এটি ঘটতে পারে যদি ফাইলগুলি সংশোধন করা হয়, দূষিত হয় বা ইনস্টলেশনটি
     অসম্পূর্ণ থাকে।
 
-    নিরাপত্তার কারণে, Seelen UI চালিয়ে যেতে পারে না।
+    নিরাপত্তার কারণে, WinUIRev চালিয়ে যেতে পারে না।
 
     অফিসিয়াল ওয়েবসাইট থেকে এটি পুনরায় ইনস্টল করুন.
   files_integrity_title: নিরাপত্তা সতর্কতা - ফাইলের অখণ্ডতা পরীক্ষা ব্যর্থ হয়েছে৷
   not_found: WebView2 রানটাইম পাওয়া যায়নি
-  not_found_description: Seelen UI এর জন্য Webview2 রানটাইম প্রয়োজন। এটা ইনস্টল করুন.
+  not_found_description: WinUIRev এর জন্য Webview2 রানটাইম প্রয়োজন। এটা ইনস্টল করুন.
   outdated: WebView2 রানটাইম পুরানো
   outdated_description: >-
-    Seelen UI এর জন্য Webview2 রানটাইম %{min_version} বা উচ্চতর প্রয়োজন। এটা
+    WinUIRev এর জন্য Webview2 রানটাইম %{min_version} বা উচ্চতর প্রয়োজন। এটা
     আপডেট করুন.
 service:
-  not_running: Seelen UI পরিষেবা চলছে না
+  not_running: WinUIRev পরিষেবা চলছে না
   not_running_description: >-
     সিলেন ইউআই সার্ভিস (স্লু-সার্ভিস) অ্যাপটি সঠিকভাবে কাজ করার জন্য একটি
     নির্ভরতা/সহায়ক।
@@ -77,7 +68,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     অন্যান্য অ্যাপ্লিকেশনের উইন্ডোগুলি নিয়ন্ত্রণ করুন (ফোকাস করুন, বন্ধ করুন,
     ছোট করুন, সরান)
-  perm_modify_configuration: Seelen UI কনফিগারেশন পরিবর্তন করুন
+  perm_modify_configuration: WinUIRev কনফিগারেশন পরিবর্তন করুন
   perm_open_file: ফাইল খুলুন
   perm_run: প্রোগ্রাম চালান
   request_description: |-

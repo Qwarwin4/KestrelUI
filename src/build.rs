@@ -14,7 +14,13 @@ fn main() {
     let sums_path = target_dir.join("SHA256SUMS");
     checksums.write(&sums_path).unwrap();
 
+    println!("cargo:rerun-if-env-changed=WINUIREV_PUBKEY");
+    println!("cargo:rerun-if-env-changed=WINUIREV_DISCORD_ID");
+
     if !cfg!(debug_assertions) {
+        if std::env::var("WINUIREV_PUBKEY").map_or(true, |k| k.is_empty()) {
+            panic!("WINUIREV_PUBKEY missing: release builds must embed the updater public key");
+        }
         sign_sha256sums(&sums_path);
     } else {
         std::fs::write(

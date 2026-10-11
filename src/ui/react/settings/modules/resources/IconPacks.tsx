@@ -60,7 +60,7 @@ export function IconPacksView() {
   return (
     <div className={cs.list}>
       <ResourceListHeader
-        discoverUrl="https://seelen.io/resources/s?category=IconPack"
+        discover="iconPack"
         search={search}
         onSearch={setSearch}
       />

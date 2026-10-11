@@ -112,7 +112,7 @@ impl Process {
 
     pub fn is_seelen(&self) -> bool {
         if let Ok(exe) = self.program_path() {
-            return exe.ends_with("seelen-ui.exe");
+            return exe.ends_with("winuirev.exe");
         }
         false
     }

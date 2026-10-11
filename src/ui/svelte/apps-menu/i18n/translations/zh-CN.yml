@@ -19,5 +19,5 @@ run_as_admin: 以管理员身份运行
 uninstall: 卸载
 unpin: 取消固定
 web_search: 按 Enter 搜索网页
-welcome_message: 欢迎使用 Seelen UI 应用菜单。
+welcome_message: 欢迎使用 WinUIRev 应用菜单。
 welcome_message2: 在此选项卡中，可固定常用应用。

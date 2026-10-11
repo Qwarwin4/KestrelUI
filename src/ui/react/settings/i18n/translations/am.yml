@@ -36,7 +36,7 @@ apps_configurations:
   export: ወደ ውጭ ይላኩ
   export_full: ቅንብሮችን በመላክ በትግበራ
   extra_info: >-
-    Seelen UI በአንድ መተግበሪያ አንድ መለያ ብቻ ነው የሚጠቀመው (የመጀመሪያው ግጥሚያ ተገኝቷል) ስለዚህ እንዴት
+    WinUIRev በአንድ መተግበሪያ አንድ መለያ ብቻ ነው የሚጠቀመው (የመጀመሪያው ግጥሚያ ተገኝቷል) ስለዚህ እንዴት
     እንደሚገለጹ ቅደም ተከተላቸው አስፈላጊ ነው፣ የቅርብ ጊዜዎቹ የተጨመሩት ቅድሚያ ይሰጣቸዋል፣ ምክንያቱም ሰንጠረዡ ከቅርቡ
     ወደ አሮጌው በነባሪ የተደረደረ ነው።
   identifier:
@@ -77,7 +77,7 @@ devtools:
   data_folder: የውሂብ አቃፊ
   enable: የገንቢ መሳሪያዎችን ያንቁ
   enable_description: >-
-    Seelen UI ውስጣዊ ነገሮችን ለመመርመር እና ለማረም የላቁ መሳሪያዎችን ይከፍታል። ለመደበኛ አገልግሎት የታሰበ
+    WinUIRev ውስጣዊ ነገሮችን ለመመርመር እና ለማረም የላቁ መሳሪያዎችን ይከፍታል። ለመደበኛ አገልግሎት የታሰበ
     አይደለም።
   icons: የተሸጎጡ አዶዎች
   install_folder: የመጫን አቃፊ
@@ -112,7 +112,7 @@ devtools:
     widget_id: መግብር መታወቂያ
 discord_banner:
   message: >-
-    ከሌሎች የSeelen UI ተጠቃሚዎች ጋር ይገናኙ፣ እገዛ ያግኙ፣ ገጽታዎችን ያጋሩ እና በቅርብ ዜናዎች እንደተዘመኑ
+    ከሌሎች የWinUIRev ተጠቃሚዎች ጋር ይገናኙ፣ እገዛ ያግኙ፣ ገጽታዎችን ያጋሩ እና በቅርብ ዜናዎች እንደተዘመኑ
     ይቆዩ።
   title: ማህበረሰባችንን ይቀላቀሉ
 extras:
@@ -160,7 +160,7 @@ general:
     plugged: ተሰኪ ወይም መሙላት
   polling_interval: የስርዓት ምርጫ ክፍተት
   polling_interval_description: >-
-    Seelen UI እንደ ሲፒዩ፣ RAM፣ አውታረ መረብ እና የዲስክ እንቅስቃሴ ያሉ የስርዓት ሀብቶችን ምን ያህል ጊዜ
+    WinUIRev እንደ ሲፒዩ፣ RAM፣ አውታረ መረብ እና የዲስክ እንቅስቃሴ ያሉ የስርዓት ሀብቶችን ምን ያህል ጊዜ
     (በሴኮንዶች ውስጥ) ይፈትሻል። አነስ ያለ ቁጥር ብዙ ተደጋጋሚ ዝመናዎች ማለት ነው፣ ነገር ግን ትንሽ ከፍ ያለ የሃብት
     አጠቃቀም ማለት ነው።
   saturday: ቅዳሜ
@@ -234,7 +234,7 @@ resources:
 review_request:
   not_now: አሁን አይደለም
   sure: በእርግጠኝነት!
-  title: በ Seelen UI እየተዝናኑ ነው?
+  title: በ WinUIRev እየተዝናኑ ነው?
 save: አስቀምጥ
 save_and_restart: አስቀምጥ & እንደገና ያስጀምሩ
 search: ፈልግ
@@ -243,7 +243,7 @@ security:
   perms:
     kill_processes: መተግበሪያዎችን መዝጋትን አስገድድ
     manage_app_windows: የሌሎች መተግበሪያዎችን መስኮቶች ይቆጣጠሩ
-    modify_configuration: የ Seelen UI ውቅረትን ያሻሽሉ።
+    modify_configuration: የ WinUIRev ውቅረትን ያሻሽሉ።
     open_file: ፋይሎችን ክፈት
     run: ፕሮግራሞችን አሂድ
 see_more: ተጨማሪ ይመልከቱ
@@ -417,14 +417,14 @@ weg:
 welcome:
   give_a_review: ግምገማ ስጥ
   message: >-
-    Seelen UI ለዊንዶውስ ነፃ እና ክፍት ምንጭ ዴስክቶፕ አካባቢ ነው። እዚህ ዴስክቶፕዎ እንዴት እንደሚመስል እና
+    WinUIRev ለዊንዶውስ ነፃ እና ክፍት ምንጭ ዴስክቶፕ አካባቢ ነው። እዚህ ዴስክቶፕዎ እንዴት እንደሚመስል እና
     ባህሪው ላይ ሙሉ ቁጥጥር አለዎት፣ ይህም እያንዳንዱን ዝርዝር ከስራ ሂደትዎ እና ዘይቤዎ ጋር ለማዛመድ እንዲያበጁ
     ያስችልዎታል።
   ok: እንጀምር!
   review: >-
-    Seelen UIን መጠቀም ከወደዱ፣ በመደብሩ ላይ ግምገማ ለመተው ያስቡበት — የእርስዎ አስተያየት ፕሮጀክቱ እንዲያድግ
+    WinUIRevን መጠቀም ከወደዱ፣ በመደብሩ ላይ ግምገማ ለመተው ያስቡበት — የእርስዎ አስተያየት ፕሮጀክቱ እንዲያድግ
     እና እንዲሻሻል ይረዳል።
-  title: ወደ Seelen UI እንኳን በደህና መጡ!
+  title: ወደ WinUIRev እንኳን በደህና መጡ!
 widget:
   default_instance: ነባሪ ምሳሌ
   default_instance_hint: ሁልጊዜ ንቁ፣ የስር መግብር አወቃቀሩን ይጠቀማል

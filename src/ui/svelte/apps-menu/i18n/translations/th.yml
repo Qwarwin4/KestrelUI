@@ -19,5 +19,5 @@ run_as_admin: เรียกใช้ในฐานะผู้ดูแลร
 uninstall: ถอนการติดตั้ง
 unpin: เลิกปักหมุด
 web_search: กด Enter เพื่อค้นหาเว็บ
-welcome_message: ยินดีต้อนรับสู่เมนูแอป Seelen UI
+welcome_message: ยินดีต้อนรับสู่เมนูแอป WinUIRev
 welcome_message2: บนแท็บนี้ คุณสามารถปักหมุดแอปโปรดของคุณได้

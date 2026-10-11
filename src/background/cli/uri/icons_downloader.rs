@@ -5,7 +5,7 @@ use seelen_core::{
     state::{Icon, IconPack, IconPackEntry},
 };
 
-use crate::{error::Result, session::application::SessionManager, utils::date_based_hex_id};
+use crate::{error::Result, utils::{date_based_hex_id, http}};
 
 pub async fn download_remote_icons(pack: &mut IconPack) -> Result<()> {
     if pack.remote_entries.is_empty() || pack.downloaded {
@@ -82,7 +82,7 @@ async fn download_remote_icon_and_validate_it(
         return Err("Folder to store is not a directory".into());
     }
 
-    let res = SessionManager::plain_get(url).send().await?;
+    let res = http::get(url).send().await?;
     if !res.status().is_success() {
         let status = res.status();
         let body = res.text().await.unwrap_or_default();

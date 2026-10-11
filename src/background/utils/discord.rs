@@ -5,7 +5,7 @@ use std::sync::{
 
 use discord_rich_presence::{
     DiscordIpc, DiscordIpcClient,
-    activity::{Activity, Assets, Button, Party, Timestamps},
+    activity::{Activity, Assets, Timestamps},
 };
 
 use crate::{
@@ -14,6 +14,9 @@ use crate::{
 };
 
 use super::spawn_named_thread;
+
+// Discord application of WinUIRev; assets `app_logo` must be uploaded there.
+const CLIENT_ID: Option<&str> = option_env!("WINUIREV_DISCORD_ID");
 
 static DISCORD_IPC_CONNECTED: AtomicBool = AtomicBool::new(false);
 static DISCORD_ENABLED: AtomicBool = AtomicBool::new(false);
@@ -52,11 +55,11 @@ static STATUSES: [&str; 20] = [
     "Creative",
     "Futuristic",
     "Pro Mode",
-    "SLU",
+    "Rev",
     "Glowy",
     "Ravens",
     "Unicorns",
-    "Seelen",
+    "WinUIRev",
     "Next-Gen",
     "Ethereal",
     "Cyberpunk",
@@ -75,6 +78,10 @@ pub fn start_discord_rpc() -> Result<()> {
 pub fn update_discord_rpc(enabled: bool) -> Result<()> {
     DISCORD_ENABLED.store(enabled, Ordering::SeqCst);
 
+    let Some(client_id) = CLIENT_ID else {
+        return Ok(());
+    };
+
     if !enabled {
         // Signal the inner loop to disconnect; the thread will see DISCORD_ENABLED=false
         // at the next outer-loop iteration and exit cleanly.
@@ -88,7 +95,7 @@ pub fn update_discord_rpc(enabled: bool) -> Result<()> {
     }
 
     DISCORD_THREAD_RUNNING.store(true, Ordering::SeqCst);
-    spawn_named_thread("Discord IPC", || {
+    spawn_named_thread("Discord IPC", move || {
         let retry_connection_time = if is_local_dev() {
             std::time::Duration::from_secs(5)
         } else {
@@ -102,7 +109,7 @@ pub fn update_discord_rpc(enabled: bool) -> Result<()> {
             }
 
             log::trace!("Trying to connect to Discord IPC");
-            let mut client = DiscordIpcClient::new("1384275226652704928");
+            let mut client = DiscordIpcClient::new(client_id);
 
             if client.connect().is_err() {
                 log::trace!(
@@ -149,23 +156,12 @@ pub fn update_discord_rpc(enabled: bool) -> Result<()> {
 }
 
 pub fn get_activity() -> Activity<'static> {
-    let random_detail = DETAILS[rand::random_range(0..DETAILS.len())];
-    let random_status = STATUSES[rand::random_range(0..STATUSES.len())];
+    let detail = DETAILS[rand::random_range(0..DETAILS.len())];
+    let status = STATUSES[rand::random_range(0..STATUSES.len())];
 
     Activity::new()
-        .state(random_status)
-        .details(random_detail)
-        .assets(
-            Assets::new()
-                .large_image("app_logo")
-                .large_text("Seelen UI")
-                .small_image("seelen_corp_logo2")
-                .small_text("Made by Seelen Corp."),
-        )
+        .state(status)
+        .details(detail)
+        .assets(Assets::new().large_image("app_logo").large_text("WinUIRev"))
         .timestamps(Timestamps::new().start(*START_TIME))
-        .party(Party::new().id("seelen-ui-party").size([10, 10]))
-        .buttons(vec![
-            Button::new("🚀 Download Now!", "https://seelen.io/apps/seelen-ui"),
-            Button::new("🐦‍⬛ Seelen Network", "https://discord.seelen.io"),
-        ])
 }

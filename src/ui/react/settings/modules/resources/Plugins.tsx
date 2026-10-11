@@ -44,7 +44,7 @@ export function PluginsView() {
   return (
     <>
       <ResourceListHeader
-        discoverUrl="https://seelen.io/resources/s?category=Plugin"
+        discover="plugin"
         search={search}
         onSearch={setSearch}
       />

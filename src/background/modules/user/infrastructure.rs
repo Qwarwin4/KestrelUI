@@ -6,7 +6,7 @@ use super::application::UserManager;
 
 fn maybe_redact_user(mut user: User) -> User {
     if FULL_STATE.load().settings.streaming_mode {
-        user.email = Some("***@seelen.io".to_string());
+        user.email = Some("***@***".to_string());
     }
     user
 }

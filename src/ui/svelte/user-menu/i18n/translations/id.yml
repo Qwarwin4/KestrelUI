@@ -16,6 +16,6 @@ profile:
   open_onedrive: Buka direktori OneDrive
   open_user_folder: Buka direktori pengguna
 seelen_options:
-  open_installation_folder: Buka folder pengaturan Seelen
-  open_log_folder: Buka folder log Seelen
-  title: Direktori Seelen
+  open_installation_folder: Buka folder pengaturan WinUIRev
+  open_log_folder: Buka folder log WinUIRev
+  title: Direktori WinUIRev

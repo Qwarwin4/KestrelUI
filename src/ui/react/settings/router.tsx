@@ -11,7 +11,7 @@ import { Shortcuts } from "./modules/shortcuts/infrastructure.tsx";
 
 import { Layout } from "./components/layout/index.tsx";
 import { RoutePath } from "./components/navigation/routes.tsx";
-import { Home } from "./modules/Home/index.tsx";
+import { Showcase } from "./modules/showcase/index.tsx";
 import { ThemeView } from "./modules/resources/Theme/View.tsx";
 import { SingleWallpaperView } from "./modules/resources/Wallpapers/View.tsx";
 import { WidgetView } from "./modules/resources/Widget/View.tsx";
@@ -20,7 +20,7 @@ export function Routing() {
   return (
     <Routes>
       <Route Component={Layout}>
-        <Route index Component={Home} />
+        <Route index Component={Showcase} />
         <Route path={RoutePath.General} Component={General} />
         <Route path={RoutePath.Security} Component={Security} />
         <Route path={RoutePath.Resource + "/*"} Component={ResourcesView} />

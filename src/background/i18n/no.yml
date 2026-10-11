@@ -1,14 +1,8 @@
-auth:
-  login_failed_body: >-
-    Noe gikk galt under pålogging. Hvis dette vedvarer, kontroller at Windows
-    'Credential Manager'-tjenesten (VaultSvc) er aktivert og kjører, og prøv på
-    nytt.
-  login_failed_title: Innlogging mislyktes
 cancel: Kansellere
 done: Ferdig
 elevated:
   description: >-
-    Seelen UI kjører med administratorrettigheter.
+    WinUIRev kjører med administratorrettigheter.
 
     Dette legger ikke til eller forbedrer noen funksjoner, og det kan utgjøre en
     sikkerhetsrisiko.
@@ -20,14 +14,11 @@ resource:
   added: En ny ressurs er lagt til
   download_failed_body: >-
     Noe gikk galt mens du lastet ned ressursen, vennligst rapporter den til
-    Seelen -utviklerteamet.
+    WinUIRev -utviklerteamet.
   download_failed_title: Ressursnedlasting mislyktes
   downloading: Last ned eiendeler ...
   downloading_body: Dette kan ta noen sekunder, ikke lukk vinduet.
   enable: Aktiver
-  login_required_action: Logg på
-  login_required_body: Du må logge på for å laste ned denne ressursen.
-  login_required_title: Pålogging kreves
 runtime:
   corrupted_data: Ødelagte data
   corrupted_file: En konfigurasjonsfil er ødelagt ved å bruke standardverdier i stedet.
@@ -39,20 +30,20 @@ runtime:
     Dette kan skje hvis filene ble endret, ødelagt eller installasjonen er
     ufullstendig.
 
-    Av sikkerhetsgrunner kan ikke Seelen UI fortsette.
+    Av sikkerhetsgrunner kan ikke WinUIRev fortsette.
 
     Installer den på nytt fra den offisielle nettsiden.
   files_integrity_title: Sikkerhetsvarsel - Kontroll av filers integritet mislyktes
   not_found: WebView2 Runtime ikke funnet
-  not_found_description: Seelen UI krever Webview2 Runtime. Vennligst installer den.
+  not_found_description: WinUIRev krever Webview2 Runtime. Vennligst installer den.
   outdated: WebView2 Runtime utdatert
   outdated_description: >-
-    Seelen UI krever Webview2 Runtime %{min_version} eller høyere. Vennligst
+    WinUIRev krever Webview2 Runtime %{min_version} eller høyere. Vennligst
     oppdater den.
 service:
-  not_running: Seelen UI Service kjører ikke
+  not_running: WinUIRev Service kjører ikke
   not_running_description: >-
-    Seelen UI Service (slu-service) er en avhengighet/hjelper for at appen skal
+    WinUIRev Service (winuirev-service) er en avhengighet/hjelper for at appen skal
     fungere skikkelig.
   not_running_ok: Start tjenesten
 shortcut:
@@ -75,7 +66,7 @@ widget_liveness:
 widget_permissions:
   perm_kill_processes: tvinge lukkede søknader
   perm_manage_app_windows: kontroller vinduene til andre applikasjoner (fokus, lukk, minimer, flytt)
-  perm_modify_configuration: endre Seelen UI-konfigurasjonen
+  perm_modify_configuration: endre WinUIRev-konfigurasjonen
   perm_open_file: åpne filer
   perm_run: kjøre programmer
   request_description: |-

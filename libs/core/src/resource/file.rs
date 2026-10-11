@@ -12,7 +12,7 @@ use super::yaml_ext;
 
 use super::Resource;
 
-/// A container for Seelen UI resources.
+/// A container for WinUIRev resources.
 ///
 /// This struct contains all the necessary data that a resource needs.
 /// It uses a custom `.slu` file extension format that can change over time

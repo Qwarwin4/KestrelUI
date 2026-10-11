@@ -21,10 +21,3 @@ pub use widget::permissions::*;
 pub use widget::*;
 pub use wm_layout::*;
 pub use workspaces::*;
-
-#[derive(Serialize, Deserialize)]
-#[serde(rename_all = "camelCase")]
-pub struct SettingsBackup {
-    pub data: serde_json::Value,
-    pub updated_at: chrono::DateTime<chrono::Utc>,
-}

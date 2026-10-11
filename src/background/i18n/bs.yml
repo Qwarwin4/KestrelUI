@@ -1,14 +1,8 @@
-auth:
-  login_failed_body: >-
-    Nešto nije u redu prilikom prijave. Ako se ovo nastavi, provjerite je li
-    Windows 'Credential Manager' usluga (VaultSvc) omogućena i pokrenuta, a
-    zatim pokušajte ponovo.
-  login_failed_title: Prijava nije uspjela
 cancel: Otkazati
 done: Gotov
 elevated:
   description: >-
-    Seelen UI radi sa administratorskim privilegijama.
+    WinUIRev radi sa administratorskim privilegijama.
 
     Ovo ne dodaje niti poboljšava nijednu funkciju i može predstavljati
     sigurnosni rizik.
@@ -25,9 +19,6 @@ resource:
   downloading: Preuzimanje imovine ...
   downloading_body: Ovo bi moglo potrajati nekoliko sekundi, molim vas nemojte zatvoriti prozor.
   enable: Omogućiti
-  login_required_action: Prijavite se
-  login_required_body: Morate se prijaviti da preuzmete ovaj resurs.
-  login_required_title: Prijava je obavezna
 runtime:
   corrupted_data: Oštećeni podaci
   corrupted_file: >-
@@ -41,20 +32,20 @@ runtime:
     Ovo se može dogoditi ako su datoteke izmijenjene, oštećene ili instalacija
     nije dovršena.
 
-    Iz sigurnosnih razloga, Seelen UI ne može nastaviti.
+    Iz sigurnosnih razloga, WinUIRev ne može nastaviti.
 
     Ponovo ga instalirajte sa službene web stranice.
   files_integrity_title: Sigurnosno upozorenje - provjera integriteta datoteka nije uspjela
   not_found: WebView2 Runtime nije pronađeno
-  not_found_description: Seelen UI zahtijeva Webview2 Runtime. Molimo instalirajte ga.
+  not_found_description: WinUIRev zahtijeva Webview2 Runtime. Molimo instalirajte ga.
   outdated: WebView2 Runtime je zastarjelo
   outdated_description: >-
-    Seelen UI zahtijeva Webview2 Runtime %{min_version} ili noviju. Ažurirajte
+    WinUIRev zahtijeva Webview2 Runtime %{min_version} ili noviju. Ažurirajte
     ga.
 service:
-  not_running: Seelen UI usluga ne radi
+  not_running: WinUIRev usluga ne radi
   not_running_description: >-
-    Seelen UI Service (slu-service) je zavisnost/pomoćnik za pravilno
+    WinUIRev Service (winuirev-service) je zavisnost/pomoćnik za pravilno
     funkcioniranje aplikacije.
   not_running_ok: Pokreni servis
 shortcut:
@@ -77,7 +68,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     kontrolirati prozore drugih aplikacija (fokusiranje, zatvaranje,
     minimiziranje, pomicanje)
-  perm_modify_configuration: modificirati Seelen UI konfiguraciju
+  perm_modify_configuration: modificirati WinUIRev konfiguraciju
   perm_open_file: otvorite fajlove
   perm_run: pokrenuti programe
   request_description: |-

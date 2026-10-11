@@ -68,7 +68,6 @@ impl crate::tauri_handlers::Handlers {
             state
         });
         FULL_STATE.load().write_settings()?;
-        crate::backups::application::on_settings_saved();
         Ok(())
     }
 

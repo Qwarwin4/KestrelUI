@@ -1,6 +1,4 @@
-import { invoke, SeelenCommand, SeelenEvent, subscribe } from "@seelen-ui/lib";
-import type { BackupStatus, UpdaterSettings } from "@seelen-ui/lib/types";
-import { signal } from "@preact/signals";
+import type { UpdaterSettings } from "@seelen-ui/lib/types";
 
 import { settings } from "../../state/mod";
 
@@ -57,28 +55,3 @@ export function patchUpdaterSettings(patch: Partial<UpdaterSettings>) {
     },
   };
 }
-
-/**
- * Gets whether cloud backup sync is enabled
- */
-export function getBackupSyncEnabled(): boolean {
-  return settings.value.backupSyncEnabled;
-}
-
-/**
- * Enables or disables automatic cloud backup sync
- */
-export function setBackupSyncEnabled(backupSyncEnabled: boolean) {
-  settings.value = {
-    ...settings.value,
-    backupSyncEnabled,
-  };
-}
-
-export const $backupStatus = signal<BackupStatus>(
-  await invoke(SeelenCommand.GetBackupStatus),
-);
-
-subscribe(SeelenEvent.SeelenBackupStatusChanged, ({ payload }) => {
-  $backupStatus.value = payload;
-});

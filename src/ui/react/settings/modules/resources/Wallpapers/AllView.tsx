@@ -90,7 +90,7 @@ export function AllWallpapersView() {
   return (
     <>
       <ResourceListHeader
-        discoverUrl="https://seelen.io/resources/s?category=Wallpaper"
+        discover="wallpaper"
         search={search}
         onSearch={setSearch}
       >

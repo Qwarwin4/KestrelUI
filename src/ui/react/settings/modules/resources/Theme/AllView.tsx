@@ -64,7 +64,7 @@ export function ThemesView() {
   return (
     <>
       <ResourceListHeader
-        discoverUrl="https://seelen.io/resources/s?category=Theme"
+        discover="theme"
         search={search}
         onSearch={setSearch}
       />

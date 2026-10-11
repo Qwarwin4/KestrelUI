@@ -1,8 +1,3 @@
-auth:
-  login_failed_body: >-
-    د ننوتلو پرمهال یو څه غلط شو. که دا دوام ومومي، ډاډ ترلاسه کړئ چې د وینډوز
-    'کریډنشل مینیجر' خدمت (VaultSvc) فعال شوی او روان دی، بیا هڅه وکړئ.
-  login_failed_title: ننوتل ناکام شول
 cancel: لغوه کول
 done: شوی
 elevated:
@@ -24,9 +19,6 @@ resource:
   downloading: د شتمنیو ډاونلوډ کول ...
   downloading_body: دا ممکن یو څو ثانیې ونیسي، مهرباني وکړئ کړکۍ بند کړئ.
   enable: وړ
-  login_required_action: ننوتل
-  login_required_body: تاسو اړتیا لرئ د دې سرچینې ډاونلوډ کولو لپاره لاسلیک وکړئ.
-  login_required_title: ننوتل اړین دي
 runtime:
   corrupted_data: فاسد ډاټا
   corrupted_file: د سازونې فایل فاسد شوی، پرځای یې د ډیفالټ ارزښتونو په کارولو سره.
@@ -39,15 +31,15 @@ runtime:
     مهرباني وکړئ دا د رسمي ویب پاڼې څخه بیا نصب کړئ.
   files_integrity_title: د امنیت خبرتیا - د فایلونو بشپړتیا چک ناکام شو
   not_found: WebView2 د چلولو وخت ونه موندل شو
-  not_found_description: Seelen UI د Webview2 Runtime ته اړتیا لري. مهرباني وکړئ دا نصب کړئ.
+  not_found_description: WinUIRev د Webview2 Runtime ته اړتیا لري. مهرباني وکړئ دا نصب کړئ.
   outdated: WebView2 د چلولو وخت زوړ شوی
   outdated_description: >-
-    Seelen UI د Webview2 Runtime %{min_version} یا لوړ ته اړتیا لري. مهرباني
+    WinUIRev د Webview2 Runtime %{min_version} یا لوړ ته اړتیا لري. مهرباني
     وکړئ تازه یې کړئ.
 service:
   not_running: د سیلین UI خدمت نه روان دی
   not_running_description: >-
-    د سیلین UI خدمت (slu-service) د ایپ لپاره د سم کار کولو لپاره انحصار / مرسته
+    د سیلین UI خدمت (winuirev-service) د ایپ لپاره د سم کار کولو لپاره انحصار / مرسته
     کونکی دی.
   not_running_ok: خدمت پیل کړئ
 shortcut:
@@ -68,7 +60,7 @@ widget_liveness:
 widget_permissions:
   perm_kill_processes: غوښتنلیکونه په زور سره تړل
   perm_manage_app_windows: د نورو غوښتنلیکونو کړکۍ کنټرول کړئ (توجه، تړل، کمول، حرکت کول)
-  perm_modify_configuration: د Seelen UI ترتیب بدل کړئ
+  perm_modify_configuration: د WinUIRev ترتیب بدل کړئ
   perm_open_file: فایلونه خلاص کړئ
   perm_run: پروګرامونه چلوي
   request_description: |-

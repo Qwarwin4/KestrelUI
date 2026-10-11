@@ -16,6 +16,6 @@ profile:
   open_onedrive: Otvorite OneDrive direktorij
   open_user_folder: Otvori korisnički imenik
 seelen_options:
-  open_installation_folder: Otvorite mapu postavki Seelen
-  open_log_folder: Otvorite mapu dnevnika Seelen
-  title: Seelen imenici
+  open_installation_folder: Otvorite mapu postavki WinUIRev
+  open_log_folder: Otvorite mapu dnevnika WinUIRev
+  title: WinUIRev imenici

@@ -1,14 +1,8 @@
-auth:
-  login_failed_body: >-
-    Kukhona okungahambanga kahle ngesikhathi sokungena ngemvume. Uma lokhu
-    kuqhubeka, qiniseka ukuthi isevisi ye-Windows 'Credential Manager'
-    (VaultSvc) ivuliwe futhi iyasebenza, bese uyazama futhi.
-  login_failed_title: ukungena kokuyimfihlo ayiphumelelanga
 cancel: Hlikihla
 done: Usulile
 elevated:
   description: >-
-    I-Seelen UI isebenza ngamalungelo omlawuli.
+    I-WinUIRev isebenza ngamalungelo omlawuli.
 
     Lokhu akungezi noma akuthuthukisi noma yiziphi izici, futhi kungase kudale
     ingcuphe yezokuphepha.
@@ -21,14 +15,11 @@ resource:
   added: Kufakwe insiza entsha
   download_failed_body: >-
     Kukhona okungahambanga kahle ngenkathi elanda insiza, sicela ubike kwiqembu
-    le-Seelen Developer.
+    le-WinUIRev Developer.
   download_failed_title: Ukulanda izinsiza kwehlulekile
   downloading: Ukulanda Amafa ...
   downloading_body: Lokhu kungathatha imizuzwana embalwa, ngicela ungavali iwindi.
   enable: Nika amandla
-  login_required_action: Ngena ngemvume
-  login_required_body: Udinga ukungena ngemvume ukuze ulande lesi sisetshenziswa.
-  login_required_title: Kudingeka ukungena ngemvume
 runtime:
   corrupted_data: Idatha eyonakalisiwe
   corrupted_file: >-
@@ -42,20 +33,20 @@ runtime:
     Lokhu kungenzeka uma amafayela aye ashintshwa, wonakala, noma ukufakwa
     kungaphelele.
 
-    Ngenxa yezizathu zokuphepha, i-Seelen UI ayikwazi ukuqhubeka.
+    Ngenxa yezizathu zokuphepha, i-WinUIRev ayikwazi ukuqhubeka.
 
     Sicela uyifake kabusha kusuka kuwebhusayithi esemthethweni.
   files_integrity_title: Isexwayiso Sokuphepha - Ukuhlola Ubuqotho Kwamafayela Kwehlulekile
   not_found: Isikhathi sokusebenza se-WebView2 asitholakali
-  not_found_description: I-Seelen UI idinga isikhathi sokusebenza se-Webview2. Sicela uyifake.
+  not_found_description: I-WinUIRev idinga isikhathi sokusebenza se-Webview2. Sicela uyifake.
   outdated: I-WebView2 Runtime isiphelelwe yisikhathi
   outdated_description: >-
-    I-Seelen UI idinga isikhathi sokusebenza se-Webview2 %{min_version} noma
+    I-WinUIRev idinga isikhathi sokusebenza se-Webview2 %{min_version} noma
     ngaphezulu. Sicela uyibuyekeze.
 service:
-  not_running: Isevisi ye-Seelen UI ayisebenzi
+  not_running: Isevisi ye-WinUIRev ayisebenzi
   not_running_description: >-
-    Isevisi ye-Seelen UI (slu-service) incike/umsizi ukuze uhlelo lokusebenza
+    Isevisi ye-WinUIRev (winuirev-service) incike/umsizi ukuze uhlelo lokusebenza
     lusebenze kahle.
   not_running_ok: Qala isevisi
 shortcut:
@@ -78,7 +69,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     lawula amawindi ezinye izinhlelo zokusebenza (gxila, vala, nciphisa,
     hambisa)
-  perm_modify_configuration: lungisa ukucushwa kwe-Seelen UI
+  perm_modify_configuration: lungisa ukucushwa kwe-WinUIRev
   perm_open_file: vula amafayela
   perm_run: sebenzisa izinhlelo
   request_description: |-

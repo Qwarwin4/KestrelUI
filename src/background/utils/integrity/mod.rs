@@ -36,7 +36,7 @@ pub fn print_initial_information() {
     let sys_locale = seelen_core::state::Settings::get_system_locale();
 
     log::info!(
-        "───────────────────── Starting Seelen UI v{version}{local}{debug} ─────────────────────"
+        "───────────────────── Starting WinUIRev v{version}{local}{debug} ─────────────────────"
     );
 
     log::info!("Arguments        : {:?}", std::env::args().collect_vec());
@@ -66,7 +66,7 @@ pub fn print_initial_information() {
 
 pub fn restart_as_appx() -> Result<!> {
     WindowsApi::execute(
-        r"shell:AppsFolder\Seelen.SeelenUI_p6yyn03m1894e!App".to_string(),
+        r"shell:AppsFolder\Qwarwin.WinUIRev_PUBLISHERHASH!App".to_string(),
         None,
         None,
         false,
@@ -99,7 +99,7 @@ pub fn warn_if_elevated(app: &tauri::AppHandle) {
 pub fn is_already_running() -> bool {
     unsafe {
         let session_id = WindowsApi::current_session_id();
-        let mutex_name = format!("Local\\Seelen-UI-Instance-{}", session_id);
+        let mutex_name = format!("Local\\WinUIRev-Instance-{}", session_id);
         let mutex_name_wide = WindowsString::from_str(&mutex_name);
 
         // Try to create a named mutex specific to the current session

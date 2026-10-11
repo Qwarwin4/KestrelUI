@@ -7,7 +7,6 @@ use std::{
     time::Duration,
 };
 
-use itertools::Itertools;
 use seelen_core::{
     resource::{Resource, ResourceId, ResourceKind, SluResource, SluResourceFile},
     state::{CssStyles, Dialog, DialogContent, IconPack, Wallpaper},
@@ -19,16 +18,13 @@ use crate::{
     app::get_app_handle,
     cli::uri::icons_downloader::download_remote_icons,
     error::Result,
-    error::ResultLogExt,
-    get_tokio_handle,
     resources::RESOURCES,
-    session::application::SessionManager,
     state::application::FULL_STATE,
-    utils::{constants::SEELEN_COMMON, date_based_hex_id},
-    widgets::{show_settings_at, trigger_dialog_backend},
+    utils::{constants::SEELEN_COMMON, date_based_hex_id, http},
+    widgets::trigger_dialog_backend,
 };
 
-pub const URI: &str = "seelen-ui.uri:";
+pub const URI: &str = "winuirev.uri:";
 
 pub async fn process_uri(uri: &str) -> Result<()> {
     log::trace!("Loading URI: {uri}");
@@ -53,55 +49,13 @@ pub async fn process_uri(uri: &str) -> Result<()> {
 
     let path = uri.trim_start_matches(URI).trim_start_matches("/");
 
-    // auth/callback?code=<token>&state=<state>
-    if path.starts_with("auth/callback") {
-        let query = path.split_once('?').map(|x| x.1).unwrap_or("");
-        let params: std::collections::HashMap<_, _> = url::form_urlencoded::parse(query.as_bytes())
-            .into_owned()
-            .collect();
-        let code = params
-            .get("code")
-            .ok_or("Auth callback missing 'code' parameter")?
-            .clone();
-        let state = params
-            .get("state")
-            .ok_or("Auth callback missing 'state' parameter")?
-            .clone();
-
-        get_tokio_handle().spawn(async move {
-            if let Err(err) = SessionManager::handle_auth_callback(code, state).await {
-                log::error!("Auth callback failed: {err:?}");
-                trigger_dialog_backend(auth_error_dialog(&format!("{err:?}"))).log_error();
-            }
-        });
+    // showcase/<id> — installs an entry from the WinUIRev showcase registry
+    if let Some(id) = path.strip_prefix("showcase/") {
+        crate::showcase::install_with_dialog(id.trim_end_matches('/')).await?;
         return Ok(());
     }
 
-    let parts = path.split("/").map(|s| s.to_string()).collect_vec();
-
-    if parts.len() != 3 {
-        return Err("Invalid URI format".into());
-    }
-
-    let [_method, enviroment, resource_id] = parts.as_slice() else {
-        return Err("Invalid URI format".into());
-    };
-
-    let Ok(resource_id) = Uuid::parse_str(resource_id) else {
-        return Err("Invalid URI format".into());
-    };
-
-    // The environment ends up in the hostname, so it must come from a fixed list: any other
-    // value (e.g. `evil.com?`) would redirect the authenticated request to another host.
-    let env_prefix = match enviroment.as_str() {
-        "production" => "",
-        "staging" => ".staging",
-        _ => return Err("Invalid URI environment".into()),
-    };
-
-    let url = format!("https://product{env_prefix}.seelen.io/resource/download/{resource_id}");
-    download_resource(&url).await?;
-    Ok(())
+    Err("Invalid URI format".into())
 }
 
 fn path_by_resource_kind(kind: &ResourceKind) -> &Path {
@@ -129,10 +83,8 @@ async fn store_file_on_respective_user_folder(file: &SluResourceFile) -> Result<
     Ok(path_to_store)
 }
 
-async fn download_resource(url: &str) -> Result<()> {
-    let dialog_id = Uuid::new_v4();
-
-    trigger_dialog_backend(Dialog {
+pub fn downloading_dialog(dialog_id: Uuid) -> Dialog {
+    Dialog {
         identifier: dialog_id,
         title: vec![DialogContent::Group {
             items: vec![
@@ -161,40 +113,12 @@ async fn download_resource(url: &str) -> Result<()> {
             },
         ],
         ..Default::default()
-    })?;
-
-    let file = match _download_resource(url).await {
-        Ok(file) => file,
-        Err(err) if err.code() == reqwest::StatusCode::UNAUTHORIZED.as_u16() => {
-            let event = "open_settings_extras";
-            get_app_handle().once(event, move |_| {
-                show_settings_at("/extras").log_error();
-            });
-            trigger_dialog_backend(login_required_dialog(dialog_id, event)).log_error();
-            return Err(err);
-        }
-        Err(err) => {
-            trigger_dialog_backend(error_dialog(dialog_id, format!("{err:?}").as_str()))
-                .log_error();
-            return Err(err);
-        }
-    };
-
-    update_dialog_to_added_resource(dialog_id, &file.resource)?;
-    Ok(())
+    }
 }
 
-async fn _download_resource(url: &str) -> Result<SluResourceFile> {
-    let res = SessionManager::authed_get(url).send().await?;
-    let status = res.status();
-    if !status.is_success() {
-        let body = res.text().await.unwrap_or_default();
-        log::error!("Failed to download resource: {status} - {body}");
-        return Err(status.into());
-    }
-
-    let file = res.json::<SluResourceFile>().await?;
-    let saved_path = store_file_on_respective_user_folder(&file).await?;
+/// Stores a decoded resource in the user folder and pulls its remote assets.
+pub async fn install_resource_file(file: &SluResourceFile) -> Result<()> {
+    let saved_path = store_file_on_respective_user_folder(file).await?;
 
     if file.resource.kind == ResourceKind::IconPack {
         let mut pack = IconPack::load(saved_path.parent().unwrap()).await?;
@@ -206,10 +130,10 @@ async fn _download_resource(url: &str) -> Result<SluResourceFile> {
         download_remote_wallpapers(&mut wallpaper).await?;
     }
 
-    Ok(file)
+    Ok(())
 }
 
-fn update_dialog_to_added_resource(dialog_id: Uuid, resource: &Resource) -> Result<()> {
+pub fn update_dialog_to_added_resource(dialog_id: Uuid, resource: &Resource) -> Result<()> {
     let config = resource_to_dialog(dialog_id, resource)?;
     trigger_dialog_backend(config)?;
 
@@ -307,81 +231,7 @@ fn resource_to_dialog(id: Uuid, resource: &Resource) -> Result<Dialog> {
     })
 }
 
-fn auth_error_dialog(err: &str) -> Dialog {
-    Dialog {
-        title: vec![DialogContent::Group {
-            items: vec![
-                DialogContent::Icon {
-                    name: "BiSolidError".to_string(),
-                    styles: Some(
-                        CssStyles::new()
-                            .add("color", "var(--color-red-800)")
-                            .add("height", "1.2rem"),
-                    ),
-                },
-                DialogContent::Text {
-                    value: t!("auth.login_failed_title").to_string(),
-                    styles: None,
-                },
-            ],
-            styles: Some(CssStyles::new().add("alignItems", "center")),
-        }],
-        content: vec![
-            DialogContent::Text {
-                value: t!("auth.login_failed_body").to_string(),
-                styles: None,
-            },
-            DialogContent::Text {
-                value: "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=".to_string(),
-                styles: Some(CssStyles::new().add("color", "var(--color-gray-400)")),
-            },
-            DialogContent::Text {
-                value: format!("Error: {err}"),
-                styles: None,
-            },
-        ],
-        ..Default::default()
-    }
-}
-
-fn login_required_dialog(id: Uuid, login_event: &str) -> Dialog {
-    Dialog {
-        identifier: id,
-        title: vec![DialogContent::Group {
-            items: vec![
-                DialogContent::Icon {
-                    name: "LuUserRound".to_string(),
-                    styles: Some(
-                        CssStyles::new()
-                            .add("color", "var(--color-blue-800)")
-                            .add("height", "1.2rem"),
-                    ),
-                },
-                DialogContent::Text {
-                    value: t!("resource.login_required_title").to_string(),
-                    styles: None,
-                },
-            ],
-            styles: Some(CssStyles::new().add("alignItems", "center")),
-        }],
-        content: vec![DialogContent::Text {
-            value: t!("resource.login_required_body").to_string(),
-            styles: None,
-        }],
-        footer: vec![DialogContent::Button {
-            skin: Some("solid".to_string()),
-            inner: vec![DialogContent::Text {
-                value: t!("resource.login_required_action").to_string(),
-                styles: None,
-            }],
-            on_click: login_event.to_string(),
-            styles: None,
-        }],
-        ..Default::default()
-    }
-}
-
-fn error_dialog(id: Uuid, err: &str) -> Dialog {
+pub fn error_dialog(id: Uuid, err: &str) -> Dialog {
     Dialog {
         identifier: id,
         title: vec![DialogContent::Group {
@@ -479,7 +329,7 @@ async fn try_download_asset(
 ) -> Result<String> {
     // Use a long timeout for large assets (videos can be hundreds of MB; the
     // global 15 s client timeout is too short on slow / CDN-throttled connections).
-    let res = SessionManager::plain_get(url.as_str())
+    let res = http::get(url.as_str())
         .timeout(Duration::from_secs(3600))
         .send()
         .await?;

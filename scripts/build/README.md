@@ -1,6 +1,6 @@
 # Build System
 
-This directory contains the modular build system for Seelen UI applications.
+This directory contains the modular build system for WinUIRev applications.
 
 ## Structure
 

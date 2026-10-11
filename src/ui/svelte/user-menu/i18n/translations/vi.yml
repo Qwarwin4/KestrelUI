@@ -16,6 +16,6 @@ profile:
   open_onedrive: Mở thư mục OneDrive
   open_user_folder: Mở thư mục người dùng
 seelen_options:
-  open_installation_folder: Mở thư mục cài đặt Seelen
-  open_log_folder: Mở thư mục nhật ký Seelen
-  title: Thư mục Seelen
+  open_installation_folder: Mở thư mục cài đặt WinUIRev
+  open_log_folder: Mở thư mục nhật ký WinUIRev
+  title: Thư mục WinUIRev

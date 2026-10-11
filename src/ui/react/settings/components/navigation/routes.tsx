@@ -14,7 +14,7 @@ export enum RoutePath {
 }
 
 export const RouteIcons: { [key in RoutePath]?: React.ReactNode } = {
-  [RoutePath.Home]: <Icon iconName="TbHome" />,
+  [RoutePath.Home]: <Icon iconName="LuStore" />,
   [RoutePath.General]: <Icon iconName="RiSettings3Fill" />,
   [RoutePath.Security]: <Icon iconName="MdSecurity" />,
   [RoutePath.Resource]: <Icon iconName="IoColorPalette" />,

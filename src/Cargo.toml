@@ -1,16 +1,16 @@
 [package]
-name = "seelen-ui"
+name = "winuirev"
 version = "2.8.9"
-description = "Seelen UI Background"
-authors = ["eythaann"]
+description = "WinUIRev Background"
+authors = ["eythaann", "Qwarwin4"]
 license = "AGPL-3.0-or-later"
-repository = "https://github.com/eythaann/seelen-ui.git"
-default-run = "seelen-ui"
+repository = "https://github.com/Qwarwin4/WinUIRev"
+default-run = "winuirev"
 edition = "2024"
 rust-version = "1.97"
 
 [[bin]]
-name = "seelen-ui"
+name = "winuirev"
 path = "background/main.rs"
 
 [[bin]]
@@ -18,7 +18,7 @@ name = "slu"
 path = "slu/main.rs"
 
 [[bin]]
-name = "slu-service"
+name = "winuirev-service"
 path = "service/main.rs"
 
 [build-dependencies]
@@ -69,6 +69,7 @@ url = { workspace = true }
 urlencoding = { workspace = true }
 fern = { workspace = true }
 reqwest = { workspace = true }
+sha2 = { workspace = true }
 translators = { workspace = true, features = ["google", "tokio-async"] }
 rand = { workspace = true }
 rustfft = { workspace = true }

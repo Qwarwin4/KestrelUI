@@ -16,6 +16,6 @@ profile:
   open_onedrive: Abra o diretório OneDrive
   open_user_folder: Abra o diretório do usuário
 seelen_options:
-  open_installation_folder: Abra a pasta de configurações do Seelen
-  open_log_folder: Abra a pasta de log do Seelen
-  title: Diretórios Seelen
+  open_installation_folder: Abra a pasta de configurações do WinUIRev
+  open_log_folder: Abra a pasta de log do WinUIRev
+  title: Diretórios WinUIRev

@@ -16,6 +16,6 @@ profile:
   open_onedrive: Otwórz katalog OneDrive
   open_user_folder: Otwórz katalog użytkownika
 seelen_options:
-  open_installation_folder: Otwórz folder ustawień Seelen
-  open_log_folder: Otwórz folder dziennika Seelen
+  open_installation_folder: Otwórz folder ustawień WinUIRev
+  open_log_folder: Otwórz folder dziennika WinUIRev
   title: Katalogi Seelena

@@ -526,8 +526,6 @@ pub struct Settings {
     /// Streaming mode: replaces sensitive information (e.g. emails) with placeholders
     /// to avoid exposing personal data in recordings or screenshots.
     pub streaming_mode: bool,
-    /// Enable or disable automatic cloud backup sync.
-    pub backup_sync_enabled: bool,
     /// Suspend all webviews when Windows GameMode is active to free resources for the game.
     pub suspend_on_game_mode: bool,
     /// Allow editing read-only shortcuts (e.g. system overrides). Only effective when dev_tools is enabled.
@@ -558,7 +556,6 @@ impl Default for Settings {
             unstable_optimizations: false,
             polling_interval: 3,
             streaming_mode: false,
-            backup_sync_enabled: true,
             suspend_on_game_mode: false,
             unlock_shortcuts: false,
         }

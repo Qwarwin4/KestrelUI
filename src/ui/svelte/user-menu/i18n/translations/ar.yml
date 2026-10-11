@@ -16,6 +16,6 @@ profile:
   open_onedrive: افتح دليل OneDrive
   open_user_folder: افتح دليل المستخدم
 seelen_options:
-  open_installation_folder: افتح مجلد إعدادات Seelen
-  open_log_folder: افتح مجلد سجل Seelen
+  open_installation_folder: افتح مجلد إعدادات WinUIRev
+  open_log_folder: افتح مجلد سجل WinUIRev
   title: أدلة سيلين

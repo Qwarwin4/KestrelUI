@@ -69,7 +69,7 @@ async fn slice_to_yml_value(content: Vec<u8>) -> Result<Value> {
 
 /// Extracts the top-level `id` field of a resource document, used as `self.id`.
 ///
-/// Every Seelen UI resource document must declare an `id`, so a missing/invalid
+/// Every WinUIRev resource document must declare an `id`, so a missing/invalid
 /// field is an error rather than an absent value.
 fn extract_self_id(value: &Value) -> Result<String> {
     value

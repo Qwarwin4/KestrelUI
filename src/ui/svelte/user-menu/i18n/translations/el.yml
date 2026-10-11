@@ -16,6 +16,6 @@ profile:
   open_onedrive: Ανοίξτε τον κατάλογο του OneDrive
   open_user_folder: Ανοίξτε τον κατάλογο χρήστη
 seelen_options:
-  open_installation_folder: Ανοίξτε το φάκελο ρυθμίσεων Seelen
-  open_log_folder: Ανοίξτε το φάκελο καταγραφής Seelen
-  title: Καταλόγους Seelen
+  open_installation_folder: Ανοίξτε το φάκελο ρυθμίσεων WinUIRev
+  open_log_folder: Ανοίξτε το φάκελο καταγραφής WinUIRev
+  title: Καταλόγους WinUIRev

@@ -1,14 +1,8 @@
-auth:
-  login_failed_body: >-
-    Jotain meni vikaan kirjautumisen aikana. Jos tämä jatkuu, varmista, että
-    Windowsin Credential Manager -palvelu (VaultSvc) on käytössä ja käynnissä,
-    ja yritä sitten uudelleen.
-  login_failed_title: Kirjautuminen epäonnistui
 cancel: Peruuttaa
 done: Tehty
 elevated:
   description: >-
-    Seelen-käyttöliittymä toimii järjestelmänvalvojan oikeuksilla.
+    WinUIRev-käyttöliittymä toimii järjestelmänvalvojan oikeuksilla.
 
     Tämä ei lisää tai paranna ominaisuuksia, ja se voi aiheuttaa
     turvallisuusriskin.
@@ -26,9 +20,6 @@ resource:
   downloading: Varojen lataaminen...
   downloading_body: Tämä saattaa kestää muutaman sekunnin, älä sulje ikkunaa.
   enable: Ota käyttöön
-  login_required_action: Kirjaudu sisään
-  login_required_body: Sinun on kirjauduttava sisään ladataksesi tämän resurssin.
-  login_required_title: Pakollinen sisäänkirjautuminen
 runtime:
   corrupted_data: Vioittuneet tiedot
   corrupted_file: Määritystiedosto on vioittunut ja käyttää sen sijaan oletusarvoja.
@@ -40,20 +31,20 @@ runtime:
     Tämä voi tapahtua, jos tiedostoja on muokattu, vioittunut tai asennus on
     epätäydellinen.
 
-    Turvallisuussyistä Seelen UI ei voi jatkaa.
+    Turvallisuussyistä WinUIRev ei voi jatkaa.
 
     Asenna se uudelleen viralliselta verkkosivustolta.
   files_integrity_title: Suojaushälytys – Tiedostojen eheyden tarkistus epäonnistui
   not_found: WebView2:n suoritusaikaa ei löydy
-  not_found_description: Seelen-käyttöliittymä vaatii Webview2 Runtime -sovelluksen. Asenna se.
+  not_found_description: WinUIRev-käyttöliittymä vaatii Webview2 Runtime -sovelluksen. Asenna se.
   outdated: WebView2 Runtime vanhentunut
   outdated_description: >-
-    Seelen-käyttöliittymä vaatii Webview2 Runtime %{min_version} tai uudemman.
+    WinUIRev-käyttöliittymä vaatii Webview2 Runtime %{min_version} tai uudemman.
     Päivitä se.
 service:
-  not_running: Seelen UI -palvelu ei ole käynnissä
+  not_running: WinUIRev -palvelu ei ole käynnissä
   not_running_description: >-
-    Seelen UI Service (slu-service) on riippuvuus/apuohjelma, jonka avulla
+    WinUIRev Service (winuirev-service) on riippuvuus/apuohjelma, jonka avulla
     sovellus toimii oikein.
   not_running_ok: Aloita palvelu
 shortcut:
@@ -76,7 +67,7 @@ widget_liveness:
 widget_permissions:
   perm_kill_processes: pakottaa sulkemaan sovellukset
   perm_manage_app_windows: hallita muiden sovellusten ikkunoita (tarkenna, sulje, pienennä, siirrä)
-  perm_modify_configuration: muokata Seelen UI -kokoonpanoa
+  perm_modify_configuration: muokata WinUIRev -kokoonpanoa
   perm_open_file: avaa tiedostoja
   perm_run: ajaa ohjelmia
   request_description: |-

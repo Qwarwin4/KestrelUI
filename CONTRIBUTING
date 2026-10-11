@@ -1,4 +1,4 @@
-# Contributing to Seelen UI
+# Contributing to WinUIRev
 
 Thank you for your interest in contributing to this project! We welcome contributions from everyone. By participating in this project, you agree to abide by the following guidelines and terms.
 
@@ -14,13 +14,9 @@ Thank you for your interest in contributing to this project! We welcome contribu
 6. Push to the branch: `git push origin feature/new-feature`.
 7. Submit a pull request.
 
-## Contributor License Agreement (CLA)
-
-By submitting code as an individual, you agree to the [Contributor License Agreement](CLA.md).
-
 ## Code of Conduct
 
-This project adheres to the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT). By participating, you are expected to uphold this code. Please report any unacceptable behavior to [Maintainer's Email].
+This project adheres to the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT). By participating, you are expected to uphold this code. Please report unacceptable behavior through GitHub issues.
 
 ## Licensing
 
@@ -28,4 +24,5 @@ All contributions to this project are subject to the terms of the [GNU Affero Ge
 
 ## Contact
 
-If you have any questions or need further clarification, please feel free to join our [Discord server](https://discord.seelen.io).
+Questions and ideas: [GitHub Discussions](https://github.com/Qwarwin4/WinUIRev/discussions).
+Configs and presets go to [winuirev-showcase](https://github.com/Qwarwin4/winuirev-showcase).

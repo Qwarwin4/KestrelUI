@@ -16,6 +16,6 @@ profile:
   open_onedrive: Obriu el directori OneDrive
   open_user_folder: Obriu el directori d'usuaris
 seelen_options:
-  open_installation_folder: Obriu la carpeta de configuració de Seelen
-  open_log_folder: Obriu la carpeta de registre de Seelen
-  title: Directoris de Seelen
+  open_installation_folder: Obriu la carpeta de configuració de WinUIRev
+  open_log_folder: Obriu la carpeta de registre de WinUIRev
+  title: Directoris de WinUIRev

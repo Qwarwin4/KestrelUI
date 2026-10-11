@@ -16,6 +16,6 @@ profile:
   open_onedrive: Deschideți directorul OneDrive
   open_user_folder: Deschideți directorul de utilizatori
 seelen_options:
-  open_installation_folder: Deschideți folderul de setări Seelen
-  open_log_folder: Deschideți folderul de jurnal Seelen
-  title: directoarele Seelen
+  open_installation_folder: Deschideți folderul de setări WinUIRev
+  open_log_folder: Deschideți folderul de jurnal WinUIRev
+  title: directoarele WinUIRev

@@ -58,7 +58,7 @@ export function WidgetsView() {
   return (
     <>
       <ResourceListHeader
-        discoverUrl="https://seelen.io/resources/s?category=Widget"
+        discover="widget"
         search={search}
         onSearch={setSearch}
       />

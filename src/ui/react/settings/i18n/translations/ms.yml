@@ -37,7 +37,7 @@ apps_configurations:
   export: Eksport
   export_full: Tetapan eksport melalui permohonan
   extra_info: >-
-    UI Seelen hanya menggunakan satu pengecam bagi setiap apl (padanan pertama
+    WinUIRev hanya menggunakan satu pengecam bagi setiap apl (padanan pertama
     ditemui) jadi susunan cara dikhususkan adalah penting, penambahan terkini
     akan diutamakan, kerana ambil perhatian bahawa jadual diisih secara lalai
     dari terkini ke lama.
@@ -82,7 +82,7 @@ devtools:
   enable: Dayakan alat pemaju
   enable_description: >-
     Membuka kunci alatan lanjutan untuk memeriksa dan menyahpepijat dalaman UI
-    Seelen. Tidak bertujuan untuk kegunaan biasa.
+    WinUIRev. Tidak bertujuan untuk kegunaan biasa.
   icons: Ikon Cache
   install_folder: Folder pemasangan
   load: Beban
@@ -120,7 +120,7 @@ devtools:
     widget_id: ID Widget
 discord_banner:
   message: >-
-    Berhubung dengan pengguna UI Seelen yang lain, dapatkan bantuan, kongsi tema
+    Berhubung dengan pengguna WinUIRev yang lain, dapatkan bantuan, kongsi tema
     dan kekalkan perkembangan terkini dengan berita terkini.
   title: Sertai Komuniti kami
 extras:
@@ -170,7 +170,7 @@ general:
     plugged: Dipasang atau mengecas
   polling_interval: Selang pengundian sistem
   polling_interval_description: >-
-    Berapa kerap (dalam saat) UI Seelen menyemak sumber sistem seperti CPU, RAM,
+    Berapa kerap (dalam saat) WinUIRev menyemak sumber sistem seperti CPU, RAM,
     rangkaian dan aktiviti cakera. Bilangan yang lebih kecil bermakna kemas kini
     yang lebih kerap, tetapi penggunaan sumber yang lebih tinggi sedikit.
   saturday: Sabtu
@@ -227,7 +227,7 @@ reset_to_default: Tetapkan semula ke nilai lalai
 resources:
   affected_widgets: Widget Terjejas
   app_outdated: >-
-    Sumber ini memerlukan versi Seelen UI yang lebih baru untuk berfungsi dengan
+    Sumber ini memerlukan versi WinUIRev yang lebih baru untuk berfungsi dengan
     baik.
   coming_soon: Akan Datang
   corrupted_wallpaper: Gagal mengeluarkan lakaran kecil - format video rosak atau tidak disokong
@@ -240,7 +240,7 @@ resources:
   modified: Diubah suai
   open_folder: Buka Folder Sumber
   outdated: >-
-    Sumber ini direka untuk versi lama Seelen UI dan mungkin tidak berfungsi
+    Sumber ini direka untuk versi lama WinUIRev dan mungkin tidak berfungsi
     dengan baik.
   see_on_website: Lihat di laman web
   update_now: Kemas kini
@@ -249,7 +249,7 @@ resources:
 review_request:
   not_now: bukan sekarang
   sure: Pasti!
-  title: Menikmati UI Seelen?
+  title: Menikmati WinUIRev?
 save: Simpan
 save_and_restart: Jimat & mulakan semula
 search: Cari
@@ -258,7 +258,7 @@ security:
   perms:
     kill_processes: Tutup paksa aplikasi
     manage_app_windows: Kawal tetingkap aplikasi lain
-    modify_configuration: Ubah suai konfigurasi UI Seelen
+    modify_configuration: Ubah suai konfigurasi WinUIRev
     open_file: Buka fail
     run: Jalankan program
 see_more: Lihat lagi
@@ -278,7 +278,7 @@ shortcuts:
   enable: Dayakan sistem pintasan terbina dalam
   enable_tooltip: >-
     Lumpuhkan jika anda akan melaksanakan sistem pintasan anda sendiri
-    menggunakan pelanggan Seelen UI
+    menggunakan pelanggan WinUIRev
   labels:
     create_new_workspace: Buat ruang kerja baru
     create_new_workspace_row: Buat Baris Ruang Kerja Baharu
@@ -437,16 +437,16 @@ weg:
 welcome:
   give_a_review: Berikan Ulasan
   message: >-
-    UI Seelen ialah persekitaran desktop sumber terbuka dan percuma untuk
+    WinUIRev ialah persekitaran desktop sumber terbuka dan percuma untuk
     Windows. Di sini anda mempunyai kawalan penuh ke atas rupa dan gelagat
     desktop anda, membolehkan anda menyesuaikan setiap butiran agar sepadan
     dengan aliran kerja dan gaya anda.
   ok: Mari mulakan!
   review: >-
-    Jika anda gemar menggunakan UI Seelen, pertimbangkan untuk meninggalkan
+    Jika anda gemar menggunakan WinUIRev, pertimbangkan untuk meninggalkan
     ulasan di kedai — maklum balas anda membantu projek berkembang dan bertambah
     baik.
-  title: Selamat datang ke UI Seelen!
+  title: Selamat datang ke WinUIRev!
 widget:
   default_instance: Contoh Lalai
   default_instance_hint: Sentiasa aktif, menggunakan konfigurasi widget akar

@@ -77,7 +77,7 @@ impl AppMessage {
 
 // ==============================================
 
-/// Seelen UI Service Actions
+/// WinUIRev Service Actions
 #[allow(dead_code)]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub enum SvcAction {

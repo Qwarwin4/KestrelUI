@@ -14,7 +14,7 @@ pub async fn process(cmd: ResourceManagerCli) -> Result<()> {
     match cmd.subcommand {
         ResourceSubCommand::Bundle { kind, path } => bundle(kind, path).await?,
         ResourceSubCommand::Translate { path, source_lang } => translate(path, source_lang).await?,
-        _ => return Err("This command needs Seelen UI to be running".into()),
+        _ => return Err("This command needs WinUIRev to be running".into()),
     }
     Ok(())
 }

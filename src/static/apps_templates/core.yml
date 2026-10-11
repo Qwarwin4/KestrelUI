@@ -5,9 +5,9 @@
     matchingStrategy: Regex
   options:
     - unmanage
-- name: Seelen
+- name: WinUIRev
   identifier:
-    id: seelen-ui.exe
+    id: winuirev.exe
     kind: Exe
     matchingStrategy: Equals
   options:

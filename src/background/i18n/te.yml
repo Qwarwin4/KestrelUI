@@ -1,9 +1,3 @@
-auth:
-  login_failed_body: >-
-    లాగిన్ సమయంలో ఏదో తప్పు జరిగింది. ఇది కొనసాగితే, Windows 'క్రెడెన్షియల్
-    మేనేజర్' సేవ (VaultSvc) ప్రారంభించబడి, రన్ చేయబడిందని నిర్ధారించుకోండి, ఆపై
-    మళ్లీ ప్రయత్నించండి.
-  login_failed_title: లాగిన్ విఫలమైంది
 cancel: రద్దు చేయండి
 done: పూర్తయింది
 elevated:
@@ -26,9 +20,6 @@ resource:
   downloading: ఆస్తులను డౌన్‌లోడ్ చేస్తోంది ...
   downloading_body: దీనికి కొన్ని సెకన్లు పట్టవచ్చు, దయచేసి విండోను మూసివేయవద్దు.
   enable: ఎనేబుల్
-  login_required_action: సైన్ ఇన్ చేయండి
-  login_required_body: ఈ వనరును డౌన్‌లోడ్ చేయడానికి మీరు సైన్ ఇన్ చేయాలి.
-  login_required_title: సైన్ ఇన్ అవసరం
 runtime:
   corrupted_data: పాడైన డేటా
   corrupted_file: బదులుగా డిఫాల్ట్ విలువలను ఉపయోగించి కాన్ఫిగరేషన్ ఫైల్ పాడైంది.
@@ -45,15 +36,15 @@ runtime:
     దయచేసి అధికారిక వెబ్‌సైట్ నుండి దీన్ని మళ్లీ ఇన్‌స్టాల్ చేయండి.
   files_integrity_title: భద్రతా హెచ్చరిక - ఫైల్‌ల సమగ్రత తనిఖీ విఫలమైంది
   not_found: WebView2 రన్‌టైమ్ కనుగొనబడలేదు
-  not_found_description: Seelen UIకి Webview2 రన్‌టైమ్ అవసరం. దయచేసి దీన్ని ఇన్‌స్టాల్ చేయండి.
+  not_found_description: WinUIRevకి Webview2 రన్‌టైమ్ అవసరం. దయచేసి దీన్ని ఇన్‌స్టాల్ చేయండి.
   outdated: WebView2 రన్‌టైమ్ పాతది
   outdated_description: >-
-    Seelen UIకి Webview2 రన్‌టైమ్ %{min_version} లేదా అంతకంటే ఎక్కువ అవసరం.
+    WinUIRevకి Webview2 రన్‌టైమ్ %{min_version} లేదా అంతకంటే ఎక్కువ అవసరం.
     దయచేసి దీన్ని నవీకరించండి.
 service:
   not_running: సీలెన్ UI సర్వీస్ అమలులో లేదు
   not_running_description: >-
-    సీలెన్ UI సర్వీస్ (slu-service) అనేది యాప్ సరిగ్గా పని చేయడానికి
+    సీలెన్ UI సర్వీస్ (winuirev-service) అనేది యాప్ సరిగ్గా పని చేయడానికి
     డిపెండెన్సీ/సహాయకం.
   not_running_ok: సేవ ప్రారంభించండి
 shortcut:

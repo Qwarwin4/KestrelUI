@@ -1,6 +1,5 @@
 import { invoke, SeelenCommand } from "@seelen-ui/lib";
 import type {
-  Resource,
   ResourceId,
   ResourceKind,
   ResourceMetadata,
@@ -13,7 +12,6 @@ import { cx } from "libs/ui/react/utils/styling.ts";
 import { convertFileSrc } from "@tauri-apps/api/core";
 import { Button, Flex, Input, Popconfirm, Tooltip } from "antd";
 import type { ComponentChildren } from "preact";
-import { useEffect, useState } from "preact/hooks";
 import { useTranslation } from "react-i18next";
 
 import { SettingsGroup, SettingsOption } from "../../components/SettingsBox/index.tsx";
@@ -21,6 +19,10 @@ import { EnvConfig } from "../shared/config/infra.ts";
 import cs from "./infra.module.css";
 import type { IconName } from "libs/ui/icons.ts";
 import { $corruptedWallpapers } from "../shared/signals.ts";
+import { resourcesWithUpdate } from "../../state/resources.ts";
+import { installFromShowcase } from "../showcase/actions.ts";
+import type { ShowcaseKind } from "../showcase/registry.ts";
+import { useNavigate } from "react-router";
 
 type AnyResource = {
   id: ResourceId;
@@ -36,26 +38,10 @@ interface ResourceCardProps {
 }
 
 export function ResourceCard({ resource, kind, actions, body }: ResourceCardProps) {
-  const [hasUpdate, setHasUpdate] = useState(false);
+  const update = resourcesWithUpdate.value.find((r) => r.id === resource.id);
   const isCorrupted = kind === "Wallpaper" && $corruptedWallpapers.value.has(resource.id);
 
   const { t } = useTranslation();
-
-  useEffect(() => {
-    async function checkUpdate() {
-      if (resource.id.startsWith("@")) {
-        return;
-      }
-
-      const res = await fetch(`https://product.seelen.io/resource/${resource.id}`);
-      const remoteResource: Resource = await res.json();
-      const lastUpdateRelease = new Date(remoteResource.updatedAt);
-      const writtenAt = new Date(resource.metadata.writtenAt);
-      setHasUpdate(lastUpdateRelease > writtenAt);
-    }
-
-    checkUpdate();
-  }, []);
 
   const [major = 0, minor = 0, patch = 0] = EnvConfig.version.split(".").map(Number);
   const [majorTarget = 0, minorTarget = 0, patchTarget = 0] = resource.metadata.appTargetVersion || [];
@@ -99,25 +85,9 @@ export function ResourceCard({ resource, kind, actions, body }: ResourceCardProp
         <ResourceText className={cs.title} text={resource.metadata.displayName} />
 
         <div className={cs.actionsTop}>
-          {!resource.id.startsWith("@") && !hasUpdate && (
-            <Tooltip title={t("resources.see_on_website")}>
-              <Button
-                type="link"
-                href={`https://seelen.io/resources/${compressUuid(resource.id)}`}
-                target="_blank"
-              >
-                <Icon iconName="TbWorldShare" />
-              </Button>
-            </Tooltip>
-          )}
-
-          {hasUpdate && (
+          {update && (
             <Tooltip title={t("resources.has_update")} placement="left">
-              <Button
-                type="link"
-                href={`https://seelen.io/resources/${compressUuid(resource.id)}?update`}
-                target="_blank"
-              >
+              <Button type="link" onClick={() => installFromShowcase(update.showcaseId)}>
                 <Icon iconName="MdUpdate" />
               </Button>
             </Tooltip>
@@ -132,7 +102,7 @@ export function ResourceCard({ resource, kind, actions, body }: ResourceCardProp
       </div>
 
       <div className={cs.footer}>
-        {!resource.metadata.bundled && resource.metadata.path.includes("com.seelen.seelen-ui") && (
+        {!resource.metadata.bundled && resource.metadata.path.includes("com.qwarwin.winuirev") && (
           <Tooltip title={t("resources.delete")} placement="left">
             <Popconfirm
               title={t("action.confirm")}
@@ -223,19 +193,20 @@ export function resolveDisplayName(name: IResourceText | undefined, language: st
 }
 
 interface ResourceListHeaderProps {
-  discoverUrl: string;
+  discover: ShowcaseKind;
   search: string;
   onSearch: (v: string) => void;
   children?: ComponentChildren;
 }
 
 export function ResourceListHeader({
-  discoverUrl,
+  discover,
   search,
   onSearch,
   children,
 }: ResourceListHeaderProps) {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   return (
     <SettingsGroup>
       <Flex gap={10}>
@@ -249,23 +220,13 @@ export function ResourceListHeader({
       </Flex>
 
       <SettingsOption>
-        <span>{t("resources.discover")}:</span>
-        <Button href={discoverUrl} target="_blank" type="link">
-          {discoverUrl}
+        <span>{t("resources.discover")}</span>
+        <Button type="link" onClick={() => navigate(`/?kind=${discover}`)}>
+          <Icon iconName="LuStore" />
+          {t("showcase.open")}
         </Button>
       </SettingsOption>
       {children}
     </SettingsGroup>
   );
-}
-
-export function compressUuid(uuid: string): string {
-  let hex = uuid.replace(/-/g, "");
-  let data = String.fromCharCode.apply(
-    null,
-    hex.match(/\w{2}/g)!.map(function (a) {
-      return parseInt(a, 16);
-    }),
-  );
-  return btoa(data).replace(/\+/g, "-").replace(/\//g, "_").replace(/=/g, "");
 }

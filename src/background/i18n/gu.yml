@@ -1,9 +1,3 @@
-auth:
-  login_failed_body: >-
-    લોગિન દરમિયાન કંઈક ખોટું થયું. જો આ ચાલુ રહે, તો ખાતરી કરો કે Windows
-    'Credential Manager' સેવા (VaultSvc) સક્ષમ અને ચાલી રહી છે, પછી ફરી પ્રયાસ
-    કરો.
-  login_failed_title: લૉગિન નિષ્ફળ થયું
 cancel: રદ કરવું
 done: કામ
 elevated:
@@ -26,9 +20,6 @@ resource:
   downloading: અસ્કયામતો ડાઉનલોડ કરી રહ્યા છીએ ...
   downloading_body: આને થોડી સેકંડ લાગી શકે છે, કૃપા કરીને વિંડો બંધ ન કરો.
   enable: સક્ષમ કરવું
-  login_required_action: સાઇન ઇન કરો
-  login_required_body: આ સંસાધનને ડાઉનલોડ કરવા માટે તમારે સાઇન ઇન કરવાની જરૂર છે.
-  login_required_title: સાઇન ઇન જરૂરી છે
 runtime:
   corrupted_data: ભ્રષ્ટ આંકડા
   corrupted_file: તેના બદલે ડિફ default લ્ટ મૂલ્યોનો ઉપયોગ કરીને, એક રૂપરેખાંકન ફાઇલ દૂષિત છે.
@@ -37,11 +28,11 @@ runtime:
   files_integrity: |-
     અમે એપ્લિકેશન ફાઇલોની અખંડિતતા ચકાસી શક્યાં નથી.
     જો ફાઇલો સંશોધિત, દૂષિત અથવા ઇન્સ્ટોલેશન અધૂરી હોય તો આવું થઈ શકે છે.
-    સુરક્ષા કારણોસર, Seelen UI ચાલુ રાખી શકાતું નથી.
+    સુરક્ષા કારણોસર, WinUIRev ચાલુ રાખી શકાતું નથી.
     કૃપા કરીને તેને સત્તાવાર વેબસાઇટ પરથી ફરીથી ઇન્સ્ટોલ કરો.
   files_integrity_title: સુરક્ષા ચેતવણી - ફાઇલોની અખંડિતતા તપાસ નિષ્ફળ
   not_found: WebView2 રનટાઇમ મળ્યો નથી
-  not_found_description: Seelen UI ને Webview2 રનટાઇમની જરૂર છે. કૃપા કરીને તેને ઇન્સ્ટોલ કરો.
+  not_found_description: WinUIRev ને Webview2 રનટાઇમની જરૂર છે. કૃપા કરીને તેને ઇન્સ્ટોલ કરો.
   outdated: WebView2 રનટાઇમ જૂનો
   outdated_description: >-
     સીલેન UI ને Webview2 રનટાઇમ %{min_version} અથવા ઉચ્ચની જરૂર છે. કૃપા કરીને
@@ -74,7 +65,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     અન્ય એપ્લિકેશન્સની વિન્ડો નિયંત્રિત કરો (ફોકસ કરો, બંધ કરો, નાનું કરો,
     ખસેડો)
-  perm_modify_configuration: Seelen UI રૂપરેખાંકન સંશોધિત કરો
+  perm_modify_configuration: WinUIRev રૂપરેખાંકન સંશોધિત કરો
   perm_open_file: ફાઇલો ખોલો
   perm_run: કાર્યક્રમો ચલાવો
   request_description: |-

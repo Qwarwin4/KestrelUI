@@ -1,14 +1,8 @@
-auth:
-  login_failed_body: >-
-    Tizimga kirishda nimadir xato ketdi. Agar bu davom etsa, Windows “Credential
-    Manager” xizmati (VaultSvc) yoqilgan va ishlayotganligiga ishonch hosil
-    qiling, keyin qayta urinib koʻring.
-  login_failed_title: tizimga kirishda xatolik yuz berdi
 cancel: Bekor qilmoq
 done: Bajarildi
 elevated:
   description: >-
-    Seelen UI administrator imtiyozlari bilan ishlaydi.
+    WinUIRev administrator imtiyozlari bilan ishlaydi.
 
     Bu hech qanday xususiyatni qo'shmaydi yoki yaxshilamaydi va xavfsizlikka
     xavf tug'dirishi mumkin.
@@ -20,15 +14,12 @@ file_explorer: Fayl Explorer
 resource:
   added: Yangi manba qo'shildi
   download_failed_body: >-
-    Resursni yuklayotganda biron bir narsa noto'g'ri ketdi, iltimos, Seelen
+    Resursni yuklayotganda biron bir narsa noto'g'ri ketdi, iltimos, WinUIRev
     ishlab chiqaruvchi jamoasiga xabar bering.
   download_failed_title: Resurslarni yuklab olish amalga oshmadi
   downloading: Aktivlarni yuklab olish ...
   downloading_body: Bu bir necha soniya davom etishi mumkin, iltimos derazani yopmang.
   enable: Yoqib yubormoq
-  login_required_action: Tizimga kirish
-  login_required_body: Ushbu resursni yuklab olish uchun tizimga kirishingiz kerak.
-  login_required_title: Kirish shart
 runtime:
   corrupted_data: Buzilgan ma'lumotlar
   corrupted_file: >-
@@ -42,20 +33,20 @@ runtime:
     Bu fayllar o'zgartirilgan, buzilgan yoki o'rnatish tugallanmagan bo'lsa
     sodir bo'lishi mumkin.
 
-    Xavfsizlik nuqtai nazaridan Seelen UI davom eta olmaydi.
+    Xavfsizlik nuqtai nazaridan WinUIRev davom eta olmaydi.
 
     Iltimos, uni rasmiy veb-saytdan qayta o'rnating.
   files_integrity_title: Xavfsizlik ogohlantirishi - Fayllar yaxlitligini tekshirish amalga oshmadi
   not_found: WebView2 ish vaqti topilmadi
-  not_found_description: Seelen UI uchun Webview2 Runtime kerak. Iltimos, uni oʻrnating.
+  not_found_description: WinUIRev uchun Webview2 Runtime kerak. Iltimos, uni oʻrnating.
   outdated: WebView2 ish vaqti eskirgan
   outdated_description: >-
-    Seelen UI uchun Webview2 Runtime %{min_version} yoki undan yuqoriroq talab
+    WinUIRev uchun Webview2 Runtime %{min_version} yoki undan yuqoriroq talab
     qilinadi. Iltimos, uni yangilang.
 service:
-  not_running: Seelen UI xizmati ishlamayapti
+  not_running: WinUIRev xizmati ishlamayapti
   not_running_description: >-
-    Seelen UI xizmati (slu-xizmati) ilovaning to'g'ri ishlashi uchun
+    WinUIRev xizmati (slu-xizmati) ilovaning to'g'ri ishlashi uchun
     qaramlik/yordamchi hisoblanadi.
   not_running_ok: Xizmatni ishga tushirish
 shortcut:
@@ -78,7 +69,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     boshqa ilovalarning oynalarini boshqarish (fokuslash, yopish,
     minimallashtirish, ko'chirish)
-  perm_modify_configuration: Seelen UI konfiguratsiyasini o'zgartiring
+  perm_modify_configuration: WinUIRev konfiguratsiyasini o'zgartiring
   perm_open_file: fayllarni oching
   perm_run: dasturlarni ishga tushirish
   request_description: |-

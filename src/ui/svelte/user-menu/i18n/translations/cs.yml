@@ -16,6 +16,6 @@ profile:
   open_onedrive: Otevřete adresář OneDrive
   open_user_folder: Otevřete adresář uživatele
 seelen_options:
-  open_installation_folder: Otevřete složku nastavení Seelen
-  open_log_folder: Otevřete složku protokolu Seelen
-  title: Seelen adresáře
+  open_installation_folder: Otevřete složku nastavení WinUIRev
+  open_log_folder: Otevřete složku protokolu WinUIRev
+  title: WinUIRev adresáře

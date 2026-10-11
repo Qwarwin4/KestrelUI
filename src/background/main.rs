@@ -3,7 +3,6 @@
 #![feature(never_type)]
 
 mod app;
-mod backups;
 mod cli;
 mod error;
 mod exposed;
@@ -13,12 +12,11 @@ mod migrations;
 mod modules;
 mod resources;
 mod server;
-mod session;
+mod showcase;
 mod state;
 mod tauri_context;
 mod tauri_handlers;
 mod tauri_plugins;
-mod telemetry;
 mod utils;
 mod virtual_desktops;
 mod widgets;
@@ -34,7 +32,6 @@ use app::SeelenUI;
 use cli::{SelfPipe, ServicePipe, handle_console_client};
 use error::Result;
 use logger::SeelenLogger;
-use session::application::SessionManager;
 use slu_ipc::messages::SvcAction;
 use tauri_handlers::register_invoke_handler;
 use tauri_plugins::register_plugins;
@@ -64,7 +61,7 @@ pub fn get_tokio_handle() -> &'static tokio::runtime::Handle {
 #[tokio::main]
 async fn main() -> std::process::ExitCode {
     if let Err(err) = SeelenLogger::init() {
-        let fallback = std::env::temp_dir().join("seelen-ui-logger-error.log");
+        let fallback = std::env::temp_dir().join("winuirev-logger-error.log");
         let _ = std::fs::write(&fallback, format!("Failed to initialize logger: {err:?}"));
         return std::process::ExitCode::from(1);
     }
@@ -131,12 +128,6 @@ async fn setup(app_handle: &tauri::AppHandle<tauri::Wry>) -> Result<()> {
         ServicePipe::start_service().await?;
     }
 
-    // Pre-warm SessionManager early so its PasswordVault decryption (~1s) overlaps
-    // with the integrity checks instead of running during the startup critical path.
-    std::thread::spawn(|| {
-        let _ = SessionManager::instance();
-    });
-
     if let Err(err) = utils::integrity::validate_webview_runtime() {
         match err {
             utils::integrity::IntegrityError::WebviewRuntimeNotInstalled => {
@@ -163,8 +154,6 @@ async fn setup(app_handle: &tauri::AppHandle<tauri::Wry>) -> Result<()> {
     SeelenUI::start().await?;
 
     warn_if_elevated(app_handle);
-    telemetry::start_telemetry();
-    backups::infrastructure::start_backup_sync();
     Ok(())
 }
 
@@ -201,7 +190,7 @@ fn app_callback(_: &tauri::AppHandle<tauri::Wry>, event: tauri::RunEvent) {
             None => api.prevent_exit(),
         },
         tauri::RunEvent::Exit => {
-            log::info!("───────────────────── Exiting Seelen UI ─────────────────────");
+            log::info!("───────────────────── Exiting WinUIRev ─────────────────────");
         }
         _ => {}
     }

@@ -4,7 +4,8 @@ import { Button, Flex, Modal } from "antd";
 import { useState } from "preact/hooks";
 import { useTranslation } from "react-i18next";
 
-import { compressUuid, ResourceIcon } from "./ResourceCard.tsx";
+import { ResourceIcon } from "./ResourceCard.tsx";
+import { installFromShowcase } from "../showcase/actions.ts";
 import { resourcesWithUpdate } from "../../state/resources.ts";
 import cs from "./updates.module.css";
 
@@ -38,10 +39,10 @@ export function ResourceUpdatesModal() {
             </Flex>
             <Button
               type="primary"
-              href={`https://seelen.io/resources/${compressUuid(resource.id)}?update`}
-              target="_blank"
-              onClick={() =>
-                setDismissed(true)}
+              onClick={() => {
+                setDismissed(true);
+                installFromShowcase(resource.showcaseId);
+              }}
             >
               <Icon iconName="MdUpdate" />
               {t("resources.update_now")}

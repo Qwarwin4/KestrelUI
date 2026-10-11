@@ -16,6 +16,6 @@ profile:
   open_onedrive: Բացեք OneDrive գրացուցակը
   open_user_folder: Բացեք օգտվողի գրացուցակը
 seelen_options:
-  open_installation_folder: Բացեք Seelen կարգավորումների պանակը
-  open_log_folder: Բացեք Seelen log թղթապանակը
-  title: Seelen դիրեկտորիաներ
+  open_installation_folder: Բացեք WinUIRev կարգավորումների պանակը
+  open_log_folder: Բացեք WinUIRev log թղթապանակը
+  title: WinUIRev դիրեկտորիաներ

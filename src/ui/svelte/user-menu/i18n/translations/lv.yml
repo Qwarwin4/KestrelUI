@@ -16,6 +16,6 @@ profile:
   open_onedrive: Atveriet OneDrive direktoriju
   open_user_folder: Atveriet lietotāja direktoriju
 seelen_options:
-  open_installation_folder: Atveriet Seelen iestatījumu mapi
-  open_log_folder: Atveriet Seelen žurnāla mapi
-  title: Seelen katalogi
+  open_installation_folder: Atveriet WinUIRev iestatījumu mapi
+  open_log_folder: Atveriet WinUIRev žurnāla mapi
+  title: WinUIRev katalogi

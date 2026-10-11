@@ -611,18 +611,16 @@ slu_commands_declaration! {
         @fallible()
         trash_bin_empty(),
 
-    // Seelen Session
-    GetSeelenSession = get_seelen_session() -> Option<SeelenSession>,
-    SeelenLogin =
-        @fallible()
-        seelen_login(),
-    SeelenLogout =
+    // Showcase
+    ShowcaseInstall =
+        @webview()
         @async()
         @fallible()
-        seelen_logout(),
-
-    // Cloud Backup
-    GetBackupStatus = get_backup_status() -> BackupStatus,
+        showcase_install(id: String),
+    ShowcaseUndo =
+        @webview()
+        @fallible()
+        showcase_undo() -> bool,
 
     // Clipboard
     ClipboardGetData = clipboard_get_data() -> ClipboardData,

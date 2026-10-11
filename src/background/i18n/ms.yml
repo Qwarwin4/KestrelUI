@@ -1,14 +1,8 @@
-auth:
-  login_failed_body: >-
-    Sesuatu telah berlaku semasa log masuk. Jika ini berterusan, pastikan
-    perkhidmatan Windows 'Credential Manager' (VaultSvc) didayakan dan berjalan,
-    kemudian cuba lagi.
-  login_failed_title: Log masuk gagal
 cancel: Batalkan
 done: Selesai
 elevated:
   description: >-
-    UI Seelen berjalan dengan keistimewaan pentadbir.
+    WinUIRev berjalan dengan keistimewaan pentadbir.
 
     Ini tidak menambah atau menambah baik sebarang ciri, dan ia mungkin
     menimbulkan risiko keselamatan.
@@ -21,14 +15,11 @@ resource:
   added: Sumber baru telah ditambah
   download_failed_body: >-
     Sesuatu yang tidak kena semasa memuat turun sumber, sila laporkan kepada
-    pasukan pemaju Seelen.
+    pasukan pemaju WinUIRev.
   download_failed_title: Muat turun sumber gagal
   downloading: Memuat turun aset ...
   downloading_body: Ini mungkin mengambil masa beberapa saat, jangan menutup tetingkap.
   enable: Membolehkan
-  login_required_action: Log Masuk
-  login_required_body: Anda perlu log masuk untuk memuat turun sumber ini.
-  login_required_title: Log masuk Diperlukan
 runtime:
   corrupted_data: Data yang rosak
   corrupted_file: Fail konfigurasi rosak, menggunakan nilai lalai.
@@ -40,20 +31,20 @@ runtime:
     Ini boleh berlaku jika fail diubah suai, rosak atau pemasangan tidak
     lengkap.
 
-    Atas sebab keselamatan, UI Seelen tidak boleh diteruskan.
+    Atas sebab keselamatan, WinUIRev tidak boleh diteruskan.
 
     Sila pasang semula dari laman web rasmi.
   files_integrity_title: Makluman Keselamatan - Semakan Integriti Fail Gagal
   not_found: WebView2 Runtime tidak ditemui
-  not_found_description: UI Seelen memerlukan Webview2 Runtime. Sila pasang.
+  not_found_description: WinUIRev memerlukan Webview2 Runtime. Sila pasang.
   outdated: WebView2 Runtime sudah lapuk
   outdated_description: >-
-    UI Seelen memerlukan Webview2 Runtime %{min_version} atau lebih tinggi. Sila
+    WinUIRev memerlukan Webview2 Runtime %{min_version} atau lebih tinggi. Sila
     kemas kini.
 service:
-  not_running: Perkhidmatan UI Seelen tidak berjalan
+  not_running: Perkhidmatan WinUIRev tidak berjalan
   not_running_description: >-
-    Perkhidmatan UI Seelen (perkhidmatan slu) ialah kebergantungan/pembantu
+    Perkhidmatan WinUIRev (perkhidmatan slu) ialah kebergantungan/pembantu
     untuk apl berfungsi dengan betul.
   not_running_ok: Mulakan perkhidmatan
 shortcut:
@@ -76,7 +67,7 @@ widget_liveness:
 widget_permissions:
   perm_kill_processes: paksa tutup aplikasi
   perm_manage_app_windows: mengawal tingkap aplikasi lain (fokus, tutup, minimumkan, alih)
-  perm_modify_configuration: ubah suai konfigurasi UI Seelen
+  perm_modify_configuration: ubah suai konfigurasi WinUIRev
   perm_open_file: buka fail
   perm_run: menjalankan program
   request_description: |-

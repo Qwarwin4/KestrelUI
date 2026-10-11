@@ -17,7 +17,6 @@ use crate::{
         user::infrastructure::reemit_user,
     },
     resources::RESOURCES,
-    session::infrastructure::reemit_session,
     state::application::{AppSettings, FULL_STATE, initialize_user_resources_watcher},
     utils::discord::{start_discord_rpc, update_discord_rpc},
     widgets::{
@@ -140,9 +139,8 @@ impl SeelenUI {
             SeelenWeg::restore_native_taskbar()?;
         }
 
-        // Re-emit user and session so streaming mode redaction takes effect immediately.
+        // Re-emit user so streaming mode redaction takes effect immediately.
         reemit_user();
-        reemit_session();
         Ok(())
     }
 
@@ -156,8 +154,8 @@ impl SeelenUI {
                 &Default::default(),
             )?;
             let is_task_enabled = task_service
-                .GetFolder(&"\\Seelen".into())
-                .and_then(|folder| folder.GetTask(&"Seelen UI Service".into()))
+                .GetFolder(&"\\WinUIRev".into())
+                .and_then(|folder| folder.GetTask(&"WinUIRev Service".into()))
                 .and_then(|task| task.Definition())
                 .and_then(|definition| definition.Triggers())
                 .and_then(|triggers| triggers.get_Item(1))

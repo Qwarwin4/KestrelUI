@@ -61,7 +61,7 @@ impl SluServiceLogger {
 
     pub fn init() -> Result<()> {
         let logs_folder =
-            WindowsApi::known_folder(FOLDERID_LocalAppData)?.join("com.seelen.seelen-ui/logs");
+            WindowsApi::known_folder(FOLDERID_LocalAppData)?.join("com.qwarwin.winuirev/logs");
         std::fs::create_dir_all(&logs_folder)?;
 
         let log_path = logs_folder.join("SLU Service.log");

@@ -16,6 +16,6 @@ profile:
   open_onedrive: Öppna OneDrive-katalogen
   open_user_folder: Öppna användarkatalogen
 seelen_options:
-  open_installation_folder: Öppna mappen Seelen-inställningar
-  open_log_folder: Öppna Seelen-loggmappen
-  title: Seelen kataloger
+  open_installation_folder: Öppna mappen WinUIRev-inställningar
+  open_log_folder: Öppna WinUIRev-loggmappen
+  title: WinUIRev kataloger

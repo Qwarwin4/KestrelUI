@@ -16,6 +16,6 @@ profile:
   open_onedrive: Avage OneDrive'i kataloog
   open_user_folder: Ava kasutajakataloog
 seelen_options:
-  open_installation_folder: Avage Seeleni seadete kaust
-  open_log_folder: Avage Seeleni logikaust
-  title: Seeleni kataloogid
+  open_installation_folder: Avage WinUIRev seadete kaust
+  open_log_folder: Avage WinUIRev logikaust
+  title: WinUIRev kataloogid
