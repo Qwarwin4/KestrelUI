@@ -31,13 +31,26 @@ ids and the `SeelenCommand` plugin API are intentionally left untouched.
 
 ## Building
 
-Requirements: Windows 10/11, Rust (toolchain pinned in `rust-toolchain.toml`), Node.js 22+, Deno 2, WebView2.
+Windows 10/11 only. Install once:
 
-```sh
+1. **Visual Studio Build Tools 2022** with the *Desktop development with C++* workload (MSVC + Windows SDK).
+   Rust links against the SDK's `kernel32.lib` and friends, so without it every build script fails with
+   `rust-lld: could not open 'kernel32.lib'`.
+   ```powershell
+   winget install Microsoft.VisualStudio.2022.BuildTools --override "--wait --passive --add Microsoft.VisualStudio.Workload.VCTools --includeRecommended"
+   ```
+2. **Rust** via [rustup](https://rustup.rs). The pinned nightly from `rust-toolchain.toml` installs itself.
+3. **Node.js 22+** and **Deno 2** (`winget install DenoLand.Deno`).
+4. WebView2 Runtime (already present on Windows 11).
+
+Open a **new** terminal after installing, then run each command on its own line:
+
+```powershell
 npm install
-cargo build -p sluhk
 npm run dev
 ```
+
+`npm install` starts with `npm run doctor`, which checks the prerequisites above and tells you what is missing.
 
 Release builds need your own signing key pair:
 
