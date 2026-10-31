@@ -1,5 +1,6 @@
 pub mod constants;
 pub mod discord;
+pub mod http;
 pub mod icon_extractor;
 pub mod integrity;
 pub mod lock_free;

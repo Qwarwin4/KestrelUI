@@ -618,6 +618,34 @@ slu_commands_declaration! {
         @webview()
         @fallible()
         showcase_undo() -> bool,
+    ShowcaseGithubUser =
+        @async()
+        @fallible()
+        showcase_github_user() -> Option<GithubUser>,
+    ShowcaseGithubLogin =
+        @webview()
+        @async()
+        @fallible()
+        showcase_github_login() -> GithubDeviceCode,
+    ShowcaseGithubLoginWait =
+        @webview()
+        @async()
+        @fallible()
+        showcase_github_login_wait() -> GithubUser,
+    ShowcaseGithubLogout =
+        @webview()
+        @fallible()
+        showcase_github_logout(),
+    ShowcaseCapturePreview =
+        @webview()
+        @async()
+        @fallible()
+        showcase_capture_preview() -> String,
+    ShowcasePublish =
+        @webview()
+        @async()
+        @fallible()
+        showcase_publish(submission: ShowcaseSubmission) -> String,
 
     // Clipboard
     ClipboardGetData = clipboard_get_data() -> ClipboardData,

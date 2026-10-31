@@ -128,8 +128,21 @@
 }
 
 .author {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
   font-size: 0.8rem;
   color: var(--color-gray-600);
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+}
+
+.unreviewed {
+  color: var(--color-yellow-800);
 }
 
 .description {
@@ -165,4 +178,59 @@
 
 .done {
   color: var(--color-green-800);
+}
+
+.account {
+  margin-top: var(--spacing-xs);
+  font-size: 0.85rem;
+
+  img {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+  }
+}
+
+.publish {
+  h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  p {
+    color: var(--color-gray-600);
+  }
+}
+
+.deviceCode {
+  align-self: center;
+  padding: var(--spacing-s) var(--spacing-l);
+  border-radius: var(--config-border-radius);
+  background-color: var(--color-gray-100);
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  user-select: all;
+}
+
+.shot {
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--config-border-radius);
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-600);
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.error {
+  color: var(--color-red-800);
+  overflow-wrap: anywhere;
 }

@@ -8,6 +8,10 @@ static CLIENT: LazyLock<reqwest::Client> = LazyLock::new(|| {
         .expect("failed to build http client")
 });
 
+pub fn client() -> &'static reqwest::Client {
+    &CLIENT
+}
+
 pub fn get(url: &str) -> reqwest::RequestBuilder {
     CLIENT.get(url)
 }

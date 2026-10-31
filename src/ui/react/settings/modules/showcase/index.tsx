@@ -1,13 +1,14 @@
 import { Icon } from "libs/ui/react/components/Icon/index.tsx";
 import type { IconName } from "libs/ui/icons.ts";
 import { cx } from "libs/ui/react/utils/styling.ts";
-import { Button, Empty, Input, Segmented, Skeleton, Tooltip } from "antd";
+import { Button, Empty, Input, Modal, Segmented, Skeleton, Tooltip } from "antd";
 import { useEffect, useMemo, useState } from "preact/hooks";
 import { useTranslation } from "react-i18next";
 import { useSearchParams } from "react-router";
 
 import { installFromShowcase, installing, undoLastPreset } from "./actions.ts";
-import { loadShowcase, previewUrl, REGISTRY_REPO, showcase, type ShowcaseEntry, type ShowcaseKind } from "./registry.ts";
+import { loadShowcase, previewUrl, runsCode, showcase, type ShowcaseEntry, type ShowcaseKind } from "./registry.ts";
+import { GithubAccount, PublishButton } from "./publish.tsx";
 import { iconPacks, plugins, themes, wallpapers, widgets } from "../../state/resources.ts";
 import cs from "./index.module.css";
 
@@ -48,7 +49,7 @@ export function Showcase() {
       !q || e.name.toLowerCase().includes(q) || e.author.toLowerCase().includes(q) ||
       e.tags.some((tag) => tag.toLowerCase().includes(q))
     )
-    .toSorted((a, b) => Number(b.official) - Number(a.official) || b.updatedAt.localeCompare(a.updatedAt));
+    .toSorted((a, b) => Number(b.official) - Number(a.official) || b.stars - a.stars);
 
   return (
     <div className={cs.page}>
@@ -56,6 +57,7 @@ export function Showcase() {
         <div>
           <h1>{t("showcase.title")}</h1>
           <p>{t("showcase.subtitle")}</p>
+          <GithubAccount />
         </div>
         <div className={cs.heroActions}>
           <Tooltip title={t("showcase.undo_tooltip")}>
@@ -64,10 +66,7 @@ export function Showcase() {
               {t("showcase.undo")}
             </Button>
           </Tooltip>
-          <Button type="primary" href={`${REGISTRY_REPO}/blob/main/CONTRIBUTING.md`} target="_blank">
-            <Icon iconName="LuUpload" />
-            {t("showcase.publish")}
-          </Button>
+          <PublishButton />
         </div>
       </header>
 
@@ -119,6 +118,21 @@ export function Showcase() {
 function Card({ entry, installed }: { entry: ShowcaseEntry; installed: boolean }) {
   const { t } = useTranslation();
   const busy = installing.value === entry.id;
+  const unreviewed = runsCode(entry) && !entry.official;
+
+  function install() {
+    if (!unreviewed) {
+      installFromShowcase(entry.id);
+      return;
+    }
+    Modal.confirm({
+      title: t("showcase.unreviewed_title"),
+      content: t("showcase.unreviewed_body", { author: entry.author }),
+      okText: t("showcase.install"),
+      okButtonProps: { danger: true },
+      onOk: () => installFromShowcase(entry.id),
+    });
+  }
 
   return (
     <article className={cs.card}>
@@ -137,9 +151,19 @@ function Card({ entry, installed }: { entry: ShowcaseEntry; installed: boolean }
 
       <div className={cs.body}>
         <h3>{entry.name}</h3>
-        <a className={cs.author} href={`https://github.com/${entry.author}`} target="_blank">
-          @{entry.author}
-        </a>
+        <div className={cs.author}>
+          <a href={`https://github.com/${entry.author}`} target="_blank">@{entry.author}</a>
+          <span>
+            <Icon iconName="LuStar" /> {entry.stars}
+          </span>
+          {unreviewed && (
+            <Tooltip title={t("showcase.unreviewed_title")}>
+              <span className={cs.unreviewed}>
+                <Icon iconName="LuShieldAlert" />
+              </span>
+            </Tooltip>
+          )}
+        </div>
         <p className={cs.description}>{entry.description}</p>
         {entry.tags.length > 0 && (
           <div className={cs.tags}>
@@ -159,7 +183,7 @@ function Card({ entry, installed }: { entry: ShowcaseEntry; installed: boolean }
           className={cx(cs.install, { [cs.done!]: installed })}
           loading={busy}
           disabled={!!installing.value && !busy}
-          onClick={() => installFromShowcase(entry.id)}
+          onClick={install}
         >
           {installed ? t("showcase.reinstall") : entry.kind === "preset" ? t("showcase.apply") : t("showcase.install")}
         </Button>

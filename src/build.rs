@@ -16,6 +16,7 @@ fn main() {
 
     println!("cargo:rerun-if-env-changed=WINUIREV_PUBKEY");
     println!("cargo:rerun-if-env-changed=WINUIREV_DISCORD_ID");
+    println!("cargo:rerun-if-env-changed=WINUIREV_GITHUB_CLIENT_ID");
 
     println!("cargo:rerun-if-env-changed=TAURI_SIGNING_PRIVATE_KEY");
 

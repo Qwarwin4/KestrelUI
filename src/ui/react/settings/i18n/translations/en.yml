@@ -259,8 +259,29 @@ session:
   sign_in_hint: Your browser will open so you can sign in securely.
   upgrade_to: Upgrade to
 showcase:
+  unreviewed_title: Not reviewed
+  unreviewed_body: This resource by @{{author}} runs its own code on your desktop and nobody has reviewed it. Install only if you trust the author.
+  logout: Sign out
+  login_title: Sign in with GitHub
+  login_body: Publishing opens a pull request to the showcase from your GitHub account. Browsing and installing never need an account.
+  login_start: Get a sign-in code
+  login_code_hint: The code is copied. Open GitHub, paste it and confirm — this window continues on its own.
+  login_open: Open GitHub
+  publish_title: Publish your setup
+  publish_body: Your dock, toolbar, window manager and theme settings go to the showcase. Shortcuts, monitors and per-app rules stay private.
+  field_name: Name
+  field_description: Short description
+  field_tags: Tags, comma separated
+  preview_hint: Take a screenshot of your desktop for the preview
+  preview_take: Take screenshot
+  preview_retake: Retake
+  publish_send: Publish
+  published_title: Sent for review
+  published_body: A pull request was opened. Your setup appears in the showcase after it is merged.
+  published_open: Open pull request
+  published_close: Close
   title: Showcase
-  subtitle: Ready-made presets and community configs. One click to install, one click to undo.
+  subtitle: Setups shared by the community on GitHub. One click to install, one click to undo.
   search: Search by name, author or tag
   publish: Publish your config
   undo: Undo last preset
