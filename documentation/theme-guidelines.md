@@ -1,6 +1,6 @@
-# Seelen UI — Theme Guidelines
+# WinUIRev — Theme Guidelines
 
-Reference guide for creating themes. A theme customizes the look of Seelen UI widgets by providing CSS (or SCSS) styles
+Reference guide for creating themes. A theme customizes the look of WinUIRev widgets by providing CSS (or SCSS) styles
 and optional user-configurable CSS variables.
 
 Read [resource guidelines](./resource-guidelines) first for concepts shared across all resource kinds.
@@ -82,7 +82,7 @@ styles:
   "550e8400-e29b-41d4-a716-446655440000": !include styles/downloaded-widget.scss
 ```
 
-You can find a widget's ID in the Seelen UI settings panel, on the widget's detail page. You don't have to target every
+You can find a widget's ID in the WinUIRev settings panel, on the widget's detail page. You don't have to target every
 widget — include only the ones your theme actually reskins.
 
 ---
@@ -97,7 +97,7 @@ sharedStyles: !include shared/index.scss
 ```
 
 **Important convention:** shared styles must not override global bare elements like `body`, `button`, or `input`
-directly. Seelen UI widgets use **`data-skin` attributes** to opt into shared component styles. Only target those
+directly. WinUIRev widgets use **`data-skin` attributes** to opt into shared component styles. Only target those
 attributes in shared styles:
 
 ```css
@@ -140,7 +140,7 @@ The `sharedStyles` field is also the right place to define the performance-mode 
 
 ## 4. User-Configurable Settings (CSS Variables)
 
-The `settings` list lets you expose CSS variables that users can tweak from the Seelen UI settings panel without
+The `settings` list lets you expose CSS variables that users can tweak from the WinUIRev settings panel without
 touching your files. Each entry defines one variable, the type of input to show, and a default value.
 
 Every variable name must start with `--` and follow CSS custom property naming rules (`--my-variable`,
@@ -346,7 +346,7 @@ settings:
 
 ## 5. System CSS Variables
 
-Seelen UI makes a set of CSS variables available in every widget. You can use these in your stylesheets without
+WinUIRev makes a set of CSS variables available in every widget. You can use these in your stylesheets without
 declaring them yourself.
 
 **Windows accent colors** — taken from the user's Windows accent color setting:
@@ -365,7 +365,7 @@ declaring them yourself.
 
 ## 6. Animations and Performance Mode
 
-When the user enables **extreme performance mode** in Seelen UI settings, all animations and transitions defined in
+When the user enables **extreme performance mode** in WinUIRev settings, all animations and transitions defined in
 themes are automatically forced off by the app. You don't need to do anything special — this is handled for you.
 
 ---
@@ -400,7 +400,7 @@ sharedStyles: !include shared/index.scss
 
 ## 8. Inspecting Widgets with DevTools
 
-Every Seelen UI widget is a webview, so you can inspect its HTML, CSS, and JavaScript exactly like a webpage. Click on
+Every WinUIRev widget is a webview, so you can inspect its HTML, CSS, and JavaScript exactly like a webpage. Click on
 any widget to focus it, then press **Ctrl + Shift + I** to open the browser DevTools for that widget.
 
 From DevTools you can:

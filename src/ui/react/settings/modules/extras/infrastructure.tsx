@@ -1,6 +1,6 @@
 import { invoke, SeelenCommand } from "@seelen-ui/lib";
 import { Icon } from "libs/ui/react/components/Icon/index.tsx";
-import { Button, Select, Switch, Tooltip } from "antd";
+import { Button, Flex, Select, Switch, Tooltip } from "antd";
 import { useTranslation } from "react-i18next";
 
 import { EnvConfig } from "../shared/config/infra.ts";
@@ -72,6 +72,21 @@ export function Information() {
               }
             />
           )}
+
+          <SettingsOption
+            label={t("extras.license")}
+            description={t("extras.license_notice")}
+            action={
+              <Flex gap={4}>
+                <Button type="link" href="https://github.com/Qwarwin4/WinUIRev" target="_blank">
+                  {t("extras.source_code")}
+                </Button>
+                <Button type="link" href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">
+                  AGPL-3.0
+                </Button>
+              </Flex>
+            }
+          />
         </SettingsSubGroup>
       </SettingsGroup>
 

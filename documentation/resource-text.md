@@ -1,6 +1,6 @@
 # ResourceText — User-Facing Text in Resources
 
-`ResourceText` is the type Seelen UI uses everywhere a resource needs to show text to the user: display names,
+`ResourceText` is the type WinUIRev uses everywhere a resource needs to show text to the user: display names,
 descriptions, widget setting labels, tooltips, context menu entries, shortcut labels, theme config labels, etc. This
 guide explains what it is, everywhere it shows up, and how to translate it with the `slu` CLI.
 
@@ -35,7 +35,7 @@ guide explains what it is, everywhere it shows up, and how to translate it with 
     de: Meine Einstellung
   ```
 
-At render time, Seelen UI looks up the text for the user's current language and falls back to `en` if that language is
+At render time, WinUIRev looks up the text for the user's current language and falls back to `en` if that language is
 missing. Because of this fallback, **`en` must always be present** whenever you use the map form — a resource missing
 the `en` entry fails validation on publish.
 
@@ -96,7 +96,7 @@ independently (see next section).
 
 ## 4. Translating with the `slu` CLI
 
-Seelen UI ships a `slu resource translate` command that fills in every supported language for a `ResourceText` YAML
+WinUIRev ships a `slu resource translate` command that fills in every supported language for a `ResourceText` YAML
 file, using **Google Translate** under the hood.
 
 ```bash
@@ -110,7 +110,7 @@ slu resource translate <path/to/file.yml> [source_lang]
 
 1. The command reads the file and looks for an entry matching `source_lang`. If it's missing, the command fails — write
    your source text first.
-2. It iterates over every language in [Seelen UI's supported languages list](./supported-languages):
+2. It iterates over every language in [WinUIRev's supported languages list](./supported-languages):
    - If a translation for that language **already exists** in the file, it is **skipped** (never overwritten).
    - Otherwise, it calls the Google Translate API to translate the source text into that language and adds it to the
      file.
@@ -158,7 +158,7 @@ slu resource translate i18n/description.yml es
   fails `Resource::verify` and cannot be published.
 - **Plain string is shorthand for `en`.** `label: My Setting` and `label: { en: My Setting }` are equivalent — the CLI
   and the UI treat them identically.
-- **`zh` and `pt` are not valid target codes** — Seelen UI only ships `zh-CN`/`zh-TW` and `pt-BR`/`pt-PT`. The translate
+- **`zh` and `pt` are not valid target codes** — WinUIRev only ships `zh-CN`/`zh-TW` and `pt-BR`/`pt-PT`. The translate
   command already maps these internally when calling Google Translate, so you don't need to worry about it, but don't
   hand-write a bare `zh:` or `pt:` key yourself — it will never match the running app's language and will silently never
   be shown.

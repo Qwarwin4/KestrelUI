@@ -1,6 +1,6 @@
 # Supported Languages
 
-Seelen UI maintains a single, authoritative list of the languages it supports across the app: the Settings language
+WinUIRev maintains a single, authoritative list of the languages it supports across the app: the Settings language
 picker, `i18n/translations/` locale files, and the
 [`slu resource translate`](./resource-text#4-translating-with-the-slu-cli) command all draw from this same list.
 
@@ -27,7 +27,7 @@ libs/core/src/constants/mod.ts
 
 ## Why this matters for resources
 
-Anything that consumes "which languages does Seelen UI support" — the Settings language dropdown, and the
+Anything that consumes "which languages does WinUIRev support" — the Settings language dropdown, and the
 `slu resource translate` command described in [ResourceText](./resource-text) — reads from this list. Adding a language
 here automatically:
 

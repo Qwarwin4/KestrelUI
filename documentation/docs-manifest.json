@@ -1,6 +1,6 @@
 {
   "$schemaVersion": 1,
-  "description": "Navigation/metadata manifest for the Seelen UI documentation viewer. Markdown files remain the source of truth for content; this file only describes structure, ordering and status. TOC/headings should be extracted from each file at build time, not duplicated here.",
+  "description": "Navigation/metadata manifest for the WinUIRev documentation viewer. Markdown files remain the source of truth for content; this file only describes structure, ordering and status. TOC/headings should be extracted from each file at build time, not duplicated here.",
   "categories": [
     { "id": "resources", "title": "Resources — Shared Concepts", "order": 1 },
     { "id": "resource-kinds", "title": "Resource Kinds", "order": 2 },
@@ -46,7 +46,7 @@
     {
       "id": "design-system",
       "title": "Design System & Manifesto",
-      "description": "The Seelen UI design contract: flat, simple, light/dark-adaptive design built on shared tokens and data-skin standard components, kept minimal so themes can mod everything.",
+      "description": "The WinUIRev design contract: flat, simple, light/dark-adaptive design built on shared tokens and data-skin standard components, kept minimal so themes can mod everything.",
       "file": "design-system.md",
       "slug": "design-system",
       "category": "themes",

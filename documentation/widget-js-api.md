@@ -8,7 +8,7 @@ how a widget is declared and packaged; this page is about what your widget's cod
 
 ## 1. Lifecycle — `Widget.self`, `init()`, `ready()`
 
-Every widget runs inside a webview that Seelen UI injects a runtime handle into. Access it with:
+Every widget runs inside a webview that WinUIRev injects a runtime handle into. Access it with:
 
 ```ts
 import { Widget } from "@seelen-ui/lib";
@@ -16,7 +16,7 @@ import { Widget } from "@seelen-ui/lib";
 const widget = Widget.self;
 ```
 
-This throws if the code is not actually running inside a Seelen UI widget webview.
+This throws if the code is not actually running inside a WinUIRev widget webview.
 
 > `Widget.getCurrent()` still exists but is deprecated — use the `Widget.self` getter instead.
 
@@ -78,7 +78,7 @@ await invoke(SeelenCommand.SwitchWorkspace, { workspaceId });
 all inferred from the `SeelenCommand` enum value you pass, so passing the wrong argument shape is a compile-time error,
 not a runtime one.
 
-**Do not look for a list of commands in this doc.** Every backend command Seelen UI exposes is declared in one place,
+**Do not look for a list of commands in this doc.** Every backend command WinUIRev exposes is declared in one place,
 and that declaration is the only source of truth (names, arguments, and return types all live together, and the
 `SeelenCommand` enum plus the TS argument/return types are generated straight from it):
 

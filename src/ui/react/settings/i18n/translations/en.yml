@@ -120,6 +120,10 @@ discord_banner:
     date with the latest news.
   title: Join our Community
 extras:
+  license: License
+  license_notice: >-
+    WinUIRev is a modified version of Seelen UI by Seelen Corp. and contributors, distributed under the GNU AGPL-3.0. You can get the source code of this version and of the original.
+  source_code: Source code
   clear_icons: Clear System Icons Cache
   clear_icons_tooltip: A restart could be required to fully take effect on all widgets
   discord_rpc: Discord rich presence

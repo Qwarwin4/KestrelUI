@@ -1,4 +1,4 @@
-# Seelen UI — Plugin Guidelines
+# WinUIRev — Plugin Guidelines
 
 Reference guide for creating plugins. A plugin is a declaration file that extends the functionality of a specific
 widget. The plugin itself only declares who it targets and provides a data payload — the target widget is entirely
@@ -25,7 +25,7 @@ declaration.
 **Plugins are merely plain, flat files — nothing more.** The `Plugin` resource kind does not define a runtime, a
 sandbox, or an execution model of any kind. It is only an envelope: `id`, `target`, and a free-form `plugin` payload.
 There is no such thing as "the plugin system" in the singular — there is one plugin **envelope** shared by every
-resource, and as many plugin **behaviors** as there are widgets willing to consume one. Seelen UI itself does not parse,
+resource, and as many plugin **behaviors** as there are widgets willing to consume one. WinUIRev itself does not parse,
 validate, or execute the contents of `plugin` in any generic way; it only routes the resource to whichever widget's
 `target` matches.
 
@@ -34,16 +34,16 @@ for what `plugin` must contain, and its own logic for parsing and executing that
 declarative tree it walks, a lookup table it renders from, anything the widget author wants). A toolbar plugin might
 define a new button with JS callbacks; a tiling window manager plugin might define a static layout tree with no code at
 all; a calendar widget's plugin might add a new event source. **The schema, the parsing, and the execution all live in
-the target widget — not in the plugin resource, and not in Seelen UI's core.**
+the target widget — not in the plugin resource, and not in WinUIRev's core.**
 
-For Seelen UI's own built-in widgets that accept plugins, see the dedicated guides:
+For WinUIRev's own built-in widgets that accept plugins, see the dedicated guides:
 
 - [Toolbar Plugins](./toolbar-plugins) — `@seelen/fancy-toolbar`
 - [Dock Plugins](./dock-plugins) — `@seelen/weg`
 - [Window Manager Layouts](./wm-layouts) — `@seelen/window-manager`
 
 If you are building your own widget and want to support plugins, you are free to design any `plugin` schema you like —
-document it for your users the same way the three guides above document Seelen UI's built-in widgets.
+document it for your users the same way the three guides above document WinUIRev's built-in widgets.
 
 ---
 
@@ -58,7 +58,7 @@ metadata:
   tags:
     - toolbar
 
-# Icon shown in the Seelen UI settings panel.
+# Icon shown in the WinUIRev settings panel.
 # Must be a valid react-icons name (https://react-icons.github.io/react-icons/).
 # Defaults to PiPuzzlePieceDuotone if omitted.
 icon: PiPuzzlePieceDuotone
