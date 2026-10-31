@@ -124,13 +124,6 @@ discord_banner:
     और नवीनतम समाचारों से अपडेट रहें।
   title: हमारे समुदाय में शामिल हों
 extras:
-  backup_group: मेघ बैकअप
-  backup_last_sync: अंतिम समन्वयन
-  backup_never_synced: कभी समन्वयित नहीं किया गया
-  backup_sync: सेटिंग्स को क्लाउड में सिंक करें
-  backup_sync_description: >-
-    क्लाउड के माध्यम से अपनी सेटिंग्स का स्वचालित रूप से बैकअप लें और
-    पुनर्स्थापित करें।
   clear_icons: स्पष्ट प्रणाली आइकन कैश
   clear_icons_tooltip: >-
     सभी विजेट पर पूरी तरह से प्रभावी होने के लिए एक पुनरारंभ की आवश्यकता हो सकती
@@ -202,7 +195,6 @@ header:
     plugin: प्लग-इन
     resources: संसाधन
     security: सुरक्षा
-    session: खाता
     shortcuts: शॉर्टकट
     soundpack: साउंड पैक
     specific_apps: आवेदन द्वारा सेटिंग्स
@@ -210,8 +202,6 @@ header:
     virtual_desk: आभासी डेस्कटॉप्स
     wallpaper: वॉलपेपर
     widget: विजेट
-home:
-  new_resources: नए संसाधन
 inherit: इनहेरिट
 inProgress: प्रगति पर है...
 insert: डालना
@@ -379,6 +369,7 @@ wall:
   saturation: परिपूर्णता
   seconds: सेकंड
   select_collection: संग्रह का चयन करें
+  show_paused_message: रुका हुआ संदेश दिखाएँ
   thumbnail_generation_complete: थंबनेल जनरेशन पूर्ण
   thumbnail_generation_finished: थंबनेल पीढ़ी सफलतापूर्वक समाप्त हो गई है
   use_accent_color: वॉलपेपर एक्सेंट रंग का प्रयोग करें
@@ -387,7 +378,6 @@ wall:
   wallpapers: वॉलपेपर
   wallpapers_and_collections: वॉलपेपर और संग्रह
   withOverlay: ओवरले के साथ
-  workspace_collections: कार्यक्षेत्र संग्रह
 weg:
   auto_hide: खुद से छिपना
   auto_hide_touch_disabled: टच स्क्रीन डिवाइस पर ऑटो हाइड उपलब्ध नहीं है
@@ -452,6 +442,7 @@ welcome:
     करती है।
   title: सीलेन यूआई में आपका स्वागत है!
 widget:
+  add_workspace_override: किसी कार्यस्थान पर ओवरराइड करें
   default_instance: डिफ़ॉल्ट उदाहरण
   default_instance_hint: हमेशा सक्रिय, रूट विजेट कॉन्फ़िगरेशन का उपयोग करता है
   enable: इस विजेट को सक्षम करें
@@ -459,6 +450,11 @@ widget:
   extra_instances: अतिरिक्त उदाहरण
   instance: उदाहरण
   instances: उदाहरण
+  remove_workspace_override: ओवरराइड हटाएं (मॉनिटर से इनहेरिट करें)
+  select_workspace: एक कार्यक्षेत्र चुनें
+  workspace_fallback_name: डेस्कटॉप {{0}}
+  workspace_overrides: कार्यस्थान ओवरराइड हो जाता है
+  workspace_row: पंक्ति {{0}}
 wm:
   animations:
     duration: एनीमेशन अवधि (एमएस)

@@ -122,11 +122,6 @@ discord_banner:
     paylaşın və ən son xəbərlərdən xəbərdar olun.
   title: İcmamıza qoşulun
 extras:
-  backup_group: Bulud Yedəkləmə
-  backup_last_sync: Son sinxronizasiya
-  backup_never_synced: Heç vaxt sinxronlaşdırılmayıb
-  backup_sync: Parametrləri buludla sinxronlaşdırın
-  backup_sync_description: Bulud vasitəsilə parametrlərinizi avtomatik olaraq yedəkləyin və bərpa edin.
   clear_icons: Sistem nişanlar önbelleği təmizləyin
   clear_icons_tooltip: Bütün vidjetlərə tam təsir göstərmək üçün yenidən başlama tələb oluna bilər
   discord_rpc: Zəngin varlığı ayırın
@@ -196,7 +191,6 @@ header:
     plugin: Plaginlər
     resources: Resurslar
     security: Təhlükəsizlik
-    session: Hesab
     shortcuts: Qısaylıq
     soundpack: Səs paketləri
     specific_apps: Tətbiq tərəfindən parametrlər
@@ -204,8 +198,6 @@ header:
     virtual_desk: Virtual masaüstü
     wallpaper: Divar kağızları
     widget: Vidjetlər
-home:
-  new_resources: Yeni mənbələr
 inherit: Varis olmaq
 inProgress: Davam edir ...
 insert: Daxil etmək
@@ -373,6 +365,7 @@ wall:
   saturation: Doydurma
   seconds: saniyə
   select_collection: Kolleksiya seçin
+  show_paused_message: Pauza edilmiş mesajı göstərin
   thumbnail_generation_complete: Miniatürlərin yaradılması tamamlandı
   thumbnail_generation_finished: Miniatür yaradılması uğurla tamamlandı
   use_accent_color: Divar kağızı vurğu rəngindən istifadə edin
@@ -381,7 +374,6 @@ wall:
   wallpapers: Divar kağızları
   wallpapers_and_collections: Divar kağızları və kolleksiyalar
   withOverlay: Örtülü ilə
-  workspace_collections: İş sahəsi kolleksiyaları
 weg:
   auto_hide: Avtomatik gizlətmək
   auto_hide_touch_disabled: Avtomatik gizlətmə sensor ekranlı cihazlarda mövcud deyil
@@ -444,6 +436,7 @@ welcome:
     düşünün – rəyiniz layihənin böyüməsinə və təkmilləşdirilməsinə kömək edir.
   title: WinUIRev-ə xoş gəlmisiniz!
 widget:
+  add_workspace_override: İş yerində yalnış yazın
   default_instance: Defolt Nümunə
   default_instance_hint: Həmişə aktivdir, kök vidcet konfiqurasiyasından istifadə edir
   enable: Bu widgetı aktivləşdirin
@@ -451,6 +444,11 @@ widget:
   extra_instances: Əlavə Nümunələr
   instance: Nümunə
   instances: Hal
+  remove_workspace_override: Ləğv etməyi silin (monitordan miras alın)
+  select_workspace: İş yerini seçin
+  workspace_fallback_name: Masaüstü {{0}}
+  workspace_overrides: İş sahəsi üstələyir
+  workspace_row: Sıra {{0}}
 wm:
   animations:
     duration: Animasiya müddəti (MS)

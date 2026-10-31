@@ -123,11 +123,6 @@ discord_banner:
     dig opdateret med de seneste nyheder.
   title: Tilmeld dig vores fællesskab
 extras:
-  backup_group: Cloud Backup
-  backup_last_sync: Sidste synkronisering
-  backup_never_synced: Aldrig synkroniseret
-  backup_sync: Synkroniser indstillinger til skyen
-  backup_sync_description: Sikkerhedskopier og gendan automatisk dine indstillinger via skyen.
   clear_icons: Ryd cache for systemikoner
   clear_icons_tooltip: En genstart kan være nødvendig for at få fuld effekt på alle widgets
   discord_rpc: Splid rig tilstedeværelse
@@ -196,7 +191,6 @@ header:
     plugin: Plugins
     resources: Ressourcer
     security: Sikkerhed
-    session: Konto
     shortcuts: Genveje
     soundpack: Lydpakker
     specific_apps: Indstillinger efter applikation
@@ -204,8 +198,6 @@ header:
     virtual_desk: Virtuelle desktops
     wallpaper: Baggrunde
     widget: Widgets
-home:
-  new_resources: Nye ressourcer
 inherit: Arve
 inProgress: I gang...
 insert: Indsæt
@@ -372,6 +364,7 @@ wall:
   saturation: Mætning
   seconds: sekunder
   select_collection: Vælg Samling
+  show_paused_message: Vis pauseret besked
   thumbnail_generation_complete: Generering af miniaturebilleder er fuldført
   thumbnail_generation_finished: Generering af miniaturebilleder er afsluttet
   use_accent_color: Brug tapet accentfarve
@@ -380,7 +373,6 @@ wall:
   wallpapers: Baggrunde
   wallpapers_and_collections: Baggrunde og samlinger
   withOverlay: Med overlay
-  workspace_collections: Arbejdsrumssamlinger
 weg:
   auto_hide: Auto skjul
   auto_hide_touch_disabled: Automatisk skjul er ikke tilgængelig på enheder med berøringsskærm
@@ -443,6 +435,7 @@ welcome:
     i butikken – din feedback hjælper projektet med at vokse og forbedre.
   title: Velkommen til WinUIRev!
 widget:
+  add_workspace_override: Tilsidesæt på et arbejdsområde
   default_instance: Standardinstans
   default_instance_hint: Altid aktiv, bruger root-widget-konfigurationen
   enable: Aktivér denne widget
@@ -450,6 +443,11 @@ widget:
   extra_instances: Ekstra Forekomster
   instance: Forekomst
   instances: Forekomster
+  remove_workspace_override: Fjern tilsidesættelse (arv fra monitor)
+  select_workspace: Vælg et arbejdsområde
+  workspace_fallback_name: Desktop {{0}}
+  workspace_overrides: Arbejdsområde tilsidesætter
+  workspace_row: Række {{0}}
 wm:
   animations:
     duration: Animationsvarighed (MS)

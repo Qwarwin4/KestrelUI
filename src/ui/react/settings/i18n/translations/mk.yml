@@ -125,13 +125,6 @@ discord_banner:
     теми и бидете во тек со најновите вести.
   title: Придружете се на нашата заедница
 extras:
-  backup_group: Облак резервна копија
-  backup_last_sync: Последна синхронизација
-  backup_never_synced: Никогаш не синхронизирано
-  backup_sync: Синхронизирајте ги поставките со облакот
-  backup_sync_description: >-
-    Автоматски правете резервна копија и вратете ги вашите поставки преку
-    облакот.
   clear_icons: Јасна кеш за икони на системот
   clear_icons_tooltip: >-
     Може да се бара рестартирање за целосно да се стапат на сила на сите
@@ -203,7 +196,6 @@ header:
     plugin: Приклучоци
     resources: Ресурси
     security: Безбедност
-    session: Сметка
     shortcuts: Кратенки
     soundpack: Звучни пакувања
     specific_apps: Поставки по апликација
@@ -211,8 +203,6 @@ header:
     virtual_desk: Виртуелни работна површина
     wallpaper: Позадини
     widget: Додатоци
-home:
-  new_resources: Нови ресурси
 inherit: Наследник
 inProgress: Во тек...
 insert: Вметнете
@@ -378,6 +368,7 @@ wall:
   saturation: Заситеност
   seconds: секунди
   select_collection: Изберете Колекција
+  show_paused_message: Прикажи паузирана порака
   thumbnail_generation_complete: Генерирањето сликички е завршено
   thumbnail_generation_finished: Генерирањето сликички заврши успешно
   use_accent_color: Користете боја на акцент на позадина
@@ -386,7 +377,6 @@ wall:
   wallpapers: Позадини
   wallpapers_and_collections: Позадини и колекции
   withOverlay: Со преклоп
-  workspace_collections: Колекции на работниот простор
 weg:
   auto_hide: Автоматско скриј
   auto_hide_touch_disabled: Автоматското криење не е достапно на уредите со екран на допир
@@ -451,6 +441,7 @@ welcome:
     подобри.
   title: Добредојдовте во WinUIRev!
 widget:
+  add_workspace_override: Отфрлање на работен простор
   default_instance: Стандардна инстанца
   default_instance_hint: Секогаш активен, ја користи конфигурацијата на root-виџетот
   enable: Овозможете го овој додаток
@@ -458,6 +449,11 @@ widget:
   extra_instances: Дополнителни случаи
   instance: Пример
   instances: Примери
+  remove_workspace_override: Отстранете го отфрлањето (наследи од мониторот)
+  select_workspace: Изберете работен простор
+  workspace_fallback_name: Десктоп {{0}}
+  workspace_overrides: Работниот простор го отфрла
+  workspace_row: Ред {{0}}
 wm:
   animations:
     duration: Времетраење на анимација (МС)

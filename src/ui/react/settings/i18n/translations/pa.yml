@@ -119,11 +119,6 @@ discord_banner:
     ਖਬਰਾਂ ਨਾਲ ਅੱਪ ਟੂ ਡੇਟ ਰਹੋ।
   title: ਸਾਡੇ ਭਾਈਚਾਰੇ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ
 extras:
-  backup_group: ਕਲਾਊਡ ਬੈਕਅੱਪ
-  backup_last_sync: ਆਖਰੀ ਸਮਕਾਲੀਕਰਨ
-  backup_never_synced: ਕਦੇ ਸਿੰਕ ਨਹੀਂ ਕੀਤਾ
-  backup_sync: ਕਲਾਉਡ ਲਈ ਸੈਟਿੰਗਾਂ ਨੂੰ ਸਿੰਕ ਕਰੋ
-  backup_sync_description: ਕਲਾਊਡ ਰਾਹੀਂ ਸਵੈਚਲਿਤ ਤੌਰ 'ਤੇ ਆਪਣੀਆਂ ਸੈਟਿੰਗਾਂ ਦਾ ਬੈਕਅੱਪ ਲਓ ਅਤੇ ਰੀਸਟੋਰ ਕਰੋ।
   clear_icons: ਸਿਸਟਮ ਆਈਕਾਨ ਕੈਚੇ ਸਾਫ਼ ਕਰੋ
   clear_icons_tooltip: ਸਾਰੇ ਵਿਜੇਟਸ 'ਤੇ ਪੂਰੀ ਤਰ੍ਹਾਂ ਲਾਗੂ ਹੋਣ ਲਈ ਇੱਕ ਰੀਸਟਾਰਟ ਦੀ ਜ਼ਰੂਰਤ ਹੋ ਸਕਦੀ ਹੈ
   discord_rpc: ਅਮੀਰ ਮੌਜੂਦਗੀ ਨੂੰ ਰੱਦ ਕਰੋ
@@ -193,7 +188,6 @@ header:
     plugin: ਪਲੱਗਇਨ
     resources: ਸਰੋਤ
     security: ਸੁਰੱਖਿਆ
-    session: ਖਾਤਾ
     shortcuts: ਸ਼ਾਰਟਕੱਟ
     soundpack: ਧੁਨੀ ਪੈਕ
     specific_apps: ਐਪਲੀਕੇਸ਼ਨ ਦੁਆਰਾ ਸੈਟਿੰਗਾਂ
@@ -201,8 +195,6 @@ header:
     virtual_desk: ਵਰਚੁਅਲ ਡੈਸਕਟਾਪ
     wallpaper: ਵਾਲਪੇਪਰ
     widget: ਵਿਜੇਟਸ
-home:
-  new_resources: ਨਵੇਂ ਸਰੋਤ
 inherit: ਵਿਰਾਸਤ
 inProgress: ਤਰੱਕੀ ਹੋ ਰਹੀ ਹੈ...
 insert: ਸੰਮਿਲਿਤ ਕਰੋ
@@ -368,6 +360,7 @@ wall:
   saturation: ਸੰਤ੍ਰਿਪਤ
   seconds: ਸਕਿੰਟ
   select_collection: ਸੰਗ੍ਰਹਿ ਚੁਣੋ
+  show_paused_message: ਰੋਕਿਆ ਸੁਨੇਹਾ ਦਿਖਾਓ
   thumbnail_generation_complete: ਥੰਬਨੇਲ ਜਨਰੇਸ਼ਨ ਪੂਰਾ ਹੋਇਆ
   thumbnail_generation_finished: ਥੰਬਨੇਲ ਬਣਾਉਣਾ ਸਫਲਤਾਪੂਰਵਕ ਸਮਾਪਤ ਹੋ ਗਿਆ ਹੈ
   use_accent_color: ਵਾਲਪੇਪਰ ਲਹਿਜ਼ੇ ਦੇ ਰੰਗ ਦੀ ਵਰਤੋਂ ਕਰੋ
@@ -376,7 +369,6 @@ wall:
   wallpapers: ਵਾਲਪੇਪਰ
   wallpapers_and_collections: ਵਾਲਪੇਪਰ ਅਤੇ ਸੰਗ੍ਰਹਿ
   withOverlay: ਓਵਰਲੇਅ ਦੇ ਨਾਲ
-  workspace_collections: ਵਰਕਸਪੇਸ ਸੰਗ੍ਰਹਿ
 weg:
   auto_hide: ਆਟੋ ਓਹਲੇ
   auto_hide_touch_disabled: ਟੱਚ ਸਕ੍ਰੀਨ ਡਿਵਾਈਸਾਂ 'ਤੇ ਆਟੋ ਹਾਈਡ ਉਪਲਬਧ ਨਹੀਂ ਹੈ
@@ -440,6 +432,7 @@ welcome:
     ਕਰਦਾ ਹੈ।
   title: WinUIRev ਵਿੱਚ ਸੁਆਗਤ ਹੈ!
 widget:
+  add_workspace_override: ਵਰਕਸਪੇਸ 'ਤੇ ਓਵਰਰਾਈਡ ਕਰੋ
   default_instance: ਪੂਰਵ-ਨਿਰਧਾਰਤ ਉਦਾਹਰਨ
   default_instance_hint: ਹਮੇਸ਼ਾ ਕਿਰਿਆਸ਼ੀਲ, ਰੂਟ ਵਿਜੇਟ ਸੰਰਚਨਾ ਦੀ ਵਰਤੋਂ ਕਰਦਾ ਹੈ
   enable: ਇਸ ਵਿਦਜਿਟ ਨੂੰ ਸਮਰੱਥ ਕਰੋ
@@ -447,6 +440,11 @@ widget:
   extra_instances: ਵਾਧੂ ਉਦਾਹਰਨਾਂ
   instance: ਉਦਾਹਰਨ
   instances: ਉਦਾਹਰਣ
+  remove_workspace_override: ਓਵਰਰਾਈਡ ਹਟਾਓ (ਮਾਨੀਟਰ ਤੋਂ ਪ੍ਰਾਪਤ ਕਰੋ)
+  select_workspace: ਇੱਕ ਵਰਕਸਪੇਸ ਚੁਣੋ
+  workspace_fallback_name: ਡੈਸਕਟਾਪ {{0}}
+  workspace_overrides: ਵਰਕਸਪੇਸ ਓਵਰਰਾਈਡ ਕਰਦਾ ਹੈ
+  workspace_row: ਕਤਾਰ {{0}}
 wm:
   animations:
     duration: ਐਨੀਮੇਸ਼ਨ ਅੰਤਰਾਲ (ਐਮਐਸ)

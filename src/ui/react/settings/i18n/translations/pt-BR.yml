@@ -123,11 +123,6 @@ discord_banner:
     temas e mantenha-se atualizado com as últimas notícias.
   title: Junte-se à nossa comunidade
 extras:
-  backup_group: Backup na nuvem
-  backup_last_sync: Última sincronização
-  backup_never_synced: Nunca sincronizado
-  backup_sync: Sincronizar configurações com a nuvem
-  backup_sync_description: Faça backup e restaure automaticamente suas configurações por meio da nuvem.
   clear_icons: Limpar cache de ícones do sistema
   clear_icons_tooltip: Pode ser necessário reiniciar para aplicar a todos os widgets
   discord_rpc: Discord rica presença
@@ -198,7 +193,6 @@ header:
     plugin: Plugins
     resources: Recursos
     security: Segurança
-    session: Conta
     shortcuts: Atalhos
     soundpack: Pacotes de Som
     specific_apps: Configurações por Aplicativo
@@ -206,8 +200,6 @@ header:
     virtual_desk: Áreas de Trabalho Virtuais
     wallpaper: Papéis de Parede
     widget: Widgets
-home:
-  new_resources: Novos Recursos
 inherit: Herdar
 inProgress: Em andamento...
 insert: Inserir
@@ -376,6 +368,7 @@ wall:
   saturation: Saturação
   seconds: segundas
   select_collection: Selecione a coleção
+  show_paused_message: Mostrar mensagem pausada
   thumbnail_generation_complete: Geração de miniaturas concluída
   thumbnail_generation_finished: A geração da miniatura foi concluída com sucesso
   use_accent_color: Use a cor de destaque do papel de parede
@@ -384,7 +377,6 @@ wall:
   wallpapers: Papéis de parede
   wallpapers_and_collections: Papéis de parede e coleções
   withOverlay: Com sobreposição
-  workspace_collections: Coleções de espaço de trabalho
 weg:
   auto_hide: Ocultar automaticamente
   auto_hide_touch_disabled: >-
@@ -450,6 +442,7 @@ welcome:
     seu feedback ajuda o projeto a crescer e melhorar.
   title: Bem-vindo à UI da WinUIRev!
 widget:
+  add_workspace_override: Substituir em um espaço de trabalho
   default_instance: Instância padrão
   default_instance_hint: Sempre ativo, usa a configuração do widget raiz
   enable: Ativar esse widget
@@ -457,6 +450,11 @@ widget:
   extra_instances: Instâncias extras
   instance: Exemplo
   instances: Instâncias
+  remove_workspace_override: Remover substituição (herdar do monitor)
+  select_workspace: Selecione um espaço de trabalho
+  workspace_fallback_name: Computador {{0}}
+  workspace_overrides: Substituições do espaço de trabalho
+  workspace_row: Linha {{0}}
 wm:
   animations:
     duration: Duração da animação (MS)

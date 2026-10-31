@@ -125,11 +125,6 @@ discord_banner:
     mavzularni baham ko'ring va so'nggi yangiliklardan xabardor bo'ling.
   title: Hamjamiyatimizga qo'shiling
 extras:
-  backup_group: Bulutli zaxira
-  backup_last_sync: Oxirgi sinxronlash
-  backup_never_synced: Hech qachon sinxronlanmagan
-  backup_sync: Sozlamalarni bulut bilan sinxronlashtiring
-  backup_sync_description: Sozlamalaringizni bulut orqali avtomatik ravishda zaxiralang va tiklang.
   clear_icons: Tozalash tizimi piktogrammalari kesh
   clear_icons_tooltip: >-
     Barcha vidjetlarga to'liq ta'sir qilish uchun qayta boshlash talab qilinishi
@@ -203,7 +198,6 @@ header:
     plugin: Plaginlar
     resources: Resurslar
     security: Xavfsizlik
-    session: Hisob
     shortcuts: Yorliqlar
     soundpack: Ovozli paketlar
     specific_apps: Ilova orqali sozlash
@@ -211,8 +205,6 @@ header:
     virtual_desk: Virtual ish stollari
     wallpaper: Fon rasmlari
     widget: Vidjetlar
-home:
-  new_resources: Yangi manbalar
 inherit: Meros qilib olmoq
 inProgress: Jarayonda...
 insert: Qo'shmoq
@@ -382,6 +374,7 @@ wall:
   saturation: To'yinganlik
   seconds: soniya
   select_collection: To'plamni tanlang
+  show_paused_message: Pauza qilingan xabarni ko'rsatish
   thumbnail_generation_complete: Eskiz yaratish tugallandi
   thumbnail_generation_finished: Eskiz yaratish muvaffaqiyatli yakunlandi
   use_accent_color: Fon rasmi aksent rangidan foydalaning
@@ -390,7 +383,6 @@ wall:
   wallpapers: Fon rasmi
   wallpapers_and_collections: Fon rasmi va kollektsiyalar
   withOverlay: Qopqoq bilan
-  workspace_collections: Ish maydoni to'plamlari
 weg:
   auto_hide: Avtomatik yashirish
   auto_hide_touch_disabled: Avtomatik yashirish sensorli ekranli qurilmalarda mavjud emas
@@ -457,6 +449,7 @@ welcome:
     beradi.
   title: WinUIRev-ga xush kelibsiz!
 widget:
+  add_workspace_override: Ish joyida bekor qilish
   default_instance: Standart misol
   default_instance_hint: Har doim faol, ildiz vidjet konfiguratsiyasidan foydalanadi
   enable: Bu vidjetni yoqing
@@ -464,6 +457,11 @@ widget:
   extra_instances: Qo'shimcha holatlar
   instance: Misol
   instances: Mustaqil holatlar
+  remove_workspace_override: Bekor qilishni olib tashlash (monitordan meros qilib olish)
+  select_workspace: Ish joyini tanlang
+  workspace_fallback_name: Ish stoli {{0}}
+  workspace_overrides: Ish joyini bekor qiladi
+  workspace_row: '{{0}}-qator'
 wm:
   animations:
     duration: Animatsiya muddati (MS)

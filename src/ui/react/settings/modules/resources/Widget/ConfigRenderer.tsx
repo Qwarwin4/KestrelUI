@@ -1,5 +1,8 @@
 import {
+  type MonitorId,
   type WidgetConfigDefinition,
+  type WidgetId,
+  WidgetSelectSource,
   WidgetSelectSubtype,
   type WidgetSettingItem,
   type WidgetSettingsDeclarationList,
@@ -11,18 +14,24 @@ import { useMemo } from "react";
 
 import { SettingsGroup, SettingsOption, SettingsSubGroup } from "../../../components/SettingsBox/index.tsx";
 import { FontSelect } from "../../../components/FontSelect/index.tsx";
+import { PluginSelect } from "./PluginSelector.tsx";
+import { WallpaperCollectionSelector } from "./Wall/WallpaperCollectionSelector.tsx";
+import { WorkspaceOverrides } from "./WorkspaceOverrides.tsx";
+import { getWorkspaceWidgetConfig, patchWidgetWorkspaceConfig, removeWidgetWorkspaceConfigKey } from "./application.ts";
 import Compact from "antd/es/space/Compact";
 import { Icon } from "libs/ui/react/components/Icon/index.tsx";
 
 interface Props {
+  // widget owning the settings declaration
+  widgetId: WidgetId;
   // settings definitions
   definitions: WidgetSettingsDeclarationList;
   // config values set by the user
   values: Record<string, any>;
   // callback to update the config
   onConfigChange: (key: string, value: any) => void;
-  // whether the widget is being configured by monitor
-  isByMonitor?: boolean;
+  // monitor being configured, if any. Only items settable by monitor/workspace are rendered
+  monitorId?: MonitorId;
 }
 
 /** Recursively collects { key: defaultValue } from all items in the definition tree. */
@@ -41,14 +50,40 @@ function collectDefaultValues(definitions: WidgetSettingsDeclarationList): Recor
   return map;
 }
 
-export function RenderBySettingsDeclaration({ definitions, values, onConfigChange }: Props) {
+/** Recursively keeps only the items configurable by monitor, dropping groups left empty. */
+function filterByMonitor(
+  definitions: WidgetSettingsDeclarationList,
+): WidgetSettingsDeclarationList {
+  return definitions.flatMap((def): WidgetConfigDefinition[] => {
+    if ("group" in def) {
+      const items = filterByMonitor(def.group.items);
+      return items.length > 0 ? [{ group: { ...def.group, items } }] : [];
+    }
+    return def.allowSetByMonitor || def.allowSetByWorkspace ? [def] : [];
+  });
+}
+
+export function RenderBySettingsDeclaration({
+  widgetId,
+  definitions,
+  values,
+  onConfigChange,
+  monitorId,
+}: Props) {
+  // defaults are collected from the full list, so dependencies on hidden items still resolve
   const defaultValues = useMemo(() => collectDefaultValues(definitions), [definitions]);
+  const visibleDefinitions = useMemo(
+    () => (monitorId ? filterByMonitor(definitions) : definitions),
+    [definitions, monitorId],
+  );
 
   return (
     <>
-      {definitions.map((definition, idx) => (
+      {visibleDefinitions.map((definition, idx) => (
         <WidgetConfigDefinition
           key={idx}
+          widgetId={widgetId}
+          monitorId={monitorId}
           definition={definition}
           values={values}
           defaultValues={defaultValues}
@@ -63,6 +98,8 @@ export function RenderBySettingsDeclaration({ definitions, values, onConfigChang
 // ================================================
 
 interface WidgetConfigDefinitionProps {
+  monitorId?: MonitorId;
+  widgetId: WidgetId;
   definition: WidgetConfigDefinition;
   values: Record<string, any>;
   defaultValues: Record<string, any>;
@@ -71,18 +108,30 @@ interface WidgetConfigDefinitionProps {
 }
 
 function WidgetConfigDefinition({
+  monitorId,
+  widgetId,
   definition,
   values,
   defaultValues,
   onConfigChange,
   nestLevel,
 }: WidgetConfigDefinitionProps) {
-  const content = renderContent(definition, values, defaultValues, onConfigChange, nestLevel);
+  const content = renderContent(
+    monitorId,
+    widgetId,
+    definition,
+    values,
+    defaultValues,
+    onConfigChange,
+    nestLevel,
+  );
 
   return nestLevel === 0 ? <SettingsGroup>{content}</SettingsGroup> : content;
 }
 
 function renderContent(
+  monitorId: MonitorId | undefined,
+  widgetId: WidgetId,
   definition: WidgetConfigDefinition,
   values: Record<string, any>,
   defaultValues: Record<string, any>,
@@ -96,6 +145,8 @@ function renderContent(
         {definition.group.items.map((item, idx) => (
           <WidgetConfigDefinition
             key={idx}
+            widgetId={widgetId}
+            monitorId={monitorId}
             definition={item}
             values={values}
             defaultValues={defaultValues}
@@ -110,6 +161,8 @@ function renderContent(
   // It's a setting item
   return (
     <WidgetSettingItemRenderer
+      widgetId={widgetId}
+      monitorId={monitorId}
       def={definition}
       values={values}
       defaultValues={defaultValues}
@@ -121,6 +174,8 @@ function renderContent(
 // ================================================
 
 interface WidgetSettingItemRendererProps {
+  monitorId?: MonitorId;
+  widgetId: WidgetId;
   def: WidgetSettingItem;
   values: Record<string, any>;
   defaultValues: Record<string, any>;
@@ -128,6 +183,8 @@ interface WidgetSettingItemRendererProps {
 }
 
 function WidgetSettingItemRenderer({
+  monitorId,
+  widgetId,
   def,
   values,
   defaultValues,
@@ -147,19 +204,69 @@ function WidgetSettingItemRenderer({
         label={<ResourceText text={def.label} />}
         tip={def.tip ? <ResourceText text={def.tip} /> : undefined}
         description={def.description ? <ResourceText text={def.description} /> : undefined}
-        action={<InputRenderer def={def} values={values} onConfigChange={onConfigChange} />}
+        action={
+          <InputRenderer
+            widgetId={widgetId}
+            def={def}
+            values={values}
+            onConfigChange={onConfigChange}
+          />
+        }
       />
+      {monitorId && def.allowSetByWorkspace && (
+        <WidgetWorkspaceOverrides
+          monitorId={monitorId}
+          widgetId={widgetId}
+          def={def}
+          values={values}
+        />
+      )}
     </ConfigProvider>
   );
 }
 
+interface WidgetWorkspaceOverridesProps {
+  monitorId: MonitorId;
+  widgetId: WidgetId;
+  def: WidgetSettingItem;
+  // values resolved for the monitor (root + monitor patch)
+  values: Record<string, any>;
+}
+
+function WidgetWorkspaceOverrides({ monitorId, widgetId, def, values }: WidgetWorkspaceOverridesProps) {
+  return (
+    <WorkspaceOverrides
+      monitorId={monitorId}
+      isOverridden={(workspaceId) =>
+        getWorkspaceWidgetConfig(monitorId, workspaceId, widgetId)?.[def.key] !== undefined}
+      renderInput={(workspaceId) => (
+        <InputRenderer
+          widgetId={widgetId}
+          def={def}
+          values={{ ...values, ...getWorkspaceWidgetConfig(monitorId, workspaceId, widgetId) }}
+          onConfigChange={(key, value) =>
+            patchWidgetWorkspaceConfig(monitorId, workspaceId, widgetId, { [key]: value })}
+        />
+      )}
+      onAdd={(workspaceId) => {
+        // starts from the monitor value, so adding an override changes nothing until edited
+        patchWidgetWorkspaceConfig(monitorId, workspaceId, widgetId, {
+          [def.key]: values[def.key] ?? def.defaultValue,
+        });
+      }}
+      onRemove={(workspaceId) => removeWidgetWorkspaceConfigKey(monitorId, workspaceId, widgetId, def.key)}
+    />
+  );
+}
+
 interface InputRenderer {
+  widgetId: WidgetId;
   def: WidgetSettingItem;
   values: Record<string, any>;
   onConfigChange: (key: string, value: any) => void;
 }
 
-function InputRenderer({ def, values, onConfigChange }: InputRenderer): ReactNode {
+function InputRenderer({ widgetId, def, values, onConfigChange }: InputRenderer): ReactNode {
   const commonProps = {
     value: values[def.key] ?? def.defaultValue,
     onChange: (value: any) => onConfigChange(def.key, value),
@@ -171,6 +278,27 @@ function InputRenderer({ def, values, onConfigChange }: InputRenderer): ReactNod
     }
 
     case "Select": {
+      if (def.source === WidgetSelectSource.Plugins) {
+        return (
+          <PluginSelect
+            target={widgetId}
+            value={commonProps.value}
+            onSelect={commonProps.onChange}
+          />
+        );
+      }
+
+      if (def.source === WidgetSelectSource.Wallpapers) {
+        return (
+          <WallpaperCollectionSelector
+            style={{ width: 200 }}
+            value={commonProps.value || null}
+            onChange={commonProps.onChange}
+            placeholder="-"
+          />
+        );
+      }
+
       if (def.subtype === WidgetSelectSubtype.Inline) {
         return (
           <Compact>

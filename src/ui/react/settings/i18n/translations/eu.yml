@@ -123,11 +123,6 @@ discord_banner:
     egon azken berrien berri.
   title: Sartu gure komunitatean
 extras:
-  backup_group: Hodeiko babeskopia
-  backup_last_sync: Azken sinkronizazioa
-  backup_never_synced: Inoiz sinkronizatuta
-  backup_sync: Sinkronizatu ezarpenak hodeiarekin
-  backup_sync_description: Egin automatikoki babeskopiak eta leheneratu ezarpenak hodeiaren bidez.
   clear_icons: Garbitu sistemaren ikonoak cachea
   clear_icons_tooltip: Berrabiarazi behar da widget guztietan erabat indarrean egon dadin
   discord_rpc: Discord presentzia aberatsa
@@ -198,7 +193,6 @@ header:
     plugin: Plakins
     resources: Baliabide
     security: Segurtasuna
-    session: Kontua
     shortcuts: Lasterbideak
     soundpack: Soinu paketeak
     specific_apps: Ezarpenak aplikazioaren arabera
@@ -206,8 +200,6 @@ header:
     virtual_desk: Mahaigain birtualak
     wallpaper: Horma-irudiak
     widget: Widgets
-home:
-  new_resources: Baliabide berriak
 inherit: Jarauntsi
 inProgress: Abian ...
 insert: Txertatu
@@ -375,6 +367,7 @@ wall:
   saturation: Saturazio
   seconds: bizkarbete
   select_collection: Hautatu Bilduma
+  show_paused_message: Erakutsi pausatutako mezua
   thumbnail_generation_complete: Miniaturak sortzea amaituta
   thumbnail_generation_finished: Miniaturak sortzea ondo amaitu da
   use_accent_color: Erabili horma-paperaren azentu kolorea
@@ -383,7 +376,6 @@ wall:
   wallpapers: Horma-irudiak
   wallpapers_and_collections: Horma-irudiak eta bildumak
   withOverlay: Gainjartzearekin
-  workspace_collections: Lan-esparruko bildumak
 weg:
   auto_hide: Ezkutatu automatikoa
   auto_hide_touch_disabled: Ezkutatze automatikoa ez dago erabilgarri ukipen-pantailako gailuetan
@@ -447,6 +439,7 @@ welcome:
     uztea; zure iritziak proiektua hazten eta hobetzen laguntzen du.
   title: Ongi etorri WinUIRev-ra!
 widget:
+  add_workspace_override: Gainidatzi laneko gune batean
   default_instance: Instantzia lehenetsia
   default_instance_hint: Beti aktibo, root widget-aren konfigurazioa erabiltzen du
   enable: Gaitu widget hau
@@ -454,6 +447,11 @@ widget:
   extra_instances: Instantzia gehigarriak
   instance: Instantzia
   instances: Makineria
+  remove_workspace_override: Kendu gainidaztea (monitoretik heredatu)
+  select_workspace: Hautatu lan-eremu bat
+  workspace_fallback_name: Mahaigaina {{0}}
+  workspace_overrides: Laneko eremuak gainidazten ditu
+  workspace_row: '{{0}} errenkada'
 wm:
   animations:
     duration: Animazioaren iraupena (MS)

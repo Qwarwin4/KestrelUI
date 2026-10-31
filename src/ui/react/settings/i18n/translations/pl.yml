@@ -125,13 +125,6 @@ discord_banner:
     udostępniaj motywy i bądź na bieżąco z najnowszymi wiadomościami.
   title: Dołącz do naszej społeczności
 extras:
-  backup_group: Kopia zapasowa w chmurze
-  backup_last_sync: Ostatnia synchronizacja
-  backup_never_synced: Nigdy nie synchronizowane
-  backup_sync: Synchronizuj ustawienia z chmurą
-  backup_sync_description: >-
-    Automatycznie twórz kopie zapasowe i przywracaj ustawienia za pośrednictwem
-    chmury.
   clear_icons: Wyczyść pamięć podręczną ikon systemowych
   clear_icons_tooltip: >-
     Do poprawnego uruchomienia wszystkich widżetów może być wymagane ponowne
@@ -204,7 +197,6 @@ header:
     plugin: Wtyczki
     resources: Zasoby
     security: Bezpieczeństwo
-    session: Konto
     shortcuts: Skróty klawiszowe
     soundpack: Pakiety dźwiękowe
     specific_apps: Ustawienia według aplikacji
@@ -212,8 +204,6 @@ header:
     virtual_desk: Wirtualne komputery stacjonarne
     wallpaper: Tapety
     widget: Widżety
-home:
-  new_resources: Nowe zasoby
 inherit: Dziedziczyć
 inProgress: W trakcie...
 insert: Wstawić
@@ -383,6 +373,7 @@ wall:
   saturation: Nasycenie
   seconds: sekund
   select_collection: Wybierz opcję Kolekcja
+  show_paused_message: Pokaż wstrzymaną wiadomość
   thumbnail_generation_complete: Generowanie miniatur zostało ukończone
   thumbnail_generation_finished: Generowanie miniatury zakończyło się pomyślnie
   use_accent_color: Użyj koloru akcentującego tapetę
@@ -391,7 +382,6 @@ wall:
   wallpapers: Tapety
   wallpapers_and_collections: Tapety i kolekcje
   withOverlay: Z nakładką
-  workspace_collections: Kolekcje obszaru roboczego
 weg:
   auto_hide: Automatyczne ukrywanie
   auto_hide_touch_disabled: >-
@@ -456,6 +446,7 @@ welcome:
     recenzji w sklepie — Twoja opinia pomoże rozwijać i ulepszać projekt.
   title: Witamy w interfejsie WinUIRev!
 widget:
+  add_workspace_override: Zastąp w obszarze roboczym
   default_instance: Domyślna instancja
   default_instance_hint: Zawsze aktywny, korzysta z konfiguracji widgetu głównego
   enable: Włącz ten widżet
@@ -463,6 +454,11 @@ widget:
   extra_instances: Dodatkowe instancje
   instance: Przykład
   instances: Wystąpienia
+  remove_workspace_override: Usuń zastąpienie (odziedzicz z monitora)
+  select_workspace: Wybierz obszar roboczy
+  workspace_fallback_name: Komputer stacjonarny {{0}}
+  workspace_overrides: Zastąpienia obszaru roboczego
+  workspace_row: Wiersz {{0}}
 wm:
   animations:
     duration: Czas trwania animacji (MS)

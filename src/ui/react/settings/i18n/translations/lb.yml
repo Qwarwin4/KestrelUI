@@ -124,11 +124,6 @@ discord_banner:
     bleift um neisten Neiegkeeten.
   title: Maacht mat bei eiser Gemeinschaft
 extras:
-  backup_group: Cloud Backupsatellit
-  backup_last_sync: Läscht Synchronisatioun
-  backup_never_synced: Ni synchroniséiert
-  backup_sync: Synchroniséiert Astellunge mat Wollek
-  backup_sync_description: Automatesch Backup a restauréiert Är Astellungen iwwer d'Wollek.
   clear_icons: Kloer System Symboler Cache
   clear_icons_tooltip: E Restart konnt noutwendeg sinn fir ganz wéi all Widgets ze maachen
   discord_rpc: Discord räich Präsenz
@@ -198,7 +193,6 @@ header:
     plugin: Plugins
     resources: Ressourcen
     security: Sécherheet
-    session: Kont
     shortcuts: Ofkierpsen
     soundpack: Tounpacken
     specific_apps: Astellunge per Uwendung
@@ -206,8 +200,6 @@ header:
     virtual_desk: Virtuell Desktops
     wallpaper: Wallpapers
     widget: Widgets
-home:
-  new_resources: Nei Insidder
 inherit: Ontherrit
 inProgress: A Beaarbechtung...
 insert: INor andafen
@@ -375,6 +367,7 @@ wall:
   saturation: Saturatioun
   seconds: Sekonnen
   select_collection: Wielt Kollektioun
+  show_paused_message: Pauséiert Message weisen
   thumbnail_generation_complete: Thumbnail Generatioun Komplett
   thumbnail_generation_finished: Thumbnail Generatioun ass erfollegräich ofgeschloss
   use_accent_color: Benotzt Tapeten Akzentfaarf
@@ -383,7 +376,6 @@ wall:
   wallpapers: Tapeten
   wallpapers_and_collections: Tapeten & Sammlungen
   withOverlay: Mat Overlay
-  workspace_collections: Aarbechtsberäich Kollektiounen
 weg:
   auto_hide: Automatesch
   auto_hide_touch_disabled: Auto verstoppen ass net op Touchscreen Geräter verfügbar
@@ -447,6 +439,7 @@ welcome:
     verbesseren.
   title: Wëllkomm op WinUIRev!
 widget:
+  add_workspace_override: Iwwerschreiden op engem Aarbechtsberäich
   default_instance: Standard Instanz
   default_instance_hint: Ëmmer aktiv, benotzt d'Root Widget Configuratioun
   enable: Aktivéiert dëse Widget
@@ -454,6 +447,11 @@ widget:
   extra_instances: Extra Instanzen
   instance: Instanz
   instances: Instanzen
+  remove_workspace_override: Ewechzehuelen iwwerdribblen (ierf vum Monitor)
+  select_workspace: Wielt eng Aarbechtsberäich
+  workspace_fallback_name: Desktop {{0}}
+  workspace_overrides: Aarbechtsberäich iwwerschreift
+  workspace_row: Zeil {{0}}
 wm:
   animations:
     duration: Animatioun Dauer (MS)

@@ -125,11 +125,6 @@ discord_banner:
     oo la soco wararkii ugu dambeeyay
   title: Ku Soo Biir Bulshadeena
 extras:
-  backup_group: Cloud Backup
-  backup_last_sync: Isku xidhkii u dambeeyay
-  backup_never_synced: Waligaa lama isku dhejin
-  backup_sync: Isku hagaaji dejinta daruuraha
-  backup_sync_description: Si toos ah u soo celi oo u soo celi dejimahaaga daruuraha.
   clear_icons: Calaamadaha Calaamadaha Camis Cast
   clear_icons_tooltip: >-
     Dib-u-bilaabi kara ayaa loo baahan karaa inuu si buuxda u dhaqan geliyo
@@ -203,7 +198,6 @@ header:
     plugin: Pluins
     resources: Kheyraadka
     security: Amniga
-    session: Xisaab
     shortcuts: Gaaban
     soundpack: Xirmooyinka dhawaaqa
     specific_apps: Dejinta Codsi
@@ -211,8 +205,6 @@ header:
     virtual_desk: Desktops Virtual
     wallpaper: Darf-biyoodka
     widget: Widgetts
-home:
-  new_resources: Kheyraadka cusub
 inherit: Dhaxlid
 inProgress: Horusocod ...
 insert: Gelin
@@ -382,6 +374,7 @@ wall:
   saturation: SATION
   seconds: sekan
   select_collection: Dooro Ururinta
+  show_paused_message: Muuji fariinta hakad
   thumbnail_generation_complete: Jiilka thumbnail oo Dhamaystiran
   thumbnail_generation_finished: Jiilkii thumbnail waxa uu u dhamaaday si guul leh
   use_accent_color: Isticmaal midabka lahjadda gidaarka
@@ -390,7 +383,6 @@ wall:
   wallpapers: Wallpapers
   wallpapers_and_collections: Warqadaha & Ururinta
   withOverlay: Iyadoo lagu daboolay
-  workspace_collections: Ururinta Goobta Shaqada
 weg:
   auto_hide: Auto qaraha
   auto_hide_touch_disabled: Qarinta tooska ah lagama heli karo aaladaha shaashadda taabashada
@@ -455,6 +447,7 @@ welcome:
     oo horumaro.
   title: Ku soo dhawoow WinUIRev!
 widget:
+  add_workspace_override: Ka gudub goobta shaqada
   default_instance: Tusaale ahaan
   default_instance_hint: Had iyo jeer fir fircoon, isticmaal nidaamka xididka widget-ka
   enable: U oggolow widget-kaan
@@ -462,6 +455,11 @@ widget:
   extra_instances: Tusaalooyinka Dheeraadka ah
   instance: Tusaale
   instances: Tusaca
+  remove_workspace_override: Ka saar xad-gudubka (ka dhaxalka kormeeraha)
+  select_workspace: Dooro goob shaqo
+  workspace_fallback_name: Desktop {{0}}
+  workspace_overrides: Goobta shaqadu way dhaaftay
+  workspace_row: Saf {{0}}
 wm:
   animations:
     duration: Duration animation (MS)

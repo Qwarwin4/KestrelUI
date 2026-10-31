@@ -121,13 +121,6 @@ discord_banner:
     করুন এবং সর্বশেষ খবরের সাথে আপ টু ডেট থাকুন৷
   title: আমাদের সম্প্রদায়ে যোগদান করুন
 extras:
-  backup_group: ক্লাউড ব্যাকআপ
-  backup_last_sync: শেষ সিঙ্ক
-  backup_never_synced: কখনই সিঙ্ক করা হয়নি
-  backup_sync: ক্লাউডে সিঙ্ক সেটিংস
-  backup_sync_description: >-
-    স্বয়ংক্রিয়ভাবে ব্যাক আপ করুন এবং ক্লাউডের মাধ্যমে আপনার সেটিংস পুনরুদ্ধার
-    করুন।
   clear_icons: ক্লিয়ার সিস্টেম আইকন ক্যাশে
   clear_icons_tooltip: >-
     সমস্ত উইজেটগুলিতে পুরোপুরি কার্যকর করার জন্য একটি পুনঃসূচনা প্রয়োজন হতে
@@ -198,7 +191,6 @@ header:
     plugin: প্লাগইন
     resources: সংস্থান
     security: নিরাপত্তা
-    session: হিসাব
     shortcuts: শর্টকাটস
     soundpack: সাউন্ড প্যাকস
     specific_apps: আবেদন দ্বারা সেটিংস
@@ -206,8 +198,6 @@ header:
     virtual_desk: ভার্চুয়াল ডেস্কটপস
     wallpaper: ওয়ালপেপার
     widget: উইজেটস
-home:
-  new_resources: নতুন সংস্থান
 inherit: উত্তরাধিকারী
 inProgress: চলমান...
 insert: .োকান
@@ -372,6 +362,7 @@ wall:
   saturation: স্যাচুরেশন
   seconds: সেকেন্ড
   select_collection: সংগ্রহ নির্বাচন করুন
+  show_paused_message: বিরতি দেওয়া বার্তা দেখান
   thumbnail_generation_complete: থাম্বনেইল জেনারেশন সম্পূর্ণ
   thumbnail_generation_finished: থাম্বনেইল জেনারেশন সফলভাবে শেষ হয়েছে
   use_accent_color: ওয়ালপেপার অ্যাকসেন্ট রঙ ব্যবহার করুন
@@ -380,7 +371,6 @@ wall:
   wallpapers: ওয়ালপেপার
   wallpapers_and_collections: ওয়ালপেপার এবং সংগ্রহ
   withOverlay: ওভারলে সহ
-  workspace_collections: ওয়ার্কস্পেস সংগ্রহ
 weg:
   auto_hide: স্বয়ং চামড়া
   auto_hide_touch_disabled: টাচ স্ক্রীন ডিভাইসে স্বয়ংক্রিয় লুকান উপলব্ধ নয়
@@ -445,6 +435,7 @@ welcome:
     করে।
   title: WinUIRev তে স্বাগতম!
 widget:
+  add_workspace_override: কর্মক্ষেত্রে ওভাররাইড করুন
   default_instance: ডিফল্ট উদাহরণ
   default_instance_hint: সর্বদা সক্রিয়, রুট উইজেট কনফিগারেশন ব্যবহার করে
   enable: এই উইজেট সক্ষম করুন
@@ -452,6 +443,11 @@ widget:
   extra_instances: অতিরিক্ত উদাহরণ
   instance: দৃষ্টান্ত
   instances: উদাহরণ
+  remove_workspace_override: ওভাররাইড সরান (মনিটর থেকে উত্তরাধিকারী)
+  select_workspace: একটি কর্মক্ষেত্র নির্বাচন করুন
+  workspace_fallback_name: ডেস্কটপ {{0}}
+  workspace_overrides: ওয়ার্কস্পেস ওভাররাইড করে
+  workspace_row: সারি {{0}}
 wm:
   animations:
     duration: অ্যানিমেশন সময়কাল (এমএস)

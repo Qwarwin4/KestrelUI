@@ -105,11 +105,6 @@ discord_banner:
   message: 与其他 WinUIRev 用户联系、获取帮助、分享主题并了解最新消息。
   title: 加入我们的社区
 extras:
-  backup_group: 云备份
-  backup_last_sync: 上次同步
-  backup_never_synced: 从未同步过
-  backup_sync: 将设置同步到云端
-  backup_sync_description: 通过云端自动备份和恢复您的设置。
   clear_icons: 清除系统图标缓存
   clear_icons_tooltip: 可能需要重启才能在所有部件上完全生效
   discord_rpc: Discord 活动状态
@@ -164,7 +159,6 @@ header:
     plugin: 插件
     resources: 资源
     security: 安全
-    session: 账户
     shortcuts: 快捷键
     soundpack: 音效包
     specific_apps: 按应用设置
@@ -172,8 +166,6 @@ header:
     virtual_desk: 虚拟桌面
     wallpaper: 壁纸
     widget: 部件
-home:
-  new_resources: 新资源
 inherit: 继承
 inProgress: 进行中…
 insert: 插入
@@ -330,6 +322,7 @@ wall:
   saturation: 饱和度
   seconds: 秒
   select_collection: 选择集合
+  show_paused_message: 显示暂停的消息
   thumbnail_generation_complete: 缩略图生成完成
   thumbnail_generation_finished: 缩略图已成功生成
   use_accent_color: 使用壁纸强调色
@@ -338,7 +331,6 @@ wall:
   wallpapers: 壁纸
   wallpapers_and_collections: 壁纸和集合
   withOverlay: 启用叠加层
-  workspace_collections: 工作区集合
 weg:
   auto_hide: 自动隐藏
   auto_hide_touch_disabled: 触摸屏设备不支持自动隐藏
@@ -396,6 +388,7 @@ welcome:
   review: 如果您喜欢使用 WinUIRev，欢迎在商店留下评价——您的反馈有助于项目成长和改进。
   title: 欢迎使用 WinUIRev
 widget:
+  add_workspace_override: 覆盖工作区
   default_instance: 默认实例
   default_instance_hint: 始终处于活动状态，使用根部件配置
   enable: 启用此部件
@@ -403,6 +396,11 @@ widget:
   extra_instances: 额外实例
   instance: 实例
   instances: 实例
+  remove_workspace_override: 删除覆盖（从监视器继承）
+  select_workspace: 选择一个工作区
+  workspace_fallback_name: 桌面版 {{0}}
+  workspace_overrides: 工作区覆盖
+  workspace_row: 第 {{0}} 行
 wm:
   animations:
     duration: 动画时长（毫秒）

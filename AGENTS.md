@@ -20,12 +20,24 @@ Translations:
 
 - DO NOT run `npm run translate` during active development.
 - Add translations manually while iterating; run the translate command only right before a final commit.
+- NEVER touch non-English i18n files (no adding, editing, translating or deleting keys). Only edit `en` entries /
+  `en.yml`; every other language is handled exclusively by `npm run translate`.
 
 Rust locking order (avoid deadlocks):
 
 1. CLI locks
 2. DATA locks
 3. EVENT locks
+
+Rust mutexes:
+
+- ALWAYS use `TracedMutex` (`src/background/utils/lock_free/traced_mutex.rs`, imported as
+  `crate::utils::lock_free::TracedMutex`) in the main binary. Never use `parking_lot::Mutex` or `std::sync::Mutex`. It
+  panics with the full chain on deadlocks (same-thread relock or cross-thread cycles) and after a hard timeout on hangs,
+  instead of freezing the app.
+- Never hold a guard across an unbounded wait (dialogs, user input, network): copy what you need, release it, and lock
+  again afterwards; the hard timeout would crash the app. Serialize such waits with a queue/channel instead.
+- Never hold a `TracedMutex` guard across an `.await`.
 
 Backend architecture rules:
 

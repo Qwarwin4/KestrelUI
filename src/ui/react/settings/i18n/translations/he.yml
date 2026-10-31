@@ -117,11 +117,6 @@ discord_banner:
     מעודכן בחדשות האחרונות.
   title: הצטרף לקהילה שלנו
 extras:
-  backup_group: גיבוי בענן
-  backup_last_sync: סנכרון אחרון
-  backup_never_synced: מעולם לא סונכרן
-  backup_sync: סנכרון הגדרות לענן
-  backup_sync_description: גבה ושחזר את ההגדרות שלך באופן אוטומטי דרך הענן.
   clear_icons: מטמון סמלי מערכת נקה
   clear_icons_tooltip: ניתן להידרש להפעלה מחדש כדי להיכנס לתוקף באופן מלא על כל הווידג'טים
   discord_rpc: נוכחות עשירה בדיסקורד
@@ -188,7 +183,6 @@ header:
     plugin: תוספים
     resources: אֶמְצָעִי
     security: בִּטָחוֹן
-    session: חֶשְׁבּוֹן
     shortcuts: קיצורי דרך
     soundpack: חבילות סאונד
     specific_apps: הגדרות לפי יישום
@@ -196,8 +190,6 @@ header:
     virtual_desk: שולחנות עבודה וירטואליים
     wallpaper: טפטים
     widget: ווידג'טים
-home:
-  new_resources: משאבים חדשים
 inherit: ירושה
 inProgress: בתהליך...
 insert: הכנס
@@ -356,6 +348,7 @@ wall:
   saturation: רִוּוּי
   seconds: שניות
   select_collection: בחר אוסף
+  show_paused_message: הצג הודעה מושהית
   thumbnail_generation_complete: יצירת תמונות ממוזערות הושלמה
   thumbnail_generation_finished: יצירת התמונות הממוזערות הסתיים בהצלחה
   use_accent_color: השתמש בצבע מבטא טפט
@@ -364,7 +357,6 @@ wall:
   wallpapers: טפטים
   wallpapers_and_collections: טפטים ואוספים
   withOverlay: עם שכבת -על
-  workspace_collections: אוספי סביבת עבודה
 weg:
   auto_hide: הסתר אוטומטי
   auto_hide_touch_disabled: הסתרה אוטומטית אינה זמינה במכשירי מסך מגע
@@ -427,6 +419,7 @@ welcome:
     שלך עוזר לפרויקט לצמוח ולהשתפר.
   title: ברוכים הבאים לWinUIRev!
 widget:
+  add_workspace_override: ביטול על סביבת עבודה
   default_instance: מופע ברירת מחדל
   default_instance_hint: פעיל תמיד, משתמש בתצורת ה-Widget השורש
   enable: אפשר יישומון זה
@@ -434,6 +427,11 @@ widget:
   extra_instances: מופעים נוספים
   instance: דוּגמָה
   instances: מקרים
+  remove_workspace_override: הסר עקיפה (ירושה מהצג)
+  select_workspace: בחר סביבת עבודה
+  workspace_fallback_name: שולחן עבודה {{0}}
+  workspace_overrides: סביבת עבודה עוקפת
+  workspace_row: שורה {{0}}
 wm:
   animations:
     duration: משך אנימציה (MS)

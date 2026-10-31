@@ -120,11 +120,6 @@ discord_banner:
     និងទទួលបានព័ត៌មានថ្មីៗចុងក្រោយបង្អស់។
   title: ចូលរួមសហគមន៍របស់យើង។
 extras:
-  backup_group: ការបម្រុងទុកតាមពពក
-  backup_last_sync: សមកាលកម្មចុងក្រោយ
-  backup_never_synced: មិនដែលធ្វើសមកាលកម្មទេ។
-  backup_sync: ធ្វើសមកាលកម្មការកំណត់ទៅពពក
-  backup_sync_description: បម្រុងទុក និងស្ដារការកំណត់របស់អ្នកឡើងវិញដោយស្វ័យប្រវត្តិតាមរយៈពពក។
   clear_icons: សម្អាតឃ្លាំងសម្ងាត់ប្រព័ន្ធ
   clear_icons_tooltip: >-
     ការចាប់ផ្តើមឡើងវិញអាចត្រូវបានតម្រូវឱ្យមានប្រសិទ្ធិភាពពេញលេញលើធាតុក្រាហ្វិកទាំងអស់
@@ -196,7 +191,6 @@ header:
     plugin: រអារ
     resources: ធនធាន
     security: សន្តិសុខ
-    session: គណនី
     shortcuts: ផ្លូវកាត់
     soundpack: កញ្ចប់សំលេង
     specific_apps: ការកំណត់តាមពាក្យសុំ
@@ -204,8 +198,6 @@ header:
     virtual_desk: ផ្ទៃតុនិម្មិត
     wallpaper: ផាបផេច
     widget: ធាតុក្រាហ្វិក
-home:
-  new_resources: ធនធានថ្មី
 inherit: តតយលមរតក
 inProgress: កំពុង​ដំណើរការ...
 insert: រចក
@@ -370,6 +362,7 @@ wall:
   saturation: ផាបថបតរ
   seconds: វិនាទី
   select_collection: ជ្រើសរើសបណ្តុំ
+  show_paused_message: បង្ហាញសារដែលបានផ្អាក
   thumbnail_generation_complete: ការបង្កើតរូបភាពតូចបានបញ្ចប់
   thumbnail_generation_finished: ការបង្កើតរូបភាពតូចបានបញ្ចប់ដោយជោគជ័យ
   use_accent_color: ប្រើពណ៌សង្កត់សំឡេងផ្ទាំងរូបភាព
@@ -378,7 +371,6 @@ wall:
   wallpapers: ផ្ទាំងរូបភាព
   wallpapers_and_collections: ផ្ទាំងរូបភាព និងបណ្តុំ
   withOverlay: ជាមួយនឹងការត្រួតលើគ្នា
-  workspace_collections: ការប្រមូលកន្លែងធ្វើការ
 weg:
   auto_hide: លាក់ដោយស្វ័យប្រវត្តិ
   auto_hide_touch_disabled: ការលាក់ដោយស្វ័យប្រវត្តិមិនមាននៅលើឧបករណ៍អេក្រង់ប៉ះទេ។
@@ -443,6 +435,7 @@ welcome:
     មតិកែលម្អរបស់អ្នកជួយឱ្យគម្រោងរីកចម្រើន និងប្រសើរឡើង។
   title: សូមស្វាគមន៍មកកាន់ WinUIRev!
 widget:
+  add_workspace_override: បដិសេធលើកន្លែងធ្វើការ
   default_instance: គំរូលំនាំដើម
   default_instance_hint: សកម្មជានិច្ច ប្រើការកំណត់រចនាសម្ព័ន្ធធាតុក្រាហ្វិកឫស
   enable: បើកដំណើរការធាតុក្រាហ្វិកនេះ
@@ -450,6 +443,11 @@ widget:
   extra_instances: ករណីបន្ថែម
   instance: ឧ
   instances: ករណីបុម
+  remove_workspace_override: លុបការបដិសេធ (ទទួលមរតកពីម៉ូនីទ័រ)
+  select_workspace: ជ្រើសរើសកន្លែងធ្វើការ
+  workspace_fallback_name: កុំព្យូទ័រលើតុ {{0}}
+  workspace_overrides: កន្លែងធ្វើការបដិសេធ
+  workspace_row: ជួរ​ដេក {{0}}
 wm:
   animations:
     duration: រយៈពេលចលនា (MS)

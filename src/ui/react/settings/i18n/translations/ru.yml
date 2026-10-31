@@ -396,6 +396,7 @@ wall:
   saturation: Насыщенность
   seconds: секунды
   select_collection: Выбрать коллекцию
+  show_paused_message: Показать приостановленное сообщение
   thumbnail_generation_complete: Создание миниатюр завершено
   thumbnail_generation_finished: Создание миниатюр успешно завершено
   use_accent_color: Используйте акцентный цвет обоев
@@ -404,7 +405,6 @@ wall:
   wallpapers: Обои
   wallpapers_and_collections: Обои и коллекции
   withOverlay: С наложением
-  workspace_collections: Коллекции рабочих пространств
 weg:
   auto_hide: Автоскрытие
   auto_hide_touch_disabled: Автоматическое скрытие недоступно на устройствах с сенсорным экраном.
@@ -468,6 +468,7 @@ welcome:
     отзыв поможет проекту расти и совершенствоваться.
   title: Добро пожаловать в WinUIRev!
 widget:
+  add_workspace_override: Переопределить в рабочей области
   default_instance: Экземпляр по умолчанию
   default_instance_hint: Всегда активен, использует конфигурацию корневого виджета
   enable: Включите этот виджет
@@ -475,6 +476,11 @@ widget:
   extra_instances: Дополнительные экземпляры
   instance: Экземпляр
   instances: Экземпляры
+  remove_workspace_override: Удалить переопределение (наследовать от монитора)
+  select_workspace: Выберите рабочее пространство
+  workspace_fallback_name: Рабочий стол {{0}}
+  workspace_overrides: Переопределения рабочей области
+  workspace_row: Строка {{0}}
 wm:
   animations:
     duration: Продолжительность анимации (мс)

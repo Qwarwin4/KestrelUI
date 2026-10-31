@@ -124,11 +124,6 @@ discord_banner:
     hoogte van die jongste nuus.
   title: Sluit aan by ons gemeenskap
 extras:
-  backup_group: Wolk-rugsteun
-  backup_last_sync: Laaste sinkronisering
-  backup_never_synced: Nooit gesinkroniseer nie
-  backup_sync: Sinkroniseer instellings met wolk
-  backup_sync_description: Rugsteun outomaties en herstel jou instellings via die wolk.
   clear_icons: Maak stelselikone kas uit
   clear_icons_tooltip: '''N Herbegin kan nodig wees om alle widgets ten volle in werking te stel'
   discord_rpc: Onenigheid ryke teenwoordigheid
@@ -197,7 +192,6 @@ header:
     plugin: Plugins
     resources: Hulpbronne
     security: Sekuriteit
-    session: Rekening
     shortcuts: Kortpaaie
     soundpack: Klankpakkies
     specific_apps: Instellings volgens aansoek
@@ -205,8 +199,6 @@ header:
     virtual_desk: Virtuele tafelrekenaars
     wallpaper: Agtergronde
     widget: Widgets
-home:
-  new_resources: Nuwe hulpbronne
 inherit: Erf
 inProgress: Aan die gang ...
 insert: Invoeg
@@ -374,6 +366,7 @@ wall:
   saturation: Versadiging
   seconds: sekondes
   select_collection: Kies Versameling
+  show_paused_message: Wys onderbreekte boodskap
   thumbnail_generation_complete: Kleinkiekie-generasie voltooi
   thumbnail_generation_finished: Kleinkiekiegenerering is suksesvol voltooi
   use_accent_color: Gebruik plakpapier aksentkleur
@@ -382,7 +375,6 @@ wall:
   wallpapers: Wallpapers
   wallpapers_and_collections: Agtergronde en versamelings
   withOverlay: Met oorleg
-  workspace_collections: Werkspasie Versamelings
 weg:
   auto_hide: Outo -vel
   auto_hide_touch_disabled: Outo-versteek is nie op raakskermtoestelle beskikbaar nie
@@ -445,6 +437,7 @@ welcome:
     winkel te gee - jou terugvoer help die projek om te groei en te verbeter.
   title: Welkom by WinUIRev!
 widget:
+  add_workspace_override: Ignoreer op 'n werkspasie
   default_instance: Verstek instansie
   default_instance_hint: Altyd aktief, gebruik die wortellegstukopstelling
   enable: Aktiveer hierdie widget
@@ -452,6 +445,11 @@ widget:
   extra_instances: Ekstra gevalle
   instance: Geval
   instances: Instansies
+  remove_workspace_override: Verwyder ignorering (erf van monitor)
+  select_workspace: Kies 'n werkspasie
+  workspace_fallback_name: Werkskerm {{0}}
+  workspace_overrides: Werkspasie ignoreer
+  workspace_row: Ry {{0}}
 wm:
   animations:
     duration: Animasie -duur (MS)

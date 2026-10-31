@@ -121,11 +121,6 @@ discord_banner:
     partagez des thèmes et restez informé des dernières nouvelles.
   title: Rejoignez notre communauté
 extras:
-  backup_group: Sauvegarde dans le cloud
-  backup_last_sync: Dernière synchronisation
-  backup_never_synced: Jamais synchronisé
-  backup_sync: Synchroniser les paramètres avec le cloud
-  backup_sync_description: Sauvegardez et restaurez automatiquement vos paramètres via le cloud.
   clear_icons: Effacer le cache des icônes du système
   clear_icons_tooltip: >-
     Un redémarrage peut être nécessaire pour que cela prenne effet sur tous les
@@ -200,7 +195,6 @@ header:
     plugin: Plugins
     resources: Ressources
     security: Sécurité
-    session: Compte
     shortcuts: Raccourcis
     soundpack: Paquets de sons
     specific_apps: Paramètres par application
@@ -208,8 +202,6 @@ header:
     virtual_desk: Bureaux virtuels
     wallpaper: Fonds d'écran
     widget: Widgets
-home:
-  new_resources: Nouvelles ressources
 inherit: Hériter
 inProgress: En cours...
 insert: Insérer
@@ -382,6 +374,7 @@ wall:
   saturation: Saturation
   seconds: secondes
   select_collection: Sélectionnez une collection
+  show_paused_message: Afficher le message en pause
   thumbnail_generation_complete: Génération de vignettes terminée
   thumbnail_generation_finished: La génération des vignettes s'est terminée avec succès
   use_accent_color: Utiliser la couleur d’accent du papier peint
@@ -390,7 +383,6 @@ wall:
   wallpapers: Fonds d'écran
   wallpapers_and_collections: Fonds d'écran et collections
   withOverlay: Avec recouvrement
-  workspace_collections: Collections d'espaces de travail
 weg:
   auto_hide: Masquage automatique
   auto_hide_touch_disabled: >-
@@ -458,6 +450,7 @@ welcome:
     vos commentaires aident le projet à se développer et à s'améliorer.
   title: "Bienvenue dans l'interface utilisateur de WinUIRev\_!"
 widget:
+  add_workspace_override: Remplacer sur un espace de travail
   default_instance: Instance par défaut
   default_instance_hint: Toujours actif, utilise la configuration du widget racine
   enable: Activer ce widget
@@ -465,6 +458,11 @@ widget:
   extra_instances: Instances supplémentaires
   instance: Exemple
   instances: Instances
+  remove_workspace_override: Supprimer le remplacement (hériter du moniteur)
+  select_workspace: Sélectionnez un espace de travail
+  workspace_fallback_name: Ordinateur de bureau {{0}}
+  workspace_overrides: Remplacements de l'espace de travail
+  workspace_row: "Ligne\_{{0}}"
 wm:
   animations:
     duration: Durée d'animation (MS)

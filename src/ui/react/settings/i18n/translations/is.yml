@@ -123,11 +123,6 @@ discord_banner:
     nýjustu fréttum.
   title: Skráðu þig í samfélag okkar
 extras:
-  backup_group: Cloud Backup
-  backup_last_sync: Síðasta samstilling
-  backup_never_synced: Aldrei samstillt
-  backup_sync: Samstilla stillingar við ský
-  backup_sync_description: Afritaðu sjálfkrafa og endurheimtu stillingarnar þínar í gegnum skýið.
   clear_icons: Hreinsa kerfistákn skyndiminni
   clear_icons_tooltip: Endurræsing gæti verið nauðsynleg til að taka gildi að fullu á allar búnaðir
   discord_rpc: Ósætti rík nærvera
@@ -196,7 +191,6 @@ header:
     plugin: Viðbætur
     resources: Auðlindir
     security: Öryggi
-    session: Reikningur
     shortcuts: Flýtileiðir
     soundpack: Hljóðpakkar
     specific_apps: Stillingar eftir umsókn
@@ -204,8 +198,6 @@ header:
     virtual_desk: Sýndarskjáborð
     wallpaper: Veggfóður
     widget: Búnaður
-home:
-  new_resources: Ný úrræði
 inherit: Erfa
 inProgress: Í vinnslu...
 insert: Settu inn
@@ -368,6 +360,7 @@ wall:
   saturation: Mettun
   seconds: sekúndur
   select_collection: Veldu Safn
+  show_paused_message: Sýna hlé á skeyti
   thumbnail_generation_complete: Smámyndagerð lokið
   thumbnail_generation_finished: Smámyndagerð hefur lokið með góðum árangri
   use_accent_color: Notaðu veggfóður hreim lit
@@ -376,7 +369,6 @@ wall:
   wallpapers: Veggfóður
   wallpapers_and_collections: Veggfóður og söfn
   withOverlay: Með yfirlagi
-  workspace_collections: Vinnusöfn
 weg:
   auto_hide: Sjálfvirk fela
   auto_hide_touch_disabled: Sjálfvirk fela er ekki í boði á snertiskjátækjum
@@ -440,6 +432,7 @@ welcome:
     umsögn um verslunina - athugasemdir þínar hjálpa verkefninu að vaxa og bæta.
   title: Velkomin í WinUIRev HÍ!
 widget:
+  add_workspace_override: Hneka á vinnusvæði
   default_instance: Sjálfgefið tilvik
   default_instance_hint: Alltaf virk, notar stillingar rótgræjunnar
   enable: Virkja þennan búnað
@@ -447,6 +440,11 @@ widget:
   extra_instances: Aukatilvik
   instance: Dæmi
   instances: Dæmi
+  remove_workspace_override: Fjarlægja hnekkt (erfa af skjá)
+  select_workspace: Veldu vinnusvæði
+  workspace_fallback_name: Skrifborð {{0}}
+  workspace_overrides: Vinnusvæði hnekkir
+  workspace_row: Röð {{0}}
 wm:
   animations:
     duration: Lengd hreyfimynda (MS)

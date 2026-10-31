@@ -124,11 +124,6 @@ discord_banner:
     dan ikuti terus berita terkini.
   title: Bergabunglah dengan Komunitas kami
 extras:
-  backup_group: Cadangan Awan
-  backup_last_sync: Sinkronisasi terakhir
-  backup_never_synced: Tidak pernah disinkronkan
-  backup_sync: Sinkronkan pengaturan ke cloud
-  backup_sync_description: Cadangkan dan pulihkan pengaturan Anda secara otomatis melalui cloud.
   clear_icons: Menghapus Cache Ikon Sistem
   clear_icons_tooltip: >-
     Pengaktifan ulang mungkin diperlukan untuk menerapkan efek sepenuhnya pada
@@ -201,7 +196,6 @@ header:
     plugin: Plugin
     resources: Sumber daya
     security: Keamanan
-    session: Akun
     shortcuts: Pintasan
     soundpack: Paket Suara
     specific_apps: Pengaturan berdasarkan Aplikasi
@@ -209,8 +203,6 @@ header:
     virtual_desk: Desktop Virtual
     wallpaper: Wallpaper
     widget: Widget
-home:
-  new_resources: Sumber Daya Baru
 inherit: Mewarisi
 inProgress: Sedang berlangsung...
 insert: Menyisipkan
@@ -378,6 +370,7 @@ wall:
   saturation: Kejenuhan
   seconds: detik
   select_collection: Pilih Koleksi
+  show_paused_message: Tampilkan pesan yang dijeda
   thumbnail_generation_complete: Pembuatan Gambar Kecil Selesai
   thumbnail_generation_finished: Pembuatan thumbnail telah selesai dengan sukses
   use_accent_color: Gunakan warna aksen wallpaper
@@ -386,7 +379,6 @@ wall:
   wallpapers: Wallpaper
   wallpapers_and_collections: Wallpaper & Koleksi
   withOverlay: Dengan Overlay
-  workspace_collections: Koleksi Ruang Kerja
 weg:
   auto_hide: Sembunyi otomatis
   auto_hide_touch_disabled: Sembunyikan otomatis tidak tersedia pada perangkat layar sentuh
@@ -450,6 +442,7 @@ welcome:
     ulasan di toko — masukan Anda membantu proyek tumbuh dan meningkat.
   title: Selamat datang di WinUIRev!
 widget:
+  add_workspace_override: Ganti di ruang kerja
   default_instance: Mesin Virtual Bawaan
   default_instance_hint: Selalu aktif, menggunakan konfigurasi widget root
   enable: Aktifkan widget ini
@@ -457,6 +450,11 @@ widget:
   extra_instances: Instans Ekstra
   instance: Contoh
   instances: Contoh
+  remove_workspace_override: Hapus override (mewarisi dari monitor)
+  select_workspace: Pilih ruang kerja
+  workspace_fallback_name: Desktop {{0}}
+  workspace_overrides: Penggantian ruang kerja
+  workspace_row: Baris {{0}}
 wm:
   animations:
     duration: Durasi Animasi (MS)

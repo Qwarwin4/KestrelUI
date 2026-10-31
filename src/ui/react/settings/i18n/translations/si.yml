@@ -122,11 +122,6 @@ discord_banner:
     සහ නවතම පුවත් සමඟ යාවත්කාලීනව සිටින්න.
   title: අපගේ ප්‍රජාවට එක්වන්න
 extras:
-  backup_group: Cloud Backup
-  backup_last_sync: අවසාන සමමුහුර්ත කිරීම
-  backup_never_synced: කිසිදා සමමුහුර්ත කර නැත
-  backup_sync: වලාකුළු වෙත සැකසුම් සමමුහුර්ත කරන්න
-  backup_sync_description: වලාකුළ හරහා ඔබගේ සැකසුම් ස්වයංක්‍රීයව උපස්ථ කර ප්‍රතිසාධනය කරන්න.
   clear_icons: පැහැදිලි පද්ධති අයිකන හැඹිලිය
   clear_icons_tooltip: >-
     සියලුම විජට් සඳහා සම්පූර්ණයෙන්ම බලාත්මක වීමට නැවත ආරම්භ කිරීම අවශ්ය විය
@@ -197,7 +192,6 @@ header:
     plugin: ප්ලගීන
     resources: සම්පත්
     security: ආරක්ෂාව
-    session: ගිණුම
     shortcuts: කෙටිමං
     soundpack: ශබ්ද ඇසුරුම්
     specific_apps: අයදුම්පත අනුව සැකසුම්
@@ -205,8 +199,6 @@ header:
     virtual_desk: අතථ්ය ඩෙස්ක්ටොප්
     wallpaper: බිතුපත්
     widget: විජට්
-home:
-  new_resources: නව සම්පත්
 inherit: උරුම වේ
 inProgress: ප්රගතියේ...
 insert: ඇතුළු කරන්න
@@ -371,6 +363,7 @@ wall:
   saturation: සන්තෘප්තිය
   seconds: තත්පර
   select_collection: එකතුව තෝරන්න
+  show_paused_message: විරාම කළ පණිවිඩය පෙන්වන්න
   thumbnail_generation_complete: සිඟිති රූ උත්පාදනය සම්පූර්ණයි
   thumbnail_generation_finished: සිඟිති රූ උත්පාදනය සාර්ථකව නිම කර ඇත
   use_accent_color: බිතුපත් උච්චාරණ වර්ණය භාවිතා කරන්න
@@ -379,7 +372,6 @@ wall:
   wallpapers: Wallpapers
   wallpapers_and_collections: බිතුපත් සහ එකතු කිරීම්
   withOverlay: ආවරණය සමඟ
-  workspace_collections: වැඩ ඉඩ එකතු කිරීම්
 weg:
   auto_hide: ස්වයංක්‍රීය සඟවන්න
   auto_hide_touch_disabled: ස්වයංක්‍රීය සැඟවීම ස්පර්ශ තිර උපාංගවල නොමැත
@@ -443,6 +435,7 @@ welcome:
     ඔබේ ප්‍රතිපෝෂණය ව්‍යාපෘතිය වර්ධනය වීමට සහ වැඩිදියුණු කිරීමට උපකාරී වේ.
   title: WinUIRev වෙත සාදරයෙන් පිළිගනිමු!
 widget:
+  add_workspace_override: වැඩබිමක් මත අභිබවා යන්න
   default_instance: පෙරනිමි අවස්ථාව
   default_instance_hint: සැමවිටම සක්‍රියයි, root widget config භාවිතා කරයි
   enable: මෙම විජට් සක්රීය කරන්න
@@ -450,6 +443,11 @@ widget:
   extra_instances: අමතර අවස්ථා
   instance: උදාහරණය
   instances: අවස්ථා
+  remove_workspace_override: ප්‍රතික්‍රියා ඉවත් කරන්න (මොනිටරයෙන් උරුම වන්න)
+  select_workspace: වැඩබිමක් තෝරන්න
+  workspace_fallback_name: වැඩතලය {{0}}
+  workspace_overrides: වැඩබිම අභිබවා යයි
+  workspace_row: පේළිය {{0}}
 wm:
   animations:
     duration: සජීවිකරණ කාලය (MS)

@@ -1,6 +1,21 @@
 # Changelog
 
-## [2.8.9-dev]
+## [2.8.11-dev]
+
+## [2.8.10]
+
+### enhancements
+
+- allow set twm layout per monitor and per workspace.
+- allow hide pause message on wallpapers.
+
+### fix
+
+- per-app volume sessions not showing in the media volume mixer.
+- network api crashing when no connected to any network.
+- system tray not showing any icon on Windows 10, and icons without registry entry being ignored on Windows 11.
+
+## [2.8.9]
 
 ### features
 

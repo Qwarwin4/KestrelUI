@@ -36,12 +36,18 @@ class LazyScope<C extends SeelenCommand> {
       this._ready = true;
     });
 
-    invoke(this.command as any).then((data) => {
-      if (!this._ready) {
-        this._data = data as AllSeelenCommandReturns[C];
+    invoke(this.command as any)
+      .then((data) => {
+        if (!this._ready) {
+          this._data = data as AllSeelenCommandReturns[C];
+          this._ready = true;
+        }
+      })
+      .catch((error) => {
+        // a failed fetch must not leave the scope fetching forever, that would hide the item
+        console.error(`Failed to fetch scope data for ${this.command}:`, error);
         this._ready = true;
-      }
-    });
+      });
   }
 }
 
@@ -59,10 +65,6 @@ const _networkOnline = new LazyScope(
 const _networkAdapters = new LazyScope(
   SeelenCommand.GetNetworkAdapters,
   SeelenEvent.NetworkAdapters,
-);
-const _networkLocalIp = new LazyScope(
-  SeelenCommand.GetNetworkDefaultLocalIp,
-  SeelenEvent.NetworkDefaultLocalIp,
 );
 const _languages = new LazyScope(
   SeelenCommand.SystemGetLanguages,
@@ -84,6 +86,7 @@ const _networkStatistics = new LazyScope(
 );
 const _memory = new LazyScope(SeelenCommand.GetSystemMemory, SeelenEvent.SystemMemoryChanged);
 const _cores = new LazyScope(SeelenCommand.GetSystemCores, SeelenEvent.SystemCoresChanged);
+const _gpus = new LazyScope(SeelenCommand.GetSystemGpus, SeelenEvent.SystemGpusChanged);
 const _focusedApp = new LazyScope(SeelenCommand.GetFocusedApp, SeelenEvent.GlobalFocusChanged);
 const _virtualDesktops = new LazyScope(
   SeelenCommand.StateGetVirtualDesktops,
@@ -165,6 +168,10 @@ export function resolveScopes(scopes: string[], { userSourceName }: ScopeMofidie
     fetching ||= cpuStep(data);
   }
 
+  if (scopesSet.has("gpu")) {
+    fetching ||= gpuStep(data);
+  }
+
   if (scopesSet.has("tray")) {
     fetching ||= trayStep(data);
   }
@@ -234,15 +241,13 @@ function mediaStep(data: Data): boolean {
 function networkStep(data: Data): boolean {
   _networkOnline.lazyInit();
   _networkAdapters.lazyInit();
-  _networkLocalIp.lazyInit();
 
-  if (_networkOnline.fetching || _networkAdapters.fetching || _networkLocalIp.fetching) {
+  if (_networkOnline.fetching || _networkAdapters.fetching) {
     return true;
   }
 
   const interfaces = _networkAdapters.data;
-  const defaultIp = _networkLocalIp.data;
-  const usingInterface = interfaces?.find((i: any) => i.ipv4 === defaultIp) || null;
+  const usingInterface = interfaces?.find((i) => i.isDefault) || null;
   data.online = _networkOnline.data;
   data.interfaces = interfaces;
   data.usingInterface = usingInterface;
@@ -403,6 +408,18 @@ function cpuStep(data: Data): boolean {
   }
 
   data.cores = _cores.data;
+
+  return false;
+}
+
+function gpuStep(data: Data): boolean {
+  _gpus.lazyInit();
+
+  if (_gpus.fetching) {
+    return true;
+  }
+
+  data.gpus = _gpus.data || [];
 
   return false;
 }

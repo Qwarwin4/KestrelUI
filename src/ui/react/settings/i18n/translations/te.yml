@@ -123,13 +123,6 @@ discord_banner:
     చేయండి మరియు తాజా వార్తలతో తాజాగా ఉండండి.
   title: మా సంఘంలో చేరండి
 extras:
-  backup_group: క్లౌడ్ బ్యాకప్
-  backup_last_sync: చివరి సమకాలీకరణ
-  backup_never_synced: ఎప్పుడూ సమకాలీకరించబడలేదు
-  backup_sync: సెట్టింగ్‌లను క్లౌడ్‌కు సమకాలీకరించండి
-  backup_sync_description: >-
-    క్లౌడ్ ద్వారా మీ సెట్టింగ్‌లను స్వయంచాలకంగా బ్యాకప్ చేయండి మరియు
-    పునరుద్ధరించండి.
   clear_icons: క్లియర్ సిస్టమ్ చిహ్నాలు కాష్
   clear_icons_tooltip: అన్ని విడ్జెట్లపై పూర్తిగా అమలులోకి రావడానికి పున art ప్రారంభం అవసరం
   discord_rpc: అసమ్మతి రిచ్ ఉనికి
@@ -198,7 +191,6 @@ header:
     plugin: ప్లగిన్లు
     resources: వనరులు
     security: భద్రత
-    session: ఖాతా
     shortcuts: సత్వరమార్గాలు
     soundpack: సౌండ్ ప్యాక్‌లు
     specific_apps: అప్లికేషన్ ద్వారా సెట్టింగులు
@@ -206,8 +198,6 @@ header:
     virtual_desk: వర్చువల్ డెస్క్‌టాప్‌లు
     wallpaper: వాల్‌పేపర్లు
     widget: విడ్జెట్లు
-home:
-  new_resources: కొత్త వనరులు
 inherit: వారసత్వంగా
 inProgress: పురోగతిలో ఉంది...
 insert: చొప్పించండి
@@ -377,6 +367,7 @@ wall:
   saturation: సంతృప్తత
   seconds: సెకన్లు
   select_collection: సేకరణను ఎంచుకోండి
+  show_paused_message: పాజ్ చేయబడిన సందేశాన్ని చూపు
   thumbnail_generation_complete: థంబ్‌నెయిల్ జనరేషన్ పూర్తయింది
   thumbnail_generation_finished: థంబ్‌నెయిల్ ఉత్పత్తి విజయవంతంగా ముగిసింది
   use_accent_color: వాల్‌పేపర్ యాస రంగును ఉపయోగించండి
@@ -385,7 +376,6 @@ wall:
   wallpapers: వాల్‌పేపర్‌లు
   wallpapers_and_collections: వాల్‌పేపర్‌లు & సేకరణలు
   withOverlay: అతివ్యాప్తితో
-  workspace_collections: కార్యస్థల సేకరణలు
 weg:
   auto_hide: ఆటో దాచు
   auto_hide_touch_disabled: టచ్ స్క్రీన్ పరికరాలలో స్వీయ దాచు అందుబాటులో లేదు
@@ -450,6 +440,7 @@ welcome:
     మరియు మెరుగుపరచడంలో సహాయపడుతుంది.
   title: WinUIRevకి స్వాగతం!
 widget:
+  add_workspace_override: కార్యస్థలంపై భర్తీ చేయండి
   default_instance: డిఫాల్ట్ ఉదాహరణ
   default_instance_hint: ఎల్లప్పుడూ సక్రియంగా ఉంటుంది, రూట్ విడ్జెట్ కాన్ఫిగర్‌ని ఉపయోగిస్తుంది
   enable: ఈ విడ్జెట్‌ను ప్రారంభించండి
@@ -457,6 +448,11 @@ widget:
   extra_instances: అదనపు సందర్భాలు
   instance: ఉదాహరణ
   instances: ఉదాహరణలు
+  remove_workspace_override: ఓవర్‌రైడ్‌ని తీసివేయండి (మానిటర్ నుండి వారసత్వంగా పొందండి)
+  select_workspace: కార్యస్థలాన్ని ఎంచుకోండి
+  workspace_fallback_name: డెస్క్‌టాప్ {{0}}
+  workspace_overrides: కార్యస్థలం ఓవర్‌రైడ్ అవుతుంది
+  workspace_row: అడ్డు వరుస {{0}}
 wm:
   animations:
     duration: యానిమేషన్ వ్యవధి (ఎంఎస్)

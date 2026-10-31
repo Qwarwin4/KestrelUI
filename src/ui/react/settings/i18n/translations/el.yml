@@ -126,13 +126,6 @@ discord_banner:
     θέματα και μείνετε ενημερωμένοι με τα τελευταία νέα.
   title: Εγγραφείτε στην Κοινότητά μας
 extras:
-  backup_group: Cloud Backup
-  backup_last_sync: Τελευταίος συγχρονισμός
-  backup_never_synced: Δεν συγχρονίστηκε ποτέ
-  backup_sync: Συγχρονισμός ρυθμίσεων στο cloud
-  backup_sync_description: >-
-    Δημιουργήστε αυτόματα αντίγραφα ασφαλείας και επαναφέρετε τις ρυθμίσεις σας
-    μέσω του cloud.
   clear_icons: Εκκαθάριση προσωρινής μνήμης εικονιδίων συστήματος
   clear_icons_tooltip: Μπορεί να απαιτηθεί επανεκκίνηση για να ισχύσει πλήρως σε όλα τα widgets
   discord_rpc: Διχόνοια πλούσια παρουσία
@@ -203,7 +196,6 @@ header:
     plugin: Plugins
     resources: Πόροι
     security: Ασφάλεια
-    session: Λογαριασμός
     shortcuts: Συντομεύσεις
     soundpack: Πακέτα ήχου
     specific_apps: Ρυθμίσεις ανά εφαρμογή
@@ -211,8 +203,6 @@ header:
     virtual_desk: Εικονικοί υπολογιστές γραφείου
     wallpaper: Ταπετσαρίες
     widget: Widgets
-home:
-  new_resources: Νέοι πόροι
 inherit: Κληρονομώ
 inProgress: Σε εξέλιξη...
 insert: Εισάγω
@@ -386,6 +376,7 @@ wall:
   saturation: Κορεσμός
   seconds: δευτερόλεπτα
   select_collection: Επιλέξτε Συλλογή
+  show_paused_message: Εμφάνιση μηνύματος σε παύση
   thumbnail_generation_complete: Ολοκληρώθηκε η δημιουργία μικρογραφιών
   thumbnail_generation_finished: Η δημιουργία μικρογραφιών ολοκληρώθηκε με επιτυχία
   use_accent_color: Χρησιμοποιήστε χρώμα έμφασης ταπετσαρίας
@@ -394,7 +385,6 @@ wall:
   wallpapers: Ταπετσαρίες
   wallpapers_and_collections: Ταπετσαρίες & Συλλογές
   withOverlay: Με επικάλυψη
-  workspace_collections: Συλλογές χώρου εργασίας
 weg:
   auto_hide: Αυτόματη απόκρυψη
   auto_hide_touch_disabled: Η αυτόματη απόκρυψη δεν είναι διαθέσιμη σε συσκευές με οθόνη αφής
@@ -461,6 +451,7 @@ welcome:
     βελτιωθεί.
   title: Καλώς ήρθατε στο WinUIRev!
 widget:
+  add_workspace_override: Παράκαμψη σε χώρο εργασίας
   default_instance: Προεπιλεγμένη περίπτωση
   default_instance_hint: Πάντα ενεργό, χρησιμοποιεί τη διαμόρφωση του γραφικού στοιχείου ρίζας
   enable: Ενεργοποιήστε αυτό το widget
@@ -468,6 +459,11 @@ widget:
   extra_instances: Επιπλέον περιπτώσεις
   instance: Παράδειγμα
   instances: Περιπτώσεις
+  remove_workspace_override: Κατάργηση παράκαμψης (κληρονομιά από την οθόνη)
+  select_workspace: Επιλέξτε έναν χώρο εργασίας
+  workspace_fallback_name: Επιτραπέζιος υπολογιστής {{0}}
+  workspace_overrides: Ο χώρος εργασίας παρακάμπτει
+  workspace_row: Σειρά {{0}}
 wm:
   animations:
     duration: Διάρκεια κινούμενων σχεδίων (MS)

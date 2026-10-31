@@ -7,7 +7,7 @@ bn: সমস্ত উইজেট এবং আচরণ কনফিগার
 bs: Glavna WinUIRev aplikacija za podešavanja za konfigurisanje svih vidžeta i ponašanja
 ca: L'aplicació principal de configuració de la interfície d'usuari de WinUIRev per configurar tots els ginys i comportaments
 cs: Hlavní aplikace pro nastavení uživatelského rozhraní WinUIRev pro konfiguraci všech widgetů a chování
-cy: Prif gymhwysiad gosodiadau UI WinUIRev ar gyfer ffurfweddu pob teclyn ac ymddygiad
+cy: Prif gymhwysiad gosodiadau WinUIRev ar gyfer ffurfweddu pob teclyn ac ymddygiad
 da: Den vigtigste WinUIRev-indstillingsapplikation til konfiguration af alle widgets og adfærd
 de: Die Hauptanwendung für WinUIRev-Benutzeroberflächeneinstellungen zum Konfigurieren aller Widgets und Verhaltensweisen
 el: Η κύρια εφαρμογή ρυθμίσεων διεπαφής χρήστη WinUIRev για τη διαμόρφωση όλων των γραφικών στοιχείων και συμπεριφορών
@@ -19,7 +19,7 @@ fa: برنامه اصلی تنظیمات رابط کاربری WinUIRev برای
 fi: WinUIRev-asetusten pääsovellus kaikkien widgetien ja toimintojen määrittämiseen
 fr: L'application principale de paramètres de l'interface utilisateur de WinUIRev pour configurer tous les widgets et comportements
 gu: બધા વિજેટ્સ અને વર્તણૂકોને ગોઠવવા માટે મુખ્ય સીલેન UI સેટિંગ્સ એપ્લિકેશન
-he: אפליקציית ההגדרות הראשית של ממשק המשתמש של WinUIRev להגדרת כל הווידג'טים וההתנהגויות
+he: אפליקציית ההגדרות הראשית של WinUIRev להגדרת כל הווידג'טים וההתנהגויות
 hi: सभी विजेट और व्यवहार को कॉन्फ़िगर करने के लिए मुख्य सीलेन यूआई सेटिंग्स एप्लिकेशन
 hr: Glavna aplikacija za postavke korisničkog sučelja WinUIRev za konfiguriranje svih widgeta i ponašanja
 hu: A WinUIRev felhasználói felület fő beállítási alkalmazása az összes widget és viselkedés konfigurálásához
@@ -27,6 +27,7 @@ hy: WinUIRev-ի կարգավորումների հիմնական հավելված
 id: Aplikasi pengaturan WinUIRev utama untuk mengonfigurasi semua widget dan perilaku
 is: Aðal WinUIRev stillingarforritið til að stilla allar búnaður og hegðun
 it: L'applicazione principale delle impostazioni dell'interfaccia utente WinUIRev per la configurazione di tutti i widget e comportamenti
+ja: すべてのウィジェットと動作を構成するためのメインの WinUIRev 設定アプリケーション
 ka: მთავარი WinUIRev პარამეტრების აპლიკაცია ყველა ვიჯეტისა და ქცევის კონფიგურაციისთვის
 km: កម្មវិធីកំណត់ WinUIRev សំខាន់សម្រាប់កំណត់រចនាសម្ព័ន្ធធាតុក្រាហ្វិក និងឥរិយាបថទាំងអស់។
 ko: 모든 위젯과 동작을 구성하기 위한 기본 WinUIRev 설정 애플리케이션
@@ -37,7 +38,7 @@ lt: Pagrindinė WinUIRev vartotojo sąsajos nustatymų programa, skirta konfigū
 lv: Galvenā WinUIRev iestatījumu lietojumprogramma visu logrīku un darbību konfigurēšanai
 mk: Главната апликација за поставки на WinUIRev за конфигурирање на сите графички контроли и однесувања
 mn: WinUIRev тохиргооны үндсэн програм бөгөөд бүх виджет болон зан төлөвийг тохируулах боломжтой
-ms: Aplikasi tetapan UI WinUIRev utama untuk mengkonfigurasi semua widget dan tingkah laku
+ms: Aplikasi tetapan WinUIRev utama untuk mengkonfigurasi semua widget dan tingkah laku
 mt: L-applikazzjoni ewlenija tas-settings ta 'WinUIRev għall-konfigurazzjoni tal-widgets u l-imġieba kollha
 ne: सबै विजेटहरू र व्यवहारहरू कन्फिगर गर्नको लागि मुख्य WinUIRev सेटिङहरू अनुप्रयोग
 nl: De belangrijkste WinUIRev-instellingentoepassing voor het configureren van alle widgets en gedrag
@@ -57,7 +58,7 @@ sv: Den huvudsakliga WinUIRev-inställningsapplikationen för att konfigurera al
 sw: Programu kuu ya mipangilio ya WinUIRev ya kusanidi wijeti na tabia zote
 ta: அனைத்து விட்ஜெட்டுகள் மற்றும் நடத்தைகளை உள்ளமைப்பதற்கான முக்கிய சீலன் UI அமைப்புகள் பயன்பாடு
 te: అన్ని విడ్జెట్‌లు మరియు ప్రవర్తనలను కాన్ఫిగర్ చేయడానికి ప్రధాన సీలెన్ UI సెట్టింగ్‌ల అప్లికేషన్
-tg: Барномаи асосии танзимоти UI WinUIRev барои танзими ҳама виджетҳо ва рафторҳо
+tg: Барномаи асосии танзимоти WinUIRev барои танзими ҳама виджетҳо ва рафторҳо
 th: แอปพลิเคชันการตั้งค่า WinUIRev หลักสำหรับการกำหนดค่าวิดเจ็ตและพฤติกรรมทั้งหมด
 tl: Ang pangunahing application ng mga setting ng WinUIRev para sa pag-configure ng lahat ng mga widget at pag-uugali
 tr: Tüm widget'ları ve davranışları yapılandırmak için ana WinUIRev ayarları uygulaması

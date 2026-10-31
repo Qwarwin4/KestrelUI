@@ -125,11 +125,6 @@ discord_banner:
     ngezindikimba, futhi uhlale unolwazi lwakamuva ngezindaba zakamuva.
   title: Joyina umphakathi wethu
 extras:
-  backup_group: I-Cloud Backup
-  backup_last_sync: Ukuvumelanisa kokugcina
-  backup_never_synced: Ayikaze ivumelaniswe
-  backup_sync: Vumelanisa izilungiselelo kumafu
-  backup_sync_description: Yenza isipele ngokuzenzakalelayo futhi ubuyisele izilungiselelo zakho ngefu.
   clear_icons: Sula i-Cold yesistimu ye-System
   clear_icons_tooltip: >-
     Ukuqalisa kabusha kungadingeka ukuthi kusebenze ngokuphelele kuwo wonke
@@ -202,7 +197,6 @@ header:
     plugin: Amaplithi
     resources: Izinsizakusebenza
     security: Ezokuphepha
-    session: I-akhawunti
     shortcuts: Amashoshothi
     soundpack: Amaphakethe omsindo
     specific_apps: Izilungiselelo ngesicelo
@@ -210,8 +204,6 @@ header:
     virtual_desk: Ama-Virtual Desktops
     wallpaper: Ama-Wallpaper
     widget: Amawijethi
-home:
-  new_resources: Izinsizakusebenza ezintsha
 inherit: Dla ifa
 inProgress: Kuyaqhubeka...
 insert: Faka
@@ -383,6 +375,7 @@ wall:
   saturation: Ukutacwaba
   seconds: imisa
   select_collection: Khetha Iqoqo
+  show_paused_message: Bonisa umlayezo omisiwe
   thumbnail_generation_complete: Ukukhiqizwa Kwesithonjana Kuqediwe
   thumbnail_generation_finished: Ukwenziwa kwezithonjana kuqede ngempumelelo
   use_accent_color: Sebenzisa umbala wokugcizelela isithombe sangemuva
@@ -391,7 +384,6 @@ wall:
   wallpapers: Izithombe zangemuva
   wallpapers_and_collections: Izithombe zangemuva namaqoqo
   withOverlay: Ngokumbondelana
-  workspace_collections: Amaqoqo wendawo yokusebenza
 weg:
   auto_hide: Fihla okuzenzakalelayo
   auto_hide_touch_disabled: Ukufihla ngokuzenzakalela akutholakali kumadivayisi wesikrini esithintwayo
@@ -457,6 +449,7 @@ welcome:
     impendulo yakho isiza iphrojekthi ukuthi ikhule futhi ithuthuke.
   title: Siyakwamukela ku-WinUIRev!
 widget:
+  add_workspace_override: Khipha endaweni yokusebenza
   default_instance: Isimo Esizenzakalelayo
   default_instance_hint: Ihlala isebenza, isebenzisa ukulungiselelwa kwewijethi yempande
   enable: Nika amandla lewijethi
@@ -464,6 +457,11 @@ widget:
   extra_instances: Izimo Ezengeziwe
   instance: Isibonelo
   instances: Izimo
+  remove_workspace_override: Susa ukukhipha (zuza kumonitha)
+  select_workspace: Khetha indawo yokusebenza
+  workspace_fallback_name: Ideskithophu {{0}}
+  workspace_overrides: Indawo yokusebenza iyakhishwa
+  workspace_row: Umugqa {{0}}
 wm:
   animations:
     duration: Isikhathi se-animation (MS)

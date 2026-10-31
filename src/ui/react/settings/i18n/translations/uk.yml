@@ -125,11 +125,6 @@ discord_banner:
     темами та будьте в курсі останніх новин.
   title: Приєднуйтесь до нашої спільноти
 extras:
-  backup_group: Хмарне резервне копіювання
-  backup_last_sync: Остання синхронізація
-  backup_never_synced: Ніколи не синхронізовано
-  backup_sync: Синхронізація налаштувань із хмарою
-  backup_sync_description: Автоматичне резервне копіювання та відновлення налаштувань через хмару.
   clear_icons: Очистити кеш системних іконок
   clear_icons_tooltip: Може знадобитися перезапуск для повного набрання чинності для всіх віджетів
   discord_rpc: Дискорд багата присутність
@@ -199,7 +194,6 @@ header:
     plugin: Плагіни
     resources: Ресурси
     security: Безпека
-    session: Обліковий запис
     shortcuts: Сполучення клавіш
     soundpack: Звукові пакети
     specific_apps: Налаштування за додатками
@@ -207,8 +201,6 @@ header:
     virtual_desk: Віртуальні робочі столи
     wallpaper: Шпалери
     widget: Віджети
-home:
-  new_resources: Нові ресурси
 inherit: Успадкувати
 inProgress: В процесі...
 insert: Вставити
@@ -377,6 +369,7 @@ wall:
   saturation: Насиченість
   seconds: секунди
   select_collection: Виберіть Колекція
+  show_paused_message: Показати призупинене повідомлення
   thumbnail_generation_complete: Генерація ескізів завершена
   thumbnail_generation_finished: Створення мініатюри успішно завершено
   use_accent_color: Використовуйте акцентний колір шпалер
@@ -385,7 +378,6 @@ wall:
   wallpapers: Шпалери
   wallpapers_and_collections: Шпалери та колекції
   withOverlay: З накладанням
-  workspace_collections: Колекції робочої області
 weg:
   auto_hide: Автоматично приховувати
   auto_hide_touch_disabled: >-
@@ -452,6 +444,7 @@ welcome:
     вдосконалюватися.
   title: Ласкаво просимо до WinUIRev!
 widget:
+  add_workspace_override: Перевизначити робочу область
   default_instance: Примірник за замовчуванням
   default_instance_hint: Завжди активний, використовує конфігурацію кореневого віджета
   enable: Увімкніть цей віджет
@@ -459,6 +452,11 @@ widget:
   extra_instances: Додаткові екземпляри
   instance: Екземпляр
   instances: Екземпляри
+  remove_workspace_override: Видалити перевизначення (успадкувати від монітора)
+  select_workspace: Виберіть робочу область
+  workspace_fallback_name: Робочий стіл {{0}}
+  workspace_overrides: Перевизначення робочої області
+  workspace_row: Ряд {{0}}
 wm:
   animations:
     duration: Тривалість анімації (MS)

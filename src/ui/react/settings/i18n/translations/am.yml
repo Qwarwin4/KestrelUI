@@ -116,11 +116,6 @@ discord_banner:
     ይቆዩ።
   title: ማህበረሰባችንን ይቀላቀሉ
 extras:
-  backup_group: የደመና ምትኬ
-  backup_last_sync: የመጨረሻው ማመሳሰል
-  backup_never_synced: በጭራሽ አልተሰመረም።
-  backup_sync: ቅንብሮችን ከደመና ጋር አስምር
-  backup_sync_description: በራስ-ሰር ምትኬ ያስቀምጡ እና ቅንብሮችዎን በደመና በኩል ወደነበሩበት ይመልሱ።
   clear_icons: የስርዓት አዶዎች መሸጎጫ
   clear_icons_tooltip: ዳግም ማስጀመር በሁሉም ፍርግሞች ላይ ሙሉ በሙሉ እንዲተገበር ሊፈልግ ይችላል
   discord_rpc: የበለጸገ መገኘት አለመግባባት
@@ -187,7 +182,6 @@ header:
     plugin: ተሰኪዎች
     resources: ሀብቶች
     security: ደህንነት
-    session: መለያ
     shortcuts: አቋራጮች
     soundpack: የድምፅ ማካካሻዎች
     specific_apps: በቅንብሮች በትግበራ
@@ -195,8 +189,6 @@ header:
     virtual_desk: ምናባዊ ዴስክቶፕስ
     wallpaper: የግድግዳ ወረቀቶች
     widget: ፍርግሞች
-home:
-  new_resources: አዲስ ሀብቶች
 inherit: ውርስ
 inProgress: በሂደት ላይ...
 insert: ያስገቡ
@@ -355,6 +347,7 @@ wall:
   saturation: ማሞቂያ
   seconds: ሰከንዶች
   select_collection: ስብስብ ይምረጡ
+  show_paused_message: ባለበት የቆመ መልእክት አሳይ
   thumbnail_generation_complete: ድንክዬ ማመንጨት ተጠናቋል
   thumbnail_generation_finished: ድንክዬ ማመንጨት በተሳካ ሁኔታ ተጠናቅቋል
   use_accent_color: የግድግዳ ወረቀት የአነጋገር ቀለም ይጠቀሙ
@@ -363,7 +356,6 @@ wall:
   wallpapers: የግድግዳ ወረቀቶች
   wallpapers_and_collections: የግድግዳ ወረቀቶች እና ስብስቦች
   withOverlay: በተደራቢ
-  workspace_collections: የስራ ቦታ ስብስቦች
 weg:
   auto_hide: ራስ-ሰር መደበቅ
   auto_hide_touch_disabled: ራስ-ደብቅ በንክኪ ስክሪን መሳሪያዎች ላይ አይገኝም
@@ -426,6 +418,7 @@ welcome:
     እና እንዲሻሻል ይረዳል።
   title: ወደ WinUIRev እንኳን በደህና መጡ!
 widget:
+  add_workspace_override: የስራ ቦታን ይሽሩ
   default_instance: ነባሪ ምሳሌ
   default_instance_hint: ሁልጊዜ ንቁ፣ የስር መግብር አወቃቀሩን ይጠቀማል
   enable: ይህን ንዑስ ፕሮግራም ያንቁ
@@ -433,6 +426,11 @@ widget:
   extra_instances: ተጨማሪ ምሳሌዎች
   instance: ምሳሌ
   instances: ሁኔታዎች
+  remove_workspace_override: መሻርን አስወግድ (ከክትትል ውርስ)
+  select_workspace: የስራ ቦታ ይምረጡ
+  workspace_fallback_name: ዴስክቶፕ {0}
+  workspace_overrides: የስራ ቦታ ይሽራል።
+  workspace_row: ረድፍ {{0}}
 wm:
   animations:
     duration: እነማ ቆይታ (MS)

@@ -268,8 +268,9 @@ pub struct WindowManagerSettings {
     pub workspace_margin: Rect,
     /// floating window settings
     pub floating: FloatingWindowSettings,
-    /// default layout
-    pub default_layout: PluginId,
+    /// layout plugin id used by default on all monitors and workspaces
+    #[serde(alias = "defaultLayout")]
+    pub layout: PluginId,
     /// window manager animations
     pub animations: WmAnimations,
     /// window manager drag behavior
@@ -367,7 +368,7 @@ impl Default for WindowManagerSettings {
             workspace_padding: 10,
             workspace_margin: Rect::default(),
             floating: FloatingWindowSettings::default(),
-            default_layout: "@default/wm-bspwm".into(),
+            layout: "@default/wm-bspwm".into(),
             animations: WmAnimations::default(),
             drag_behavior: WmDragBehavior::Sort,
             stack_bar_visibility: WmStackBarVisibility::AsNeeded,
@@ -407,6 +408,8 @@ pub struct SeelenWallSettings {
     pub use_accent_color: bool,
     /// fraction of monitor area that must be covered by windows before pausing wallpaper (0.5–1.0)
     pub coverage_pause_threshold: f64,
+    /// whether to show a message over the wallpaper when it is paused by performance mode
+    pub show_paused_message: bool,
     /// deprecated, this field will be removed on v3
     #[serde(alias = "backgroundsV2")]
     pub deprecated_bgs: Option<Vec<WallpaperId>>,
@@ -423,6 +426,7 @@ impl Default for SeelenWallSettings {
             multimonitor_behaviour: MultimonitorBehaviour::PerMonitor,
             use_accent_color: false,
             coverage_pause_threshold: 0.8,
+            show_paused_message: true,
             deprecated_bgs: None,
         }
     }

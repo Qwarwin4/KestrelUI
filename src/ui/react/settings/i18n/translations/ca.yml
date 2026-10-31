@@ -123,13 +123,6 @@ discord_banner:
     obteniu ajuda, compartiu temes i estigueu al dia de les últimes notícies.
   title: Uneix-te a la nostra comunitat
 extras:
-  backup_group: Còpia de seguretat al núvol
-  backup_last_sync: Última sincronització
-  backup_never_synced: Mai sincronitzat
-  backup_sync: Sincronitza la configuració amb el núvol
-  backup_sync_description: >-
-    Feu una còpia de seguretat i restaurau automàticament la vostra configuració
-    mitjançant el núvol.
   clear_icons: Esborrar la memòria cau de les icones del sistema
   clear_icons_tooltip: Es pot requerir un reinici per tenir efecte sobre tots els ginys
   discord_rpc: Presència rica en discòrdia
@@ -202,7 +195,6 @@ header:
     plugin: Tapins
     resources: Recursos
     security: Seguretat
-    session: Compte
     shortcuts: Dreceres
     soundpack: Paquets de son
     specific_apps: Configuració per aplicació
@@ -210,8 +202,6 @@ header:
     virtual_desk: Desktops virtuals
     wallpaper: Fons de pantalla
     widget: Widgets
-home:
-  new_resources: Recursos nous
 inherit: Heretar
 inProgress: En progrés...
 insert: Inserir
@@ -380,6 +370,7 @@ wall:
   saturation: Saturació
   seconds: segons
   select_collection: Seleccioneu Col·lecció
+  show_paused_message: Mostra el missatge en pausa
   thumbnail_generation_complete: S'ha completat la generació de miniatures
   thumbnail_generation_finished: La generació de miniatures ha finalitzat correctament
   use_accent_color: Utilitzeu el color d'accent del fons de pantalla
@@ -388,7 +379,6 @@ wall:
   wallpapers: Fons de pantalla
   wallpapers_and_collections: Fons de pantalla i col·leccions
   withOverlay: Amb superposició
-  workspace_collections: Col·leccions d'espais de treball
 weg:
   auto_hide: Amaga automàtic
   auto_hide_touch_disabled: L'ocultació automàtica no està disponible als dispositius de pantalla tàctil
@@ -454,6 +444,7 @@ welcome:
     els vostres comentaris ajuden el projecte a créixer i millorar.
   title: Benvingut a WinUIRev!
 widget:
+  add_workspace_override: Anul·lació en un espai de treball
   default_instance: Instància per defecte
   default_instance_hint: Sempre actiu, utilitza la configuració del widget arrel
   enable: Activa aquest widget
@@ -461,6 +452,11 @@ widget:
   extra_instances: Instàncies addicionals
   instance: Instància
   instances: Instàncies
+  remove_workspace_override: Elimina la substitució (hereta del monitor)
+  select_workspace: Seleccioneu un espai de treball
+  workspace_fallback_name: Escriptori {{0}}
+  workspace_overrides: Anul·lació de l'espai de treball
+  workspace_row: Fila {{0}}
 wm:
   animations:
     duration: Durada de l'animació (MS)

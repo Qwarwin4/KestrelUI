@@ -124,13 +124,6 @@ discord_banner:
     meg témákat, és maradjon naprakész a legfrissebb hírekről.
   title: Csatlakozz közösségünkhöz
 extras:
-  backup_group: Biztonsági mentés a felhőből
-  backup_last_sync: Utolsó szinkronizálás
-  backup_never_synced: Soha nem szinkronizált
-  backup_sync: Szinkronizálja a beállításokat a felhőbe
-  backup_sync_description: >-
-    A beállítások automatikus biztonsági mentése és visszaállítása a felhőn
-    keresztül.
   clear_icons: Rendszerikonok gyorsítótárának törlése
   clear_icons_tooltip: >-
     Újraindítás szükséges lehet ahhoz, hogy az összes widget teljes mértékben
@@ -203,7 +196,6 @@ header:
     plugin: Plugins
     resources: Források
     security: Biztonság
-    session: fiók
     shortcuts: Parancsikonok
     soundpack: Hang csomagok
     specific_apps: Alkalmazásonkénti beállítások
@@ -211,8 +203,6 @@ header:
     virtual_desk: Virtuális asztalok
     wallpaper: Háttérképek
     widget: Widgetek
-home:
-  new_resources: Új források
 inherit: Örököl
 inProgress: Folyamatban...
 insert: Beilleszt
@@ -380,6 +370,7 @@ wall:
   saturation: Telítettség
   seconds: másodpercek
   select_collection: Válassza a Gyűjtemény lehetőséget
+  show_paused_message: Szüneteltetett üzenet megjelenítése
   thumbnail_generation_complete: A miniatűrök generálása kész
   thumbnail_generation_finished: A miniatűrök generálása sikeresen befejeződött
   use_accent_color: Használjon tapéta kiemelő színt
@@ -388,7 +379,6 @@ wall:
   wallpapers: Háttérképek
   wallpapers_and_collections: Háttérképek és gyűjtemények
   withOverlay: Overlay-vel
-  workspace_collections: Munkaterület-gyűjtemények
 weg:
   auto_hide: Automatikus elrejtés
   auto_hide_touch_disabled: Az automatikus elrejtés nem érhető el érintőképernyős eszközökön
@@ -452,6 +442,7 @@ welcome:
     áruházban – visszajelzése segíti a projekt növekedését és fejlődését.
   title: Üdvözöljük a WinUIRev-n!
 widget:
+  add_workspace_override: Felülbírálás munkaterületen
   default_instance: Alapértelmezett példány
   default_instance_hint: Mindig aktív, a root widget konfigurációját használja
   enable: Engedélyezze ezt a widgetet
@@ -459,6 +450,11 @@ widget:
   extra_instances: Extra példányok
   instance: Példa
   instances: Instances
+  remove_workspace_override: Felülírás eltávolítása (öröklés a monitorról)
+  select_workspace: Válasszon ki egy munkaterületet
+  workspace_fallback_name: Asztali {{0}}
+  workspace_overrides: Munkaterület felülbírálja
+  workspace_row: '{{0}}. sor'
 wm:
   animations:
     duration: Animációs időtartam (MS)

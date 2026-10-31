@@ -127,13 +127,6 @@ discord_banner:
     tema, at manatiling napapanahon sa pinakabagong balita.
   title: Sumali sa aming Komunidad
 extras:
-  backup_group: Cloud Backup
-  backup_last_sync: Huling pag-sync
-  backup_never_synced: Hindi kailanman naka-sync
-  backup_sync: I-sync ang mga setting sa cloud
-  backup_sync_description: >-
-    Awtomatikong i-back up at i-restore ang iyong mga setting sa pamamagitan ng
-    cloud.
   clear_icons: I -clear ang Mga Icon ng System Cache
   clear_icons_tooltip: >-
     Ang isang pag -restart ay maaaring kailanganin upang ganap na maisakatuparan
@@ -206,7 +199,6 @@ header:
     plugin: Plugins
     resources: Mga mapagkukunan
     security: Seguridad
-    session: Account
     shortcuts: Mga shortcut
     soundpack: Mga tunog pack
     specific_apps: Mga setting sa pamamagitan ng application
@@ -214,8 +206,6 @@ header:
     virtual_desk: Mga Virtual Desktop
     wallpaper: Wallpaper
     widget: Mga widget
-home:
-  new_resources: Mga bagong mapagkukunan
 inherit: Magmana
 inProgress: Sa pag -unlad ...
 insert: Ipasok
@@ -385,6 +375,7 @@ wall:
   saturation: Saturation
   seconds: segundo
   select_collection: Piliin ang Koleksyon
+  show_paused_message: Ipakita ang naka-pause na mensahe
   thumbnail_generation_complete: Kumpleto na ang Pagbuo ng Thumbnail
   thumbnail_generation_finished: Matagumpay na natapos ang pagbuo ng thumbnail
   use_accent_color: Gumamit ng kulay ng accent ng wallpaper
@@ -393,7 +384,6 @@ wall:
   wallpapers: Mga Wallpaper
   wallpapers_and_collections: Mga Wallpaper at Koleksyon
   withOverlay: Na may overlay
-  workspace_collections: Mga Koleksyon ng Workspace
 weg:
   auto_hide: Auto itago
   auto_hide_touch_disabled: Hindi available ang auto hide sa mga touch screen device
@@ -458,6 +448,7 @@ welcome:
     lumago at umunlad.
   title: Maligayang pagdating sa WinUIRev!
 widget:
+  add_workspace_override: I-override sa isang workspace
   default_instance: Default na Instance
   default_instance_hint: Palaging aktibo, gumagamit ng root widget config
   enable: Paganahin ang widget na ito
@@ -465,6 +456,11 @@ widget:
   extra_instances: Mga Dagdag na Instance
   instance: Halimbawa
   instances: Mga pagkakataon
+  remove_workspace_override: Alisin ang override (manahin mula sa monitor)
+  select_workspace: Pumili ng workspace
+  workspace_fallback_name: Desktop {{0}}
+  workspace_overrides: Na-override ang workspace
+  workspace_row: Hilera {{0}}
 wm:
   animations:
     duration: Tagal ng Animation (MS)

@@ -125,13 +125,6 @@ discord_banner:
     மற்றும் சமீபத்திய செய்திகளுடன் புதுப்பித்த நிலையில் இருக்கவும்.
   title: எங்கள் சமூகத்தில் சேரவும்
 extras:
-  backup_group: கிளவுட் காப்புப்பிரதி
-  backup_last_sync: கடைசி ஒத்திசைவு
-  backup_never_synced: ஒருபோதும் ஒத்திசைக்கப்படவில்லை
-  backup_sync: மேகக்கணிக்கு அமைப்புகளை ஒத்திசைக்கவும்
-  backup_sync_description: >-
-    கிளவுட் வழியாக உங்கள் அமைப்புகளை தானாகவே காப்புப் பிரதி எடுத்து
-    மீட்டமைக்கவும்.
   clear_icons: கணினி ஐகான்கள் தற்காலிக சேமிப்பை அழிக்கவும்
   clear_icons_tooltip: அனைத்து விட்ஜெட்களிலும் முழுமையாக நடைமுறைக்கு வர மறுதொடக்கம் தேவைப்படலாம்
   discord_rpc: கருத்து வேறுபாடு நிறைந்த இருப்பு
@@ -201,7 +194,6 @@ header:
     plugin: செருகுநிரல்கள்
     resources: வளங்கள்
     security: பாதுகாப்பு
-    session: கணக்கு
     shortcuts: குறுக்குவழிகள்
     soundpack: ஒலி பொதிகள்
     specific_apps: பயன்பாட்டின் மூலம் அமைப்புகள்
@@ -209,8 +201,6 @@ header:
     virtual_desk: மெய்நிகர் டெஸ்க்டாப்புகள்
     wallpaper: வால்பேப்பர்கள்
     widget: விட்ஜெட்டுகள்
-home:
-  new_resources: புதிய வளங்கள்
 inherit: மரபு
 inProgress: செயல்பாட்டில் உள்ளது...
 insert: செருகவும்
@@ -382,6 +372,7 @@ wall:
   saturation: செறிவு
   seconds: விநாடிகள்
   select_collection: சேகரிப்பைத் தேர்ந்தெடுக்கவும்
+  show_paused_message: இடைநிறுத்தப்பட்ட செய்தியைக் காட்டு
   thumbnail_generation_complete: சிறுபட உருவாக்கம் முடிந்தது
   thumbnail_generation_finished: சிறுபட உருவாக்கம் வெற்றிகரமாக முடிந்தது
   use_accent_color: வால்பேப்பர் உச்சரிப்பு வண்ணத்தைப் பயன்படுத்தவும்
@@ -390,7 +381,6 @@ wall:
   wallpapers: வால்பேப்பர்கள்
   wallpapers_and_collections: வால்பேப்பர்கள் & தொகுப்புகள்
   withOverlay: மேலடுக்கு
-  workspace_collections: பணியிட தொகுப்புகள்
 weg:
   auto_hide: தானாக மறை
   auto_hide_touch_disabled: தொடுதிரை சாதனங்களில் தானியங்கு மறை கிடைக்காது
@@ -457,6 +447,7 @@ welcome:
     உதவுகிறது.
   title: WinUIRevக்கு வரவேற்கிறோம்!
 widget:
+  add_workspace_override: பணியிடத்தில் மேலெழுதவும்
   default_instance: இயல்புநிலை நிகழ்வு
   default_instance_hint: எப்போதும் செயலில், ரூட் விட்ஜெட் கட்டமைப்பைப் பயன்படுத்துகிறது
   enable: இந்த விட்ஜெட்டை இயக்கவும்
@@ -464,6 +455,11 @@ widget:
   extra_instances: கூடுதல் நிகழ்வுகள்
   instance: உதாரணம்
   instances: நிகழ்வுகள்
+  remove_workspace_override: மேலெழுதலை அகற்று (மானிட்டரிலிருந்து மரபுரிமை)
+  select_workspace: பணியிடத்தைத் தேர்ந்தெடுக்கவும்
+  workspace_fallback_name: டெஸ்க்டாப் {{0}}
+  workspace_overrides: பணியிடம் மேலெழுகிறது
+  workspace_row: வரிசை {{0}}
 wm:
   animations:
     duration: அனிமேஷன் காலம் (எம்.எஸ்)

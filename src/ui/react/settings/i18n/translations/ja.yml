@@ -109,11 +109,6 @@ discord_banner:
   message: 他の WinUIRev ユーザーとつながり、ヘルプを得たり、テーマを共有したり、最新ニュースを入手したりできます。
   title: コミュニティに参加してください
 extras:
-  backup_group: クラウドバックアップ
-  backup_last_sync: 最終同期
-  backup_never_synced: 決して同期しない
-  backup_sync: 設定をクラウドに同期する
-  backup_sync_description: クラウド経由で設定を自動的にバックアップおよび復元します。
   clear_icons: システムアイコンキャッシュをクリアする
   clear_icons_tooltip: すべてのウィジェットに完全に反映させるには、再起動が必要な場合があります。
   discord_rpc: Discordの豊かな存在感
@@ -177,7 +172,6 @@ header:
     plugin: プラグイン
     resources: リソース
     security: 安全
-    session: アカウント
     shortcuts: ショートカットキー
     soundpack: サウンドパック
     specific_apps: アプリケーション別設定
@@ -185,8 +179,6 @@ header:
     virtual_desk: 仮想デスクトップ
     wallpaper: 壁紙
     widget: ウィジェット
-home:
-  new_resources: 新しいリソース
 inherit: 継承
 inProgress: 近日実装予定...
 insert: 挿入
@@ -345,6 +337,7 @@ wall:
   saturation: 彩度
   seconds: 秒
   select_collection: コレクションの選択
+  show_paused_message: 一時停止したメッセージを表示する
   thumbnail_generation_complete: サムネイルの生成が完了しました
   thumbnail_generation_finished: サムネイルの生成が正常に終了しました
   use_accent_color: 壁紙のアクセントカラーを使用する
@@ -353,7 +346,6 @@ wall:
   wallpapers: 壁紙
   wallpapers_and_collections: 壁紙とコレクション
   withOverlay: オーバーレイ付き
-  workspace_collections: ワークスペースコレクション
 weg:
   auto_hide: 自動的に隠す
   auto_hide_touch_disabled: 自動非表示はタッチ スクリーン デバイスでは利用できません
@@ -415,6 +407,7 @@ welcome:
     の使用を楽しんでいる場合は、ストアにレビューを残すことを検討してください。あなたのフィードバックはプロジェクトの成長と改善に役立ちます。
   title: WinUIRev へようこそ!
 widget:
+  add_workspace_override: ワークスペースをオーバーライドする
   default_instance: デフォルトのインスタンス
   default_instance_hint: 常にアクティブで、ルート ウィジェット構成を使用します
   enable: このウィジェットを有効にする
@@ -422,6 +415,11 @@ widget:
   extra_instances: 追加のインスタンス
   instance: 実例
   instances: インスタンス
+  remove_workspace_override: オーバーライドを削除 (モニターから継承)
+  select_workspace: ワークスペースを選択してください
+  workspace_fallback_name: デスクトップ {{0}}
+  workspace_overrides: ワークスペースの上書き
+  workspace_row: 行 {{0}}
 wm:
   animations:
     duration: アニメーション期間（MS）

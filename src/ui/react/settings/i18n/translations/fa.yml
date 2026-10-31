@@ -121,11 +121,6 @@ discord_banner:
     تم ها را به اشتراک بگذارید و از آخرین اخبار به روز بمانید.
   title: به انجمن ما بپیوندید
 extras:
-  backup_group: پشتیبان گیری ابری
-  backup_last_sync: آخرین همگام سازی
-  backup_never_synced: هرگز همگام سازی نشد
-  backup_sync: تنظیمات را با ابر همگام کنید
-  backup_sync_description: به طور خودکار از تنظیمات خود از طریق ابر نسخه پشتیبان تهیه و بازیابی کنید.
   clear_icons: حافظه نهان سیستم را پاک کنید
   clear_icons_tooltip: >-
     یک راه اندازی مجدد می تواند مورد نیاز باشد تا به طور کامل در همه ویجت ها
@@ -196,7 +191,6 @@ header:
     plugin: پلاگین
     resources: منابع
     security: امنیت
-    session: حساب
     shortcuts: میانبرها
     soundpack: بسته های صدا
     specific_apps: تنظیمات توسط برنامه
@@ -204,8 +198,6 @@ header:
     virtual_desk: دسک تاپ مجازی
     wallpaper: تصاویر پس زمینه
     widget: ویراچه
-home:
-  new_resources: منابع جدید
 inherit: ارث
 inProgress: در حال پیش رفت...
 insert: درج کردن
@@ -370,6 +362,7 @@ wall:
   saturation: اشباع
   seconds: ثانیه
   select_collection: مجموعه را انتخاب کنید
+  show_paused_message: نمایش پیام متوقف شده
   thumbnail_generation_complete: تولید ریز عکسها کامل شد
   thumbnail_generation_finished: تولید تصویر بند انگشتی با موفقیت به پایان رسید
   use_accent_color: از رنگ تاکیدی کاغذ دیواری استفاده کنید
@@ -378,7 +371,6 @@ wall:
   wallpapers: تصاویر پس زمینه
   wallpapers_and_collections: تصاویر پس زمینه و مجموعه ها
   withOverlay: با روکش
-  workspace_collections: مجموعه های فضای کاری
 weg:
   auto_hide: پنهان خودکار
   auto_hide_touch_disabled: پنهان کردن خودکار در دستگاه های صفحه لمسی در دسترس نیست
@@ -441,6 +433,7 @@ welcome:
     بگذارید - بازخورد شما به رشد و بهبود پروژه کمک می کند.
   title: به WinUIRev خوش آمدید!
 widget:
+  add_workspace_override: نادیده گرفتن یک فضای کاری
   default_instance: نمونه پیش فرض
   default_instance_hint: همیشه فعال است، از پیکربندی ویجت ریشه استفاده می کند
   enable: این ویجت را فعال کنید
@@ -448,6 +441,11 @@ widget:
   extra_instances: موارد اضافی
   instance: نمونه
   instances: نمونه
+  remove_workspace_override: حذف نادیده گرفتن (ارث بردن از مانیتور)
+  select_workspace: یک فضای کاری را انتخاب کنید
+  workspace_fallback_name: رومیزی {{0}}
+  workspace_overrides: فضای کاری لغو می شود
+  workspace_row: ردیف {{0}}
 wm:
   animations:
     duration: مدت زمان انیمیشن (MS)

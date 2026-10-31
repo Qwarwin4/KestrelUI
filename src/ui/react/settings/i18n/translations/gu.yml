@@ -123,11 +123,6 @@ discord_banner:
     નવીનતમ સમાચાર સાથે અદ્યતન રહો.
   title: અમારા સમુદાયમાં જોડાઓ
 extras:
-  backup_group: મેઘ બેકઅપ
-  backup_last_sync: છેલ્લું સમન્વયન
-  backup_never_synced: ક્યારેય સમન્વયિત નથી
-  backup_sync: મેઘ પર સુમેળ સેટિંગ્સ
-  backup_sync_description: ક્લાઉડ દ્વારા આપમેળે બેકઅપ લો અને તમારી સેટિંગ્સ પુનઃસ્થાપિત કરો.
   clear_icons: સ્પષ્ટ સિસ્ટમ ચિહ્નો કેશ
   clear_icons_tooltip: બધા વિજેટો પર સંપૂર્ણ અસર કરવા માટે ફરીથી પ્રારંભ કરવાની જરૂર પડી શકે છે
   discord_rpc: અસંખ્ય સમૃદ્ધ હાજરી
@@ -196,7 +191,6 @@ header:
     plugin: તૃણ
     resources: સાધનો
     security: સુરક્ષા
-    session: એકાઉન્ટ
     shortcuts: શૉર્ટકટ્સ
     soundpack: સાચા પેક
     specific_apps: અરજી દ્વારા સેટિંગ્સ
@@ -204,8 +198,6 @@ header:
     virtual_desk: વર્ચ્યુઅલ ડેસ્કટ .પ
     wallpaper: વ wallpapers લપેપર્સ
     widget: વિજેટો
-home:
-  new_resources: નવી સાધનો
 inherit: વારસો મેળવવો
 inProgress: ચાલુ છે...
 insert: દાખલ કરવું
@@ -371,6 +363,7 @@ wall:
   saturation: સચોટતા
   seconds: સેકન્ડ
   select_collection: સંગ્રહ પસંદ કરો
+  show_paused_message: થોભાવેલ સંદેશ બતાવો
   thumbnail_generation_complete: થંબનેલ જનરેશન પૂર્ણ
   thumbnail_generation_finished: થંબનેલ જનરેશન સફળતાપૂર્વક સમાપ્ત થયું
   use_accent_color: વૉલપેપર ઉચ્ચાર રંગનો ઉપયોગ કરો
@@ -379,7 +372,6 @@ wall:
   wallpapers: વૉલપેપર્સ
   wallpapers_and_collections: વૉલપેપર્સ અને સંગ્રહો
   withOverlay: ઓવરલે સાથે
-  workspace_collections: વર્કસ્પેસ સંગ્રહો
 weg:
   auto_hide: સ્વતઃ છુપાવો
   auto_hide_touch_disabled: ટચ સ્ક્રીન ઉપકરણો પર સ્વતઃ છુપાવો ઉપલબ્ધ નથી
@@ -443,6 +435,7 @@ welcome:
     વિચારો — તમારો પ્રતિસાદ પ્રોજેક્ટને વધવા અને સુધારવામાં મદદ કરે છે.
   title: WinUIRev માં આપનું સ્વાગત છે!
 widget:
+  add_workspace_override: વર્કસ્પેસ પર ઓવરરાઇડ કરો
   default_instance: ડિફૉલ્ટ ઇન્સ્ટન્સ
   default_instance_hint: હંમેશા સક્રિય, રૂટ વિજેટ રૂપરેખાનો ઉપયોગ કરે છે
   enable: આ વિજેટને સક્ષમ કરો
@@ -450,6 +443,11 @@ widget:
   extra_instances: વધારાના દાખલાઓ
   instance: દાખલો
   instances: દાખલા
+  remove_workspace_override: ઓવરરાઇડ દૂર કરો (મોનિટરમાંથી વારસામાં મેળવો)
+  select_workspace: કાર્યસ્થળ પસંદ કરો
+  workspace_fallback_name: ડેસ્કટોપ {{0}}
+  workspace_overrides: વર્કસ્પેસ ઓવરરાઇડ કરે છે
+  workspace_row: પંક્તિ {{0}}
 wm:
   animations:
     duration: એનિમેશન અવધિ (એમએસ)

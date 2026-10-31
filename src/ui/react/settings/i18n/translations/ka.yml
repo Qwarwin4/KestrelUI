@@ -125,13 +125,6 @@ discord_banner:
     თემები და იყავით განახლებული უახლესი ამბების შესახებ.
   title: შემოუერთდით ჩვენს საზოგადოებას
 extras:
-  backup_group: Cloud Backup
-  backup_last_sync: ბოლო სინქრონიზაცია
-  backup_never_synced: არასოდეს სინქრონიზებული
-  backup_sync: პარამეტრების სინქრონიზაცია ღრუბელთან
-  backup_sync_description: >-
-    ავტომატურად შექმენით სარეზერვო ასლები და აღადგინეთ თქვენი პარამეტრები
-    ღრუბლის საშუალებით.
   clear_icons: სუფთა სისტემის ხატები ქეში
   clear_icons_tooltip: გადატვირთვა შეიძლება საჭირო გახდეს, რომ სრულად იმოქმედოს ყველა ვიჯეტზე
   discord_rpc: უთანხმოება მდიდარი ყოფნა
@@ -200,7 +193,6 @@ header:
     plugin: ამხებო
     resources: რესურსები
     security: უსაფრთხოება
-    session: ანგარიში
     shortcuts: მალსახმობები
     soundpack: ხმის პაკეტები
     specific_apps: პარამეტრები აპლიკაციით
@@ -208,8 +200,6 @@ header:
     virtual_desk: ვირტუალური სამუშაო მაგიდა
     wallpaper: ფონები
     widget: ვიჯეტები
-home:
-  new_resources: ახალი რესურსები
 inherit: მემკვიდრეობით მიღება
 inProgress: Პროგრესირებს...
 insert: ჩასმა
@@ -374,6 +364,7 @@ wall:
   saturation: გაჯერება
   seconds: წამები
   select_collection: აირჩიეთ კოლექცია
+  show_paused_message: შეჩერებული შეტყობინების ჩვენება
   thumbnail_generation_complete: მინიატურების გენერაცია დასრულებულია
   thumbnail_generation_finished: ესკიზების შექმნა წარმატებით დასრულდა
   use_accent_color: გამოიყენეთ ფონის აქცენტის ფერი
@@ -382,7 +373,6 @@ wall:
   wallpapers: ფონები
   wallpapers_and_collections: ფონები და კოლექციები
   withOverlay: გადახურვით
-  workspace_collections: სამუშაო სივრცის კოლექციები
 weg:
   auto_hide: Ავტომატური დამალვა
   auto_hide_touch_disabled: ავტომატური დამალვა მიუწვდომელია სენსორული ეკრანის მოწყობილობებზე
@@ -448,6 +438,7 @@ welcome:
     თქვენი გამოხმაურება ეხმარება პროექტს ზრდასა და გაუმჯობესებაში.
   title: კეთილი იყოს თქვენი მობრძანება WinUIRev-ში!
 widget:
+  add_workspace_override: გადააჭარბეთ სამუშაო სივრცეს
   default_instance: ნაგულისხმევი ინსტანცია
   default_instance_hint: ყოველთვის აქტიური, იყენებს root ვიჯეტის კონფიგურაციას
   enable: ჩართეთ ეს ვიჯეტი
@@ -455,6 +446,11 @@ widget:
   extra_instances: დამატებითი შემთხვევები
   instance: მაგალითად
   instances: შემთხვევები
+  remove_workspace_override: წაშალეთ უგულებელყოფა (მემკვიდრეობა მონიტორიდან)
+  select_workspace: აირჩიეთ სამუშაო ადგილი
+  workspace_fallback_name: სამუშაო მაგიდა {{0}}
+  workspace_overrides: სამუშაო სივრცე უგულებელყოფს
+  workspace_row: მწკრივი {{0}}
 wm:
   animations:
     duration: ანიმაციის ხანგრძლივობა (MS)

@@ -122,11 +122,6 @@ discord_banner:
     jagage teemasid ja olge kursis viimaste uudistega.
   title: Liituge meie kogukonnaga
 extras:
-  backup_group: Pilvevarundamine
-  backup_last_sync: Viimane sünkroonimine
-  backup_never_synced: Pole kunagi sünkroonitud
-  backup_sync: Sünkrooni seaded pilvega
-  backup_sync_description: Varundage ja taastage seaded automaatselt pilve kaudu.
   clear_icons: Tühjenda süsteemi ikoonide vahemälu
   clear_icons_tooltip: Kõigi vidinate täielikuks jõustumiseks võib olla vajalik taaskäivitamine.
   discord_rpc: Discord rikas kohalolek
@@ -195,7 +190,6 @@ header:
     plugin: Plugins
     resources: Ressursid
     security: Turvalisus
-    session: konto
     shortcuts: Otseteed
     soundpack: Helipaketid
     specific_apps: Seadistused rakenduse järgi
@@ -203,8 +197,6 @@ header:
     virtual_desk: Virtuaalsed töölauad
     wallpaper: Taustapildid
     widget: Vidinad
-home:
-  new_resources: Uued ressursid
 inherit: Pärima
 inProgress: Pooleli ...
 insert: Sisestama
@@ -371,6 +363,7 @@ wall:
   saturation: Küllastumine
   seconds: sekundid
   select_collection: Valige Kogu
+  show_paused_message: Kuva peatatud sõnum
   thumbnail_generation_complete: Pisipiltide genereerimine on lõpetatud
   thumbnail_generation_finished: Pisipiltide genereerimine on edukalt lõppenud
   use_accent_color: Kasutage tapeedi aktsentvärvi
@@ -379,7 +372,6 @@ wall:
   wallpapers: Taustapildid
   wallpapers_and_collections: Taustapildid ja kollektsioonid
   withOverlay: Koos kattekihiga
-  workspace_collections: Tööruumi kogud
 weg:
   auto_hide: Automaatne peida
   auto_hide_touch_disabled: Automaatne peitmine pole puuteekraaniga seadmetes saadaval
@@ -443,6 +435,7 @@ welcome:
     jätmist – teie tagasiside aitab projektil kasvada ja täiustada.
   title: Tere tulemast WinUIRev!
 widget:
+  add_workspace_override: Alistada tööalal
   default_instance: Vaikimisi eksemplar
   default_instance_hint: Alati aktiivne, kasutab juurvidina konfiguratsiooni
   enable: Võta see vidin kasutusele
@@ -450,6 +443,11 @@ widget:
   extra_instances: Lisajuhtumid
   instance: Näide
   instances: Instants
+  remove_workspace_override: Eemalda alistamine (pärib monitorilt)
+  select_workspace: Valige tööala
+  workspace_fallback_name: Töölaud {{0}}
+  workspace_overrides: Tööala alistab
+  workspace_row: Rida {{0}}
 wm:
   animations:
     duration: Animatsiooni kestus (MS)

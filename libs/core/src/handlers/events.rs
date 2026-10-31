@@ -86,7 +86,6 @@ slu_events_declaration! {
     MediaOutputs(Vec<MediaDevice>) as "media-outputs",
     MediaWaveform(AudioWaveform) as "media::waveform",
 
-    NetworkDefaultLocalIp(String) as "network-default-local-ip",
     NetworkAdapters(Vec<NetworkAdapter>) as "network-adapters",
     NetworkInternetConnection(bool) as "network-internet-connection",
     NetworkWlanScanned(Vec<WlanBssEntry>) as "wlan-scanned",
@@ -128,6 +127,7 @@ slu_events_declaration! {
     SystemNetworkChanged(Vec<NetworkStatistics>) as "system::network-changed",
     SystemMemoryChanged(Memory) as "system::memory-changed",
     SystemCoresChanged(Vec<Core>) as "system::cores-changed",
+    SystemGpusChanged(Vec<Gpu>) as "system::gpus-changed",
 
     BluetoothDevicesChanged(Vec<BluetoothDevice>) as "bluetooth-devices-changed",
 

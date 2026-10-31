@@ -107,11 +107,6 @@ discord_banner:
   message: 與其他 WinUIRev 使用者聯繫、獲取協助、分享主題並了解最新消息。
   title: 加入我們的社群
 extras:
-  backup_group: 雲端備份
-  backup_last_sync: 上次同步
-  backup_never_synced: 從未同步過
-  backup_sync: 將設定同步到雲端
-  backup_sync_description: 透過雲端自動備份和還原您的設定。
   clear_icons: 清除系統圖示快取
   clear_icons_tooltip: 小工具可能需要重新啟動才會生效
   discord_rpc: Discord富狀態
@@ -168,7 +163,6 @@ header:
     plugin: 擴充功能
     resources: 資源
     security: 安全
-    session: 帳戶
     shortcuts: 快捷鍵
     soundpack: 聲音包
     specific_apps: 個別應用程式設定
@@ -176,8 +170,6 @@ header:
     virtual_desk: 虛擬桌面
     wallpaper: 桌布
     widget: 小工具
-home:
-  new_resources: 新資源
 inherit: 繼承
 inProgress: 進行中...
 insert: 插入
@@ -334,6 +326,7 @@ wall:
   saturation: 飽和
   seconds: 秒
   select_collection: 選擇系列
+  show_paused_message: 顯示暫停的訊息
   thumbnail_generation_complete: 縮圖生成完成
   thumbnail_generation_finished: 縮圖生成已成功完成
   use_accent_color: 使用桌布強調色
@@ -342,7 +335,6 @@ wall:
   wallpapers: 桌布
   wallpapers_and_collections: 桌布和收藏
   withOverlay: 啟用疊加層
-  workspace_collections: 工作區集合
 weg:
   auto_hide: 自動隱藏
   auto_hide_touch_disabled: 自動隱藏在觸控螢幕裝置上不可用
@@ -402,6 +394,7 @@ welcome:
   review: 如果您喜歡使用 WinUIRev，請考慮在商店留下評論，您的回饋有助於專案的發展和改進。
   title: 歡迎來到WinUIRev！
 widget:
+  add_workspace_override: 覆蓋工作區
   default_instance: 預設視窗
   default_instance_hint: 始終處於活動狀態，使用根小工具配置
   enable: 啟用這個小工具
@@ -409,6 +402,11 @@ widget:
   extra_instances: 額外視窗
   instance: 視窗
   instances: 視窗
+  remove_workspace_override: 刪除覆蓋（從監視器繼承）
+  select_workspace: 選擇一個工作區
+  workspace_fallback_name: 桌面版 {{0}}
+  workspace_overrides: 工作區覆蓋
+  workspace_row: 第 {{0}} 行
 wm:
   animations:
     duration: 動畫持續時間（MS）

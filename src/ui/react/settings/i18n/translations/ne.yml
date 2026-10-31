@@ -124,13 +124,6 @@ discord_banner:
     विषयवस्तुहरू साझा गर्नुहोस्, र नवीनतम समाचारहरूको साथ अद्यावधिक रहनुहोस्।
   title: हाम्रो समुदायमा सामेल हुनुहोस्
 extras:
-  backup_group: क्लाउड ब्याकअप
-  backup_last_sync: पछिल्लो सिंक
-  backup_never_synced: कहिल्यै सिंक गरिएको छैन
-  backup_sync: क्लाउडमा सेटिङहरू सिंक गर्नुहोस्
-  backup_sync_description: >-
-    क्लाउड मार्फत स्वचालित रूपमा ब्याकअप र आफ्नो सेटिङहरू पुनर्स्थापना
-    गर्नुहोस्।
   clear_icons: स्पष्ट प्रणाली आइकनहरू क्यास
   clear_icons_tooltip: 'सबै विजेटहरूमा पूर्ण रूपमा प्रभाव लिनको लागि एक पुन: सुरू गर्न आवश्यक पर्दछ'
   discord_rpc: धनी उपस्थितिको विरोध गर्नुहोस्
@@ -200,7 +193,6 @@ header:
     plugin: निशम्न
     resources: वस्तुजार
     security: सुरक्षा
-    session: खाता
     shortcuts: सर्टकटहरू
     soundpack: ध्वनि प्याक
     specific_apps: अनुप्रयोग द्वारा सेटिंग्स
@@ -208,8 +200,6 @@ header:
     virtual_desk: भर्चुअल डेस्कटपहरू
     wallpaper: वालपेपरहरू
     widget: विजेटहरू
-home:
-  new_resources: नयाँ स्रोतहरू
 inherit: बाबु बाजेबाट पाउनु
 inProgress: प्रगति हुदैछ...
 insert: घुसाउनु
@@ -377,6 +367,7 @@ wall:
   saturation: संतृप्ति
   seconds: सेकेन्ड
   select_collection: संग्रह चयन गर्नुहोस्
+  show_paused_message: रोकिएको सन्देश देखाउनुहोस्
   thumbnail_generation_complete: थम्बनेल जेनेरेसन पूरा भयो
   thumbnail_generation_finished: थम्बनेल उत्पादन सफलतापूर्वक समाप्त भयो
   use_accent_color: वालपेपर उच्चारण रंग प्रयोग गर्नुहोस्
@@ -385,7 +376,6 @@ wall:
   wallpapers: वालपेपर
   wallpapers_and_collections: वालपेपर र संग्रह
   withOverlay: ओभरले साथ
-  workspace_collections: कार्यक्षेत्र संग्रहहरू
 weg:
   auto_hide: 'स्वत: लुकाउने'
   auto_hide_touch_disabled: टच स्क्रिन उपकरणहरूमा स्वतः लुकाउने सुविधा उपलब्ध छैन
@@ -450,6 +440,7 @@ welcome:
     मद्दत गर्दछ।
   title: WinUIRev मा स्वागत छ!
 widget:
+  add_workspace_override: कार्यस्थानमा ओभरराइड गर्नुहोस्
   default_instance: पूर्वनिर्धारित उदाहरण
   default_instance_hint: सँधै सक्रिय, रूट विजेट कन्फिगरेसन प्रयोग गर्दछ
   enable: यो विजेट सक्षम गर्नुहोस्
@@ -457,6 +448,11 @@ widget:
   extra_instances: अतिरिक्त उदाहरणहरू
   instance: उदाहरण
   instances: संकेतहरू
+  remove_workspace_override: ओभरराइड हटाउनुहोस् (मोनिटरबाट इनहेरिट)
+  select_workspace: कार्यस्थान चयन गर्नुहोस्
+  workspace_fallback_name: डेस्कटप {{0}}
+  workspace_overrides: कार्यक्षेत्र ओभरराइड गर्दछ
+  workspace_row: पङ्क्ति {{0}}
 wm:
   animations:
     duration: एनिमेसन अवधि (एमएस)

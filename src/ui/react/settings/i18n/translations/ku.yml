@@ -121,11 +121,6 @@ discord_banner:
     mijaran parve bikin û bi nûçeyên herî dawî re bimînin.
   title: Tevlî Civata me bibin
 extras:
-  backup_group: Cloud Backup
-  backup_last_sync: Hevdemkirina dawîn
-  backup_never_synced: Qet nehat senkronîzekirin
-  backup_sync: Mîhengên bi ewr re hevdeng bikin
-  backup_sync_description: Bi navgîniya ewr ve mîhengên xwe bixweber hilînin û sererast bikin.
   clear_icons: Îkonên pergala zelal cache
   clear_icons_tooltip: >-
     Pêdivî ye ku ji nû ve destpêkirinê were xwestin ku bi tevahî li ser hemî
@@ -196,7 +191,6 @@ header:
     plugin: Pêçanin
     resources: Resourcesavkaniyên
     security: Ewlekarî
-    session: Konto
     shortcuts: Kurtefîlm
     soundpack: Pakêtên deng
     specific_apps: Mîhengên bi serîlêdanê
@@ -204,8 +198,6 @@ header:
     virtual_desk: Desktopên Virtual
     wallpaper: Wallpapers
     widget: Widgets
-home:
-  new_resources: Resourcesavkaniyên nû
 inherit: Mîratgirtin
 inProgress: Ez teslîm nabim...
 insert: Lêzêdekirin
@@ -375,6 +367,7 @@ wall:
   saturation: Satutionation
   seconds: seconds
   select_collection: Hilbijêre Collection
+  show_paused_message: Peyama rawestandî nîşan bide
   thumbnail_generation_complete: Nifşa Thumbnail Biqede
   thumbnail_generation_finished: Çêkirina pîçikan bi serfirazî qediya
   use_accent_color: Rengê devoka dîwarê dîwar bikar bînin
@@ -383,7 +376,6 @@ wall:
   wallpapers: Wallpapers
   wallpapers_and_collections: Wallpaper & Collections
   withOverlay: Bi sernav
-  workspace_collections: Koleksiyonên Cihê Xebatê
 weg:
   auto_hide: Auto Hide
   auto_hide_touch_disabled: Veşartina otomatîkî li ser cîhazên ekrana destikê peyda nabe
@@ -448,6 +440,7 @@ welcome:
     pêşve bibe.
   title: Hûn bi xêr hatin WinUIRev!
 widget:
+  add_workspace_override: Li ser cîhek xebatê hilweşînin
   default_instance: Mînaka Bingehîn
   default_instance_hint: Her gav çalak e, veavakirina widgeta root bikar tîne
   enable: Vê widgetê çalak bikin
@@ -455,6 +448,11 @@ widget:
   extra_instances: Mînakên Zêdeyî
   instance: Mînak
   instances: Mînak
+  remove_workspace_override: Rexnegiriyê rake (ji çavdêriyê mîras bigire)
+  select_workspace: Cihek xebatê hilbijêrin
+  workspace_fallback_name: Sermaseya {{0}}
+  workspace_overrides: Cihê xebatê serûbin dike
+  workspace_row: Rêz {{0}}
 wm:
   animations:
     duration: Demjimêr anîmasyon (MS)

@@ -123,11 +123,6 @@ discord_banner:
     uppdaterad med de senaste nyheterna.
   title: Gå med i vår community
 extras:
-  backup_group: Cloud Backup
-  backup_last_sync: Senaste synkronisering
-  backup_never_synced: Aldrig synkat
-  backup_sync: Synkronisera inställningar till molnet
-  backup_sync_description: Säkerhetskopiera och återställ dina inställningar automatiskt via molnet.
   clear_icons: Rensa cachen för systemikoner
   clear_icons_tooltip: En omstart kan krävas för att få full effekt på alla widgets
   discord_rpc: Discord rik närvaro
@@ -197,7 +192,6 @@ header:
     plugin: Plugins
     resources: Resurser
     security: Säkerhet
-    session: Konto
     shortcuts: Genvägar
     soundpack: Ljudpaket
     specific_apps: Inställningar per applikation
@@ -205,8 +199,6 @@ header:
     virtual_desk: Virtuella skrivbord
     wallpaper: Bakgrundsbilder
     widget: Widgetar
-home:
-  new_resources: Nya resurser
 inherit: Ärva
 inProgress: Pågående...
 insert: Infoga
@@ -373,6 +365,7 @@ wall:
   saturation: Mättnad
   seconds: sekunder
   select_collection: Välj Samling
+  show_paused_message: Visa pausat meddelande
   thumbnail_generation_complete: Generering av miniatyrbilder är klar
   thumbnail_generation_finished: Generering av miniatyrbilder har slutförts framgångsrikt
   use_accent_color: Använd tapetaccentfärg
@@ -381,7 +374,6 @@ wall:
   wallpapers: Bakgrundsbilder
   wallpapers_and_collections: Tapeter och samlingar
   withOverlay: Med överlägg
-  workspace_collections: Arbetsyta samlingar
 weg:
   auto_hide: Auto Hide
   auto_hide_touch_disabled: Automatisk döljning är inte tillgängligt på enheter med pekskärm
@@ -444,6 +436,7 @@ welcome:
     – din feedback hjälper projektet att växa och förbättras.
   title: Välkommen till WinUIRev!
 widget:
+  add_workspace_override: Åsidosätt på en arbetsyta
   default_instance: Standardinstans
   default_instance_hint: Alltid aktiv, använder root-widgetkonfigurationen
   enable: Aktivera denna widget
@@ -451,6 +444,11 @@ widget:
   extra_instances: Extra instanser
   instance: Exempel
   instances: Instanser
+  remove_workspace_override: Ta bort åsidosättning (ärv från monitor)
+  select_workspace: Välj en arbetsyta
+  workspace_fallback_name: Desktop {{0}}
+  workspace_overrides: Arbetsytan åsidosätter
+  workspace_row: Rad {{0}}
 wm:
   animations:
     duration: Animationens varaktighet (MS)

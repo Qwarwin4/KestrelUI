@@ -125,11 +125,6 @@ discord_banner:
     získajte pomoc, zdieľajte témy a buďte informovaní o najnovších správach.
   title: Pripojte sa k našej komunite
 extras:
-  backup_group: Cloudové zálohovanie
-  backup_last_sync: Posledná synchronizácia
-  backup_never_synced: Nikdy nesynchronizované
-  backup_sync: Synchronizujte nastavenia do cloudu
-  backup_sync_description: Automaticky zálohujte a obnovujte svoje nastavenia prostredníctvom cloudu.
   clear_icons: Vymazanie vyrovnávacej pamäte systémových ikon
   clear_icons_tooltip: Aby sa všetky widgety plne prejavili, môže byť potrebný reštart.
   discord_rpc: Rozpor bohatá prítomnosť
@@ -198,7 +193,6 @@ header:
     plugin: Zásuvné moduly
     resources: Zdroje
     security: Bezpečnosť
-    session: účtu
     shortcuts: Skratky
     soundpack: Zvukové balíky
     specific_apps: Nastavenia podľa aplikácie
@@ -206,8 +200,6 @@ header:
     virtual_desk: Virtuálne pracovné plochy
     wallpaper: Tapety na plochu
     widget: Widgety
-home:
-  new_resources: Nové zdroje
 inherit: Zdediť
 inProgress: Prebieha ...
 insert: Vložiť
@@ -379,6 +371,7 @@ wall:
   saturation: Nasýtenie
   seconds: sekundy
   select_collection: Vyberte položku Zbierka
+  show_paused_message: Zobraziť pozastavenú správu
   thumbnail_generation_complete: Generovanie miniatúr je dokončené
   thumbnail_generation_finished: Generovanie miniatúr bolo úspešne ukončené
   use_accent_color: Použite akcentovú farbu tapety
@@ -387,7 +380,6 @@ wall:
   wallpapers: Tapety
   wallpapers_and_collections: Tapety a kolekcie
   withOverlay: S prekrytím
-  workspace_collections: Kolekcie pracovného priestoru
 weg:
   auto_hide: Automaticky skryť
   auto_hide_touch_disabled: Automatické skrytie nie je dostupné na zariadeniach s dotykovou obrazovkou
@@ -451,6 +443,7 @@ welcome:
     v obchode – vaša spätná väzba pomáha projektu rásť a zlepšovať sa.
   title: Vitajte v používateľskom rozhraní WinUIRev!
 widget:
+  add_workspace_override: Prepísať v pracovnom priestore
   default_instance: Predvolená inštancia
   default_instance_hint: Vždy aktívny, používa koreňovú konfiguráciu widgetu
   enable: Povolenie tohto widgetu
@@ -458,6 +451,11 @@ widget:
   extra_instances: Extra inštancie
   instance: Inštancia
   instances: Inštancie
+  remove_workspace_override: Odstrániť prepísanie (zdediť z monitora)
+  select_workspace: Vyberte pracovný priestor
+  workspace_fallback_name: Počítač {{0}}
+  workspace_overrides: Prepíše pracovný priestor
+  workspace_row: Riadok {{0}}
 wm:
   animations:
     duration: Trvanie animácie (MS)

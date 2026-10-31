@@ -119,11 +119,6 @@ discord_banner:
     على اطلاع على آخر الأخبار.
   title: انضم إلى مجتمعنا
 extras:
-  backup_group: النسخ الاحتياطي السحابي
-  backup_last_sync: آخر مزامنة
-  backup_never_synced: لم تتم مزامنتها مطلقًا
-  backup_sync: إعدادات المزامنة مع السحابة
-  backup_sync_description: النسخ الاحتياطي واستعادة إعداداتك تلقائيًا عبر السحابة.
   clear_icons: مسح ذاكرة التخزين المؤقت لأيقونات النظام
   clear_icons_tooltip: قد تكون إعادة التشغيل مطلوبة لتدخل جميع الأدوات حيز التنفيذ بالكامل
   discord_rpc: حضور غني بالخلاف
@@ -191,7 +186,6 @@ header:
     plugin: المكونات الإضافية
     resources: الموارد
     security: حماية
-    session: حساب
     shortcuts: الاختصارات
     soundpack: حزم الصوت
     specific_apps: الإعدادات حسب التطبيق
@@ -199,8 +193,6 @@ header:
     virtual_desk: أجهزة الكمبيوتر المكتبية الافتراضية
     wallpaper: خلفيات
     widget: الأدوات
-home:
-  new_resources: الموارد الجديدة
 inherit: ورث
 inProgress: قيد التنفيذ...
 insert: أدخل
@@ -361,6 +353,7 @@ wall:
   saturation: التشبع
   seconds: ثوان
   select_collection: حدد المجموعة
+  show_paused_message: إظهار الرسالة المتوقفة مؤقتًا
   thumbnail_generation_complete: اكتمل إنشاء الصورة المصغرة
   thumbnail_generation_finished: تم الانتهاء من إنشاء الصور المصغرة بنجاح
   use_accent_color: استخدام لون لهجة ورق الحائط
@@ -369,7 +362,6 @@ wall:
   wallpapers: خلفيات
   wallpapers_and_collections: خلفيات ومجموعات
   withOverlay: مع تراكب
-  workspace_collections: مجموعات مساحة العمل
 weg:
   auto_hide: الأخفاء التلقائي
   auto_hide_touch_disabled: الإخفاء التلقائي غير متاح على الأجهزة التي تعمل باللمس
@@ -432,6 +424,7 @@ welcome:
     تساعد المشروع على النمو والتحسن.
   title: مرحبًا بك في واجهة مستخدم WinUIRev!
 widget:
+  add_workspace_override: تجاوز على مساحة العمل
   default_instance: المثيل الافتراضي
   default_instance_hint: نشط دائمًا، ويستخدم تكوين عنصر واجهة المستخدم الجذر
   enable: تمكين هذه الأداة
@@ -439,6 +432,11 @@ widget:
   extra_instances: مثيلات إضافية
   instance: مثال
   instances: المثيلات
+  remove_workspace_override: إزالة التجاوز (وراثة من الشاشة)
+  select_workspace: حدد مساحة عمل
+  workspace_fallback_name: سطح المكتب {{0}}
+  workspace_overrides: تجاوزات مساحة العمل
+  workspace_row: الصف {{0}}
 wm:
   animations:
     duration: مدة الرسوم المتحركة (MS)

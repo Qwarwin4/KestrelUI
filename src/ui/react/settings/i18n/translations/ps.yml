@@ -122,11 +122,6 @@ discord_banner:
     کړئ، او د وروستي خبرونو سره تازه اوسئ.
   title: زموږ په ټولنه کې ګډون وکړئ
 extras:
-  backup_group: د کلاوډ بیک اپ
-  backup_last_sync: وروستی ترکیب
-  backup_never_synced: هیڅکله همغږي نه ده
-  backup_sync: په کلاوډ کې تنظیمات همغږي کړئ
-  backup_sync_description: په اوتومات ډول د بادل له لارې خپل تنظیمات بیک اپ او بحال کړئ.
   clear_icons: د ایکسین عکس کې کیچ
   clear_icons_tooltip: یو چالان ته اړتیا لیدل کیدی شي چې په بشپړ پوړ کې په بشپړ ډول پلي شي
   discord_rpc: د بډایه شتون سره مخالفت وکړئ
@@ -195,7 +190,6 @@ header:
     plugin: فلګونه
     resources: سرچینې
     security: امنیت
-    session: حساب
     shortcuts: لنډوکونه
     soundpack: غږ کڅوړه
     specific_apps: د غوښتنلیک له مخې تنظیمات
@@ -203,8 +197,6 @@ header:
     virtual_desk: مجازی ډیسټاپونه
     wallpaper: والپيپرونه
     widget: ویجټونه
-home:
-  new_resources: نوې سرچينې
 inherit: میراث
 inProgress: د پرمختګ په حال کې...
 insert: دننه کړئ
@@ -365,6 +357,7 @@ wall:
   saturation: تړل
   seconds: ثانیې
   select_collection: ټولګه وټاکئ
+  show_paused_message: ځنډول شوی پیغام وښایاست
   thumbnail_generation_complete: د تمبیل تولید بشپړ شو
   thumbnail_generation_finished: د تمبیل تولید په بریالیتوب سره پای ته ورسید
   use_accent_color: د وال پیپر تلفظ رنګ وکاروئ
@@ -373,7 +366,6 @@ wall:
   wallpapers: وال پیپرونه
   wallpapers_and_collections: وال پیپرونه او ټولګه
   withOverlay: د
-  workspace_collections: د کار ځای ټولګه
 weg:
   auto_hide: آٹو پټول
   auto_hide_touch_disabled: د ټچ سکرین وسیلو کې اتومات پټول شتون نلري
@@ -436,6 +428,7 @@ welcome:
     ستاسو نظر د پروژې وده او وده کې مرسته کوي.
   title: WinUIRev ته ښه راغلاست!
 widget:
+  add_workspace_override: په یوه کاري ځای کې وګرځئ
   default_instance: ډیفالټ مثال
   default_instance_hint: تل فعال، د روټ ویجټ ترتیب کاروي
   enable: دې ویجیټ وړ کړئ
@@ -443,6 +436,11 @@ widget:
   extra_instances: اضافي مثالونه
   instance: مثال
   instances: مثالونه
+  remove_workspace_override: اووررایډ لرې کړئ (د مانیټر څخه میراث)
+  select_workspace: د کار ځای غوره کړئ
+  workspace_fallback_name: ډیسټاپ {{0}}
+  workspace_overrides: د کار ځای له منځه ځي
+  workspace_row: قطار {{0}}
 wm:
   animations:
     duration: د انیمیشن موده (MS)

@@ -125,11 +125,6 @@ discord_banner:
     și fiți la curent cu cele mai recente știri.
   title: Alăturați-vă comunității noastre
 extras:
-  backup_group: Backup în cloud
-  backup_last_sync: Ultima sincronizare
-  backup_never_synced: Nu s-a sincronizat niciodată
-  backup_sync: Sincronizați setările cu cloud
-  backup_sync_description: Faceți backup și restaurați automat setările prin cloud.
   clear_icons: Ștergeți memoria cache a pictogramelor de sistem
   clear_icons_tooltip: >-
     Ar putea fi necesară o repornire pentru ca toate widget-urile să intre în
@@ -202,7 +197,6 @@ header:
     plugin: Plugin-uri
     resources: Resurse
     security: Securitate
-    session: Cont
     shortcuts: Comitete rapide
     soundpack: Pachete de sunet
     specific_apps: Setări în funcție de aplicație
@@ -210,8 +204,6 @@ header:
     virtual_desk: Birouri virtuale
     wallpaper: Imagini de fundal
     widget: Widget-uri
-home:
-  new_resources: Resurse noi
 inherit: Moşteni
 inProgress: În curs...
 insert: Introduce
@@ -379,6 +371,7 @@ wall:
   saturation: Saturație
   seconds: secunde
   select_collection: Selectați Colecție
+  show_paused_message: Afișează mesajul întrerupt
   thumbnail_generation_complete: Generarea miniaturii finalizată
   thumbnail_generation_finished: Generarea miniaturilor s-a încheiat cu succes
   use_accent_color: Utilizați culoarea de accent pentru tapet
@@ -387,7 +380,6 @@ wall:
   wallpapers: Imagini de fundal
   wallpapers_and_collections: Imagini de fundal și colecții
   withOverlay: Cu suprapunere
-  workspace_collections: Colecții de spațiu de lucru
 weg:
   auto_hide: Ascundere automată
   auto_hide_touch_disabled: Ascunderea automată nu este disponibilă pe dispozitivele cu ecran tactil
@@ -452,6 +444,7 @@ welcome:
     îmbunătățească.
   title: Bun venit la WinUIRev!
 widget:
+  add_workspace_override: Ignorați pe un spațiu de lucru
   default_instance: Instanță implicită
   default_instance_hint: Întotdeauna activ, folosește configurația widget rădăcină
   enable: Activați acest widget
@@ -459,6 +452,11 @@ widget:
   extra_instances: Instanțe suplimentare
   instance: Exemplu
   instances: Instanțe
+  remove_workspace_override: Eliminați anularea (moșteniți de pe monitor)
+  select_workspace: Selectați un spațiu de lucru
+  workspace_fallback_name: Desktop {{0}}
+  workspace_overrides: Suprascrierea spațiului de lucru
+  workspace_row: Rândul {{0}}
 wm:
   animations:
     duration: Durata de animație (MS)

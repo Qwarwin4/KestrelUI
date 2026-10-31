@@ -387,6 +387,7 @@ wall:
   saturation: Saturation
   seconds: seconds
   select_collection: Select Collection
+  show_paused_message: Show paused message
   thumbnail_generation_complete: Thumbnail Generation Complete
   thumbnail_generation_finished: Thumbnail generation has finished successfully
   use_accent_color: Use wallpaper accent color
@@ -395,7 +396,6 @@ wall:
   wallpapers: Wallpapers
   wallpapers_and_collections: Wallpapers & Collections
   withOverlay: With Overlay
-  workspace_collections: Workspace Collections
 weg:
   auto_hide: Auto Hide
   auto_hide_touch_disabled: Auto hide is not available on touch screen devices
@@ -458,6 +458,7 @@ welcome:
     feedback helps the project grow and improve.
   title: Welcome to WinUIRev!
 widget:
+  add_workspace_override: Override on a workspace
   default_instance: Default Instance
   default_instance_hint: Always active, uses the root widget config
   enable: Enable this widget
@@ -465,6 +466,11 @@ widget:
   extra_instances: Extra Instances
   instance: Instance
   instances: Instances
+  remove_workspace_override: Remove override (inherit from monitor)
+  select_workspace: Select a workspace
+  workspace_fallback_name: Desktop {{0}}
+  workspace_overrides: Workspace overrides
+  workspace_row: Row {{0}}
 wm:
   animations:
     duration: Animation Duration (ms)

@@ -126,13 +126,6 @@ discord_banner:
     neuesten Nachrichten auf dem Laufenden.
   title: Treten Sie unserer Community bei
 extras:
-  backup_group: Cloud-Backup
-  backup_last_sync: Letzte Synchronisierung
-  backup_never_synced: Nie synchronisiert
-  backup_sync: Synchronisieren Sie die Einstellungen mit der Cloud
-  backup_sync_description: >-
-    Sichern Sie Ihre Einstellungen automatisch über die Cloud und stellen Sie
-    sie wieder her.
   clear_icons: System-Symbol-Cache löschen
   clear_icons_tooltip: >-
     Ein Neustart könnte erforderlich sein, um alle Widgets vollständig zu
@@ -204,7 +197,6 @@ header:
     plugin: Plugins
     resources: Ressourcen
     security: Sicherheit
-    session: Konto
     shortcuts: Kurzbefehle
     soundpack: Sound Packs
     specific_apps: Einstellungen nach Anwendung
@@ -212,8 +204,6 @@ header:
     virtual_desk: Virtuelle Desktops
     wallpaper: Bildschirmhintergründe
     widget: Widgets
-home:
-  new_resources: Neue Ressourcen
 inherit: Erben
 inProgress: In Bearbeitung...
 insert: Einfügen
@@ -385,6 +375,7 @@ wall:
   saturation: Sättigung
   seconds: Sekunden
   select_collection: Wählen Sie Sammlung
+  show_paused_message: Pausierte Nachricht anzeigen
   thumbnail_generation_complete: Miniaturbild-Erstellung abgeschlossen
   thumbnail_generation_finished: Die Miniaturbildgenerierung wurde erfolgreich abgeschlossen
   use_accent_color: Verwenden Sie eine Akzentfarbe für die Tapete
@@ -393,7 +384,6 @@ wall:
   wallpapers: Hintergrundbilder
   wallpapers_and_collections: Hintergrundbilder und Sammlungen
   withOverlay: Mit Overlay
-  workspace_collections: Arbeitsbereichssammlungen
 weg:
   auto_hide: Automatisch ausblenden
   auto_hide_touch_disabled: Das automatische Ausblenden ist auf Touchscreen-Geräten nicht verfügbar
@@ -457,6 +447,7 @@ welcome:
     bei, dass das Projekt wächst und sich verbessert.
   title: Willkommen bei WinUIRev!
 widget:
+  add_workspace_override: Überschreiben Sie einen Arbeitsbereich
   default_instance: Standardinstanz
   default_instance_hint: Immer aktiv, verwendet die Root-Widget-Konfiguration
   enable: Aktivieren Sie dieses Widget
@@ -464,6 +455,11 @@ widget:
   extra_instances: Zusätzliche Instanzen
   instance: Beispiel
   instances: Instanzen
+  remove_workspace_override: Überschreibung entfernen (vom Monitor erben)
+  select_workspace: Wählen Sie einen Arbeitsbereich aus
+  workspace_fallback_name: Desktop {{0}}
+  workspace_overrides: Arbeitsbereichsüberschreibungen
+  workspace_row: Zeile {{0}}
 wm:
   animations:
     duration: Animationsdauer (MS)

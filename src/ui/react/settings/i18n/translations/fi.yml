@@ -124,11 +124,6 @@ discord_banner:
     teemoja ja pysy ajan tasalla viimeisimmistä uutisista.
   title: Liity yhteisöömme
 extras:
-  backup_group: Pilvivarmuuskopio
-  backup_last_sync: Viimeisin synkronointi
-  backup_never_synced: Ei koskaan synkronoitu
-  backup_sync: Synkronoi asetukset pilveen
-  backup_sync_description: Varmuuskopioi ja palauta asetuksesi automaattisesti pilven kautta.
   clear_icons: Tyhjennä järjestelmän kuvakkeiden välimuisti
   clear_icons_tooltip: >-
     Uudelleenkäynnistystä saatetaan tarvita, jotta kaikki widgetit tulisivat
@@ -200,7 +195,6 @@ header:
     plugin: Liitännäiset
     resources: Resurssit
     security: Turvallisuus
-    session: Tili
     shortcuts: Pikakuvakkeet
     soundpack: Sound Packit
     specific_apps: Asetukset sovelluksen mukaan
@@ -208,8 +202,6 @@ header:
     virtual_desk: Virtuaaliset työpöydät
     wallpaper: Taustakuvat
     widget: Widgetit
-home:
-  new_resources: Uudet resurssit
 inherit: Periä
 inProgress: Käynnissä...
 insert: Lisätä
@@ -375,6 +367,7 @@ wall:
   saturation: Saturaatio
   seconds: sekunti
   select_collection: Valitse Kokoelma
+  show_paused_message: Näytä keskeytetty viesti
   thumbnail_generation_complete: Pikkukuvien luominen valmis
   thumbnail_generation_finished: Pikkukuvien luominen on päättynyt onnistuneesti
   use_accent_color: Käytä taustakuvan korostusväriä
@@ -383,7 +376,6 @@ wall:
   wallpapers: Taustakuvat
   wallpapers_and_collections: Taustakuvat & Kokoelmat
   withOverlay: Päällysteen kanssa
-  workspace_collections: Työtilakokoelmat
 weg:
   auto_hide: Automaattinen piilo
   auto_hide_touch_disabled: Automaattinen piilotus ei ole käytettävissä kosketusnäytöllisissä laitteissa
@@ -447,6 +439,7 @@ welcome:
     kauppaan – palautteesi auttaa projektia kasvamaan ja kehittymään.
   title: Tervetuloa WinUIRev-käyttöliittymään!
 widget:
+  add_workspace_override: Ohita työtilassa
   default_instance: Oletusinstanssi
   default_instance_hint: Aina aktiivinen, käyttää juuriwidgetin konfiguraatiota
   enable: Ota tämä widget käyttöön
@@ -454,6 +447,11 @@ widget:
   extra_instances: Ylimääräiset esiintymät
   instance: Esimerkki
   instances: Instanssit
+  remove_workspace_override: Poista ohitus (peri näytöltä)
+  select_workspace: Valitse työtila
+  workspace_fallback_name: Työpöytä {{0}}
+  workspace_overrides: Työtilan ohitukset
+  workspace_row: Rivi {{0}}
 wm:
   animations:
     duration: Animaation kesto (MS)

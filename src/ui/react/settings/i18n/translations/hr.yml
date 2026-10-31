@@ -124,13 +124,6 @@ discord_banner:
     ostanite u tijeku s najnovijim vijestima.
   title: Pridružite se našoj zajednici
 extras:
-  backup_group: Sigurnosna kopija u oblaku
-  backup_last_sync: Zadnja sinkronizacija
-  backup_never_synced: Nikad sinkronizirano
-  backup_sync: Sinkronizirajte postavke s oblakom
-  backup_sync_description: >-
-    Automatski napravite sigurnosnu kopiju i vratite svoje postavke putem
-    oblaka.
   clear_icons: Očistite predmemoriju ikona sustava
   clear_icons_tooltip: Ponovno pokretanje moglo bi se u potpunosti stupiti na sve widgete
   discord_rpc: Discord bogata prisutnost
@@ -199,7 +192,6 @@ header:
     plugin: Dodaci
     resources: Resursi
     security: Sigurnost
-    session: Račun
     shortcuts: Prečac
     soundpack: Zvučni paketi
     specific_apps: Postavke prema aplikaciji
@@ -207,8 +199,6 @@ header:
     virtual_desk: Virtualna radna računala
     wallpaper: Pozadine
     widget: Widgeti
-home:
-  new_resources: Novi resursi
 inherit: Naslijediti
 inProgress: U nastajanju...
 insert: Umetnuti
@@ -377,6 +367,7 @@ wall:
   saturation: Zasićenost
   seconds: sekundi
   select_collection: Odaberite Zbirka
+  show_paused_message: Prikaži pauziranu poruku
   thumbnail_generation_complete: Generiranje sličica dovršeno
   thumbnail_generation_finished: Generiranje sličica je uspješno završeno
   use_accent_color: Koristite boju tapeta
@@ -385,7 +376,6 @@ wall:
   wallpapers: Pozadine
   wallpapers_and_collections: Pozadine i kolekcije
   withOverlay: S prekrivanjem
-  workspace_collections: Zbirke radnog prostora
 weg:
   auto_hide: Auto sakrij
   auto_hide_touch_disabled: Automatsko skrivanje nije dostupno na uređajima s dodirnim zaslonom
@@ -449,6 +439,7 @@ welcome:
     trgovini - vaše povratne informacije pomažu razvoju i poboljšanju projekta.
   title: Dobro došli u WinUIRev!
 widget:
+  add_workspace_override: Nadjačavanje na radnom prostoru
   default_instance: Zadana instanca
   default_instance_hint: Uvijek aktivan, koristi konfiguraciju korijenskog widgeta
   enable: Omogući ovaj widget
@@ -456,6 +447,11 @@ widget:
   extra_instances: Dodatne instance
   instance: Primjer
   instances: Slučajevi
+  remove_workspace_override: Ukloni nadjačavanje (naslijedi od monitora)
+  select_workspace: Odaberite radni prostor
+  workspace_fallback_name: Radna površina {{0}}
+  workspace_overrides: Nadjačavanja radnog prostora
+  workspace_row: Red {{0}}
 wm:
   animations:
     duration: Trajanje animacije (MS)

@@ -119,11 +119,6 @@ discord_banner:
     ແບ່ງ​ປັນ​ຮູບ​ແບບ, ແລະ​ຕິດ​ຕໍ່​ກັບ​ຂ່າວ​ຫລ້າ​ສຸດ.
   title: ເຂົ້າຮ່ວມຊຸມຊົນຂອງພວກເຮົາ
 extras:
-  backup_group: Cloud Backup
-  backup_last_sync: ຊິງຄ໌ຄັ້ງສຸດທ້າຍ
-  backup_never_synced: ບໍ່ເຄີຍຊິ້ງ
-  backup_sync: ຕັ້ງຄ່າການຊິງຄ໌ກັບຄລາວ
-  backup_sync_description: ສຳຮອງຂໍ້ມູນອັດຕະໂນມັດ ແລະຟື້ນຟູການຕັ້ງຄ່າຂອງທ່ານຜ່ານຄລາວ.
   clear_icons: ລະບົບໄອຄອນລະບົບໄອຄອນ
   clear_icons_tooltip: ການເລີ່ມຕົ້ນໃຫມ່ອາດຈະມີຜົນບັງຄັບໃຊ້ຢ່າງເຕັມສ່ວນໃນທຸກໆ widget
   discord_rpc: ຄວາມຂັດແຍ້ງທີ່ອຸດົມສົມບູນ
@@ -192,7 +187,6 @@ header:
     plugin: Plugins
     resources: ຊັບພະຍາກອນ
     security: ຄວາມປອດໄພ
-    session: ບັນຊີ
     shortcuts: ທາງລັດ
     soundpack: ຊອງສຽງ
     specific_apps: ການຕັ້ງຄ່າໂດຍການສະຫມັກ
@@ -200,8 +194,6 @@ header:
     virtual_desk: virtual desktops
     wallpaper: ຮູບວໍເປເປີ
     widget: widgets
-home:
-  new_resources: ຊັບພະຍາກອນໃຫມ່
 inherit: ມູນມໍລະດົກ
 inProgress: ຢູ່ໃນຄວາມຄືບໜ້າ...
 insert: ຊອນເຂົ້າ
@@ -362,6 +354,7 @@ wall:
   saturation: ອີ່ມຕົວ
   seconds: ວິນາທີ
   select_collection: ເລືອກຄໍເລັກຊັນ
+  show_paused_message: ສະແດງຂໍ້ຄວາມທີ່ຢຸດຊົ່ວຄາວ
   thumbnail_generation_complete: ການສ້າງຮູບຕົວຢ່າງສໍາເລັດ
   thumbnail_generation_finished: ການສ້າງຮູບຕົວຢ່າງສຳເລັດແລ້ວ
   use_accent_color: ໃຊ້ສີທີ່ເນັ້ນໃສ່ຮູບພື້ນຫຼັງ
@@ -370,7 +363,6 @@ wall:
   wallpapers: ພາບພື້ນຫຼັງ
   wallpapers_and_collections: ພາບພື້ນຫຼັງ & ຄໍເລັກຊັນ
   withOverlay: ດ້ວຍການຊ້ອນກັນ
-  workspace_collections: ການເກັບພື້ນທີ່ເຮັດວຽກ
 weg:
   auto_hide: ເຊື່ອງອັດຕະໂນມັດ
   auto_hide_touch_disabled: ການເຊື່ອງອັດຕະໂນມັດບໍ່ສາມາດໃຊ້ໄດ້ໃນອຸປະກອນໜ້າຈໍສໍາຜັດ
@@ -434,6 +426,7 @@ welcome:
     ຄໍາຄິດເຫັນຂອງທ່ານຊ່ວຍໃຫ້ໂຄງການຂະຫຍາຍຕົວແລະປັບປຸງ.
   title: ຍິນດີຕ້ອນຮັບສູ່ WinUIRev!
 widget:
+  add_workspace_override: ຍົກເລີກພື້ນທີ່ເຮັດວຽກ
   default_instance: ຕົວຢ່າງເລີ່ມຕົ້ນ
   default_instance_hint: ເຄື່ອນໄຫວຢູ່ສະເໝີ, ໃຊ້ການຕັ້ງຄ່າ widget ຮາກ
   enable: ເປີດໃຊ້ widget ນີ້
@@ -441,6 +434,11 @@ widget:
   extra_instances: ກໍລະນີພິເສດ
   instance: ຕົວຢ່າງ
   instances: ຖານະ
+  remove_workspace_override: ເອົາ​ການ​ລົບ​ລ້າງ (ສືບ​ທອດ​ຈາກ​ການ​ຕິດ​ຕາມ​)
+  select_workspace: ເລືອກພື້ນທີ່ເຮັດວຽກ
+  workspace_fallback_name: ເດັສທັອບ {{0}}
+  workspace_overrides: ແທນທີ່ພື້ນທີ່ເຮັດວຽກ
+  workspace_row: ແຖວ {{0}}
 wm:
   animations:
     duration: ໄລຍະເວລາທີ່ມີຊີວິດຊີວາ (MS)

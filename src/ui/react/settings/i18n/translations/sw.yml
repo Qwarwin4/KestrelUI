@@ -123,11 +123,6 @@ discord_banner:
     usasishe habari za hivi punde.
   title: Jiunge na Jumuiya yetu
 extras:
-  backup_group: Hifadhi Nakala ya Wingu
-  backup_last_sync: Usawazishaji wa mwisho
-  backup_never_synced: Haijasawazishwa kamwe
-  backup_sync: Sawazisha mipangilio kwenye wingu
-  backup_sync_description: Hifadhi nakala kiotomatiki na urejeshe mipangilio yako kupitia wingu.
   clear_icons: Kashe ya icons za mfumo wazi
   clear_icons_tooltip: Kuanza tena kunaweza kuhitajika kuchukua kikamilifu kwa vilivyoandikwa vyote
   discord_rpc: Tofautisha uwepo wa tajiri
@@ -196,7 +191,6 @@ header:
     plugin: Programu -jalizi
     resources: Rasilimali
     security: Usalama
-    session: Akaunti
     shortcuts: Njia za mkato
     soundpack: Pakiti za sauti
     specific_apps: Mipangilio na Maombi
@@ -204,8 +198,6 @@ header:
     virtual_desk: Dawati za kweli
     wallpaper: Wallpapers
     widget: Vilivyoandikwa
-home:
-  new_resources: Rasilimali mpya
 inherit: Urithi
 inProgress: Inaendelea...
 insert: Ingiza
@@ -370,6 +362,7 @@ wall:
   saturation: Kueneza
   seconds: sekunde
   select_collection: Chagua Mkusanyiko
+  show_paused_message: Onyesha ujumbe uliositishwa
   thumbnail_generation_complete: Uzalishaji wa Kijipicha Umekamilika
   thumbnail_generation_finished: Uzalishaji wa kijipicha umekamilika
   use_accent_color: Tumia rangi ya lafudhi ya mandhari
@@ -378,7 +371,6 @@ wall:
   wallpapers: Mandhari
   wallpapers_and_collections: Mandhari na Mikusanyiko
   withOverlay: Na overlay
-  workspace_collections: Mikusanyiko ya Nafasi ya Kazi
 weg:
   auto_hide: Kujificha kiotomatiki
   auto_hide_touch_disabled: Ficha otomatiki haipatikani kwenye vifaa vya skrini ya kugusa
@@ -444,6 +436,7 @@ welcome:
     maoni yako husaidia mradi kukua na kuboreka.
   title: Karibu kwenye WinUIRev!
 widget:
+  add_workspace_override: Batilisha nafasi ya kazi
   default_instance: Tukio Chaguomsingi
   default_instance_hint: Inatumika kila wakati, hutumia usanidi wa wijeti ya mizizi
   enable: Wezesha widget hii
@@ -451,6 +444,11 @@ widget:
   extra_instances: Matukio ya Ziada
   instance: Mfano
   instances: Matukio
+  remove_workspace_override: Ondoa ubatilishaji (urithi kutoka kwa mfuatiliaji)
+  select_workspace: Chagua eneo la kazi
+  workspace_fallback_name: Eneo-kazi {{0}}
+  workspace_overrides: Nafasi ya kazi imebatilisha
+  workspace_row: Safu mlalo {{0}}
 wm:
   animations:
     duration: Muda wa Uhuishaji (MS)
