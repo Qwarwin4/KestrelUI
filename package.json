@@ -17,7 +17,7 @@
     "version:start": "tsx ./scripts/versionish.ts start",
     "version:finish": "tsx ./scripts/versionish.ts finish",
     "preinstall": "node scripts/doctor.mjs && npm run build:lib",
-    "postinstall": "lefthook install"
+    "postinstall": "lefthook install || exit 0"
   },
   "keywords": [],
   "author": {

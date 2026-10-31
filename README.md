@@ -31,28 +31,23 @@ ids and the `SeelenCommand` plugin API are intentionally left untouched.
 
 ## Building
 
-Windows 10/11 only. Install once:
+Windows 10/11 only.
 
-1. **Visual Studio Build Tools 2022** with the *Desktop development with C++* workload (MSVC + Windows SDK).
-   Rust links against the SDK's `kernel32.lib` and friends, so without it every build script fails with
-   `rust-lld: could not open 'kernel32.lib'`.
-   ```powershell
-   winget install Microsoft.VisualStudio.2022.BuildTools --override "--wait --passive --add Microsoft.VisualStudio.Workload.VCTools --includeRecommended"
-   ```
-2. **Rust** via [rustup](https://rustup.rs). The pinned nightly from `rust-toolchain.toml` installs itself.
-3. **Node.js 22+** and **Deno 2** (`winget install DenoLand.Deno`).
-4. WebView2 Runtime (already present on Windows 11).
+1. Run `setup.bat` once. It installs Visual Studio Build Tools (MSVC + Windows SDK), Rust, Node.js, Deno,
+   Git and WebView2 through winget, then the pinned Rust toolchain.
+2. Open a new terminal and run `build.bat`:
 
-Open a **new** terminal after installing, then run each command on its own line:
+   | command             | result                                           |
+   | ------------------- | ------------------------------------------------ |
+   | `build.bat`         | debug installer in `target\debug\bundle\nsis`     |
+   | `build.bat dev`     | run from sources with hot reload                 |
+   | `build.bat release` | release installer in `target\release\bundle\nsis` |
 
-```powershell
-npm install
-npm run dev
-```
+Both scripts work from any folder, including an unpacked zip. `npm run doctor` checks the prerequisites and says
+what is missing — the usual one is the Windows SDK (`rust-lld: could not open 'kernel32.lib'`).
 
-`npm install` starts with `npm run doctor`, which checks the prerequisites above and tells you what is missing.
-
-Release builds need your own signing key pair:
+Local release builds are unsigned and have auto-updates off.
+Signed releases with auto-updates need your own key pair:
 
 ```sh
 npx tauri signer generate -w winuirev.key

@@ -17,17 +17,18 @@ fn main() {
     println!("cargo:rerun-if-env-changed=WINUIREV_PUBKEY");
     println!("cargo:rerun-if-env-changed=WINUIREV_DISCORD_ID");
 
-    if !cfg!(debug_assertions) {
-        if std::env::var("WINUIREV_PUBKEY").map_or(true, |k| k.is_empty()) {
-            panic!("WINUIREV_PUBKEY missing: release builds must embed the updater public key");
-        }
+    println!("cargo:rerun-if-env-changed=TAURI_SIGNING_PRIVATE_KEY");
+
+    // local release builds go unsigned: without WINUIREV_PUBKEY the app skips
+    // the signature check and the updater, so a placeholder is enough
+    let signed = !cfg!(debug_assertions) && env_set("WINUIREV_PUBKEY");
+    if signed {
         sign_sha256sums(&sums_path);
     } else {
-        std::fs::write(
-            sums_path.with_extension("sig"),
-            "NOT SIGNED NEEDED FOR DEBUG",
-        )
-        .unwrap();
+        if !cfg!(debug_assertions) {
+            println!("cargo:warning=unsigned build: set WINUIREV_PUBKEY to enable updates");
+        }
+        std::fs::write(sums_path.with_extension("sig"), "UNSIGNED").unwrap();
     }
 
     tauri_build::build();
@@ -59,6 +60,10 @@ where
             cb(path);
         }
     }
+}
+
+fn env_set(name: &str) -> bool {
+    std::env::var(name).is_ok_and(|v| !v.is_empty())
 }
 
 fn sign_sha256sums(path: &PathBuf) {
