@@ -2,7 +2,7 @@ cancel: លប់ចោល
 done: រ្យេឱដេនោ
 elevated:
   description: >-
-    WinUIRev កំពុងដំណើរការដោយមានសិទ្ធិជាអ្នកគ្រប់គ្រង។
+    KestrelUI កំពុងដំណើរការដោយមានសិទ្ធិជាអ្នកគ្រប់គ្រង។
 
     នេះមិនបន្ថែម ឬកែលម្អមុខងារណាមួយឡើយ ហើយវាអាចបង្កហានិភ័យសុវត្ថិភាព។
 
@@ -25,17 +25,17 @@ runtime:
   files_integrity: |-
     យើងមិនអាចផ្ទៀងផ្ទាត់ភាពត្រឹមត្រូវនៃឯកសារកម្មវិធីបានទេ។
     វាអាចកើតឡើងប្រសិនបើឯកសារត្រូវបានកែប្រែ ខូច ឬការដំឡើងមិនពេញលេញ។
-    សម្រាប់ហេតុផលសុវត្ថិភាព WinUIRev មិនអាចបន្តបានទេ។
+    សម្រាប់ហេតុផលសុវត្ថិភាព KestrelUI មិនអាចបន្តបានទេ។
     សូមដំឡើងវាឡើងវិញពីគេហទំព័រផ្លូវការ។
   files_integrity_title: ការដាស់តឿនសុវត្ថិភាព - ការត្រួតពិនិត្យភាពត្រឹមត្រូវនៃឯកសារបានបរាជ័យ
   not_found: WebView2 Runtime រកមិនឃើញទេ។
-  not_found_description: WinUIRev ទាមទារ Webview2 Runtime ។ សូមដំឡើងវា។
+  not_found_description: KestrelUI ទាមទារ Webview2 Runtime ។ សូមដំឡើងវា។
   outdated: WebView2 Runtime ហួសសម័យ
-  outdated_description: WinUIRev ទាមទារ Webview2 Runtime %{min_version} ឬខ្ពស់ជាងនេះ។ សូមអាប់ដេតវា។
+  outdated_description: KestrelUI ទាមទារ Webview2 Runtime %{min_version} ឬខ្ពស់ជាងនេះ។ សូមអាប់ដេតវា។
 service:
-  not_running: សេវា WinUIRev មិនដំណើរការទេ។
+  not_running: សេវា KestrelUI មិនដំណើរការទេ។
   not_running_description: >-
-    WinUIRev Service (winuirev-service)
+    KestrelUI Service (kestrelui-service)
     គឺជាការពឹងផ្អែក/ជំនួយសម្រាប់កម្មវិធីឱ្យដំណើរការបានត្រឹមត្រូវ។
   not_running_ok: ចាប់ផ្តើមសេវាកម្ម
 shortcut:
@@ -56,7 +56,7 @@ widget_liveness:
 widget_permissions:
   perm_kill_processes: បង្ខំឱ្យបិទកម្មវិធី
   perm_manage_app_windows: គ្រប់គ្រងបង្អួចនៃកម្មវិធីផ្សេងទៀត (ផ្តោត, បិទ, បង្រួមអប្បបរមា, ផ្លាស់ទី)
-  perm_modify_configuration: កែប្រែការកំណត់រចនាសម្ព័ន្ធ WinUIRev
+  perm_modify_configuration: កែប្រែការកំណត់រចនាសម្ព័ន្ធ KestrelUI
   perm_open_file: បើកឯកសារ
   perm_run: ដំណើរការកម្មវិធី
   request_description: |-

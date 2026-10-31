@@ -41,9 +41,9 @@ impl ServicePipe {
     pub fn service_path() -> Result<PathBuf> {
         let service_path = if was_installed_using_msix() {
             WindowsApi::known_folder(FOLDERID_LocalAppData)?
-                .join("Microsoft\\WindowsApps\\winuirev-service.exe")
+                .join("Microsoft\\WindowsApps\\kestrelui-service.exe")
         } else {
-            std::env::current_exe()?.with_file_name("winuirev-service.exe")
+            std::env::current_exe()?.with_file_name("kestrelui-service.exe")
         };
         Ok(service_path)
     }
@@ -57,8 +57,8 @@ impl ServicePipe {
                 &Default::default(),
                 &Default::default(),
             )?;
-            let folder = task_service.GetFolder(&"\\WinUIRev".into())?;
-            let task = folder.GetTask(&"WinUIRev Service".into())?;
+            let folder = task_service.GetFolder(&"\\KestrelUI".into())?;
+            let task = folder.GetTask(&"KestrelUI Service".into())?;
 
             let actions = task.Definition()?.Actions()?;
             // ask to microsoft what that hell this start counting from 1 instead 0

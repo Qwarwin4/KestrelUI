@@ -2,7 +2,7 @@ cancel: අවලංගු කරන්න
 done: කළා
 elevated:
   description: >-
-    WinUIRev පරිපාලක වරප්‍රසාද සහිතව ක්‍රියාත්මක වේ.
+    KestrelUI පරිපාලක වරප්‍රසාද සහිතව ක්‍රියාත්මක වේ.
 
     මෙය කිසිදු විශේෂාංගයක් එකතු කිරීම හෝ වැඩිදියුණු කිරීම සිදු නොකරන අතර, එය
     ආරක්ෂක අවදානමක් ඇති කළ හැකිය.
@@ -27,19 +27,19 @@ runtime:
   files_integrity: |-
     අපට යෙදුම් ගොනුවල අඛණ්ඩතාව සත්‍යාපනය කළ නොහැකි විය.
     ගොනු වෙනස් කිරීම, දූෂිත වීම හෝ ස්ථාපනය අසම්පූර්ණ නම් මෙය සිදු විය හැක.
-    ආරක්ෂක හේතූන් මත, WinUIRev දිගටම කරගෙන යා නොහැක.
+    ආරක්ෂක හේතූන් මත, KestrelUI දිගටම කරගෙන යා නොහැක.
     කරුණාකර එය නිල වෙබ් අඩවියෙන් නැවත ස්ථාපනය කරන්න.
   files_integrity_title: ආරක්ෂක ඇඟවීම - ගොනු අඛණ්ඩතාව පරීක්ෂා කිරීම අසාර්ථක විය
   not_found: WebView2 ධාවන කාලය හමු නොවීය
-  not_found_description: WinUIRev සඳහා Webview2 ධාවන කාලය අවශ්‍යයි. කරුණාකර එය ස්ථාපනය කරන්න.
+  not_found_description: KestrelUI සඳහා Webview2 ධාවන කාලය අවශ්‍යයි. කරුණාකර එය ස්ථාපනය කරන්න.
   outdated: WebView2 ධාවන කාලය යල් පැන ඇත
   outdated_description: >-
-    WinUIRev සඳහා Webview2 ධාවන කාලය %{min_version} හෝ ඉහළ අවශ්‍ය වේ. කරුණාකර
+    KestrelUI සඳහා Webview2 ධාවන කාලය %{min_version} හෝ ඉහළ අවශ්‍ය වේ. කරුණාකර
     එය යාවත්කාලීන කරන්න.
 service:
-  not_running: WinUIRev සේවාව ක්‍රියාත්මක නොවේ
+  not_running: KestrelUI සේවාව ක්‍රියාත්මක නොවේ
   not_running_description: >-
-    WinUIRev සේවාව (winuirev-service) යනු යෙදුම නිසියාකාරව ක්‍රියා කිරීමට
+    KestrelUI සේවාව (kestrelui-service) යනු යෙදුම නිසියාකාරව ක්‍රියා කිරීමට
     යැපුම්/උපකාරකයකි.
   not_running_ok: සේවාව ආරම්භ කරන්න
 shortcut:
@@ -62,7 +62,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     වෙනත් යෙදුම්වල කවුළු පාලනය කරන්න (අවධානය යොමු කරන්න, වසා දමන්න, අවම කරන්න,
     චලනය කරන්න)
-  perm_modify_configuration: WinUIRev වින්‍යාසය වෙනස් කරන්න
+  perm_modify_configuration: KestrelUI වින්‍යාසය වෙනස් කරන්න
   perm_open_file: විවෘත ගොනු
   perm_run: වැඩසටහන් ක්රියාත්මක කරන්න
   request_description: |-

@@ -37,7 +37,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               tag_name: `v${version}`,
-              name: `WinUIRev v${version}`,
+              name: `KestrelUI v${version}`,
               body: log.match(re)?.[0].trim() || "",
               generate_release_notes: true,
               draft: true,
@@ -56,9 +56,9 @@ jobs:
             arch: arm64
     runs-on: windows-2025
     env:
-      WINUIREV_PUBKEY: ${{ secrets.WINUIREV_PUBKEY }}
-      WINUIREV_DISCORD_ID: ${{ vars.WINUIREV_DISCORD_ID }}
-      WINUIREV_GITHUB_CLIENT_ID: ${{ vars.WINUIREV_GITHUB_CLIENT_ID }}
+      KESTREL_PUBKEY: ${{ secrets.KESTREL_PUBKEY }}
+      KESTREL_DISCORD_ID: ${{ vars.KESTREL_DISCORD_ID }}
+      KESTREL_GITHUB_CLIENT_ID: ${{ vars.KESTREL_GITHUB_CLIENT_ID }}
       TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
       TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
     steps:
@@ -76,7 +76,7 @@ jobs:
         shell: pwsh
         run: |
           $v = "${{ needs.release.outputs.version }}"
-          $exe = "target/${{ matrix.target }}/release/bundle/nsis/WinUIRev_${v}_${{ matrix.arch }}-setup.exe"
+          $exe = "target/${{ matrix.target }}/release/bundle/nsis/KestrelUI_${v}_${{ matrix.arch }}-setup.exe"
           Get-ChildItem "target/${{ matrix.target }}/release/bundle/nsis" -Filter *.sig | Remove-Item
           npx tauri signer sign "$exe"
 

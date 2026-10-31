@@ -7,9 +7,11 @@ import { Routing } from "./router.tsx";
 import { ThumbnailGeneratorModal } from "./components/ThumbnailGeneratorModal/index.tsx";
 import { WelcomeModal } from "./components/WelcomeModal/infra.tsx";
 import { uiColors } from "./state/system.ts";
+import { neonColor, neonEnabled } from "./modules/general/infra/NeonColor.tsx";
 
 export function App() {
-  const isDarkMode = useDarkMode();
+  const neon = neonEnabled();
+  const isDarkMode = useDarkMode() || neon;
 
   useEffect(() => {
     setTimeout(() => {
@@ -21,14 +23,16 @@ export function App() {
     Widget.self.ready();
   }, []);
 
-  const color = new Color(isDarkMode ? uiColors.value.accent_light : uiColors.value.accent_dark);
+  const color = neon
+    ? neonColor()
+    : new Color(isDarkMode ? uiColors.value.accent_light : uiColors.value.accent_dark).toHexString();
 
   return (
     <ConfigProvider
       componentSize="small"
       theme={{
         token: {
-          colorPrimary: color.toHexString(),
+          colorPrimary: color,
         },
         algorithm: isDarkMode ? theme.darkAlgorithm : theme.defaultAlgorithm,
       }}

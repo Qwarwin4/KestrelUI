@@ -1,5 +1,5 @@
-//! Config showcase. Every entry is a public GitHub repository tagged `winuirev-config`
-//! with a `winuirev.json` manifest at its root; the settings app finds them through
+//! Config showcase. Every entry is a public GitHub repository tagged `kestrelui-config`
+//! with a `kestrelui.json` manifest at its root; the settings app finds them through
 //! GitHub search. Browsing and installing need no account.
 
 mod github;
@@ -24,8 +24,8 @@ use crate::{
     widgets::trigger_dialog_backend,
 };
 
-pub const TOPIC: &str = "winuirev-config";
-pub const MANIFEST: &str = "winuirev.json";
+pub const TOPIC: &str = "kestrelui-config";
+pub const MANIFEST: &str = "kestrelui.json";
 const MAX_SNAPSHOTS: usize = 10;
 const MAX_FILE: usize = 20 * 1024 * 1024;
 

@@ -66,7 +66,7 @@ impl Optimizations {
         let current_u8: u8 = current.into();
 
         if current_u8 != stored {
-            log::trace!("WinUIRev performance mode changed to {current:?}");
+            log::trace!("KestrelUI performance mode changed to {current:?}");
             PERFORMANCE_MODE
                 .inner
                 .store(current_u8, std::sync::atomic::Ordering::SeqCst);

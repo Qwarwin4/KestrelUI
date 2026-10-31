@@ -2,7 +2,7 @@ cancel: Ləğv etmək
 done: Tamamlandı
 elevated:
   description: >-
-    WinUIRev administrator imtiyazları ilə işləyir.
+    KestrelUI administrator imtiyazları ilə işləyir.
 
     Bu, heç bir xüsusiyyət əlavə etmir və ya təkmilləşdirmir və təhlükəsizlik
     riski yarada bilər.
@@ -14,7 +14,7 @@ file_explorer: Fayl Explorer
 resource:
   added: Yeni bir qaynaq əlavə edildi
   download_failed_body: >-
-    Resursu yükləyərkən bir şey səhv oldu, xahiş edirəm WinUIRev geliştirici
+    Resursu yükləyərkən bir şey səhv oldu, xahiş edirəm KestrelUI geliştirici
     komandasına bildirin.
   download_failed_title: Resurs yükləmə uğursuz oldu
   downloading: Aktivləri yükləmək ...
@@ -33,22 +33,22 @@ runtime:
     Bu, fayllar dəyişdirildikdə, zədələndikdə və ya quraşdırma tamamlanmadıqda
     baş verə bilər.
 
-    Təhlükəsizlik səbəbləri ilə WinUIRev davam edə bilməz.
+    Təhlükəsizlik səbəbləri ilə KestrelUI davam edə bilməz.
 
     Lütfən, onu rəsmi saytdan yenidən quraşdırın.
   files_integrity_title: >-
     Təhlükəsizlik Xəbərdarlığı - Faylların bütövlüyünün yoxlanılması uğursuz
     oldu
   not_found: WebView2 İcra vaxtı tapılmadı
-  not_found_description: WinUIRev Webview2 Runtime tələb edir. Zəhmət olmasa quraşdırın.
+  not_found_description: KestrelUI Webview2 Runtime tələb edir. Zəhmət olmasa quraşdırın.
   outdated: WebView2 İcra vaxtı köhnəlmişdir
   outdated_description: >-
-    WinUIRev Webview2 Runtime %{min_version} və ya daha yüksək tələb edir.
+    KestrelUI Webview2 Runtime %{min_version} və ya daha yüksək tələb edir.
     Zəhmət olmasa yeniləyin.
 service:
-  not_running: WinUIRev Xidməti işləmir
+  not_running: KestrelUI Xidməti işləmir
   not_running_description: >-
-    WinUIRev Xidməti (slu-xidmət) tətbiqin düzgün işləməsi üçün
+    KestrelUI Xidməti (slu-xidmət) tətbiqin düzgün işləməsi üçün
     asılılıq/köməkçidir.
   not_running_ok: Xidmətə başlayın
 shortcut:
@@ -73,7 +73,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     digər proqramların pəncərələrini idarə edin (fokuslayın, bağlayın, minimuma
     endirin, köçürün)
-  perm_modify_configuration: WinUIRev konfiqurasiyasını dəyişdirin
+  perm_modify_configuration: KestrelUI konfiqurasiyasını dəyişdirin
   perm_open_file: faylları açın
   perm_run: proqramları işlədin
   request_description: |-

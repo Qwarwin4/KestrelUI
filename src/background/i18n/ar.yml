@@ -2,7 +2,7 @@ cancel: يلغي
 done: منتهي
 elevated:
   description: |-
-    تعمل واجهة WinUIRev بامتيازات المسؤول.
+    تعمل واجهة KestrelUI بامتيازات المسؤول.
     وهذا لا يضيف أو يحسن أي ميزات، وقد يشكل خطرًا أمنيًا.
     للحصول على أمان أفضل، يرجى إعادة تشغيله دون الحصول على أذونات المسؤول.
   title: التشغيل كمسؤول
@@ -22,18 +22,18 @@ runtime:
   files_integrity: |-
     لم نتمكن من التحقق من سلامة ملفات التطبيق.
     يمكن أن يحدث هذا في حالة تعديل الملفات أو تلفها أو عدم اكتمال التثبيت.
-    لأسباب أمنية، لا يمكن لـ WinUIRev الاستمرار.
+    لأسباب أمنية، لا يمكن لـ KestrelUI الاستمرار.
     يرجى إعادة تثبيته من الموقع الرسمي.
   files_integrity_title: تنبيه أمني - فشل التحقق من سلامة الملفات
   not_found: لم يتم العثور على وقت تشغيل WebView2
-  not_found_description: تتطلب واجهة مستخدم WinUIRev وقت تشغيل Webview2. الرجاء تثبيته.
+  not_found_description: تتطلب واجهة مستخدم KestrelUI وقت تشغيل Webview2. الرجاء تثبيته.
   outdated: وقت تشغيل WebView2 قديم
   outdated_description: >-
-    تتطلب واجهة مستخدم WinUIRev وقت تشغيل Webview2 %{min_version} أو أعلى. يرجى
+    تتطلب واجهة مستخدم KestrelUI وقت تشغيل Webview2 %{min_version} أو أعلى. يرجى
     تحديثه.
 service:
-  not_running: خدمة WinUIRev لا تعمل
-  not_running_description: تعتبر خدمة WinUIRev (خدمة slu) بمثابة تبعية/مساعد للتطبيق للعمل بشكل صحيح.
+  not_running: خدمة KestrelUI لا تعمل
+  not_running_description: تعتبر خدمة KestrelUI (خدمة slu) بمثابة تبعية/مساعد للتطبيق للعمل بشكل صحيح.
   not_running_ok: ابدأ الخدمة
 shortcut:
   conflicts:
@@ -53,7 +53,7 @@ widget_liveness:
 widget_permissions:
   perm_kill_processes: فرض إغلاق التطبيقات
   perm_manage_app_windows: التحكم في نوافذ التطبيقات الأخرى (التركيز، الإغلاق، التصغير، النقل)
-  perm_modify_configuration: تعديل تكوين WinUIRev
+  perm_modify_configuration: تعديل تكوين KestrelUI
   perm_open_file: فتح الملفات
   perm_run: تشغيل البرامج
   request_description: |-

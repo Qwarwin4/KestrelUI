@@ -2,7 +2,7 @@ cancel: Ματαίωση
 done: Γινώμενος
 elevated:
   description: >-
-    Το WinUIRev εκτελείται με δικαιώματα διαχειριστή.
+    Το KestrelUI εκτελείται με δικαιώματα διαχειριστή.
 
     Αυτό δεν προσθέτει ή βελτιώνει καμία δυνατότητα και μπορεί να θέσει σε
     κίνδυνο την ασφάλεια.
@@ -14,7 +14,7 @@ resource:
   added: Προστέθηκε ένας νέος πόρος
   download_failed_body: >-
     Κάτι πήγε στραβά κατά τη λήψη του πόρου, παρακαλούμε αναφέρετέ το στην ομάδα
-    ανάπτυξης του WinUIRev.
+    ανάπτυξης του KestrelUI.
   download_failed_title: Η λήψη πόρων απέτυχε
   downloading: Λήψη περιουσιακών στοιχείων...
   downloading_body: Αυτό μπορεί να διαρκέσει μερικά δευτερόλεπτα, μην κλείσετε το παράθυρο.
@@ -30,20 +30,20 @@ runtime:
     Αυτό μπορεί να συμβεί εάν τα αρχεία έχουν τροποποιηθεί, καταστραφεί ή η
     εγκατάσταση δεν έχει ολοκληρωθεί.
 
-    Για λόγους ασφαλείας, το WinUIRev δεν μπορεί να συνεχίσει.
+    Για λόγους ασφαλείας, το KestrelUI δεν μπορεί να συνεχίσει.
 
     Εγκαταστήστε το ξανά από τον επίσημο ιστότοπο.
   files_integrity_title: Ειδοποίηση ασφαλείας - Ο έλεγχος ακεραιότητας αρχείων απέτυχε
   not_found: Ο χρόνος εκτέλεσης WebView2 δεν βρέθηκε
-  not_found_description: Το WinUIRev απαιτεί Webview2 Runtime. Εγκαταστήστε το.
+  not_found_description: Το KestrelUI απαιτεί Webview2 Runtime. Εγκαταστήστε το.
   outdated: Ο χρόνος εκτέλεσης WebView2 είναι ξεπερασμένος
   outdated_description: >-
-    Η διεπαφή χρήστη WinUIRev απαιτεί Webview2 Runtime %{min_version} ή υψηλότερη.
+    Η διεπαφή χρήστη KestrelUI απαιτεί Webview2 Runtime %{min_version} ή υψηλότερη.
     Ενημερώστε το.
 service:
-  not_running: Η υπηρεσία διεπαφής χρήστη WinUIRev δεν εκτελείται
+  not_running: Η υπηρεσία διεπαφής χρήστη KestrelUI δεν εκτελείται
   not_running_description: >-
-    Η υπηρεσία WinUIRev (winuirev-service) είναι μια εξάρτηση/βοήθεια για τη σωστή
+    Η υπηρεσία KestrelUI (kestrelui-service) είναι μια εξάρτηση/βοήθεια για τη σωστή
     λειτουργία της εφαρμογής.
   not_running_ok: Ξεκινήστε την υπηρεσία
 shortcut:
@@ -70,7 +70,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     έλεγχος των παραθύρων άλλων εφαρμογών (εστίαση, κλείσιμο, ελαχιστοποίηση,
     μετακίνηση)
-  perm_modify_configuration: τροποποιήστε τη διαμόρφωση διεπαφής χρήστη WinUIRev
+  perm_modify_configuration: τροποποιήστε τη διαμόρφωση διεπαφής χρήστη KestrelUI
   perm_open_file: ανοιχτά αρχεία
   perm_run: τρέξτε προγράμματα
   request_description: |-

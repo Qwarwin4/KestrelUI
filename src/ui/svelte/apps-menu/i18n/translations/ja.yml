@@ -20,5 +20,5 @@ run_as_admin: 管理者として実行
 uninstall: アンインストール
 unpin: ピン留め解除
 web_search: Enter キーを押して Web を検索
-welcome_message: WinUIRev アプリ メニューへようこそ。
+welcome_message: KestrelUI アプリ メニューへようこそ。
 welcome_message2: このタブでは、お気に入りのアプリをピン留めできます。

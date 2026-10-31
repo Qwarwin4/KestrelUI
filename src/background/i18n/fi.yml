@@ -2,7 +2,7 @@ cancel: Peruuttaa
 done: Tehty
 elevated:
   description: >-
-    WinUIRev-käyttöliittymä toimii järjestelmänvalvojan oikeuksilla.
+    KestrelUI-käyttöliittymä toimii järjestelmänvalvojan oikeuksilla.
 
     Tämä ei lisää tai paranna ominaisuuksia, ja se voi aiheuttaa
     turvallisuusriskin.
@@ -31,20 +31,20 @@ runtime:
     Tämä voi tapahtua, jos tiedostoja on muokattu, vioittunut tai asennus on
     epätäydellinen.
 
-    Turvallisuussyistä WinUIRev ei voi jatkaa.
+    Turvallisuussyistä KestrelUI ei voi jatkaa.
 
     Asenna se uudelleen viralliselta verkkosivustolta.
   files_integrity_title: Suojaushälytys – Tiedostojen eheyden tarkistus epäonnistui
   not_found: WebView2:n suoritusaikaa ei löydy
-  not_found_description: WinUIRev-käyttöliittymä vaatii Webview2 Runtime -sovelluksen. Asenna se.
+  not_found_description: KestrelUI-käyttöliittymä vaatii Webview2 Runtime -sovelluksen. Asenna se.
   outdated: WebView2 Runtime vanhentunut
   outdated_description: >-
-    WinUIRev-käyttöliittymä vaatii Webview2 Runtime %{min_version} tai uudemman.
+    KestrelUI-käyttöliittymä vaatii Webview2 Runtime %{min_version} tai uudemman.
     Päivitä se.
 service:
-  not_running: WinUIRev -palvelu ei ole käynnissä
+  not_running: KestrelUI -palvelu ei ole käynnissä
   not_running_description: >-
-    WinUIRev Service (winuirev-service) on riippuvuus/apuohjelma, jonka avulla
+    KestrelUI Service (kestrelui-service) on riippuvuus/apuohjelma, jonka avulla
     sovellus toimii oikein.
   not_running_ok: Aloita palvelu
 shortcut:
@@ -67,7 +67,7 @@ widget_liveness:
 widget_permissions:
   perm_kill_processes: pakottaa sulkemaan sovellukset
   perm_manage_app_windows: hallita muiden sovellusten ikkunoita (tarkenna, sulje, pienennä, siirrä)
-  perm_modify_configuration: muokata WinUIRev -kokoonpanoa
+  perm_modify_configuration: muokata KestrelUI -kokoonpanoa
   perm_open_file: avaa tiedostoja
   perm_run: ajaa ohjelmia
   request_description: |-

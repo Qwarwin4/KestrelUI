@@ -16,6 +16,6 @@ profile:
   open_onedrive: Otvorite OneDrive direktorij
   open_user_folder: Otvorite korisnički imenik
 seelen_options:
-  open_installation_folder: Otvorite fasciklu podešavanja WinUIRev
-  open_log_folder: Otvorite WinUIRev log folder
-  title: WinUIRev imenici
+  open_installation_folder: Otvorite fasciklu podešavanja KestrelUI
+  open_log_folder: Otvorite KestrelUI log folder
+  title: KestrelUI imenici

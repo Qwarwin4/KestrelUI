@@ -78,7 +78,7 @@ static USER_RESOURCES_WATCHER: OnceLock<Debouncer<ReadDirectoryChangesWatcher, F
     OnceLock::new();
 
 pub fn initialize_user_resources_watcher() -> Result<()> {
-    log::trace!("Starting WinUIRev Files Watcher");
+    log::trace!("Starting KestrelUI Files Watcher");
     let mut debouncer = new_debouncer(
         Duration::from_millis(100),
         None,

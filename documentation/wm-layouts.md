@@ -2,7 +2,7 @@
 
 This is one concrete example of the generic Plugin mechanism described in [plugin guidelines](./plugin-guidelines): the
 tiling Window Manager (`@seelen/window-manager`) is the target widget, and this page documents **its** schema for
-`plugin`, and **its** rules for parsing that data into a live layout tree. None of this is special-cased in WinUIRev's
+`plugin`, and **its** rules for parsing that data into a live layout tree. None of this is special-cased in KestrelUI's
 core — the window manager owns all of it.
 
 There is no separate "Layout" resource kind. A layout is simply a `Plugin` resource whose `target` is
@@ -110,7 +110,7 @@ YAML/JSON value: number, string, or boolean depending on the operand).
 
 ## 4. How It Becomes a Live Layout
 
-At runtime, WinUIRev resolves the active layout's `Plugin` resource, parses its `structure` into `TwmPluginNode`s, and
+At runtime, KestrelUI resolves the active layout's `Plugin` resource, parses its `structure` into `TwmPluginNode`s, and
 converts that declarative tree into a runtime tree (`TwmRuntimeNode`) — copying `kind`, `lifetime`, `priority`,
 `growFactor` (used as both the initial and the live, user-resizable grow factor), `condition`, `maxStackSize`, and
 `stackPolicy` as-is, and initializing runtime-only state (assigned windows, active window, screen rect) empty. From then

@@ -2,7 +2,7 @@
 
 This is one concrete example of the generic Plugin mechanism described in [plugin guidelines](./plugin-guidelines):
 `@seelen/weg` (SeelenWeg, the dock/taskbar) is the target widget, and this page documents **its** schema for `plugin`,
-and **its** rules for parsing and executing that data. None of this is special-cased in WinUIRev's core — the dock
+and **its** rules for parsing and executing that data. None of this is special-cased in KestrelUI's core — the dock
 widget owns all of it.
 
 Note the distinction from pinned dock items: things like `AppOrFile` and `Separator` are the dock's **built-in,
@@ -161,7 +161,7 @@ return 3;
 
 ### Loading it with the `slu` CLI
 
-While iterating, load the folder directly into a running WinUIRev instance — no bundling needed:
+While iterating, load the folder directly into a running KestrelUI instance — no bundling needed:
 
 ```bash
 slu resource load plugin ./MyPlugin

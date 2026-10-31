@@ -1,6 +1,6 @@
-# WinUIRev — Design System & Manifesto
+# KestrelUI — Design System & Manifesto
 
-This document defines **how WinUIRev looks and why**.
+This document defines **how KestrelUI looks and why**.
 
 **Scope:**
 
@@ -46,10 +46,10 @@ This document defines **how WinUIRev looks and why**.
 3. **Standard components, defined once.** Buttons, inputs, selects, sliders, switches, checkboxes, radios and popovers
    are defined once in the default theme's shared styles and reused everywhere through `data-skin`. Do not create
    one-off variants.
-4. **Moddable first.** Users restyle WinUIRev through themes. The simpler and flatter our markup and CSS are, the
+4. **Moddable first.** Users restyle KestrelUI through themes. The simpler and flatter our markup and CSS are, the
    easier it is to theme. Low specificity, descriptive class names, no inline visual styles, no visuals baked into
    components.
-5. **Consistency over novelty.** A new widget must look like it has always been part of WinUIRev. Reuse existing
+5. **Consistency over novelty.** A new widget must look like it has always been part of KestrelUI. Reuse existing
    tokens, skins and patterns instead of inventing new ones.
 
 > **This document wins over existing code.** Parts of the codebase still contain legacy patterns that are pending
@@ -304,7 +304,7 @@ Always with accent or status color variables; never to frame a box or separate c
 
 - Font: **always the inherited system font**. No other font families, including `monospace` for technical data (IPs,
   MACs, codes): the UI never shows content that needs vertical alignment of characters.
-- Sizes: WinUIRev is a desktop UI, not a document, so there is no fixed typographic scale. Recommended sizes:
+- Sizes: KestrelUI is a desktop UI, not a document, so there is no fixed typographic scale. Recommended sizes:
   - `1rem` — the base. It is the user's browser/system default, so never override the root font size.
   - `0.8rem` — menus and popovers (`.slu-std-popover` already sets it).
 

@@ -12,10 +12,10 @@ const packageJson: BuildOptions["package"] = {
   license,
   repository: {
     type: "git",
-    url: "git+https://github.com/Qwarwin4/WinUIRev.git",
+    url: "git+https://github.com/Qwarwin4/KestrelUI.git",
   },
   bugs: {
-    url: "https://github.com/Qwarwin4/WinUIRev/issues",
+    url: "https://github.com/Qwarwin4/KestrelUI/issues",
   },
 };
 

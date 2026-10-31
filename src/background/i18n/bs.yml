@@ -2,7 +2,7 @@ cancel: Otkazati
 done: Gotov
 elevated:
   description: >-
-    WinUIRev radi sa administratorskim privilegijama.
+    KestrelUI radi sa administratorskim privilegijama.
 
     Ovo ne dodaje niti poboljšava nijednu funkciju i može predstavljati
     sigurnosni rizik.
@@ -32,20 +32,20 @@ runtime:
     Ovo se može dogoditi ako su datoteke izmijenjene, oštećene ili instalacija
     nije dovršena.
 
-    Iz sigurnosnih razloga, WinUIRev ne može nastaviti.
+    Iz sigurnosnih razloga, KestrelUI ne može nastaviti.
 
     Ponovo ga instalirajte sa službene web stranice.
   files_integrity_title: Sigurnosno upozorenje - provjera integriteta datoteka nije uspjela
   not_found: WebView2 Runtime nije pronađeno
-  not_found_description: WinUIRev zahtijeva Webview2 Runtime. Molimo instalirajte ga.
+  not_found_description: KestrelUI zahtijeva Webview2 Runtime. Molimo instalirajte ga.
   outdated: WebView2 Runtime je zastarjelo
   outdated_description: >-
-    WinUIRev zahtijeva Webview2 Runtime %{min_version} ili noviju. Ažurirajte
+    KestrelUI zahtijeva Webview2 Runtime %{min_version} ili noviju. Ažurirajte
     ga.
 service:
-  not_running: WinUIRev usluga ne radi
+  not_running: KestrelUI usluga ne radi
   not_running_description: >-
-    WinUIRev Service (winuirev-service) je zavisnost/pomoćnik za pravilno
+    KestrelUI Service (kestrelui-service) je zavisnost/pomoćnik za pravilno
     funkcioniranje aplikacije.
   not_running_ok: Pokreni servis
 shortcut:
@@ -68,7 +68,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     kontrolirati prozore drugih aplikacija (fokusiranje, zatvaranje,
     minimiziranje, pomicanje)
-  perm_modify_configuration: modificirati WinUIRev konfiguraciju
+  perm_modify_configuration: modificirati KestrelUI konfiguraciju
   perm_open_file: otvorite fajlove
   perm_run: pokrenuti programe
   request_description: |-

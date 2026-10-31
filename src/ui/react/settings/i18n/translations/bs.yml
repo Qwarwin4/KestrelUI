@@ -37,7 +37,7 @@ apps_configurations:
   export: Izvoz
   export_full: Izvoz postavki po nanosu
   extra_info: >-
-    WinUIRev Koristite samo jedan identifikator po aplikaciji (prvo pronađeno),
+    KestrelUI Koristite samo jedan identifikator po aplikaciji (prvo pronađeno),
     tako da je narudžba u tome kako je specifično, najnoviji dodani bit će
     prioritet, jer je u priopćenju tablica po zadanim postavkama sortirana iz
     posljednjeg.
@@ -82,7 +82,7 @@ devtools:
   enable: Omogućite alate za programere
   enable_description: >-
     Otključava napredne alate za inspekciju i otklanjanje grešaka u
-    unutrašnjosti WinUIRev. Nije predviđeno za redovnu upotrebu.
+    unutrašnjosti KestrelUI. Nije predviđeno za redovnu upotrebu.
   icons: Keširane ikone
   install_folder: Instalacijska mapa
   load: Opteretiti
@@ -120,7 +120,7 @@ devtools:
     widget_id: ID vidžeta
 discord_banner:
   message: >-
-    Povežite se s drugim WinUIRev korisnicima, dobijte pomoć, dijelite teme i
+    Povežite se s drugim KestrelUI korisnicima, dobijte pomoć, dijelite teme i
     budite u toku s najnovijim vijestima.
   title: Pridružite se našoj zajednici
 extras:
@@ -164,7 +164,7 @@ general:
     plugged: Uključen ili punjenje
   polling_interval: Sistemski interval anketiranja
   polling_interval_description: >-
-    Koliko često (u sekundama) WinUIRev provjerava sistemske resurse kao što su
+    Koliko često (u sekundama) KestrelUI provjerava sistemske resurse kao što su
     CPU, RAM, mreža i aktivnost diska. Manji broj znači češće ažuriranje, ali
     nešto veću upotrebu resursa.
   saturday: Subota
@@ -217,7 +217,7 @@ reset_configurations: Resetujte konfiguracije
 reset_to_default: Resetiranje na zadanu vrijednost
 resources:
   affected_widgets: Pogođeni vidžeti
-  app_outdated: Ovaj resurs zahtijeva noviju verziju WinUIRev Ui da radi pravilno.
+  app_outdated: Ovaj resurs zahtijeva noviju verziju KestrelUI Ui da radi pravilno.
   coming_soon: Uskoro
   corrupted_wallpaper: Ekstrahiranje sličice nije uspjelo - oštećen ili nepodržan video format
   delete: Izbriši resurs
@@ -238,7 +238,7 @@ resources:
 review_request:
   not_now: Ne sada
   sure: Naravno!
-  title: Uživate u korisničkom sučelju WinUIRev?
+  title: Uživate u korisničkom sučelju KestrelUI?
 save: Sačuvati
 save_and_restart: Spremi i ponovno pokretanje
 search: Traži
@@ -247,7 +247,7 @@ security:
   perms:
     kill_processes: Prisilno zatvorite aplikacije
     manage_app_windows: Kontrolirajte prozore drugih aplikacija
-    modify_configuration: Izmijenite WinUIRev konfiguraciju
+    modify_configuration: Izmijenite KestrelUI konfiguraciju
     open_file: Otvorite fajlove
     run: Pokreni programe
 see_more: Pogledajte više
@@ -430,16 +430,16 @@ weg:
 welcome:
   give_a_review: Dajte recenziju
   message: >-
-    WinUIRev je besplatno desktop okruženje otvorenog koda za Windows. Ovdje
+    KestrelUI je besplatno desktop okruženje otvorenog koda za Windows. Ovdje
     imate potpunu kontrolu nad načinom na koji vaš desktop izgleda i kako se
     ponaša, što vam omogućava da prilagodite svaki detalj kako bi odgovarao
     vašem toku rada i stilu.
   ok: Počnimo!
   review: >-
-    Ako uživate u korišćenju WinUIRev korisničkog sučelja, razmislite o tome da
+    Ako uživate u korišćenju KestrelUI korisničkog sučelja, razmislite o tome da
     ostavite recenziju o trgovini - vaše povratne informacije pomažu da se
     projekt razvija i poboljšava.
-  title: Dobrodošli u WinUIRev!
+  title: Dobrodošli u KestrelUI!
 widget:
   add_workspace_override: Nadjačavanje na radnom prostoru
   default_instance: Zadana instanca

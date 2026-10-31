@@ -15,8 +15,8 @@ use crate::{
 
 use super::spawn_named_thread;
 
-// Discord application of WinUIRev; assets `app_logo` must be uploaded there.
-const CLIENT_ID: Option<&str> = option_env!("WINUIREV_DISCORD_ID");
+// Discord application of KestrelUI; assets `app_logo` must be uploaded there.
+const CLIENT_ID: Option<&str> = option_env!("KESTREL_DISCORD_ID");
 
 static DISCORD_IPC_CONNECTED: AtomicBool = AtomicBool::new(false);
 static DISCORD_ENABLED: AtomicBool = AtomicBool::new(false);
@@ -59,7 +59,7 @@ static STATUSES: [&str; 20] = [
     "Glowy",
     "Ravens",
     "Unicorns",
-    "WinUIRev",
+    "KestrelUI",
     "Next-Gen",
     "Ethereal",
     "Cyberpunk",
@@ -162,6 +162,6 @@ pub fn get_activity() -> Activity<'static> {
     Activity::new()
         .state(status)
         .details(detail)
-        .assets(Assets::new().large_image("app_logo").large_text("WinUIRev"))
+        .assets(Assets::new().large_image("app_logo").large_text("KestrelUI"))
         .timestamps(Timestamps::new().start(*START_TIME))
 }

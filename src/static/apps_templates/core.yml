@@ -5,9 +5,9 @@
     matchingStrategy: Regex
   options:
     - unmanage
-- name: WinUIRev
+- name: KestrelUI
   identifier:
-    id: winuirev.exe
+    id: kestrelui.exe
     kind: Exe
     matchingStrategy: Equals
   options:

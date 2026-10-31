@@ -16,6 +16,6 @@ profile:
   open_onedrive: Iftaħ id-direttorju OneDrive
   open_user_folder: Iftaħ id-direttorju tal-utent
 seelen_options:
-  open_installation_folder: Iftaħ il-folder tas-settings ta' WinUIRev
-  open_log_folder: Iftaħ il-fowlder tal-log WinUIRev
-  title: Direttorji WinUIRev
+  open_installation_folder: Iftaħ il-folder tas-settings ta' KestrelUI
+  open_log_folder: Iftaħ il-fowlder tal-log KestrelUI
+  title: Direttorji KestrelUI

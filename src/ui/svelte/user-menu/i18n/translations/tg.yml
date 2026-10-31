@@ -16,6 +16,6 @@ profile:
   open_onedrive: Феҳристи OneDrive-ро кушоед
   open_user_folder: Феҳристи корбарро кушоед
 seelen_options:
-  open_installation_folder: Папкаи танзимоти WinUIRevро кушоед
-  open_log_folder: Папкаи гузориши WinUIRevро кушоед
+  open_installation_folder: Папкаи танзимоти KestrelUIро кушоед
+  open_log_folder: Папкаи гузориши KestrelUIро кушоед
   title: Феҳристҳои дидашуда

@@ -1,0 +1,17 @@
+.ft-bar {
+  background-color: oklch(from var(--neon-surface) l c h / var(--neon-glass));
+  backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid var(--neon-line);
+
+  &[data-has-margin="false"] {
+    border-width: 0 0 1px;
+  }
+}
+
+.ft-bar-item.ft-bar-item-clickable:hover {
+  background-color: oklch(from var(--neon-color) l c h / 0.12);
+}
+
+.ft-bar-item-content {
+  font-variant-numeric: tabular-nums;
+}

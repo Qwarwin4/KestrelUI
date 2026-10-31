@@ -20,5 +20,5 @@ run_as_admin: Patakbuhin bilang Administrator
 uninstall: I-uninstall
 unpin: I-unpin
 web_search: Pindutin ang Enter upang maghanap sa web
-welcome_message: Maligayang pagdating sa menu ng WinUIRev app.
+welcome_message: Maligayang pagdating sa menu ng KestrelUI app.
 welcome_message2: Sa tab na ito, maaari mong i-pin ang iyong mga paboritong app.

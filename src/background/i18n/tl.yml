@@ -2,7 +2,7 @@ cancel: Kanselahin
 done: Tapos na
 elevated:
   description: >-
-    Gumagana ang WinUIRev na may mga pribilehiyo ng administrator.
+    Gumagana ang KestrelUI na may mga pribilehiyo ng administrator.
 
     Hindi ito nagdaragdag o nagpapahusay ng anumang mga tampok, at maaari itong
     magdulot ng panganib sa seguridad.
@@ -15,7 +15,7 @@ resource:
   added: Ang isang bagong mapagkukunan ay naidagdag
   download_failed_body: >-
     May mali habang nag -download ng mapagkukunan, mangyaring iulat ito sa
-    koponan ng developer ng WinUIRev.
+    koponan ng developer ng KestrelUI.
   download_failed_title: Nabigo ang pag -download ng mapagkukunan
   downloading: Pag -download ng mga assets ...
   downloading_body: Maaaring tumagal ito ng ilang segundo, mangyaring huwag isara ang window.
@@ -33,23 +33,23 @@ runtime:
     Ito ay maaaring mangyari kung ang mga file ay binago, nasira, o ang
     pag-install ay hindi kumpleto.
 
-    Para sa mga kadahilanang panseguridad, hindi maaaring magpatuloy ang WinUIRev
+    Para sa mga kadahilanang panseguridad, hindi maaaring magpatuloy ang KestrelUI
     UI.
 
     Mangyaring muling i-install ito mula sa opisyal na website.
   files_integrity_title: Alerto sa Seguridad - Nabigo ang Pagsusuri ng Integridad ng mga File
   not_found: Hindi nahanap ang WebView2 Runtime
   not_found_description: >-
-    Ang WinUIRev ay nangangailangan ng Webview2 Runtime. Mangyaring i-install
+    Ang KestrelUI ay nangangailangan ng Webview2 Runtime. Mangyaring i-install
     ito.
   outdated: Luma na ang Runtime ng WebView2
   outdated_description: >-
-    Ang WinUIRev ay nangangailangan ng Webview2 Runtime %{min_version} o mas
+    Ang KestrelUI ay nangangailangan ng Webview2 Runtime %{min_version} o mas
     mataas. Mangyaring i-update ito.
 service:
-  not_running: Hindi tumatakbo ang WinUIRev Service
+  not_running: Hindi tumatakbo ang KestrelUI Service
   not_running_description: >-
-    Ang WinUIRev Service (winuirev-service) ay isang dependency/helper para gumana
+    Ang KestrelUI Service (kestrelui-service) ay isang dependency/helper para gumana
     nang maayos ang app.
   not_running_ok: Simulan ang serbisyo
 shortcut:
@@ -76,7 +76,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     kontrolin ang mga bintana ng iba pang mga application (focus, isara,
     i-minimize, ilipat)
-  perm_modify_configuration: baguhin ang configuration ng WinUIRev
+  perm_modify_configuration: baguhin ang configuration ng KestrelUI
   perm_open_file: buksan ang mga file
   perm_run: magpatakbo ng mga programa
   request_description: |-

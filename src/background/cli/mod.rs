@@ -22,11 +22,11 @@ use crate::{
     },
 };
 
-/// WARNING: winuirev.exe CLI commands are deprecated.
+/// WARNING: kestrelui.exe CLI commands are deprecated.
 ///
 /// Use `slu` instead.
 #[derive(Debug, clap::Parser)]
-#[command(version, name = "WinUIRev")]
+#[command(version, name = "KestrelUI")]
 struct MainCli {
     #[arg(long, default_value_t)]
     silent: bool,
@@ -58,7 +58,7 @@ pub async fn handle_console_client() -> Result<()> {
     if let Some(uri) = cli.uri {
         AppIpc::send(AppMessage::OpenUri(uri))
             .await
-            .map_err(|_| "Can't establish connection, ensure WinUIRev is running.")?;
+            .map_err(|_| "Can't establish connection, ensure KestrelUI is running.")?;
         std::process::exit(0);
     }
 

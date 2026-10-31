@@ -22,7 +22,7 @@ pub async fn check_for_updates() -> Result<Option<Update>> {
             .updater_builder()
             .pubkey(PUB_KEY)
             .endpoints(vec![
-                "https://github.com/Qwarwin4/WinUIRev/releases/download/nightly/latest.json"
+                "https://github.com/Qwarwin4/KestrelUI/releases/download/nightly/latest.json"
                     .try_into()
                     .expect("Failed to parse url"),
             ])?
@@ -36,7 +36,7 @@ pub async fn check_for_updates() -> Result<Option<Update>> {
             .updater_builder()
             .pubkey(PUB_KEY)
             .endpoints(vec![
-                "https://github.com/Qwarwin4/WinUIRev/releases/latest/download/latest.json"
+                "https://github.com/Qwarwin4/KestrelUI/releases/latest/download/latest.json"
                     .try_into()
                     .expect("Failed to parse url"),
             ])?

@@ -130,7 +130,7 @@ pub enum WidgetInstanceMode {
     /// The widget is allowed to have multiple instances.\
     /// This allow to the user manually create more instances of this same widget.
     Multiple,
-    /// WinUIRev will create an instance of this widget per each monitor connected.\
+    /// KestrelUI will create an instance of this widget per each monitor connected.\
     /// This can be configured by the user using per monitor settings.\
     ReplicaByMonitor,
 }

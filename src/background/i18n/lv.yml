@@ -2,7 +2,7 @@ cancel: Atcelt
 done: Darīts
 elevated:
   description: >-
-    WinUIRev darbojas ar administratora privilēģijām.
+    KestrelUI darbojas ar administratora privilēģijām.
 
     Tas nepievieno vai neuzlabo nekādas funkcijas, un tas var radīt drošības
     risku.
@@ -15,7 +15,7 @@ resource:
   added: Ir pievienots jauns resurss
   download_failed_body: >-
     Lejupielādējot resursu, kaut kas notika nepareizi, lūdzu, ziņojiet par to
-    WinUIRev izstrādātāju komandai.
+    KestrelUI izstrādātāju komandai.
   download_failed_title: Resursu lejupielāde neizdevās
   downloading: Aktīvu lejupielāde...
   downloading_body: Tas var aizņemt dažas sekundes, lūdzu, neaizveriet logu.
@@ -30,19 +30,19 @@ runtime:
   files_integrity: |-
     Mēs nevarējām pārbaudīt lietojumprogrammu failu integritāti.
     Tas var notikt, ja faili ir modificēti, bojāti vai instalēšana ir nepilnīga.
-    Drošības apsvērumu dēļ WinUIRev nevar turpināt.
+    Drošības apsvērumu dēļ KestrelUI nevar turpināt.
     Lūdzu, atkārtoti instalējiet to no oficiālās vietnes.
   files_integrity_title: Drošības brīdinājums — failu integritātes pārbaude neizdevās
   not_found: WebView2 izpildlaiks nav atrasts
-  not_found_description: WinUIRev ir nepieciešams Webview2 Runtime. Lūdzu, instalējiet to.
+  not_found_description: KestrelUI ir nepieciešams Webview2 Runtime. Lūdzu, instalējiet to.
   outdated: WebView2 izpildlaiks ir novecojis
   outdated_description: >-
-    WinUIRev lietotāja interfeisam ir nepieciešama Webview2 Runtime %{min_version}
+    KestrelUI lietotāja interfeisam ir nepieciešama Webview2 Runtime %{min_version}
     vai jaunāka versija. Lūdzu, atjauniniet to.
 service:
-  not_running: WinUIRev pakalpojums nedarbojas
+  not_running: KestrelUI pakalpojums nedarbojas
   not_running_description: >-
-    WinUIRev pakalpojums (winuirev-service) ir atkarība/palīgs, lai lietotne
+    KestrelUI pakalpojums (kestrelui-service) ir atkarība/palīgs, lai lietotne
     darbotos pareizi.
   not_running_ok: Sāciet pakalpojumu
 shortcut:
@@ -67,7 +67,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     kontrolēt citu lietojumprogrammu logus (fokusēt, aizvērt, samazināt,
     pārvietot)
-  perm_modify_configuration: modificēt WinUIRev konfigurāciju
+  perm_modify_configuration: modificēt KestrelUI konfigurāciju
   perm_open_file: atvērt failus
   perm_run: palaist programmas
   request_description: |-

@@ -22,6 +22,7 @@ import {
 
 import { SettingsGroup, SettingsOption } from "../../../components/SettingsBox/index.tsx";
 import { Colors } from "./Colors.tsx";
+import { NeonColor, neonEnabled } from "./NeonColor.tsx";
 import { PerformanceSettings } from "./Performance.tsx";
 
 export function General() {
@@ -123,7 +124,8 @@ export function General() {
         />
       </SettingsGroup>
 
-      <Colors />
+      <NeonColor />
+      {!neonEnabled() && <Colors />}
 
       <SettingsGroup>
         <SettingsOption

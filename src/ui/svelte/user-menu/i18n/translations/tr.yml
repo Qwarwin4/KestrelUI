@@ -16,6 +16,6 @@ profile:
   open_onedrive: OneDrive dizinini aç
   open_user_folder: Kullanıcı dizinini aç
 seelen_options:
-  open_installation_folder: WinUIRev ayarlar klasörünü aç
-  open_log_folder: WinUIRev günlük klasörünü aç
-  title: WinUIRev dizinleri
+  open_installation_folder: KestrelUI ayarlar klasörünü aç
+  open_log_folder: KestrelUI günlük klasörünü aç
+  title: KestrelUI dizinleri

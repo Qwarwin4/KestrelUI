@@ -2,7 +2,7 @@
 setlocal EnableDelayedExpansion
 cd /d "%~dp0"
 
-rem Installs everything needed to build WinUIRev. Safe to run again.
+rem Installs everything needed to build KestrelUI. Safe to run again.
 
 where winget >nul 2>&1
 if errorlevel 1 (

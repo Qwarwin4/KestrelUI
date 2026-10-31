@@ -25,10 +25,24 @@
 
     border-bottom: 1px solid var(--color-gray-200);
 
-    > img {
+    > .logo {
+      position: relative;
+      flex-shrink: 0;
       width: min(28px, 100%);
       aspect-ratio: 1/1;
+      border-radius: 22%;
+      background-color: #0b130f;
       transition: width 100ms linear;
+
+      // the mark is a mask so the theme's icon color can recolor it
+      > span {
+        position: absolute;
+        inset: 0;
+        background-color: var(--kestrel-icon-color, var(--system-accent-color));
+        mask-position: center;
+        mask-size: contain;
+        mask-repeat: no-repeat;
+      }
     }
 
     > h1 {

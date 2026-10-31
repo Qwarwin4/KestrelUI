@@ -2,7 +2,7 @@ cancel: रद्द गर्नु
 done: पूरा
 elevated:
   description: >-
-    WinUIRev प्रशासक विशेषाधिकार संग चलिरहेको छ।
+    KestrelUI प्रशासक विशेषाधिकार संग चलिरहेको छ।
 
     यसले कुनै पनि सुविधाहरू थप्ने वा सुधार गर्दैन, र यसले सुरक्षा जोखिम
     निम्त्याउन सक्छ।
@@ -27,19 +27,19 @@ runtime:
   files_integrity: |-
     हामीले अनुप्रयोग फाइलहरूको अखण्डता प्रमाणित गर्न सकेनौं।
     यदि फाइलहरू परिमार्जन, भ्रष्ट वा स्थापना अपूर्ण भएमा यो हुन सक्छ।
-    सुरक्षा कारणहरूका लागि, WinUIRev जारी राख्न सक्दैन।
+    सुरक्षा कारणहरूका लागि, KestrelUI जारी राख्न सक्दैन।
     कृपया यसलाई आधिकारिक वेबसाइटबाट पुन: स्थापना गर्नुहोस्।
   files_integrity_title: सुरक्षा सतर्कता - फाइलहरूको अखण्डता जाँच असफल भयो
   not_found: WebView2 रनटाइम फेला परेन
-  not_found_description: WinUIRev लाई Webview2 रनटाइम चाहिन्छ। कृपया यसलाई स्थापना गर्नुहोस्।
+  not_found_description: KestrelUI लाई Webview2 रनटाइम चाहिन्छ। कृपया यसलाई स्थापना गर्नुहोस्।
   outdated: WebView2 रनटाइम पुरानो
   outdated_description: >-
-    WinUIRev लाई Webview2 रनटाइम %{min_version} वा उच्च चाहिन्छ। कृपया यसलाई
+    KestrelUI लाई Webview2 रनटाइम %{min_version} वा उच्च चाहिन्छ। कृपया यसलाई
     अपडेट गर्नुहोस्।
 service:
-  not_running: WinUIRev सेवा चलिरहेको छैन
+  not_running: KestrelUI सेवा चलिरहेको छैन
   not_running_description: >-
-    WinUIRev सेवा (winuirev-service) एपलाई राम्रोसँग काम गर्नको लागि निर्भरता/सहायक
+    KestrelUI सेवा (kestrelui-service) एपलाई राम्रोसँग काम गर्नको लागि निर्भरता/सहायक
     हो।
   not_running_ok: सेवा सुरु गर्नुहोस्
 shortcut:
@@ -64,7 +64,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     अन्य अनुप्रयोगहरूको विन्डोहरू नियन्त्रण गर्नुहोस् (फोकस, बन्द, न्यूनतम,
     सार्नुहोस्)
-  perm_modify_configuration: WinUIRev कन्फिगरेसन परिमार्जन गर्नुहोस्
+  perm_modify_configuration: KestrelUI कन्फिगरेसन परिमार्जन गर्नुहोस्
   perm_open_file: फाइलहरू खोल्नुहोस्
   perm_run: कार्यक्रमहरू सञ्चालन गर्ने
   request_description: |-

@@ -24,7 +24,7 @@ use crate::{
     widgets::trigger_dialog_backend,
 };
 
-pub const URI: &str = "winuirev.uri:";
+pub const URI: &str = "kestrelui.uri:";
 
 pub async fn process_uri(uri: &str) -> Result<()> {
     log::trace!("Loading URI: {uri}");
@@ -49,7 +49,7 @@ pub async fn process_uri(uri: &str) -> Result<()> {
 
     let path = uri.trim_start_matches(URI).trim_start_matches("/");
 
-    // showcase/<id> — installs an entry from the WinUIRev showcase registry
+    // showcase/<id> — installs an entry from the KestrelUI showcase registry
     if let Some(id) = path.strip_prefix("showcase/") {
         crate::showcase::install_with_dialog(id.trim_end_matches('/')).await?;
         return Ok(());

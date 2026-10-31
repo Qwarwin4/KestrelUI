@@ -77,7 +77,7 @@ impl AppMessage {
 
 // ==============================================
 
-/// WinUIRev Service Actions
+/// KestrelUI Service Actions
 #[allow(dead_code)]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub enum SvcAction {

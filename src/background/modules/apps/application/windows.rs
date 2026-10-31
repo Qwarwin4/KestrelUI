@@ -228,7 +228,7 @@ pub fn is_interactable_window(window: &Window) -> bool {
     // this class is used for edge tabs to be shown as independent windows on alt + tab
     // this only applies when the new tab is created it is bound to explorer.exe for some reason
     // maybe we can search/learn more about edge tabs later.
-    // fix: https://github.com/Qwarwin4/WinUIRev/issues/83
+    // fix: https://github.com/Qwarwin4/KestrelUI/issues/83
     if window.class() == "Windows.Internal.Shell.TabProxyWindow" {
         return false;
     }

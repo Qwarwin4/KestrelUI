@@ -16,6 +16,6 @@ profile:
   open_onedrive: Відкрийте каталог OneDrive
   open_user_folder: Відкрити каталог користувача
 seelen_options:
-  open_installation_folder: Відкрийте папку налаштувань WinUIRev
-  open_log_folder: Відкрийте папку журналу WinUIRev
-  title: Довідники WinUIRev
+  open_installation_folder: Відкрийте папку налаштувань KestrelUI
+  open_log_folder: Відкрийте папку журналу KestrelUI
+  title: Довідники KestrelUI

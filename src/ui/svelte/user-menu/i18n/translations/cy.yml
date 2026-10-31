@@ -16,6 +16,6 @@ profile:
   open_onedrive: Agor cyfeiriadur OneDrive
   open_user_folder: Agor cyfeiriadur defnyddiwr
 seelen_options:
-  open_installation_folder: Agor ffolder gosodiadau WinUIRev
-  open_log_folder: Agor ffolder log WinUIRev
-  title: Cyfeiriaduron WinUIRev
+  open_installation_folder: Agor ffolder gosodiadau KestrelUI
+  open_log_folder: Agor ffolder log KestrelUI
+  title: Cyfeiriaduron KestrelUI

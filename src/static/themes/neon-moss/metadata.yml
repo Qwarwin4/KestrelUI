@@ -1,0 +1,46 @@
+id: "@kestrel/neon-moss"
+metadata:
+  displayName: !extend i18n/display_name.yml
+  description: !extend i18n/description.yml
+  tags:
+    - dark
+    - glass
+    - neon
+settings:
+  - syntax: <color>
+    name: --neon-color
+    label:
+      en: Neon color
+      ru: Цвет неона
+    initialValue: "#5ef0a0"
+  - syntax: <boolean>
+    name: --neon-icon-follow
+    label:
+      en: Icon uses the neon color
+      ru: Иконка цвета неона
+    initialValue: true
+  - syntax: <color>
+    name: --neon-icon-color
+    label:
+      en: Icon color
+      ru: Цвет иконки
+    initialValue: "#5ef0a0"
+  - syntax: <number>
+    name: --neon-glass
+    label:
+      en: Glass opacity
+      ru: Прозрачность стекла
+    initialValue: 0.62
+    min: 0.3
+    max: 1
+    step: 0.02
+  - syntax: <boolean>
+    name: --neon-glow
+    label:
+      en: Glow
+      ru: Свечение
+    initialValue: true
+styles:
+  "@seelen/fancy-toolbar": !include styles/toolbar.scss
+  "@seelen/weg": !include styles/weg.scss
+sharedStyles: !include ./shared.scss

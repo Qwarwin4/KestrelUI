@@ -2,7 +2,7 @@ cancel: Չեղարկել
 done: Արված
 elevated:
   description: >-
-    WinUIRev-ն աշխատում է ադմինիստրատորի արտոնություններով:
+    KestrelUI-ն աշխատում է ադմինիստրատորի արտոնություններով:
 
     Սա չի ավելացնում կամ բարելավում որևէ գործառույթ, և դա կարող է անվտանգության
     վտանգ ներկայացնել:
@@ -31,20 +31,20 @@ runtime:
     Դա կարող է տեղի ունենալ, եթե ֆայլերը փոփոխված են, վնասված են կամ տեղադրումն
     ավարտված չէ:
 
-    Անվտանգության նկատառումներից ելնելով, WinUIRev-ն չի կարող շարունակել:
+    Անվտանգության նկատառումներից ելնելով, KestrelUI-ն չի կարող շարունակել:
 
     Խնդրում ենք նորից տեղադրել այն պաշտոնական կայքից:
   files_integrity_title: Անվտանգության զգուշացում – Ֆայլերի ամբողջականության ստուգումը ձախողվեց
   not_found: WebView2 Runtime-ը չի գտնվել
-  not_found_description: "WinUIRev-ն պահանջում է Webview2 Runtime: Խնդրում ենք տեղադրել այն:"
+  not_found_description: "KestrelUI-ն պահանջում է Webview2 Runtime: Խնդրում ենք տեղադրել այն:"
   outdated: WebView2 Runtime-ը հնացել է
   outdated_description: >-
-    WinUIRev-ն պահանջում է Webview2 Runtime %{min_version} կամ ավելի բարձր:
+    KestrelUI-ն պահանջում է Webview2 Runtime %{min_version} կամ ավելի բարձր:
     Խնդրում ենք թարմացնել այն:
 service:
-  not_running: WinUIRev ծառայությունը չի աշխատում
+  not_running: KestrelUI ծառայությունը չի աշխատում
   not_running_description: >-
-    WinUIRev Service-ը (winuirev-service) կախվածություն/օգնական է հավելվածի ճիշտ
+    KestrelUI Service-ը (kestrelui-service) կախվածություն/օգնական է հավելվածի ճիշտ
     աշխատանքի համար:
   not_running_ok: Սկսեք ծառայությունը
 shortcut:
@@ -69,7 +69,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     վերահսկել այլ հավելվածների պատուհանները (կենտրոնանալ, փակել, նվազագույնի
     հասցնել, տեղափոխել)
-  perm_modify_configuration: փոփոխել WinUIRev-ի կոնֆիգուրացիան
+  perm_modify_configuration: փոփոխել KestrelUI-ի կոնֆիգուրացիան
   perm_open_file: բաց ֆայլեր
   perm_run: գործարկել ծրագրեր
   request_description: |-

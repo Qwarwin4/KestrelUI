@@ -22,10 +22,10 @@ impl ServiceSubcommands {
 pub fn get_cli() -> Command {
     Command::new(SERVICE_DISPLAY_NAME.to_string())
         .author("eythaann")
-        .about("WinUIRev Command Line Interface.")
-        .long_about("WinUIRev Command Line Interface.")
+        .about("KestrelUI Command Line Interface.")
+        .long_about("KestrelUI Command Line Interface.")
         .before_help("")
-        .after_help("To read more about WinUIRev visit https://github.com/Qwarwin4/WinUIRev")
+        .after_help("To read more about KestrelUI visit https://github.com/Qwarwin4/KestrelUI")
         .subcommands([
             Command::new(ServiceSubcommands::INSTALL)
                 .about("Installs or repairs the service (elevation required)."),

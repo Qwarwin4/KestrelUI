@@ -2,7 +2,7 @@ cancel: বাতিল
 done: সম্পন্ন
 elevated:
   description: >-
-    WinUIRev প্রশাসকের বিশেষাধিকারের সাথে চলছে।
+    KestrelUI প্রশাসকের বিশেষাধিকারের সাথে চলছে।
 
     এটি কোনও বৈশিষ্ট্য যুক্ত বা উন্নত করে না এবং এটি একটি নিরাপত্তা ঝুঁকি তৈরি
     করতে পারে।
@@ -30,18 +30,18 @@ runtime:
     এটি ঘটতে পারে যদি ফাইলগুলি সংশোধন করা হয়, দূষিত হয় বা ইনস্টলেশনটি
     অসম্পূর্ণ থাকে।
 
-    নিরাপত্তার কারণে, WinUIRev চালিয়ে যেতে পারে না।
+    নিরাপত্তার কারণে, KestrelUI চালিয়ে যেতে পারে না।
 
     অফিসিয়াল ওয়েবসাইট থেকে এটি পুনরায় ইনস্টল করুন.
   files_integrity_title: নিরাপত্তা সতর্কতা - ফাইলের অখণ্ডতা পরীক্ষা ব্যর্থ হয়েছে৷
   not_found: WebView2 রানটাইম পাওয়া যায়নি
-  not_found_description: WinUIRev এর জন্য Webview2 রানটাইম প্রয়োজন। এটা ইনস্টল করুন.
+  not_found_description: KestrelUI এর জন্য Webview2 রানটাইম প্রয়োজন। এটা ইনস্টল করুন.
   outdated: WebView2 রানটাইম পুরানো
   outdated_description: >-
-    WinUIRev এর জন্য Webview2 রানটাইম %{min_version} বা উচ্চতর প্রয়োজন। এটা
+    KestrelUI এর জন্য Webview2 রানটাইম %{min_version} বা উচ্চতর প্রয়োজন। এটা
     আপডেট করুন.
 service:
-  not_running: WinUIRev পরিষেবা চলছে না
+  not_running: KestrelUI পরিষেবা চলছে না
   not_running_description: >-
     সিলেন ইউআই সার্ভিস (স্লু-সার্ভিস) অ্যাপটি সঠিকভাবে কাজ করার জন্য একটি
     নির্ভরতা/সহায়ক।
@@ -68,7 +68,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     অন্যান্য অ্যাপ্লিকেশনের উইন্ডোগুলি নিয়ন্ত্রণ করুন (ফোকাস করুন, বন্ধ করুন,
     ছোট করুন, সরান)
-  perm_modify_configuration: WinUIRev কনফিগারেশন পরিবর্তন করুন
+  perm_modify_configuration: KestrelUI কনফিগারেশন পরিবর্তন করুন
   perm_open_file: ফাইল খুলুন
   perm_run: প্রোগ্রাম চালান
   request_description: |-

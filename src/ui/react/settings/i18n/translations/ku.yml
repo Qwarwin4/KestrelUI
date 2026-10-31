@@ -78,7 +78,7 @@ devtools:
   data_folder: Peldanka daneyê
   enable: Amûrên Pêşdebir çalak bikin
   enable_description: >-
-    Amûrên pêşkeftî yên ji bo teftîşkirin û verastkirina hundurên UI-ya WinUIRev
+    Amûrên pêşkeftî yên ji bo teftîşkirin û verastkirina hundurên UI-ya KestrelUI
     vedike. Ji bo karanîna birêkûpêk nayê armanc kirin.
   icons: Îkonên Cached
   install_folder: Peldanka sazkirinê
@@ -117,7 +117,7 @@ devtools:
     widget_id: ID widget
 discord_banner:
   message: >-
-    Bi bikarhênerên din ên WinUIRev re têkilî daynin, alîkariyê bistînin,
+    Bi bikarhênerên din ên KestrelUI re têkilî daynin, alîkariyê bistînin,
     mijaran parve bikin û bi nûçeyên herî dawî re bimînin.
   title: Tevlî Civata me bibin
 extras:
@@ -163,7 +163,7 @@ general:
     plugged: Plug kirin an drav kirin
   polling_interval: Navbera dengdanê ya pergalê
   polling_interval_description: >-
-    Çi caran (di çirkeyan de) WinUIRev çavkaniyên pergalê yên wekî CPU, RAM,
+    Çi caran (di çirkeyan de) KestrelUI çavkaniyên pergalê yên wekî CPU, RAM,
     torê, û çalakiya dîskê kontrol dike. Hejmarek piçûktir tê wateya nûvekirinên
     pir caran, lê karanîna çavkaniyê hinekî bilindtir e.
   saturday: Şemî
@@ -217,7 +217,7 @@ reset_to_default: Reset bi nirxa xwerû
 resources:
   affected_widgets: Widgetên bandorkirî
   app_outdated: >-
-    Vê çavkaniyê guhertoyek nû ya WinUIRev hewce dike ku bi rengek baş
+    Vê çavkaniyê guhertoyek nû ya KestrelUI hewce dike ku bi rengek baş
     bixebite.
   coming_soon: Hema têm
   corrupted_wallpaper: >-
@@ -232,7 +232,7 @@ resources:
   modified: Modified
   open_folder: Peldanka çavkaniya vekirî
   outdated: >-
-    Vê çavkaniyê ji bo guhertoyek kevn a WinUIRev hate çêkirin û dibe ku bi
+    Vê çavkaniyê ji bo guhertoyek kevn a KestrelUI hate çêkirin û dibe ku bi
     rengek baş kar neke.
   see_on_website: Li ser malperê bibînin
   update_now: Rojanekirin
@@ -241,7 +241,7 @@ resources:
 review_request:
   not_now: Guhê xwe nedenê
   sure: Emîn!
-  title: Ji WinUIRev-ê kêfxweş dibin?
+  title: Ji KestrelUI-ê kêfxweş dibin?
 save: Rizgarkirin
 save_and_restart: Save & Restart
 search: Gerr
@@ -250,7 +250,7 @@ security:
   perms:
     kill_processes: Bi zorê sepanên girtina
     manage_app_windows: Paceyên serîlêdanên din kontrol bikin
-    modify_configuration: Veavakirina WinUIRev biguherînin
+    modify_configuration: Veavakirina KestrelUI biguherînin
     open_file: Pelên vekin
     run: Bername bimeşînin
 see_more: Bêtir bibînin
@@ -269,7 +269,7 @@ shortcuts:
     tayîn bike.
   enable: Pergala kurtefîlmên çêkirî çalak bikin
   enable_tooltip: >-
-    Heke hûn ê pergala kurteya xwe bi karanîna muwekîlê WinUIRev bikar bînin
+    Heke hûn ê pergala kurteya xwe bi karanîna muwekîlê KestrelUI bikar bînin
     bicîh bikin
   labels:
     create_new_workspace: Karê nû nû çêbikin
@@ -429,16 +429,16 @@ weg:
 welcome:
   give_a_review: Bidin Review
   message: >-
-    WinUIRev ji bo Windows-ê hawîrdorek sermaseya belaş û çavkaniya vekirî ye.
+    KestrelUI ji bo Windows-ê hawîrdorek sermaseya belaş û çavkaniya vekirî ye.
     Li vir kontrola we ya bêkêmasî heye ka sermaseya we çawa xuya dike û
     tevdigere, ku dihêle hûn her hûrgulî xweş bikin da ku li gorî xebata xwe û
     şêwaza xwe tevbigerin.
   ok: Ka em dest pê bikin!
   review: >-
-    Heke hûn ji karanîna WinUIRev-yê hez dikin, bifikirin ku li ser firotgehê
+    Heke hûn ji karanîna KestrelUI-yê hez dikin, bifikirin ku li ser firotgehê
     nirxandinek bihêlin - nerînên we ji projeyê re dibe alîkar ku mezin bibe û
     pêşve bibe.
-  title: Hûn bi xêr hatin WinUIRev!
+  title: Hûn bi xêr hatin KestrelUI!
 widget:
   add_workspace_override: Li ser cîhek xebatê hilweşînin
   default_instance: Mînaka Bingehîn

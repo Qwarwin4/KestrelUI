@@ -30,14 +30,14 @@ apps_configurations:
     Disse samlede konfigurationer kan ikke redigeres og er designet til at give
     dig den bedste oplevelse uden tilpasning. De konfigurerer automatisk de mest
     almindelige applikationer til dig.
-  bundled_title: App Config bundtet med WinUIRev
+  bundled_title: App Config bundtet med KestrelUI
   confirm_delete: Er du sikker på, at du vil slette denne konfiguration/er?
   confirm_delete_title: Bekræft slet
   delete: Slet
   export: Eksport
   export_full: Eksporter indstillinger efter program
   extra_info: >-
-    WinUIRev bruger kun én identifikator pr. app (første match fundet), så
+    KestrelUI bruger kun én identifikator pr. app (første match fundet), så
     rækkefølgen i, hvordan de specificeres, er vigtig, det senest tilføjede vil
     blive prioriteret, da bemærk, at tabellen er sorteret som standard fra
     seneste til gammel.
@@ -80,7 +80,7 @@ devtools:
   data_folder: Datamappe
   enable: Aktivér udviklerværktøjer
   enable_description: >-
-    Låser op avancerede værktøjer til inspektion og fejlretning af WinUIRev
+    Låser op avancerede værktøjer til inspektion og fejlretning af KestrelUI
     UI-internal. Not intended for regular use.
   icons: Cachelagrede ikoner
   install_folder: Installationsmappe
@@ -119,7 +119,7 @@ devtools:
     widget_id: Widget ID
 discord_banner:
   message: >-
-    Få forbindelse til andre WinUIRev-brugere, få hjælp, del temaer, og hold
+    Få forbindelse til andre KestrelUI-brugere, få hjælp, del temaer, og hold
     dig opdateret med de seneste nyheder.
   title: Tilmeld dig vores fællesskab
 extras:
@@ -163,7 +163,7 @@ general:
     plugged: Tilsluttet eller opladning
   polling_interval: System polling interval
   polling_interval_description: >-
-    Hvor ofte (i sekunder) WinUIRev kontrollerer systemressourcer som CPU, RAM,
+    Hvor ofte (i sekunder) KestrelUI kontrollerer systemressourcer som CPU, RAM,
     netværk og diskaktivitet. Et mindre antal betyder hyppigere opdateringer,
     men lidt højere ressourceforbrug.
   saturday: lørdag
@@ -216,7 +216,7 @@ reset_configurations: Nulstil konfigurationer
 reset_to_default: Nulstil til standardværdi
 resources:
   affected_widgets: Berørte widgets
-  app_outdated: Denne ressource kræver en nyere version af WinUIRev for at fungere korrekt.
+  app_outdated: Denne ressource kræver en nyere version af KestrelUI for at fungere korrekt.
   coming_soon: Kommer snart
   corrupted_wallpaper: >-
     Kunne ikke udtrække miniaturebilledet - beskadiget eller ikke-understøttet
@@ -230,7 +230,7 @@ resources:
   modified: Ændret
   open_folder: Åbn ressourcemappen
   outdated: >-
-    Denne ressource er designet til en ældre version af WinUIRev og fungerer
+    Denne ressource er designet til en ældre version af KestrelUI og fungerer
     muligvis ikke korrekt.
   see_on_website: Se på hjemmesiden
   update_now: Opdatering
@@ -239,7 +239,7 @@ resources:
 review_request:
   not_now: Ikke nu
   sure: Sikker!
-  title: Nyder du WinUIRev?
+  title: Nyder du KestrelUI?
 save: Gemme
 save_and_restart: Gem & genstart
 search: Søge
@@ -248,7 +248,7 @@ security:
   perms:
     kill_processes: Tving lukkede ansøgninger
     manage_app_windows: Styr vinduerne i andre programmer
-    modify_configuration: Rediger WinUIRev-konfigurationen
+    modify_configuration: Rediger KestrelUI-konfigurationen
     open_file: Åbn filer
     run: Kør programmer
 see_more: Se mere
@@ -267,7 +267,7 @@ shortcuts:
   enable: Aktivér det indbyggede genvejssystem
   enable_tooltip: >-
     Deaktiver, hvis du vil implementere dit eget genvejssystem ved hjælp af
-    WinUIRev Client
+    KestrelUI Client
   labels:
     create_new_workspace: Opret et nyt arbejdsområde
     create_new_workspace_row: Opret ny arbejdsområderække
@@ -426,14 +426,14 @@ weg:
 welcome:
   give_a_review: Giv en anmeldelse
   message: >-
-    WinUIRev er et gratis og open source-skrivebordsmiljø til Windows. Her har
+    KestrelUI er et gratis og open source-skrivebordsmiljø til Windows. Her har
     du fuld kontrol over, hvordan dit skrivebord ser ud og opfører sig, så du
     kan tilpasse hver eneste detalje, så den matcher din arbejdsgang og stil.
   ok: Lad os starte!
   review: >-
-    Hvis du kan lide at bruge WinUIRev, kan du overveje at skrive en anmeldelse
+    Hvis du kan lide at bruge KestrelUI, kan du overveje at skrive en anmeldelse
     i butikken – din feedback hjælper projektet med at vokse og forbedre.
-  title: Velkommen til WinUIRev!
+  title: Velkommen til KestrelUI!
 widget:
   add_workspace_override: Tilsidesæt på et arbejdsområde
   default_instance: Standardinstans

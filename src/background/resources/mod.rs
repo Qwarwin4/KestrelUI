@@ -313,7 +313,7 @@ impl ResourceManager {
     }
 
     /// Activates a loaded resource the same way the "Enable" button does after installing
-    /// a resource from the marketplace (via `winuirev.uri:` or a dropped `.slu` file).
+    /// a resource from the marketplace (via `kestrelui.uri:` or a dropped `.slu` file).
     pub fn enable_resource(&self, kind: ResourceKind, id: ResourceId) {
         let plugin_events: Vec<PluginId> = match &kind {
             ResourceKind::Plugin => vec![PluginId::from(id.clone())],

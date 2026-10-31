@@ -2,7 +2,7 @@ cancel: Annuler
 done: Fait
 elevated:
   description: >-
-    WinUIRev fonctionne avec des privilèges d'administrateur.
+    KestrelUI fonctionne avec des privilèges d'administrateur.
 
     Cela n’ajoute ni n’améliore aucune fonctionnalité et peut présenter un
     risque de sécurité.
@@ -15,7 +15,7 @@ resource:
   added: Une nouvelle ressource a été ajoutée
   download_failed_body: >-
     Un problème s'est produit lors du téléchargement de la ressource, veuillez
-    le signaler à l'équipe de développeurs de WinUIRev.
+    le signaler à l'équipe de développeurs de KestrelUI.
   download_failed_title: Le téléchargement des ressources a échoué
   downloading: Téléchargement des actifs...
   downloading_body: Cela peut prendre quelques secondes, ne fermez pas la fenêtre.
@@ -31,22 +31,22 @@ runtime:
     Cela peut se produire si les fichiers ont été modifiés, corrompus ou si
     l'installation est incomplète.
 
-    Pour des raisons de sécurité, WinUIRev ne peut pas continuer.
+    Pour des raisons de sécurité, KestrelUI ne peut pas continuer.
 
     Veuillez le réinstaller depuis le site officiel.
   files_integrity_title: Alerte de sécurité - Échec de la vérification de l'intégrité des fichiers
   not_found: Le moteur d'exécution WebView2 est introuvable
   not_found_description: >-
-    L'interface utilisateur de WinUIRev nécessite le runtime Webview2. Veuillez
+    L'interface utilisateur de KestrelUI nécessite le runtime Webview2. Veuillez
     l'installer.
   outdated: WebView2 Runtime obsolète
   outdated_description: >-
-    L'interface utilisateur de WinUIRev nécessite Webview2 Runtime %{min_version}
+    L'interface utilisateur de KestrelUI nécessite Webview2 Runtime %{min_version}
     ou supérieur. Veuillez le mettre à jour.
 service:
-  not_running: Le service d'interface utilisateur WinUIRev ne fonctionne pas
+  not_running: Le service d'interface utilisateur KestrelUI ne fonctionne pas
   not_running_description: >-
-    WinUIRev Service (winuirev-service) est une dépendance/une aide permettant à
+    KestrelUI Service (kestrelui-service) est une dépendance/une aide permettant à
     l'application de fonctionner correctement.
   not_running_ok: Démarrer le service
 shortcut:
@@ -71,7 +71,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     contrôler les fenêtres d'autres applications (focus, fermer, minimiser,
     déplacer)
-  perm_modify_configuration: modifier la configuration de l'interface utilisateur de WinUIRev
+  perm_modify_configuration: modifier la configuration de l'interface utilisateur de KestrelUI
   perm_open_file: ouvrir des fichiers
   perm_run: exécuter des programmes
   request_description: "Le widget '%{widget_name}' demande l'autorisation de %{command}. \n\nVoulez-vous autoriser cela\_?"

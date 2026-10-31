@@ -16,6 +16,6 @@ profile:
   open_onedrive: دایرکتوری OneDrive را باز کنید
   open_user_folder: دایرکتوری کاربر را باز کنید
 seelen_options:
-  open_installation_folder: پوشه تنظیمات WinUIRev را باز کنید
-  open_log_folder: پوشه log WinUIRev را باز کنید
-  title: دایرکتوری های WinUIRev
+  open_installation_folder: پوشه تنظیمات KestrelUI را باز کنید
+  open_log_folder: پوشه log KestrelUI را باز کنید
+  title: دایرکتوری های KestrelUI

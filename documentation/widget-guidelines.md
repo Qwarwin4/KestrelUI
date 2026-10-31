@@ -1,10 +1,10 @@
-# WinUIRev — Widget Guidelines
+# KestrelUI — Widget Guidelines
 
 Reference guide for creating widgets. A widget is a small web app — HTML, CSS, and JavaScript — that runs inside a
-WinUIRev window. It is essentially a Single Page Application (SPA): you can use any framework you like (React, Svelte,
+KestrelUI window. It is essentially a Single Page Application (SPA): you can use any framework you like (React, Svelte,
 Vue, vanilla JS, anything) or none at all.
 
-WinUIRev's own built-in widgets are mostly written in Svelte; the Settings panel is written in React.
+KestrelUI's own built-in widgets are mostly written in Svelte; the Settings panel is written in React.
 
 Read [resource guidelines](./resource-guidelines) first for concepts shared across all resource kinds.
 
@@ -36,7 +36,7 @@ Read [resource guidelines](./resource-guidelines) first for concepts shared acro
 ## 1. How a Widget is Loaded
 
 After you build and bundle your project you will have three output files: an HTML shell, a bundled JS file, and a
-bundled CSS file. These are referenced from `metadata.yml` using `!include` and loaded by WinUIRev into an isolated
+bundled CSS file. These are referenced from `metadata.yml` using `!include` and loaded by KestrelUI into an isolated
 webview window.
 
 This guide covers how your widget is declared and packaged. For the runtime JS API your widget code calls once it's
@@ -78,7 +78,7 @@ metadata:
     - clock
     - minimal
 
-# Icon shown in the WinUIRev settings panel.
+# Icon shown in the KestrelUI settings panel.
 # Must be a valid react-icons name (https://react-icons.github.io/react-icons/).
 icon: PiClockFill
 
@@ -133,18 +133,18 @@ The `instances` field controls how many copies of the widget can run at the same
 | ------------------ | ------------------------------------------------------------------- |
 | `Single`           | Only one instance allowed. Default.                                 |
 | `Multiple`         | The user can create as many instances as they want.                 |
-| `ReplicaByMonitor` | WinUIRev automatically creates one instance per connected monitor. |
+| `ReplicaByMonitor` | KestrelUI automatically creates one instance per connected monitor. |
 
 ---
 
 ## 5. User-Configurable Settings
 
-The `settings` list lets users configure your widget from the WinUIRev settings panel without editing any files. Each
+The `settings` list lets users configure your widget from the KestrelUI settings panel without editing any files. Each
 entry defines a control that reads and writes a value your widget can access at runtime.
 
 Every setting has a unique `key` that your widget code uses to read the stored value.
 
-> **Reserved keys:** `enabled` and `$instances` are reserved by WinUIRev and cannot be used as setting keys.
+> **Reserved keys:** `enabled` and `$instances` are reserved by KestrelUI and cannot be used as setting keys.
 
 ---
 

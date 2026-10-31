@@ -16,6 +16,6 @@ profile:
   open_onedrive: Atidarykite OneDrive katalogą
   open_user_folder: Atidarykite vartotojo katalogą
 seelen_options:
-  open_installation_folder: Atidarykite WinUIRev nustatymų aplanką
-  open_log_folder: Atidarykite WinUIRev žurnalo aplanką
-  title: WinUIRev katalogai
+  open_installation_folder: Atidarykite KestrelUI nustatymų aplanką
+  open_log_folder: Atidarykite KestrelUI žurnalo aplanką
+  title: KestrelUI katalogai

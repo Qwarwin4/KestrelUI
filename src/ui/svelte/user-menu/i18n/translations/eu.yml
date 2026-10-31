@@ -16,6 +16,6 @@ profile:
   open_onedrive: Ireki OneDrive direktorioa
   open_user_folder: Ireki erabiltzailearen direktorioa
 seelen_options:
-  open_installation_folder: Ireki WinUIRev ezarpenen karpeta
-  open_log_folder: Ireki WinUIRev erregistro-karpeta
-  title: WinUIRev direktorioak
+  open_installation_folder: Ireki KestrelUI ezarpenen karpeta
+  open_log_folder: Ireki KestrelUI erregistro-karpeta
+  title: KestrelUI direktorioak

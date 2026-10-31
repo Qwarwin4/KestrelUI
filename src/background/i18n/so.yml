@@ -2,7 +2,7 @@ cancel: Burin
 done: Sameeyey
 elevated:
   description: >-
-    WinUIRev waxa ay la socotaa mudnaanta maamulaha
+    KestrelUI waxa ay la socotaa mudnaanta maamulaha
 
     Tani ma soo kordhinayso ama ma wanaajinayso wax sifooyin ah, waxaana laga
     yaabaa inay keento khatar amni.
@@ -35,20 +35,20 @@ runtime:
     Tani waxay dhici kartaa haddii faylasha wax laga beddelay, la kharribmay,
     ama rakibiddu aanay dhammaystirnayn.
 
-    Sababaha amniga, WinUIRev ma sii socon karo.
+    Sababaha amniga, KestrelUI ma sii socon karo.
 
     Fadlan dib uga soo dejiso degelka rasmiga ah
   files_integrity_title: Digniin Amni - Hubinta daacadnimada faylalka waa guuldareystay
   not_found: WebView2 Runtime lama helin
-  not_found_description: WinUIRev wuxuu u baahan yahay Webview2 Runtime. Fadlan rakib
+  not_found_description: KestrelUI wuxuu u baahan yahay Webview2 Runtime. Fadlan rakib
   outdated: WebView2 Runtime waa dhacay
   outdated_description: >-
-    WinUIRev wuxuu u baahan yahay Webview2 Runtime %{min_version} ama ka
+    KestrelUI wuxuu u baahan yahay Webview2 Runtime %{min_version} ama ka
     sareeya. Fadlan u cusboonaysii
 service:
-  not_running: WinUIRev Service ma socdo
+  not_running: KestrelUI Service ma socdo
   not_running_description: >-
-    WinUIRev Service (winuirev-service) waa ku-tiirsanaan/caawiye abka inuu si sax
+    KestrelUI Service (kestrelui-service) waa ku-tiirsanaan/caawiye abka inuu si sax
     ah u shaqeeyo.
   not_running_ok: Bilow adeegga
 shortcut:
@@ -71,7 +71,7 @@ widget_liveness:
 widget_permissions:
   perm_kill_processes: xoog xidhid codsiyada
   perm_manage_app_windows: xakamee daaqadaha codsiyada kale ( diiradda saar, xidh, yaree, dhaqaaq)
-  perm_modify_configuration: wax ka beddel qaabka WinUIRev
+  perm_modify_configuration: wax ka beddel qaabka KestrelUI
   perm_open_file: faylasha furan
   perm_run: socodsii barnaamijyada
   request_description: |-

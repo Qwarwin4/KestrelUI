@@ -102,7 +102,7 @@ export function ResourceCard({ resource, kind, actions, body }: ResourceCardProp
       </div>
 
       <div className={cs.footer}>
-        {!resource.metadata.bundled && resource.metadata.path.includes("com.qwarwin.winuirev") && (
+        {!resource.metadata.bundled && resource.metadata.path.includes("com.qwarwin.kestrelui") && (
           <Tooltip title={t("resources.delete")} placement="left">
             <Popconfirm
               title={t("action.confirm")}

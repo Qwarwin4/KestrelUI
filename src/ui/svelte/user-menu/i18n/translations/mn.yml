@@ -16,6 +16,6 @@ profile:
   open_onedrive: OneDrive лавлахыг нээнэ үү
   open_user_folder: Хэрэглэгчийн лавлахыг нээх
 seelen_options:
-  open_installation_folder: WinUIRev тохиргооны хавтсыг нээнэ үү
-  open_log_folder: WinUIRev бүртгэлийн хавтсыг нээнэ үү
-  title: WinUIRev лавлахууд
+  open_installation_folder: KestrelUI тохиргооны хавтсыг нээнэ үү
+  open_log_folder: KestrelUI бүртгэлийн хавтсыг нээнэ үү
+  title: KestrelUI лавлахууд

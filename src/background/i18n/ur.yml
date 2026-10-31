@@ -2,7 +2,7 @@ cancel: منسوخ کریں
 done: کیا
 elevated:
   description: >-
-    WinUIRev منتظم کے استحقاق کے ساتھ چل رہا ہے۔
+    KestrelUI منتظم کے استحقاق کے ساتھ چل رہا ہے۔
 
     یہ کسی بھی خصوصیت کو شامل یا بہتر نہیں کرتا ہے، اور یہ سیکورٹی کے خطرے کا
     باعث بن سکتا ہے۔
@@ -33,15 +33,15 @@ runtime:
     براہ کرم اسے سرکاری ویب سائٹ سے دوبارہ انسٹال کریں۔
   files_integrity_title: سیکیورٹی الرٹ - فائلوں کی سالمیت چیک ناکام ہوگئی
   not_found: WebView2 رن ٹائم نہیں ملا
-  not_found_description: WinUIRev کو Webview2 رن ٹائم کی ضرورت ہے۔ براہ کرم اسے انسٹال کریں۔
+  not_found_description: KestrelUI کو Webview2 رن ٹائم کی ضرورت ہے۔ براہ کرم اسے انسٹال کریں۔
   outdated: WebView2 رن ٹائم پرانا ہے۔
   outdated_description: >-
-    WinUIRev کو Webview2 رن ٹائم %{min_version} یا اس سے زیادہ درکار ہے۔ براہ
+    KestrelUI کو Webview2 رن ٹائم %{min_version} یا اس سے زیادہ درکار ہے۔ براہ
     کرم اسے اپ ڈیٹ کریں۔
 service:
-  not_running: WinUIRev سروس نہیں چل رہی ہے۔
+  not_running: KestrelUI سروس نہیں چل رہی ہے۔
   not_running_description: >-
-    WinUIRev سروس (winuirev-service) ایپ کے صحیح طریقے سے کام کرنے کے لیے ایک
+    KestrelUI سروس (kestrelui-service) ایپ کے صحیح طریقے سے کام کرنے کے لیے ایک
     انحصار/مددگار ہے۔
   not_running_ok: سروس شروع کریں۔
 shortcut:
@@ -64,7 +64,7 @@ widget_liveness:
 widget_permissions:
   perm_kill_processes: زبردستی بند ایپلی کیشنز
   perm_manage_app_windows: دیگر ایپلی کیشنز کی ونڈوز کو کنٹرول کریں (فوکس، بند، کم سے کم، منتقل)
-  perm_modify_configuration: WinUIRev کنفیگریشن میں ترمیم کریں۔
+  perm_modify_configuration: KestrelUI کنفیگریشن میں ترمیم کریں۔
   perm_open_file: فائلیں کھولیں
   perm_run: پروگرام چلائیں
   request_description: |-

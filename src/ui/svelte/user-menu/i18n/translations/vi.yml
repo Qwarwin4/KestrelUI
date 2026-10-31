@@ -16,6 +16,6 @@ profile:
   open_onedrive: Mở thư mục OneDrive
   open_user_folder: Mở thư mục người dùng cá nhân
 seelen_options:
-  open_installation_folder: Mở thư mục cấu hình WinUIRev
+  open_installation_folder: Mở thư mục cấu hình KestrelUI
   open_log_folder: Mở thư mục nhật ký (Logs)
-  title: Thư mục hệ thống WinUIRev
+  title: Thư mục hệ thống KestrelUI

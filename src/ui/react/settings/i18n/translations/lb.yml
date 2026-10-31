@@ -30,7 +30,7 @@ apps_configurations:
     Dës gebündelt Konfiguratiounen sinn net geännert a sinn entwéckelt fir Iech
     déi bescht Erfahrung ouni Personnalisatioun ze ginn. Si konfiguréieren
     automatesch déi heefegst Uwendungen fir Iech.
-  bundled_title: App con conflüchteg mat WinUIRev
+  bundled_title: App con conflüchteg mat KestrelUI
   confirm_delete: Sidd Dir sécher, datt Dir dës Configuratioun / s läscht braucht?
   confirm_delete_title: Confirméieren Leedung
   delete: Läschen
@@ -81,7 +81,7 @@ devtools:
   data_folder: Etabond Dossier
   enable: Aktivéiert Entwéckler Tools
   enable_description: >-
-    Spär fortgeschratt Tools fir Inspektioun an Debugging WinUIRev Interns. Net
+    Spär fortgeschratt Tools fir Inspektioun an Debugging KestrelUI Interns. Net
     fir regelméisseg Gebrauch geduecht.
   icons: Cache Ikonen
   install_folder: Installatioun Dossier
@@ -120,7 +120,7 @@ devtools:
     widget_id: Widget ID
 discord_banner:
   message: >-
-    Connectéiert mat anere WinUIRev Benotzer, kritt Hëllef, deelt Themen a
+    Connectéiert mat anere KestrelUI Benotzer, kritt Hëllef, deelt Themen a
     bleift um neisten Neiegkeeten.
   title: Maacht mat bei eiser Gemeinschaft
 extras:
@@ -165,7 +165,7 @@ general:
     plugged: Ugeschloss oder opluede
   polling_interval: System Ëmfro Intervall
   polling_interval_description: >-
-    Wéi dacks (a Sekonnen) WinUIRev iwwerpréift Systemressourcen wéi CPU, RAM,
+    Wéi dacks (a Sekonnen) KestrelUI iwwerpréift Systemressourcen wéi CPU, RAM,
     Netzwierk an Diskaktivitéit. Eng méi kleng Zuel bedeit méi heefeg Updates,
     awer e bësse méi héich Ressourceverbrauch.
   saturday: Samschdeg
@@ -218,7 +218,7 @@ reset_configurations: Reset Konfiguratiounen
 reset_to_default: Reset op Standardwäert
 resources:
   affected_widgets: Betraff Widgets
-  app_outdated: Dës Ressource brauch eng nei Versioun vu WinUIRev Ui fir richteg ze schaffen.
+  app_outdated: Dës Ressource brauch eng nei Versioun vu KestrelUI Ui fir richteg ze schaffen.
   coming_soon: Geschwënn
   corrupted_wallpaper: Ausgefall Miniatur Extrait - korrupt oder net ënnerstëtzt Video Format
   delete: Läschen Ressource
@@ -239,7 +239,7 @@ resources:
 review_request:
   not_now: Net elo
   sure: Sécher!
-  title: Genéisst WinUIRev?
+  title: Genéisst KestrelUI?
 save: Spuerwäit
 save_and_restart: Spuert & nei starten
 search: Sichen
@@ -248,7 +248,7 @@ security:
   perms:
     kill_processes: Force zoumaachen Uwendungen
     manage_app_windows: Kontrolléiert d'Fënstere vun aneren Uwendungen
-    modify_configuration: Änneren d'WinUIRev Konfiguratioun
+    modify_configuration: Änneren d'KestrelUI Konfiguratioun
     open_file: Dateien opmaachen
     run: Programmer lafen
 see_more: Méi gesinn
@@ -429,15 +429,15 @@ weg:
 welcome:
   give_a_review: Gëff eng Iwwerpréiwung
   message: >-
-    WinUIRev ass e gratis an Open Source Desktop-Ëmfeld fir Windows. Hei hutt
+    KestrelUI ass e gratis an Open Source Desktop-Ëmfeld fir Windows. Hei hutt
     Dir voll Kontroll iwwer wéi Ären Desktop ausgesäit a behuelen, wat Iech
     erlaabt all Detail ze personaliséieren fir Äre Workflow a Stil ze passen.
   ok: Loosst eis ufänken!
   review: >-
-    Wann Dir genéisst WinUIRev ze benotzen, betruecht eng Iwwerpréiwung am
+    Wann Dir genéisst KestrelUI ze benotzen, betruecht eng Iwwerpréiwung am
     Geschäft ze loossen - Äre Feedback hëlleft de Projet ze wuessen a
     verbesseren.
-  title: Wëllkomm op WinUIRev!
+  title: Wëllkomm op KestrelUI!
 widget:
   add_workspace_override: Iwwerschreiden op engem Aarbechtsberäich
   default_instance: Standard Instanz

@@ -2,7 +2,7 @@ cancel: Indargabetu
 done: Egin
 elevated:
   description: >-
-    WinUIRev administratzaile-pribilegioekin exekutatzen ari da.
+    KestrelUI administratzaile-pribilegioekin exekutatzen ari da.
 
     Honek ez du ezaugarririk gehitzen edo hobetzen, eta segurtasun arriskua sor
     dezake.
@@ -14,7 +14,7 @@ file_explorer: Fitxategien arakatzailea
 resource:
   added: Baliabide berri bat gehitu da
   download_failed_body: >-
-    Zerbait gaizki joan da baliabidea deskargatzean, jakinarazi WinUIRev
+    Zerbait gaizki joan da baliabidea deskargatzean, jakinarazi KestrelUI
     garatzaileen taldeari.
   download_failed_title: Baliabideen deskargak huts egin du
   downloading: Aktiboak deskargatzen ...
@@ -33,20 +33,20 @@ runtime:
     Hau gerta daiteke fitxategiak aldatu, hondatuta edo instalazioa osatu gabe
     badago.
 
-    Segurtasun arrazoiengatik, WinUIRev ezin da jarraitu.
+    Segurtasun arrazoiengatik, KestrelUI ezin da jarraitu.
 
     Mesedez, berriro instalatu webgune ofizialetik.
   files_integrity_title: Segurtasun alerta - Huts egin du fitxategien osotasuna egiaztatzea
   not_found: WebView2 Runtime ez da aurkitu
-  not_found_description: WinUIRev-k Webview2 Runtime behar du. Mesedez, instala ezazu.
+  not_found_description: KestrelUI-k Webview2 Runtime behar du. Mesedez, instala ezazu.
   outdated: WebView2 Exekuzio-denbora zaharkituta dago
   outdated_description: >-
-    WinUIRev-k Webview2 Runtime %{min_version} edo handiagoa behar du. Mesedez,
+    KestrelUI-k Webview2 Runtime %{min_version} edo handiagoa behar du. Mesedez,
     eguneratu.
 service:
-  not_running: WinUIRev Zerbitzua ez dago martxan
+  not_running: KestrelUI Zerbitzua ez dago martxan
   not_running_description: >-
-    WinUIRev Zerbitzua (slu-zerbitzua) menpekotasun/laguntzailea da aplikazioak
+    KestrelUI Zerbitzua (slu-zerbitzua) menpekotasun/laguntzailea da aplikazioak
     behar bezala funtziona dezan.
   not_running_ok: Hasi zerbitzua
 shortcut:
@@ -69,7 +69,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     kontrolatu beste aplikazio batzuen leihoak (fokatu, itxi, minimizatu,
     mugitu)
-  perm_modify_configuration: aldatu WinUIRev konfigurazioa
+  perm_modify_configuration: aldatu KestrelUI konfigurazioa
   perm_open_file: ireki fitxategiak
   perm_run: exekutatu programak
   request_description: |-

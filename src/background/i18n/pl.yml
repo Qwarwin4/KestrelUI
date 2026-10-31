@@ -2,7 +2,7 @@ cancel: Anulować
 done: Zrobione
 elevated:
   description: >-
-    WinUIRev działa z uprawnieniami administratora.
+    KestrelUI działa z uprawnieniami administratora.
 
     Nie dodaje to ani nie ulepsza żadnych funkcji i może stanowić zagrożenie
     bezpieczeństwa.
@@ -15,7 +15,7 @@ resource:
   added: Dodano nowy zasób
   download_failed_body: >-
     Coś poszło nie tak podczas pobierania zasobu, zgłoś to zespołowi deweloperów
-    WinUIRev.
+    KestrelUI.
   download_failed_title: Pobieranie zasobów nie powiodło się
   downloading: Pobieranie zasobów...
   downloading_body: Może to potrwać kilka sekund, nie zamykaj okna.
@@ -33,23 +33,23 @@ runtime:
     Może się to zdarzyć, jeśli pliki zostały zmodyfikowane, uszkodzone lub
     instalacja jest niekompletna.
 
-    Ze względów bezpieczeństwa interfejs użytkownika WinUIRev nie może być
+    Ze względów bezpieczeństwa interfejs użytkownika KestrelUI nie może być
     kontynuowany.
 
     Zainstaluj go ponownie z oficjalnej strony internetowej.
   files_integrity_title: Alert zabezpieczeń — sprawdzenie integralności plików nie powiodło się
   not_found: Nie znaleziono środowiska uruchomieniowego WebView2
   not_found_description: >-
-    Interfejs użytkownika WinUIRev wymaga środowiska uruchomieniowego Webview2.
+    Interfejs użytkownika KestrelUI wymaga środowiska uruchomieniowego Webview2.
     Zainstaluj go.
   outdated: Środowisko wykonawcze WebView2 jest nieaktualne
   outdated_description: >-
-    Interfejs użytkownika WinUIRev wymaga środowiska uruchomieniowego Webview2
+    Interfejs użytkownika KestrelUI wymaga środowiska uruchomieniowego Webview2
     %{min_version} lub nowszego. Zaktualizuj je i spróbuj ponownie.
 service:
-  not_running: Usługa WinUIRev nie działa prawidłowo
+  not_running: Usługa KestrelUI nie działa prawidłowo
   not_running_description: >-
-    Usługa WinUIRev Service (winuirev-service) jest zależnością umożliwiającą
+    Usługa KestrelUI Service (kestrelui-service) jest zależnością umożliwiającą
     prawidłowe działanie aplikacji.
   not_running_ok: Uruchom usługę
 shortcut:
@@ -72,7 +72,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     sterować oknami innych aplikacji (fokus, zamykanie, minimalizowanie,
     przesuwanie)
-  perm_modify_configuration: zmodyfikuj konfigurację interfejsu użytkownika WinUIRev
+  perm_modify_configuration: zmodyfikuj konfigurację interfejsu użytkownika KestrelUI
   perm_open_file: otwarte pliki
   perm_run: uruchamiać programy
   request_description: |-

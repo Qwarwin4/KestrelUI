@@ -55,7 +55,7 @@ runs:
           // Build the update manifest
           const update = {
             version,
-            notes: `WinUIRev build ${version}`,
+            notes: `KestrelUI build ${version}`,
             pub_date: new Date().toISOString(),
             platforms: {
               "windows-x86_64": { signature: "", url: "" },

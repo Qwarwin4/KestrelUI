@@ -2,7 +2,7 @@ cancel: Zrušit
 done: Hotovo
 elevated:
   description: >-
-    WinUIRev běží s oprávněními správce.
+    KestrelUI běží s oprávněními správce.
 
     To nepřidává ani nevylepšuje žádné funkce a může představovat bezpečnostní
     riziko.
@@ -30,20 +30,20 @@ runtime:
     K tomu může dojít, pokud byly soubory změněny, poškozeny nebo instalace není
     úplná.
 
-    Z bezpečnostních důvodů nemůže WinUIRev pokračovat.
+    Z bezpečnostních důvodů nemůže KestrelUI pokračovat.
 
     Nainstalujte jej znovu z oficiálních stránek.
   files_integrity_title: Výstraha zabezpečení – Kontrola integrity souborů se nezdařila
   not_found: WebView2 Runtime nebyl nalezen
-  not_found_description: WinUIRev vyžaduje Webview2 Runtime. Nainstalujte jej prosím.
+  not_found_description: KestrelUI vyžaduje Webview2 Runtime. Nainstalujte jej prosím.
   outdated: WebView2 Runtime je zastaralé
   outdated_description: >-
-    WinUIRev vyžaduje Webview2 Runtime %{min_version} nebo vyšší. Aktualizujte
+    KestrelUI vyžaduje Webview2 Runtime %{min_version} nebo vyšší. Aktualizujte
     jej.
 service:
-  not_running: Služba WinUIRev neběží
+  not_running: Služba KestrelUI neběží
   not_running_description: >-
-    WinUIRev Service (winuirev-service) je závislost/pomocník pro správné fungování
+    KestrelUI Service (kestrelui-service) je závislost/pomocník pro správné fungování
     aplikace.
   not_running_ok: Spusťte službu
 shortcut:
@@ -64,7 +64,7 @@ widget_liveness:
 widget_permissions:
   perm_kill_processes: vynutit uzavření aplikací
   perm_manage_app_windows: ovládat okna jiných aplikací (zaostřit, zavřít, minimalizovat, přesunout)
-  perm_modify_configuration: upravit konfiguraci uživatelského rozhraní WinUIRev
+  perm_modify_configuration: upravit konfiguraci uživatelského rozhraní KestrelUI
   perm_open_file: otevřít soubory
   perm_run: spouštět programy
   request_description: |-

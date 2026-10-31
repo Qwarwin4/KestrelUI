@@ -1,10 +1,10 @@
 !macro NSIS_HOOK_PREINSTALL
-  StrCpy $1 "taskkill.exe /F /T /IM winuirev-service.exe"
+  StrCpy $1 "taskkill.exe /F /T /IM kestrelui-service.exe"
   DetailPrint 'Exec: $1'
   nsExec::Exec $1
   Pop $0
 
-  StrCpy $1 "taskkill.exe /F /T /IM winuirev.exe"
+  StrCpy $1 "taskkill.exe /F /T /IM kestrelui.exe"
   DetailPrint 'Exec: $1'
   nsExec::Exec $1
   Pop $0
@@ -29,8 +29,8 @@
 
 !macro NSIS_HOOK_POSTINSTALL
   ; Install the service
-  DetailPrint 'Exec: winuirev-service.exe install'
-  nsExec::Exec '"$INSTDIR\winuirev-service.exe" install'
+  DetailPrint 'Exec: kestrelui-service.exe install'
+  nsExec::Exec '"$INSTDIR\kestrelui-service.exe" install'
   Pop $0
   ; Refresh file associations icons
   !insertmacro UPDATEFILEASSOC
@@ -38,12 +38,12 @@
 
 !macro NSIS_HOOK_PREUNINSTALL
   ; Gracefully stop the service
-  DetailPrint 'Exec: winuirev-service.exe stop'
-  nsExec::Exec '"$INSTDIR\winuirev-service.exe" stop'
+  DetailPrint 'Exec: kestrelui-service.exe stop'
+  nsExec::Exec '"$INSTDIR\kestrelui-service.exe" stop'
   Pop $0
   ; Remove the service
-  DetailPrint 'Exec: winuirev-service.exe uninstall'
-  nsExec::Exec '"$INSTDIR\winuirev-service.exe" uninstall'
+  DetailPrint 'Exec: kestrelui-service.exe uninstall'
+  nsExec::Exec '"$INSTDIR\kestrelui-service.exe" uninstall'
   Pop $0
 !macroend
 

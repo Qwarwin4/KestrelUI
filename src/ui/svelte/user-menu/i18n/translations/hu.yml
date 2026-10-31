@@ -16,6 +16,6 @@ profile:
   open_onedrive: Nyissa meg a OneDrive könyvtárat
   open_user_folder: Nyissa meg a felhasználói könyvtárat
 seelen_options:
-  open_installation_folder: Nyissa meg a WinUIRev beállítások mappát
-  open_log_folder: Nyissa meg a WinUIRev naplómappát
-  title: WinUIRev könyvtárak
+  open_installation_folder: Nyissa meg a KestrelUI beállítások mappát
+  open_log_folder: Nyissa meg a KestrelUI naplómappát
+  title: KestrelUI könyvtárak

@@ -62,7 +62,7 @@ pub fn get_tokio_handle() -> &'static tokio::runtime::Handle {
 #[tokio::main]
 async fn main() -> std::process::ExitCode {
     if let Err(err) = SeelenLogger::init() {
-        let fallback = std::env::temp_dir().join("winuirev-logger-error.log");
+        let fallback = std::env::temp_dir().join("kestrelui-logger-error.log");
         let _ = std::fs::write(&fallback, format!("Failed to initialize logger: {err:?}"));
         return std::process::ExitCode::from(1);
     }
@@ -191,7 +191,7 @@ fn app_callback(_: &tauri::AppHandle<tauri::Wry>, event: tauri::RunEvent) {
             None => api.prevent_exit(),
         },
         tauri::RunEvent::Exit => {
-            log::info!("───────────────────── Exiting WinUIRev ─────────────────────");
+            log::info!("───────────────────── Exiting KestrelUI ─────────────────────");
         }
         _ => {}
     }

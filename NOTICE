@@ -1,5 +1,5 @@
-WinUIRev
-Copyright (C) 2026 WinUIRev contributors
+KestrelUI
+Copyright (C) 2026 KestrelUI contributors
 
 This program is a modified version of Seelen UI
 (https://github.com/eythaann/seelen-ui), forked from commit
@@ -13,8 +13,8 @@ Main modifications (see git history for details):
 - removed the account/session system, plan tiers and cloud backup
 - removed telemetry, the news feed, the resource store integration and
   promotional content
-- rebranded to WinUIRev (name, identifiers, icons, pipes, installer)
+- rebranded to KestrelUI (name, identifiers, icons, pipes, installer)
 - added a GitHub-based configuration showcase with settings snapshots
 
-"Seelen" and "Seelen UI" are names of the original project; WinUIRev is not
+"Seelen" and "Seelen UI" are names of the original project; KestrelUI is not
 affiliated with or endorsed by Seelen Corp.

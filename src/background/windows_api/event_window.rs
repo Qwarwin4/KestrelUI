@@ -61,8 +61,8 @@ impl BgWindowProc {
     /// will lock until the window is closed
     unsafe fn _create_background_window(done: &crossbeam_channel::Sender<()>) -> Result<()> {
         unsafe {
-            let title = WindowsString::from("WinUIRev Background Window");
-            let class = WindowsString::from("WinUIRevBackgroundWindow");
+            let title = WindowsString::from("KestrelUI Background Window");
+            let class = WindowsString::from("KestrelUIBackgroundWindow");
 
             let h_module = WindowsApi::module_handle_w()?;
 

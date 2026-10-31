@@ -30,14 +30,14 @@ apps_configurations:
     Ove paketne konfiguracije nisu moguće uređivati ​​i dizajnirane su tako da
     vam pruže najbolje iskustvo bez prilagodbe. Oni automatski konfiguriraju
     najčešće aplikacije za vas.
-  bundled_title: Aplikacija config sa WinUIRev
+  bundled_title: Aplikacija config sa KestrelUI
   confirm_delete: Jeste li sigurni da želite izbrisati ovu konfiguraciju?
   confirm_delete_title: Potvrdi Delete
   delete: Izbrisati
   export: Izvoz
   export_full: Postavke izvoza putem aplikacije
   extra_info: >-
-    WinUIRev koristi samo jedan identifikator po aplikaciji (prvo pronađeno
+    KestrelUI koristi samo jedan identifikator po aplikaciji (prvo pronađeno
     podudaranje) tako da je redoslijed u načinu na koji su specificirani važan,
     najnovije dodano će imati prioritet, imajte na umu da je tablica sortirana
     prema zadanim postavkama od najnovijeg prema starom.
@@ -82,7 +82,7 @@ devtools:
   enable: Omogućite alate za razvojne programere
   enable_description: >-
     Otključava napredne alate za provjeru i otklanjanje grešaka unutarnje
-    komponente korisničkog sučelja WinUIRev. Nije namijenjen za redovitu upotrebu.
+    komponente korisničkog sučelja KestrelUI. Nije namijenjen za redovitu upotrebu.
   icons: Spremljene ikone
   install_folder: Mapa za instalaciju
   load: Opterećenje
@@ -120,7 +120,7 @@ devtools:
     widget_id: ID widgeta
 discord_banner:
   message: >-
-    Povežite se s drugim korisnicima WinUIRev, potražite pomoć, dijelite teme i
+    Povežite se s drugim korisnicima KestrelUI, potražite pomoć, dijelite teme i
     ostanite u tijeku s najnovijim vijestima.
   title: Pridružite se našoj zajednici
 extras:
@@ -164,7 +164,7 @@ general:
     plugged: Priključeno ili punjenje
   polling_interval: Interval prozivanja sustava
   polling_interval_description: >-
-    Koliko često (u sekundama) WinUIRev provjerava sistemske resurse kao što su
+    Koliko često (u sekundama) KestrelUI provjerava sistemske resurse kao što su
     CPU, RAM, mreža i aktivnost diska. Manji broj znači češća ažuriranja, ali
     malo veću upotrebu resursa.
   saturday: subota
@@ -218,7 +218,7 @@ reset_to_default: Poništite na zadanu vrijednost
 resources:
   affected_widgets: Zahvaćeni widgeti
   app_outdated: >-
-    Ovaj resurs zahtijeva da novija verzija WinUIRev korisničkog sučelja radi
+    Ovaj resurs zahtijeva da novija verzija KestrelUI korisničkog sučelja radi
     ispravno.
   coming_soon: Dolazi uskoro
   corrupted_wallpaper: >-
@@ -242,7 +242,7 @@ resources:
 review_request:
   not_now: Ne sad
   sure: Naravno!
-  title: Uživate li u WinUIRev korisničkom sučelju?
+  title: Uživate li u KestrelUI korisničkom sučelju?
 save: Uštedjeti
 save_and_restart: Spremi i ponovno pokrenite
 search: Pretraživanje
@@ -251,7 +251,7 @@ security:
   perms:
     kill_processes: Prisilno zatvaranje aplikacija
     manage_app_windows: Kontrolirajte prozore drugih aplikacija
-    modify_configuration: Izmijenite konfiguraciju korisničkog sučelja WinUIRev
+    modify_configuration: Izmijenite konfiguraciju korisničkog sučelja KestrelUI
     open_file: Otvorite datoteke
     run: Pokretanje programa
 see_more: Pogledajte više
@@ -270,7 +270,7 @@ shortcuts:
   enable: Omogući ugrađeni sustav prečaca
   enable_tooltip: >-
     Onemogući ako ćete implementirati vlastiti sustav prečaca pomoću klijenta
-    WinUIRev
+    KestrelUI
   labels:
     create_new_workspace: Stvorite novi radni prostor
     create_new_workspace_row: Stvorite novi redak radnog prostora
@@ -429,15 +429,15 @@ weg:
 welcome:
   give_a_review: Dajte recenziju
   message: >-
-    WinUIRev je besplatno desktop okruženje otvorenog koda za Windows. Ovdje
+    KestrelUI je besplatno desktop okruženje otvorenog koda za Windows. Ovdje
     imate potpunu kontrolu nad izgledom i ponašanjem vaše radne površine, što
     vam omogućuje da prilagodite svaki detalj kako bi odgovarao vašem tijeku
     rada i stilu.
   ok: Počnimo!
   review: >-
-    Ako volite koristiti WinUIRev, razmislite o tome da ostavite recenziju u
+    Ako volite koristiti KestrelUI, razmislite o tome da ostavite recenziju u
     trgovini - vaše povratne informacije pomažu razvoju i poboljšanju projekta.
-  title: Dobro došli u WinUIRev!
+  title: Dobro došli u KestrelUI!
 widget:
   add_workspace_override: Nadjačavanje na radnom prostoru
   default_instance: Zadana instanca

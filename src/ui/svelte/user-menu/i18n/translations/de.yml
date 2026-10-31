@@ -16,6 +16,6 @@ profile:
   open_onedrive: Öffnen Sie das OneDrive-Verzeichnis
   open_user_folder: Benutzerverzeichnis öffnen
 seelen_options:
-  open_installation_folder: Öffnen Sie den WinUIRev-Einstellungsordner
-  open_log_folder: Öffnen Sie den WinUIRev-Protokollordner
-  title: WinUIRev-Verzeichnisse
+  open_installation_folder: Öffnen Sie den KestrelUI-Einstellungsordner
+  open_log_folder: Öffnen Sie den KestrelUI-Protokollordner
+  title: KestrelUI-Verzeichnisse

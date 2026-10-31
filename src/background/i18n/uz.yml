@@ -2,7 +2,7 @@ cancel: Bekor qilmoq
 done: Bajarildi
 elevated:
   description: >-
-    WinUIRev administrator imtiyozlari bilan ishlaydi.
+    KestrelUI administrator imtiyozlari bilan ishlaydi.
 
     Bu hech qanday xususiyatni qo'shmaydi yoki yaxshilamaydi va xavfsizlikka
     xavf tug'dirishi mumkin.
@@ -14,7 +14,7 @@ file_explorer: Fayl Explorer
 resource:
   added: Yangi manba qo'shildi
   download_failed_body: >-
-    Resursni yuklayotganda biron bir narsa noto'g'ri ketdi, iltimos, WinUIRev
+    Resursni yuklayotganda biron bir narsa noto'g'ri ketdi, iltimos, KestrelUI
     ishlab chiqaruvchi jamoasiga xabar bering.
   download_failed_title: Resurslarni yuklab olish amalga oshmadi
   downloading: Aktivlarni yuklab olish ...
@@ -33,20 +33,20 @@ runtime:
     Bu fayllar o'zgartirilgan, buzilgan yoki o'rnatish tugallanmagan bo'lsa
     sodir bo'lishi mumkin.
 
-    Xavfsizlik nuqtai nazaridan WinUIRev davom eta olmaydi.
+    Xavfsizlik nuqtai nazaridan KestrelUI davom eta olmaydi.
 
     Iltimos, uni rasmiy veb-saytdan qayta o'rnating.
   files_integrity_title: Xavfsizlik ogohlantirishi - Fayllar yaxlitligini tekshirish amalga oshmadi
   not_found: WebView2 ish vaqti topilmadi
-  not_found_description: WinUIRev uchun Webview2 Runtime kerak. Iltimos, uni oʻrnating.
+  not_found_description: KestrelUI uchun Webview2 Runtime kerak. Iltimos, uni oʻrnating.
   outdated: WebView2 ish vaqti eskirgan
   outdated_description: >-
-    WinUIRev uchun Webview2 Runtime %{min_version} yoki undan yuqoriroq talab
+    KestrelUI uchun Webview2 Runtime %{min_version} yoki undan yuqoriroq talab
     qilinadi. Iltimos, uni yangilang.
 service:
-  not_running: WinUIRev xizmati ishlamayapti
+  not_running: KestrelUI xizmati ishlamayapti
   not_running_description: >-
-    WinUIRev xizmati (slu-xizmati) ilovaning to'g'ri ishlashi uchun
+    KestrelUI xizmati (slu-xizmati) ilovaning to'g'ri ishlashi uchun
     qaramlik/yordamchi hisoblanadi.
   not_running_ok: Xizmatni ishga tushirish
 shortcut:
@@ -69,7 +69,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     boshqa ilovalarning oynalarini boshqarish (fokuslash, yopish,
     minimallashtirish, ko'chirish)
-  perm_modify_configuration: WinUIRev konfiguratsiyasini o'zgartiring
+  perm_modify_configuration: KestrelUI konfiguratsiyasini o'zgartiring
   perm_open_file: fayllarni oching
   perm_run: dasturlarni ishga tushirish
   request_description: |-

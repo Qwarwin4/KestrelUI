@@ -20,5 +20,5 @@ run_as_admin: Գործարկել որպես ադմինիստրատոր
 uninstall: Տեղահանել
 unpin: Ապամրացնել
 web_search: Սեղմեք Enter՝ համացանցում որոնելու համար
-welcome_message: 'Բարի գալուստ WinUIRev հավելվածի ընտրացանկ:'
+welcome_message: 'Բարի գալուստ KestrelUI հավելվածի ընտրացանկ:'
 welcome_message2: 'Այս ներդիրում կարող եք ամրացնել ձեր սիրած հավելվածները:'

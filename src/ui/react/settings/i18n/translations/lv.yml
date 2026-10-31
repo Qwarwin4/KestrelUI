@@ -30,14 +30,14 @@ apps_configurations:
     Šīs komplektētās konfigurācijas nav rediģējamas un ir paredzētas, lai
     sniegtu jums vislabāko pieredzi bez pielāgošanas. Tie automātiski konfigurē
     jums visizplatītākās lietojumprogrammas.
-  bundled_title: Lietotnes konfigurācija, kas komplektēta ar WinUIRev
+  bundled_title: Lietotnes konfigurācija, kas komplektēta ar KestrelUI
   confirm_delete: Vai esat pārliecināts, ka vēlaties izdzēst šo konfigurāciju/-as?
   confirm_delete_title: Apstipriniet izdzēst
   delete: Dzēst
   export: Eksportēt
   export_full: Eksportēt iestatījumus pēc lietojumprogrammas
   extra_info: >-
-    WinUIRev lietotāja saskarnē katrai lietotnei tiek izmantots tikai viens
+    KestrelUI lietotāja saskarnē katrai lietotnei tiek izmantots tikai viens
     identifikators (atrasta pirmā atbilstība), tāpēc ir svarīga secība, kādā tie
     tiek norādīti, un jaunākajam pievienotajam tiks piešķirta prioritāte, jo
     ņemiet vērā, ka tabula pēc noklusējuma tiek kārtota no jaunākā uz veco.
@@ -80,7 +80,7 @@ devtools:
   data_folder: Datu mape
   enable: Iespējot izstrādātāju rīkus
   enable_description: >-
-    Atbloķē uzlabotus rīkus WinUIRev iekšējo ierīču pārbaudei un atkļūdošanai.
+    Atbloķē uzlabotus rīkus KestrelUI iekšējo ierīču pārbaudei un atkļūdošanai.
     Nav paredzēts regulārai lietošanai.
   icons: Kešatmiņā saglabātās ikonas
   install_folder: Instalēšanas mape
@@ -119,7 +119,7 @@ devtools:
     widget_id: "Logrīka\_ID"
 discord_banner:
   message: >-
-    Sazinieties ar citiem WinUIRev lietotājiem, saņemiet palīdzību, kopīgojiet
+    Sazinieties ar citiem KestrelUI lietotājiem, saņemiet palīdzību, kopīgojiet
     motīvus un esiet informēts par jaunākajām ziņām.
   title: Pievienojieties mūsu kopienai
 extras:
@@ -165,7 +165,7 @@ general:
     plugged: Pievienots vai uzlādēts
   polling_interval: Sistēmas aptaujas intervāls
   polling_interval_description: >-
-    Cik bieži (sekundēs) WinUIRev pārbauda sistēmas resursus, piemēram, CPU,
+    Cik bieži (sekundēs) KestrelUI pārbauda sistēmas resursus, piemēram, CPU,
     RAM, tīkla un diska darbību. Mazāks skaitlis nozīmē biežākus atjauninājumus,
     bet nedaudz lielāku resursu izmantošanu.
   saturday: sestdiena
@@ -218,7 +218,7 @@ reset_configurations: Atiestatīt konfigurācijas
 reset_to_default: Atiestatīt noklusējuma vērtību
 resources:
   affected_widgets: Ietekmētie logrīki
-  app_outdated: Lai šis resurss darbotos pareizi, nepieciešama jaunāka WinUIRev versija.
+  app_outdated: Lai šis resurss darbotos pareizi, nepieciešama jaunāka KestrelUI versija.
   coming_soon: Drīzumā
   corrupted_wallpaper: "Neizdevās izvilkt sīktēlu\_— bojāts vai neatbalstīts video formāts"
   delete: Dzēst resursu
@@ -230,7 +230,7 @@ resources:
   modified: Pārveidots
   open_folder: Atvērt resursu mapi
   outdated: >-
-    Šis resurss ir izstrādāts vecākai WinUIRev versijai un var nedarboties
+    Šis resurss ir izstrādāts vecākai KestrelUI versijai un var nedarboties
     pareizi.
   see_on_website: Skatīt vietnē
   update_now: Atjaunināt
@@ -239,7 +239,7 @@ resources:
 review_request:
   not_now: Ne tagad
   sure: Protams!
-  title: Vai jums patīk WinUIRev?
+  title: Vai jums patīk KestrelUI?
 save: Ietaupīt
 save_and_restart: Saglabāt un restartēt
 search: Meklēt
@@ -248,7 +248,7 @@ security:
   perms:
     kill_processes: Piespiedu kārtā aizvērt lietojumprogrammas
     manage_app_windows: Kontrolējiet citu lietojumprogrammu logus
-    modify_configuration: Mainiet WinUIRev konfigurāciju
+    modify_configuration: Mainiet KestrelUI konfigurāciju
     open_file: Atveriet failus
     run: Palaist programmas
 see_more: Skatīt vairāk
@@ -267,7 +267,7 @@ shortcuts:
     saistīšanu, lai to atrisinātu.
   enable: Iespējot iebūvēto saīsņu sistēmu
   enable_tooltip: >-
-    Atspējot, ja jūs ieviesīsit savu saīsņu sistēmu, izmantojot WinUIRev
+    Atspējot, ja jūs ieviesīsit savu saīsņu sistēmu, izmantojot KestrelUI
     klientu
   labels:
     create_new_workspace: Izveidojiet jaunu darbvietu
@@ -429,13 +429,13 @@ weg:
 welcome:
   give_a_review: Sniedziet atsauksmi
   message: >-
-    WinUIRev ir bezmaksas atvērtā koda darbvirsmas vide operētājsistēmai
+    KestrelUI ir bezmaksas atvērtā koda darbvirsmas vide operētājsistēmai
     Windows. Šeit jums ir pilnīga kontrole pār jūsu darbvirsmas izskatu un
     darbību, ļaujot pielāgot katru detaļu, lai tā atbilstu jūsu darbplūsmai un
     stilam.
   ok: Sāksim!
-  review: "Ja jums patīk izmantot WinUIRev, apsveriet iespēju atstāt atsauksmi par veikalu\_— jūsu atsauksmes palīdz projektam augt un uzlaboties."
-  title: Laipni lūdzam WinUIRev lietotāja saskarnē!
+  review: "Ja jums patīk izmantot KestrelUI, apsveriet iespēju atstāt atsauksmi par veikalu\_— jūsu atsauksmes palīdz projektam augt un uzlaboties."
+  title: Laipni lūdzam KestrelUI lietotāja saskarnē!
 widget:
   add_workspace_override: Ignorēšana darbvietā
   default_instance: Noklusējuma instance

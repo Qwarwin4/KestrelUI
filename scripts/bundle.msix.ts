@@ -56,13 +56,13 @@ const manifest = fs
 fs.writeFileSync(`${buildFolder}/AppxManifest.xml`, manifest);
 
 // Add binaries
-fs.copyFileSync(`${outDir}/winuirev.exe`, `${buildFolder}/winuirev.exe`);
-fs.copyFileSync(`${outDir}/winuirev-service.exe`, `${buildFolder}/winuirev-service.exe`);
+fs.copyFileSync(`${outDir}/kestrelui.exe`, `${buildFolder}/kestrelui.exe`);
+fs.copyFileSync(`${outDir}/kestrelui-service.exe`, `${buildFolder}/kestrelui-service.exe`);
 fs.copyFileSync(`${outDir}/slu.exe`, `${buildFolder}/slu.exe`);
 
 // add pdb files if debug
 if (pre || target === "release") {
-  fs.copyFileSync(`${outDir}/winuirev.pdb`, `${buildFolder}/winuirev.pdb`);
+  fs.copyFileSync(`${outDir}/kestrelui.pdb`, `${buildFolder}/kestrelui.pdb`);
 }
 
 // dlls

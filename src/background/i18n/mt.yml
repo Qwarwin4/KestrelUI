@@ -2,7 +2,7 @@ cancel: Ikkanċella
 done: Magħmul
 elevated:
   description: >-
-    WinUIRev qed taħdem bi privileġġi ta' amministratur.
+    KestrelUI qed taħdem bi privileġġi ta' amministratur.
 
     Dan ma jżid jew itejjeb l-ebda karatteristika, u jista' joħloq riskju
     għas-sigurtà.
@@ -15,7 +15,7 @@ resource:
   added: Ġiet miżjuda riżorsa ġdida
   download_failed_body: >-
     Xi ħaġa marret ħażin waqt li tniżżel ir-riżorsa, jekk jogħġbok irrapportaha
-    lit-tim tal-iżviluppatur WinUIRev.
+    lit-tim tal-iżviluppatur KestrelUI.
   download_failed_title: It-tniżżil tar-riżorsi falla
   downloading: Tniżżil ta 'assi ...
   downloading_body: Dan jista 'jieħu ftit sekondi, jekk jogħġbok ma tagħlaqx it-tieqa.
@@ -31,20 +31,20 @@ runtime:
     Dan jista 'jiġri jekk il-fajls ġew modifikati, korrotta, jew
     l-installazzjoni ma tkunx kompluta.
 
-    Għal raġunijiet ta' sigurtà, WinUIRev ma tistax tkompli.
+    Għal raġunijiet ta' sigurtà, KestrelUI ma tistax tkompli.
 
     Jekk jogħġbok installa mill-ġdid mill-websajt uffiċjali.
   files_integrity_title: Twissija tas-Sigurtà - Iċċekkjar tal-Integrità tal-Fajls Fallit
   not_found: WebView2 Runtime ma nstabx
-  not_found_description: WinUIRev teħtieġ Webview2 Runtime. Jekk jogħġbok installah.
+  not_found_description: KestrelUI teħtieġ Webview2 Runtime. Jekk jogħġbok installah.
   outdated: WebView2 Runtime skadut
   outdated_description: >-
-    WinUIRev teħtieġ Webview2 Runtime %{min_version} jew ogħla. Jekk jogħġbok
+    KestrelUI teħtieġ Webview2 Runtime %{min_version} jew ogħla. Jekk jogħġbok
     aġġornaha.
 service:
-  not_running: Is-Servizz ta' WinUIRev mhux qed jaħdem
+  not_running: Is-Servizz ta' KestrelUI mhux qed jaħdem
   not_running_description: >-
-    WinUIRev Service (winuirev-service) huwa dipendenza/helper biex l-app taħdem
+    KestrelUI Service (kestrelui-service) huwa dipendenza/helper biex l-app taħdem
     sew.
   not_running_ok: Ibda s-servizz
 shortcut:
@@ -69,7 +69,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     tikkontrolla t-twieqi ta 'applikazzjonijiet oħra (tiffoka, tagħlaq,
     timminimizza, timxi)
-  perm_modify_configuration: timmodifika l-konfigurazzjoni ta 'WinUIRev
+  perm_modify_configuration: timmodifika l-konfigurazzjoni ta 'KestrelUI
   perm_open_file: fajls miftuħa
   perm_run: imexxu programmi
   request_description: |-

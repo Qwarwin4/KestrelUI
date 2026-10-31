@@ -2,7 +2,7 @@ cancel: ຍົກເລີກ
 done: ແລ້ວ? ແລ້ວ
 elevated:
   description: >-
-    WinUIRev ກໍາລັງເຮັດວຽກດ້ວຍສິດທິຂອງຜູ້ເບິ່ງແຍງລະບົບ.
+    KestrelUI ກໍາລັງເຮັດວຽກດ້ວຍສິດທິຂອງຜູ້ເບິ່ງແຍງລະບົບ.
 
     ອັນນີ້ບໍ່ໄດ້ເພີ່ມ ຫຼືປັບປຸງຄຸນສົມບັດໃດໆ,
     ແລະມັນອາດຈະສ້າງຄວາມສ່ຽງດ້ານຄວາມປອດໄພ.
@@ -28,19 +28,19 @@ runtime:
   files_integrity: |-
     ພວກເຮົາບໍ່ສາມາດຢືນຢັນຄວາມສົມບູນຂອງໄຟລ໌ແອັບພລິເຄຊັນໄດ້.
     ອັນນີ້ສາມາດເກີດຂຶ້ນໄດ້ຖ້າໄຟລ໌ຖືກແກ້ໄຂ, ເສຍຫາຍ, ຫຼືການຕິດຕັ້ງບໍ່ສົມບູນ.
-    ສໍາລັບເຫດຜົນດ້ານຄວາມປອດໄພ, WinUIRev ບໍ່ສາມາດສືບຕໍ່ໄດ້.
+    ສໍາລັບເຫດຜົນດ້ານຄວາມປອດໄພ, KestrelUI ບໍ່ສາມາດສືບຕໍ່ໄດ້.
     ກະລຸນາຕິດຕັ້ງມັນຄືນໃໝ່ຈາກເວັບໄຊທ໌ທາງການ.
   files_integrity_title: ແຈ້ງເຕືອນຄວາມປອດໄພ - ການກວດສອບຄວາມສົມບູນຂອງໄຟລ໌ລົ້ມເຫລວ
   not_found: ບໍ່ພົບ WebView2 Runtime
-  not_found_description: WinUIRev ຕ້ອງການ Webview2 Runtime. ກະລຸນາຕິດຕັ້ງມັນ.
+  not_found_description: KestrelUI ຕ້ອງການ Webview2 Runtime. ກະລຸນາຕິດຕັ້ງມັນ.
   outdated: WebView2 Runtime ລ້າສະໄຫມ
   outdated_description: >-
-    WinUIRev ຕ້ອງການ Webview2 Runtime %{min_version} ຫຼືສູງກວ່າ.
+    KestrelUI ຕ້ອງການ Webview2 Runtime %{min_version} ຫຼືສູງກວ່າ.
     ກະລຸນາອັບເດດມັນ.
 service:
-  not_running: ການບໍລິການ WinUIRev ບໍ່ເຮັດວຽກ
+  not_running: ການບໍລິການ KestrelUI ບໍ່ເຮັດວຽກ
   not_running_description: >-
-    WinUIRev Service (winuirev-service)
+    KestrelUI Service (kestrelui-service)
     ເປັນການເພິ່ງພາອາໄສ/ຜູ້ຊ່ວຍເພື່ອໃຫ້ແອັບເຮັດວຽກໄດ້ຢ່າງຖືກຕ້ອງ.
   not_running_ok: ເລີ່ມການບໍລິການ
 shortcut:
@@ -63,7 +63,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     ຄວບ​ຄຸມ​ປ່ອງ​ຢ້ຽມ​ຂອງ​ຄໍາ​ຮ້ອງ​ສະ​ຫມັກ​ອື່ນໆ (ສຸມ​ໃສ່​, ປິດ​, ຫຼຸດ​ຜ່ອນ​,
     ຍ້າຍ​)
-  perm_modify_configuration: ແກ້ໄຂການຕັ້ງຄ່າ WinUIRev
+  perm_modify_configuration: ແກ້ໄຂການຕັ້ງຄ່າ KestrelUI
   perm_open_file: ເປີດໄຟລ໌
   perm_run: ດໍາເນີນໂຄງການ
   request_description: |-

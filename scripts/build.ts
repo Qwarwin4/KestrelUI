@@ -1,5 +1,5 @@
 // Main build orchestrator
-// This file coordinates the build process for WinUIRev applications
+// This file coordinates the build process for KestrelUI applications
 
 import { parseArgs } from "./build/config.ts";
 import { extractIcons } from "./build/steps/icons.ts";

@@ -27,7 +27,7 @@ apps_configurations:
     workspace: 工作區
     workspace_placeholder: 無
   bundled_msg: 這些捆綁的配置不可編輯，旨在為您提供最佳體驗而沒有自定義。他們會自動為您配置最常見的應用程序。
-  bundled_title: App Config與WinUIRev捆綁在一起
+  bundled_title: App Config與KestrelUI捆綁在一起
   confirm_delete: 您確定要刪除此設定嗎？
   confirm_delete_title: 確認刪除
   delete: 刪除
@@ -71,7 +71,7 @@ devtools:
   custom_config_file: 載入自定義設定文件
   data_folder: 數據文件夾
   enable: 啟用開發人員工具
-  enable_description: 解鎖用於檢查和除錯 WinUIRev 內部結構的進階工具。不建議日常使用。
+  enable_description: 解鎖用於檢查和除錯 KestrelUI 內部結構的進階工具。不建議日常使用。
   icons: 快取圖示
   install_folder: 安裝文件夾
   load: 載入
@@ -104,15 +104,15 @@ devtools:
     tab: 小部件
     widget_id: 小部件 ID
 discord_banner:
-  message: 與其他 WinUIRev 使用者聯繫、獲取協助、分享主題並了解最新消息。
+  message: 與其他 KestrelUI 使用者聯繫、獲取協助、分享主題並了解最新消息。
   title: 加入我們的社群
 extras:
   clear_icons: 清除系統圖示快取
   clear_icons_tooltip: 小工具可能需要重新啟動才會生效
   discord_rpc: Discord富狀態
   discord_rpc_description: 向大家展示您的風格！
-  exit: 退出WinUIRev
-  relaunch: 重新啟動WinUIRev
+  exit: 退出KestrelUI
+  relaunch: 重新啟動KestrelUI
   streaming_mode: 串流模式
   streaming_mode_description: 用佔位符取代敏感資訊（例如電子郵件），以在錄製或螢幕截圖期間保護隱私。
   version: 版本
@@ -140,7 +140,7 @@ general:
       minimal: 基本優化
     plugged: 插電或充電時
   polling_interval: 系統輪詢間隔
-  polling_interval_description: WinUIRev 檢查 CPU、RAM、網路和磁碟活動等系統資源的頻率（以秒為單位）。數字越小意味著更新越頻繁，但資源使用率會稍高。
+  polling_interval_description: KestrelUI 檢查 CPU、RAM、網路和磁碟活動等系統資源的頻率（以秒為單位）。數字越小意味著更新越頻繁，但資源使用率會稍高。
   saturday: 星期六
   start_of_week: 一週的第一天
   startup: 開機時自動啟動
@@ -188,7 +188,7 @@ reset_configurations: 重置設定
 reset_to_default: 恢復為預設值
 resources:
   affected_widgets: 受影響的小工具
-  app_outdated: 此資源需要較新版本的WinUIRev才能正常運作。
+  app_outdated: 此資源需要較新版本的KestrelUI才能正常運作。
   coming_soon: 即將推出
   corrupted_wallpaper: 無法擷取縮圖 - 影片格式已損壞或不受支持
   delete: 刪除資源
@@ -199,7 +199,7 @@ resources:
   included_plugins: 包含的擴充功能
   modified: 修改的
   open_folder: 打開資源文件夾
-  outdated: 此資源是為舊版WinUIRev設計的，可能無法正常運作。
+  outdated: 此資源是為舊版KestrelUI設計的，可能無法正常運作。
   see_on_website: 查看詳情
   update_now: 更新
   updates_available: 可用更新
@@ -207,7 +207,7 @@ resources:
 review_request:
   not_now: 再體驗看看
   sure: 當然！
-  title: 喜歡WinUIRev嗎？
+  title: 喜歡KestrelUI嗎？
 save: 保存
 save_and_restart: 保存並重新啟動
 search: 搜尋
@@ -216,7 +216,7 @@ security:
   perms:
     kill_processes: 強制關閉應用程式
     manage_app_windows: 控制其他應用程式的窗口
-    modify_configuration: 修改WinUIRev配置
+    modify_configuration: 修改KestrelUI配置
     open_file: 開啟文件
     run: 運行程式
 see_more: 查看更多
@@ -236,8 +236,8 @@ shortcuts:
     create_new_workspace: 創建新工作區
     create_new_workspace_row: 建立新的工作區行
     destroy_current_workspace: 刪除當前工作區
-    misc_force_quit: 強制退出WinUIRev
-    misc_force_restart: 強制重新啟動WinUIRev
+    misc_force_quit: 強制退出KestrelUI
+    misc_force_restart: 強制重新啟動KestrelUI
     move_to_workspace: 移至工作區{{0}}
     pause_toggle: 暫停/恢復快捷方式
     send_to_next_workspace: 將視窗傳送到下一個工作區
@@ -388,11 +388,11 @@ weg:
 welcome:
   give_a_review: 發表評論
   message: >-
-    WinUIRev 是一個適用於 Windows 的免費開源桌面環境。
+    KestrelUI 是一個適用於 Windows 的免費開源桌面環境。
     在這裡，您可以完全控制桌面的外觀和行為，允許您自定義每個細節以匹配您的工作流程和風格。
   ok: 讓我們開始吧！
-  review: 如果您喜歡使用 WinUIRev，請考慮在商店留下評論，您的回饋有助於專案的發展和改進。
-  title: 歡迎來到WinUIRev！
+  review: 如果您喜歡使用 KestrelUI，請考慮在商店留下評論，您的回饋有助於專案的發展和改進。
+  title: 歡迎來到KestrelUI！
 widget:
   add_workspace_override: 覆蓋工作區
   default_instance: 預設視窗

@@ -1,0 +1,28 @@
+.taskbar {
+  background-color: oklch(from var(--neon-surface) l c h / var(--neon-glass));
+  backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid var(--neon-line);
+  box-shadow:
+    var(--shadow-l),
+    0 0 32px -16px var(--neon-shine);
+}
+
+.weg-item-open-sign {
+  &.weg-item-open-sign-active {
+    background-color: oklch(from var(--neon-color) l c h / 0.5);
+  }
+
+  &.weg-item-open-sign-focused {
+    background-color: var(--neon-color);
+    box-shadow: 0 0 8px var(--neon-shine);
+  }
+}
+
+// mask layers tint system icons; the start button is the KestrelUI mark
+.slu-icon-mask {
+  background-color: var(--kestrel-icon-color) !important;
+}
+
+.weg-separator {
+  border-color: var(--neon-line) !important;
+}

@@ -53,10 +53,10 @@ function msvc() {
   }
 }
 
-console.log("WinUIRev build doctor");
+console.log("KestrelUI build doctor");
 
 if (process.platform !== "win32") {
-  console.log("  skip native checks: WinUIRev builds only on Windows");
+  console.log("  skip native checks: KestrelUI builds only on Windows");
   process.exit(0);
 }
 

@@ -20,5 +20,5 @@ run_as_admin: Käivita administraatorina
 uninstall: Desinstalli
 unpin: Vabastage
 web_search: Veebis otsimiseks vajutage sisestusklahvi
-welcome_message: Tere tulemast WinUIRev rakenduse menüüsse.
+welcome_message: Tere tulemast KestrelUI rakenduse menüüsse.
 welcome_message2: Sellel vahekaardil saate kinnitada oma lemmikrakendused.

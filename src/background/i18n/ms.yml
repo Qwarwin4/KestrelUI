@@ -2,7 +2,7 @@ cancel: Batalkan
 done: Selesai
 elevated:
   description: >-
-    WinUIRev berjalan dengan keistimewaan pentadbir.
+    KestrelUI berjalan dengan keistimewaan pentadbir.
 
     Ini tidak menambah atau menambah baik sebarang ciri, dan ia mungkin
     menimbulkan risiko keselamatan.
@@ -15,7 +15,7 @@ resource:
   added: Sumber baru telah ditambah
   download_failed_body: >-
     Sesuatu yang tidak kena semasa memuat turun sumber, sila laporkan kepada
-    pasukan pemaju WinUIRev.
+    pasukan pemaju KestrelUI.
   download_failed_title: Muat turun sumber gagal
   downloading: Memuat turun aset ...
   downloading_body: Ini mungkin mengambil masa beberapa saat, jangan menutup tetingkap.
@@ -31,20 +31,20 @@ runtime:
     Ini boleh berlaku jika fail diubah suai, rosak atau pemasangan tidak
     lengkap.
 
-    Atas sebab keselamatan, WinUIRev tidak boleh diteruskan.
+    Atas sebab keselamatan, KestrelUI tidak boleh diteruskan.
 
     Sila pasang semula dari laman web rasmi.
   files_integrity_title: Makluman Keselamatan - Semakan Integriti Fail Gagal
   not_found: WebView2 Runtime tidak ditemui
-  not_found_description: WinUIRev memerlukan Webview2 Runtime. Sila pasang.
+  not_found_description: KestrelUI memerlukan Webview2 Runtime. Sila pasang.
   outdated: WebView2 Runtime sudah lapuk
   outdated_description: >-
-    WinUIRev memerlukan Webview2 Runtime %{min_version} atau lebih tinggi. Sila
+    KestrelUI memerlukan Webview2 Runtime %{min_version} atau lebih tinggi. Sila
     kemas kini.
 service:
-  not_running: Perkhidmatan WinUIRev tidak berjalan
+  not_running: Perkhidmatan KestrelUI tidak berjalan
   not_running_description: >-
-    Perkhidmatan WinUIRev (perkhidmatan slu) ialah kebergantungan/pembantu
+    Perkhidmatan KestrelUI (perkhidmatan slu) ialah kebergantungan/pembantu
     untuk apl berfungsi dengan betul.
   not_running_ok: Mulakan perkhidmatan
 shortcut:
@@ -67,7 +67,7 @@ widget_liveness:
 widget_permissions:
   perm_kill_processes: paksa tutup aplikasi
   perm_manage_app_windows: mengawal tingkap aplikasi lain (fokus, tutup, minimumkan, alih)
-  perm_modify_configuration: ubah suai konfigurasi WinUIRev
+  perm_modify_configuration: ubah suai konfigurasi KestrelUI
   perm_open_file: buka fail
   perm_run: menjalankan program
   request_description: |-

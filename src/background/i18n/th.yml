@@ -2,7 +2,7 @@ cancel: ยกเลิก
 done: เสร็จแล้ว
 elevated:
   description: >-
-    WinUIRev กำลังทำงานด้วยสิทธิ์ของผู้ดูแลระบบ
+    KestrelUI กำลังทำงานด้วยสิทธิ์ของผู้ดูแลระบบ
 
     การดำเนินการนี้ไม่ได้เพิ่มหรือปรับปรุงคุณสมบัติใดๆ
     และอาจก่อให้เกิดความเสี่ยงด้านความปลอดภัย
@@ -12,7 +12,7 @@ elevated:
 file_explorer: ไฟล์เอ็กซ์พลอเรอร์
 resource:
   added: มีการเพิ่มทรัพยากรใหม่
-  download_failed_body: มีบางอย่างผิดปกติในขณะที่ดาวน์โหลดทรัพยากรโปรดรายงานไปยังทีมนักพัฒนา WinUIRev
+  download_failed_body: มีบางอย่างผิดปกติในขณะที่ดาวน์โหลดทรัพยากรโปรดรายงานไปยังทีมนักพัฒนา KestrelUI
   download_failed_title: การดาวน์โหลดทรัพยากรล้มเหลว
   downloading: ดาวน์โหลดสินทรัพย์ ...
   downloading_body: อาจใช้เวลาสองสามวินาทีโปรดอย่าปิดหน้าต่าง
@@ -25,17 +25,17 @@ runtime:
   files_integrity: |-
     เราไม่สามารถตรวจสอบความสมบูรณ์ของไฟล์แอปพลิเคชันได้
     กรณีนี้อาจเกิดขึ้นได้หากไฟล์ได้รับการแก้ไข เสียหาย หรือการติดตั้งไม่สมบูรณ์
-    ด้วยเหตุผลด้านความปลอดภัย WinUIRev ไม่สามารถดำเนินการต่อได้
+    ด้วยเหตุผลด้านความปลอดภัย KestrelUI ไม่สามารถดำเนินการต่อได้
     โปรดติดตั้งใหม่จากเว็บไซต์อย่างเป็นทางการ
   files_integrity_title: การแจ้งเตือนความปลอดภัย - การตรวจสอบความสมบูรณ์ของไฟล์ล้มเหลว
   not_found: ไม่พบรันไทม์ WebView2
-  not_found_description: WinUIRev ต้องการรันไทม์ Webview2 กรุณาติดตั้ง.
+  not_found_description: KestrelUI ต้องการรันไทม์ Webview2 กรุณาติดตั้ง.
   outdated: รันไทม์ WebView2 ล้าสมัย
-  outdated_description: WinUIRev ต้องใช้รันไทม์ Webview2 %{min_version} หรือสูงกว่า กรุณาอัปเดตมัน.
+  outdated_description: KestrelUI ต้องใช้รันไทม์ Webview2 %{min_version} หรือสูงกว่า กรุณาอัปเดตมัน.
 service:
-  not_running: บริการ WinUIRev ไม่ทำงาน
+  not_running: บริการ KestrelUI ไม่ทำงาน
   not_running_description: >-
-    WinUIRev Service (winuirev-service)
+    KestrelUI Service (kestrelui-service)
     เป็นตัวพึ่งพา/ตัวช่วยเพื่อให้แอปทำงานได้อย่างถูกต้อง
   not_running_ok: เริ่มให้บริการ
 shortcut:
@@ -56,7 +56,7 @@ widget_liveness:
 widget_permissions:
   perm_kill_processes: บังคับปิดแอปพลิเคชัน
   perm_manage_app_windows: ควบคุมหน้าต่างของแอปพลิเคชั่นอื่น ๆ (โฟกัส ปิด ย่อเล็กสุด ย้าย)
-  perm_modify_configuration: แก้ไขการกำหนดค่า WinUIRev
+  perm_modify_configuration: แก้ไขการกำหนดค่า KestrelUI
   perm_open_file: เปิดไฟล์
   perm_run: รันโปรแกรม
   request_description: |-

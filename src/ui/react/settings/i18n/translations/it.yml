@@ -30,14 +30,14 @@ apps_configurations:
     Queste configurazioni fornite non sono modificabili e sono progettate per
     fornirvi la migliore esperienza senza personalizzazione. Configurano
     automaticamente le applicazioni più comuni per voi.
-  bundled_title: Config App Fornite con WinUIRev
+  bundled_title: Config App Fornite con KestrelUI
   confirm_delete: Siete sicuri di voler eliminare questa/e configurazione/i?
   confirm_delete_title: Conferma Eliminazione
   delete: Elimina
   export: Esporta
   export_full: Esportazione delle impostazioni per applicazione
   extra_info: >-
-    WinUIRev utilizza solo un identificatore per app (primo corrispondente
+    KestrelUI utilizza solo un identificatore per app (primo corrispondente
     trovato), quindi l'ordine in cui sono specificate è importante; l'ultima
     aggiunta avrà la priorità. Nota che la tabella è ordinata per impostazione
     predefinita dalla più recente alla più vecchia.
@@ -82,7 +82,7 @@ devtools:
   enable: Abilita Strumenti Sviluppatore
   enable_description: >-
     Sblocca strumenti avanzati per l'ispezione e il debug dei componenti interni
-    dell'interfaccia utente WinUIRev. Non destinato all'uso regolare.
+    dell'interfaccia utente KestrelUI. Non destinato all'uso regolare.
   icons: Icone memorizzate nella cache
   install_folder: Cartella di Installazione
   load: Carica
@@ -120,7 +120,7 @@ devtools:
     widget_id: ID del widget
 discord_banner:
   message: >-
-    Connettiti con altri utenti dell'interfaccia utente WinUIRev, ottieni
+    Connettiti con altri utenti dell'interfaccia utente KestrelUI, ottieni
     assistenza, condividi temi e rimani aggiornato con le ultime notizie.
   title: Unisciti alla nostra comunità
 extras:
@@ -166,7 +166,7 @@ general:
     plugged: Collegato o ricarica
   polling_interval: Intervallo di polling del sistema
   polling_interval_description: >-
-    La frequenza con cui (in secondi) WinUIRev controlla le risorse di sistema
+    La frequenza con cui (in secondi) KestrelUI controlla le risorse di sistema
     come CPU, RAM, rete e attività del disco. Un numero inferiore indica
     aggiornamenti più frequenti, ma un utilizzo delle risorse leggermente
     superiore.
@@ -222,7 +222,7 @@ reset_to_default: Ripristino del valore predefinito
 resources:
   affected_widgets: Widget interessati
   app_outdated: >-
-    Questa risorsa richiede una versione più recente di WinUIRev per funzionare
+    Questa risorsa richiede una versione più recente di KestrelUI per funzionare
     correttamente.
   coming_soon: Prossimamente
   corrupted_wallpaper: >-
@@ -237,7 +237,7 @@ resources:
   modified: Modificato
   open_folder: Aprire la cartella delle risorse
   outdated: >-
-    Questa risorsa è stata progettata per una versione precedente di WinUIRev e
+    Questa risorsa è stata progettata per una versione precedente di KestrelUI e
     potrebbe non funzionare correttamente.
   see_on_website: Vedi sul sito web
   update_now: Aggiornamento
@@ -246,7 +246,7 @@ resources:
 review_request:
   not_now: Non adesso
   sure: Sicuro!
-  title: Ti piace l'interfaccia utente di WinUIRev?
+  title: Ti piace l'interfaccia utente di KestrelUI?
 save: Salva
 save_and_restart: Salva e Riavvia
 search: Ricerca
@@ -255,7 +255,7 @@ security:
   perms:
     kill_processes: Forza la chiusura delle applicazioni
     manage_app_windows: Controlla le finestre di altre applicazioni
-    modify_configuration: Modifica la configurazione dell'interfaccia utente di WinUIRev
+    modify_configuration: Modifica la configurazione dell'interfaccia utente di KestrelUI
     open_file: Apri file
     run: Esegui programmi
 see_more: Per saperne di più
@@ -274,7 +274,7 @@ shortcuts:
   enable: Abilita le scorciatoie integrate
   enable_tooltip: >-
     Disabilita se implementerai il tuo sistema di scorciatoie utilizzando il
-    client WinUIRev
+    client KestrelUI
   labels:
     create_new_workspace: Crea nuovo spazio di lavoro
     create_new_workspace_row: Crea una nuova riga dell'area di lavoro
@@ -437,16 +437,16 @@ weg:
 welcome:
   give_a_review: Dai una recensione
   message: >-
-    WinUIRev è un ambiente desktop gratuito e open source per Windows. Qui hai
+    KestrelUI è un ambiente desktop gratuito e open source per Windows. Qui hai
     il pieno controllo sull'aspetto e sul comportamento del tuo desktop,
     permettendoti di personalizzare ogni dettaglio per adattarlo al tuo flusso
     di lavoro e al tuo stile.
   ok: Iniziamo!
   review: >-
-    Se ti piace utilizzare l'interfaccia utente di WinUIRev, valuta la possibilità
+    Se ti piace utilizzare l'interfaccia utente di KestrelUI, valuta la possibilità
     di lasciare una recensione nello store: il tuo feedback aiuta il progetto a
     crescere e migliorare.
-  title: Benvenuti nell'interfaccia utente di WinUIRev!
+  title: Benvenuti nell'interfaccia utente di KestrelUI!
 widget:
   add_workspace_override: Sostituisci su un'area di lavoro
   default_instance: Istanza predefinita

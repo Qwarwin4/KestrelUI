@@ -20,5 +20,5 @@ run_as_admin: Suorita järjestelmänvalvojana
 uninstall: Poista asennus
 unpin: Irrota kiinnitys
 web_search: Hae verkosta painamalla Enter
-welcome_message: Tervetuloa WinUIRev -sovellusvalikkoon.
+welcome_message: Tervetuloa KestrelUI -sovellusvalikkoon.
 welcome_message2: Tällä välilehdellä voit kiinnittää suosikkisovelluksesi.

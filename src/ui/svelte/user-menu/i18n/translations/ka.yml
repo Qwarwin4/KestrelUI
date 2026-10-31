@@ -16,6 +16,6 @@ profile:
   open_onedrive: გახსენით OneDrive დირექტორია
   open_user_folder: გახსენით მომხმარებლის დირექტორია
 seelen_options:
-  open_installation_folder: გახსენით WinUIRev პარამეტრების საქაღალდე
-  open_log_folder: გახსენით WinUIRev ჟურნალის საქაღალდე
-  title: WinUIRev დირექტორიები
+  open_installation_folder: გახსენით KestrelUI პარამეტრების საქაღალდე
+  open_log_folder: გახსენით KestrelUI ჟურნალის საქაღალდე
+  title: KestrelUI დირექტორიები

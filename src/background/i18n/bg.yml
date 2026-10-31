@@ -2,7 +2,7 @@ cancel: Отказ
 done: Готово
 elevated:
   description: >-
-    WinUIRev работи с администраторски права.
+    KestrelUI работи с администраторски права.
 
     Това не добавя или подобрява никакви функции и може да представлява риск за
     сигурността.
@@ -15,7 +15,7 @@ resource:
   added: Добавен е нов ресурс
   download_failed_body: >-
     Нещо се е объркало при изтеглянето на ресурса, моля, докладвайте за това на
-    екипа на разработчиците на WinUIRev.
+    екипа на разработчиците на KestrelUI.
   download_failed_title: Изтеглянето на ресурса е неуспешно
   downloading: Изтегляне на активи...
   downloading_body: Това може да отнеме няколко секунди, моля, не затваряйте прозореца.
@@ -33,22 +33,22 @@ runtime:
     Това може да се случи, ако файловете са били модифицирани, повредени или
     инсталацията е непълна.
 
-    От съображения за сигурност WinUIRev не може да продължи.
+    От съображения за сигурност KestrelUI не може да продължи.
 
     Моля, преинсталирайте го от официалния уебсайт.
   files_integrity_title: >-
     Предупреждение за сигурност - Проверката на целостта на файловете е
     неуспешна
   not_found: WebView2 Runtime не е намерен
-  not_found_description: WinUIRev изисква Webview2 Runtime. Моля, инсталирайте го.
+  not_found_description: KestrelUI изисква Webview2 Runtime. Моля, инсталирайте го.
   outdated: WebView2 Runtime е остарял
   outdated_description: >-
-    WinUIRev изисква Webview2 Runtime %{min_version} или по-нова версия. Моля,
+    KestrelUI изисква Webview2 Runtime %{min_version} или по-нова версия. Моля,
     актуализирайте го.
 service:
-  not_running: Услугата WinUIRev не работи
+  not_running: Услугата KestrelUI не работи
   not_running_description: >-
-    WinUIRev Service (winuirev-service) е зависимост/помощник за правилното
+    KestrelUI Service (kestrelui-service) е зависимост/помощник за правилното
     функциониране на приложението.
   not_running_ok: Стартирайте услугата
 shortcut:
@@ -73,7 +73,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     контролирайте прозорците на други приложения (фокусиране, затваряне,
     минимизиране, преместване)
-  perm_modify_configuration: променете конфигурацията на потребителския интерфейс на WinUIRev
+  perm_modify_configuration: променете конфигурацията на потребителския интерфейс на KestrelUI
   perm_open_file: отворени файлове
   perm_run: стартирайте програми
   request_description: |-

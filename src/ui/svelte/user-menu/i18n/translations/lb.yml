@@ -16,6 +16,6 @@ profile:
   open_onedrive: Open OneDrive Verzeechnes
   open_user_folder: Öffnen vum Benotzerverzeichnis
 seelen_options:
-  open_installation_folder: Open WinUIRev Astellungen Dossier
-  open_log_folder: Open WinUIRev Log Dossier
-  title: WinUIRev directory
+  open_installation_folder: Open KestrelUI Astellungen Dossier
+  open_log_folder: Open KestrelUI Log Dossier
+  title: KestrelUI directory

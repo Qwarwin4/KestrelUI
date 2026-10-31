@@ -20,5 +20,5 @@ run_as_admin: Chạy dưới quyền Quản trị viên
 uninstall: Gỡ cài đặt
 unpin: Bỏ ghim
 web_search: Nhấn Enter để tìm kiếm trên web
-welcome_message: Chào mừng bạn đến với Menu ứng dụng của WinUIRev.
+welcome_message: Chào mừng bạn đến với Menu ứng dụng của KestrelUI.
 welcome_message2: Tại đây, bạn có thể ghim các ứng dụng yêu thích để truy cập nhanh chóng.

@@ -19,15 +19,15 @@ impl SelfPipe {
         }
 
         // Normalize argv: always use a fixed program name as argv[0] for clap.
-        // The first element may be an executable path (winuirev.exe, slu.exe, etc.)
+        // The first element may be an executable path (kestrelui.exe, slu.exe, etc.)
         // or already a subcommand when called internally.
         let normalized: Vec<String> =
             if argv[0].ends_with(".exe") || argv[0].contains('\\') || argv[0].contains('/') {
-                std::iter::once("winuirev.exe".to_string())
+                std::iter::once("kestrelui.exe".to_string())
                     .chain(argv.into_iter().skip(1))
                     .collect()
             } else {
-                std::iter::once("winuirev.exe".to_string())
+                std::iter::once("kestrelui.exe".to_string())
                     .chain(argv)
                     .collect()
             };

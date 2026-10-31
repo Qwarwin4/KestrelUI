@@ -155,8 +155,8 @@ impl SeelenUI {
                 &Default::default(),
             )?;
             let is_task_enabled = task_service
-                .GetFolder(&"\\WinUIRev".into())
-                .and_then(|folder| folder.GetTask(&"WinUIRev Service".into()))
+                .GetFolder(&"\\KestrelUI".into())
+                .and_then(|folder| folder.GetTask(&"KestrelUI Service".into()))
                 .and_then(|task| task.Definition())
                 .and_then(|definition| definition.Triggers())
                 .and_then(|triggers| triggers.get_Item(1))

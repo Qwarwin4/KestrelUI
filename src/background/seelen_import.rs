@@ -1,5 +1,5 @@
 //! One-time import of an existing Seelen UI setup (NSIS or Microsoft Store install)
-//! so switching to WinUIRev keeps settings, themes, widgets, icon packs and wallpapers.
+//! so switching to KestrelUI keeps settings, themes, widgets, icon packs and wallpapers.
 
 use std::path::{Path, PathBuf};
 

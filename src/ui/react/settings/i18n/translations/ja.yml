@@ -29,7 +29,7 @@ apps_configurations:
   bundled_msg: >-
     これらのバンドルされた構成は編集可能ではなく、カスタマイズなしで最高の体験を提供するように設計されています。
     最も一般的なアプリケーションを自動的に構成します。
-  bundled_title: WinUIRevにバンドルされたアプリの構成
+  bundled_title: KestrelUIにバンドルされたアプリの構成
   confirm_delete: この構成を削除しますか？
   confirm_delete_title: 削除の確認
   delete: 消去
@@ -73,7 +73,7 @@ devtools:
   custom_config_file: カスタム構成ファイルをロードする
   data_folder: データのフォルダー
   enable: 開発者ツールを有効にする
-  enable_description: WinUIRev の内部を検査およびデバッグするための高度なツールのロックを解除します。 通常の使用を目的としていません。
+  enable_description: KestrelUI の内部を検査およびデバッグするための高度なツールのロックを解除します。 通常の使用を目的としていません。
   icons: キャッシュされたアイコン
   install_folder: アプリのフォルダー
   load: ロード
@@ -106,7 +106,7 @@ devtools:
     tab: ウィジェット
     widget_id: ウィジェットID
 discord_banner:
-  message: 他の WinUIRev ユーザーとつながり、ヘルプを得たり、テーマを共有したり、最新ニュースを入手したりできます。
+  message: 他の KestrelUI ユーザーとつながり、ヘルプを得たり、テーマを共有したり、最新ニュースを入手したりできます。
   title: コミュニティに参加してください
 extras:
   clear_icons: システムアイコンキャッシュをクリアする
@@ -146,7 +146,7 @@ general:
     plugged: 電源接続時
   polling_interval: システムのポーリング間隔
   polling_interval_description: >-
-    WinUIRev が CPU、RAM、ネットワーク、ディスク アクティビティなどのシステム リソースをチェックする頻度 (秒単位)。
+    KestrelUI が CPU、RAM、ネットワーク、ディスク アクティビティなどのシステム リソースをチェックする頻度 (秒単位)。
     数値が小さいほど、更新頻度は高くなりますが、リソース使用量がわずかに高くなります。
   saturday: 土曜日
   start_of_week: 週の始まり
@@ -197,7 +197,7 @@ reset_configurations: 設定のリセット
 reset_to_default: デフォルトに戻す
 resources:
   affected_widgets: 影響を受けるウィジェット
-  app_outdated: このリソースが正しく動作するためには、新しいバージョンのWinUIRevが必要です。
+  app_outdated: このリソースが正しく動作するためには、新しいバージョンのKestrelUIが必要です。
   coming_soon: 近日公開
   corrupted_wallpaper: サムネイルの抽出に失敗しました - 破損したビデオ形式またはサポートされていないビデオ形式です
   delete: リソースを削除します
@@ -208,7 +208,7 @@ resources:
   included_plugins: 付属のプラグイン
   modified: 修正済み
   open_folder: リソースフォルダを開く
-  outdated: このリソースは古いバージョンのWinUIRev用に設計されており、正しく動作しない可能性があります。
+  outdated: このリソースは古いバージョンのKestrelUI用に設計されており、正しく動作しない可能性があります。
   see_on_website: ウェブサイトで見る
   update_now: アップデート
   updates_available: 利用可能なアップデート
@@ -216,7 +216,7 @@ resources:
 review_request:
   not_now: また今度
   sure: もちろん！
-  title: WinUIRev をお楽しみですか？
+  title: KestrelUI をお楽しみですか？
 save: 保存
 save_and_restart: 保存して再起動
 search: 検索
@@ -225,7 +225,7 @@ security:
   perms:
     kill_processes: アプリケーションを強制終了する
     manage_app_windows: 他のアプリケーションのウィンドウを制御する
-    modify_configuration: WinUIRev 構成を変更する
+    modify_configuration: KestrelUI 構成を変更する
     open_file: ファイルを開く
     run: プログラムを実行する
 see_more: もっと見る
@@ -242,7 +242,7 @@ shortcuts:
     一部のショートカットは複数のアクションに割り当てられています。競合するウィジェットの 1 つを無効にするか、重複したキー
     バインドを再割り当てして解決します。
   enable: ビルトインショートカットシステムを有効にします
-  enable_tooltip: WinUIRevクライアントを使用して独自のショートカットシステムを実装する場合は無効にします
+  enable_tooltip: KestrelUIクライアントを使用して独自のショートカットシステムを実装する場合は無効にします
   labels:
     create_new_workspace: 新しいワークスペースを作成
     create_new_workspace_row: 新しいワークスペース行の作成
@@ -399,13 +399,13 @@ weg:
 welcome:
   give_a_review: レビューを投稿する
   message: >-
-    WinUIRev は、Windows 用の無料のオープンソース
+    KestrelUI は、Windows 用の無料のオープンソース
     デスクトップ環境です。ここでは、デスクトップの外観や動作を完全に制御でき、ワークフローやスタイルに合わせてあらゆる詳細をカスタマイズできます。
   ok: 始めましょう！
   review: >-
-    WinUIRev
+    KestrelUI
     の使用を楽しんでいる場合は、ストアにレビューを残すことを検討してください。あなたのフィードバックはプロジェクトの成長と改善に役立ちます。
-  title: WinUIRev へようこそ!
+  title: KestrelUI へようこそ!
 widget:
   add_workspace_override: ワークスペースをオーバーライドする
   default_instance: デフォルトのインスタンス

@@ -16,6 +16,6 @@ profile:
   open_onedrive: Opnaðu OneDrive möppuna
   open_user_folder: Opnaðu notendaskrá
 seelen_options:
-  open_installation_folder: Opnaðu WinUIRev stillingamöppuna
-  open_log_folder: Opnaðu WinUIRev log möppu
-  title: WinUIRev möppur
+  open_installation_folder: Opnaðu KestrelUI stillingamöppuna
+  open_log_folder: Opnaðu KestrelUI log möppu
+  title: KestrelUI möppur

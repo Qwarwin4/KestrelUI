@@ -2,7 +2,7 @@ cancel: Cancel
 done: Done
 elevated:
   description: |-
-    WinUIRev is running with administrator privileges.
+    KestrelUI is running with administrator privileges.
     This does not add or improve any features, and it may pose a security risk.
     For better security, please restart it without administrator permissions.
   title: Running as Administrator
@@ -11,7 +11,7 @@ resource:
   added: A new resource has been added
   download_failed_body: >-
     Something went wrong while downloading the resource, please report it to the
-    WinUIRev developer team.
+    KestrelUI developer team.
   download_failed_title: Resource download failed
   downloading: Downloading assets...
   downloading_body: This might take a few seconds, please don't close the window.
@@ -27,25 +27,25 @@ runtime:
     This can happen if files were modified, corrupted, or the installation is
     incomplete.
 
-    For security reasons, WinUIRev cannot continue.
+    For security reasons, KestrelUI cannot continue.
 
     Please reinstall it from the official website.
   files_integrity_title: Security Alert - Files Integrity Check Failed
   not_found: WebView2 Runtime not found
-  not_found_description: WinUIRev requires Webview2 Runtime. Please install it.
+  not_found_description: KestrelUI requires Webview2 Runtime. Please install it.
   outdated: WebView2 Runtime outdated
   outdated_description: >-
-    WinUIRev requires Webview2 Runtime %{min_version} or higher. Please update
+    KestrelUI requires Webview2 Runtime %{min_version} or higher. Please update
     it.
 seelen_import:
   title: Import from Seelen UI
   body: >-
     Seelen UI settings were found in %{path}. Import your settings, themes,
-    widgets, icon packs and wallpapers into WinUIRev?
+    widgets, icon packs and wallpapers into KestrelUI?
 service:
-  not_running: WinUIRev Service not running
+  not_running: KestrelUI Service not running
   not_running_description: >-
-    WinUIRev Service (winuirev-service) is a dependency/helper for the app to work
+    KestrelUI Service (kestrelui-service) is a dependency/helper for the app to work
     properly.
   not_running_ok: Start service
 shortcut:
@@ -66,7 +66,7 @@ widget_liveness:
 widget_permissions:
   perm_kill_processes: force close applications
   perm_manage_app_windows: control the windows of other applications (focus, close, minimize, move)
-  perm_modify_configuration: modify the WinUIRev configuration
+  perm_modify_configuration: modify the KestrelUI configuration
   perm_open_file: open files
   perm_run: run programs
   request_description: |-

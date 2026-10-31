@@ -16,6 +16,6 @@ profile:
   open_onedrive: Buka direktori OneDrive
   open_user_folder: Buka direktori pengguna
 seelen_options:
-  open_installation_folder: Buka folder tetapan WinUIRev
-  open_log_folder: Buka folder log WinUIRev
-  title: Direktori WinUIRev
+  open_installation_folder: Buka folder tetapan KestrelUI
+  open_log_folder: Buka folder log KestrelUI
+  title: Direktori KestrelUI

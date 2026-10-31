@@ -86,13 +86,13 @@ impl std::fmt::Debug for AppError {
                 }
 
                 // 2) skip trace of other modules/libraries specially tracing of tao and tauri libs
-                if !name.starts_with("winuirev") {
+                if !name.starts_with("kestrelui") {
                     index += 1;
                     continue;
                 }
 
                 // 3) skip convertion of erros to AppError
-                if name.starts_with("winuirev::error::impl") && name.ends_with("from") {
+                if name.starts_with("kestrelui::error::impl") && name.ends_with("from") {
                     index += 1;
                     continue;
                 }

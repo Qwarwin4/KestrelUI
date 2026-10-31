@@ -323,7 +323,7 @@ export class IconPackManager {
    *   path: "C:\\Program Files\\Steam\\steam.exe"
    * });
    * const iconPath = instance.extractIcon({
-   *   umid: "Qwarwin.WinUIRev_PUBLISHERHASH!App"
+   *   umid: "Qwarwin.KestrelUI_PUBLISHERHASH!App"
    * });
    */
   public static requestIconExtraction(obj: GetIconArgs): Promise<void> {

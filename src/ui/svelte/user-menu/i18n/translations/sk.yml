@@ -16,6 +16,6 @@ profile:
   open_onedrive: Otvorte adresár OneDrive
   open_user_folder: Otvorte užívateľský adresár
 seelen_options:
-  open_installation_folder: Otvorte priečinok nastavení WinUIRev
-  open_log_folder: Otvorte priečinok protokolu WinUIRev
-  title: WinUIRev adresáre
+  open_installation_folder: Otvorte priečinok nastavení KestrelUI
+  open_log_folder: Otvorte priečinok protokolu KestrelUI
+  title: KestrelUI adresáre

@@ -16,6 +16,6 @@ profile:
   open_onedrive: Open OneDrive directory
   open_user_folder: Open user directory
 seelen_options:
-  open_installation_folder: Open WinUIRev settings folder
-  open_log_folder: Open WinUIRev log folder
-  title: WinUIRev directories
+  open_installation_folder: Open KestrelUI settings folder
+  open_log_folder: Open KestrelUI log folder
+  title: KestrelUI directories

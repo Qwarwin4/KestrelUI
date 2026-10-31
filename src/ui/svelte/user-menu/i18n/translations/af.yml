@@ -16,6 +16,6 @@ profile:
   open_onedrive: Maak OneDrive-gids oop
   open_user_folder: Maak gebruikersgids oop
 seelen_options:
-  open_installation_folder: Maak WinUIRev-instellingsmap oop
-  open_log_folder: Maak WinUIRev-loglêergids oop
-  title: WinUIRev-gidse
+  open_installation_folder: Maak KestrelUI-instellingsmap oop
+  open_log_folder: Maak KestrelUI-loglêergids oop
+  title: KestrelUI-gidse

@@ -2,7 +2,7 @@ cancel: ይቅር
 done: ተከናውኗል
 elevated:
   description: |-
-    WinUIRev ከአስተዳዳሪ ልዩ መብቶች ጋር እየሰራ ነው።
+    KestrelUI ከአስተዳዳሪ ልዩ መብቶች ጋር እየሰራ ነው።
     ይህ ምንም አይነት ባህሪን አይጨምርም ወይም አያሻሽልም፣ እና የደህንነት ስጋት ሊፈጥር ይችላል።
     ለተሻለ ደህንነት፣ እባክዎን ያለአስተዳዳሪ ፈቃድ እንደገና ያስጀምሩት።
   title: እንደ አስተዳዳሪ በመሮጥ ላይ
@@ -22,16 +22,16 @@ runtime:
   files_integrity: |-
     የመተግበሪያ ፋይሎችን ትክክለኛነት ማረጋገጥ አልቻልንም።
     ፋይሎች ከተሻሻሉ፣ ከተበላሹ ወይም መጫኑ ካልተሟላ ይሄ ሊከሰት ይችላል።
-    ለደህንነት ሲባል WinUIRev መቀጠል አይችልም።
+    ለደህንነት ሲባል KestrelUI መቀጠል አይችልም።
     እባክዎ ከኦፊሴላዊው ድር ጣቢያ እንደገና ይጫኑት።
   files_integrity_title: የደህንነት ማንቂያ - የፋይሎች ትክክለኛነት ማረጋገጥ አልተሳካም።
   not_found: WebView2 Runtime አልተገኘም።
-  not_found_description: WinUIRev Webview2 Runtime ያስፈልገዋል። እባክዎ ይጫኑት።
+  not_found_description: KestrelUI Webview2 Runtime ያስፈልገዋል። እባክዎ ይጫኑት።
   outdated: WebView2 Runtime ጊዜው አልፎበታል።
-  outdated_description: WinUIRev Webview2 Runtime %{min_version} ወይም ከዚያ በላይ ይፈልጋል። እባክዎ ያዘምኑት።
+  outdated_description: KestrelUI Webview2 Runtime %{min_version} ወይም ከዚያ በላይ ይፈልጋል። እባክዎ ያዘምኑት።
 service:
-  not_running: WinUIRev አገልግሎት እየሰራ አይደለም።
-  not_running_description: WinUIRev አገልግሎት (slu-አገልግሎት) መተግበሪያው በትክክል እንዲሰራ ጥገኛ/ረዳት ነው።
+  not_running: KestrelUI አገልግሎት እየሰራ አይደለም።
+  not_running_description: KestrelUI አገልግሎት (slu-አገልግሎት) መተግበሪያው በትክክል እንዲሰራ ጥገኛ/ረዳት ነው።
   not_running_ok: አገልግሎት ጀምር
 shortcut:
   conflicts:
@@ -51,7 +51,7 @@ widget_liveness:
 widget_permissions:
   perm_kill_processes: አፕሊኬሽኖችን አስገድድ
   perm_manage_app_windows: የሌሎች መተግበሪያዎችን መስኮቶች ይቆጣጠሩ (ማተኮር ፣ መዝጋት ፣ መቀነስ ፣ ማንቀሳቀስ)
-  perm_modify_configuration: የ WinUIRev ውቅርን ቀይር
+  perm_modify_configuration: የ KestrelUI ውቅርን ቀይር
   perm_open_file: ፋይሎችን ይክፈቱ
   perm_run: ፕሮግራሞችን አሂድ
   request_description: |-

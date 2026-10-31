@@ -2,7 +2,7 @@ cancel: Tühistama
 done: Tehtud
 elevated:
   description: >-
-    WinUIRev töötab administraatoriõigustega.
+    KestrelUI töötab administraatoriõigustega.
 
     See ei lisa ega täiusta ühtegi funktsiooni ning võib kujutada endast
     turvariski.
@@ -14,7 +14,7 @@ file_explorer: File Explorer
 resource:
   added: Lisatud on uus ressurss
   download_failed_body: >-
-    Midagi läks ressursi allalaadimisel valesti, palun teatage sellest WinUIRev
+    Midagi läks ressursi allalaadimisel valesti, palun teatage sellest KestrelUI
     arendusmeeskonnale.
   download_failed_title: Ressursi allalaadimine ebaõnnestus
   downloading: Varade allalaadimine...
@@ -28,19 +28,19 @@ runtime:
   files_integrity: |-
     Meil ei õnnestunud rakendusfailide terviklikkust kontrollida.
     See võib juhtuda, kui faile on muudetud, rikutud või installimine on poolik.
-    Turvakaalutlustel ei saa WinUIRev jätkata.
+    Turvakaalutlustel ei saa KestrelUI jätkata.
     Installige see uuesti ametlikult veebisaidilt.
   files_integrity_title: Turvahoiatus – failide terviklikkuse kontroll ebaõnnestus
   not_found: WebView2 käitusaega ei leitud
-  not_found_description: WinUIRev kasutajaliides nõuab Webview2 Runtime'i. Palun installige see.
+  not_found_description: KestrelUI kasutajaliides nõuab Webview2 Runtime'i. Palun installige see.
   outdated: WebView2 käitusaeg on aegunud
   outdated_description: >-
-    WinUIRev kasutajaliides nõuab Webview2 Runtime %{min_version} või uuemat.
+    KestrelUI kasutajaliides nõuab Webview2 Runtime %{min_version} või uuemat.
     Palun värskendage seda.
 service:
-  not_running: WinUIRev teenus ei tööta
+  not_running: KestrelUI teenus ei tööta
   not_running_description: >-
-    WinUIRev teenus (slu-teenus) on rakenduse nõuetekohaseks
+    KestrelUI teenus (slu-teenus) on rakenduse nõuetekohaseks
     tööks sõltuvus/abimees.
   not_running_ok: Käivitage teenus
 shortcut:
@@ -63,7 +63,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     juhtida teiste rakenduste aknaid (teravustada, sulgeda, minimeerida,
     teisaldada)
-  perm_modify_configuration: muuta WinUIRev konfiguratsiooni
+  perm_modify_configuration: muuta KestrelUI konfiguratsiooni
   perm_open_file: failid avada
   perm_run: käivitada programme
   request_description: |-

@@ -1,11 +1,11 @@
 <h1 align="center">
-  <img src="../../documentation/images/logo.svg" width="44" align="top" alt="WinUIRev Logo" />
-  WinUIRev Library
+  <img src="../../documentation/images/logo.svg" width="44" align="top" alt="KestrelUI Logo" />
+  KestrelUI Library
 </h1>
 
-The **WinUIRev Library** is the core library for [WinUIRev](https://github.com/Qwarwin4/WinUIRev), a highly
+The **KestrelUI Library** is the core library for [KestrelUI](https://github.com/Qwarwin4/KestrelUI), a highly
 customizable desktop UI. This library provides the necessary tools and types to create and manage widgets, plugins, and
-themes for the WinUIRev application. It's a hybrid library with a Rust core and TypeScript/Deno bindings, designed for
+themes for the KestrelUI application. It's a hybrid library with a Rust core and TypeScript/Deno bindings, designed for
 performance and type safety.
 
 ## Installation

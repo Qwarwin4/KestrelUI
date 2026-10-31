@@ -1,8 +1,8 @@
 import { signal } from "@preact/signals";
 
 // every showcase entry is someone's public repo tagged with this topic and a
-// winuirev.json manifest in its root; nothing is hosted by the project itself
-export const TOPIC = "winuirev-config";
+// kestrelui.json manifest in its root; nothing is hosted by the project itself
+export const TOPIC = "kestrelui-config";
 const OFFICIAL = new Set(["qwarwin4"]);
 const CACHE_KEY = "showcase-cache-v2";
 const CACHE_TTL = 10 * 60 * 1000;
@@ -67,7 +67,7 @@ function writeCache(entries: ShowcaseEntry[]) {
 }
 
 async function toEntry(repo: SearchRepo): Promise<ShowcaseEntry | null> {
-  const res = await fetch(raw(repo.full_name, "winuirev.json"));
+  const res = await fetch(raw(repo.full_name, "kestrelui.json"));
   if (!res.ok) return null;
   const m: Manifest = await res.json();
   if (!m.kind) return null;

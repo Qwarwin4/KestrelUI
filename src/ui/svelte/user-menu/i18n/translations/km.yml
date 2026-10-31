@@ -16,6 +16,6 @@ profile:
   open_onedrive: បើកថត OneDrive
   open_user_folder: បើកបញ្ជីអ្នកប្រើប្រាស់
 seelen_options:
-  open_installation_folder: បើកថតការកំណត់ WinUIRev
-  open_log_folder: បើកថតឯកសារ WinUIRev
-  title: បញ្ជីឈ្មោះ WinUIRev
+  open_installation_folder: បើកថតការកំណត់ KestrelUI
+  open_log_folder: បើកថតឯកសារ KestrelUI
+  title: បញ្ជីឈ្មោះ KestrelUI

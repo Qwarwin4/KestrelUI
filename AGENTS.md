@@ -2,7 +2,7 @@
 
 Guidance for AI agents working in this repository.
 
-WinUIRev is a customizable Windows desktop environment built with:
+KestrelUI is a customizable Windows desktop environment built with:
 
 - Rust + Tauri (backend)
 - TypeScript + React/Preact (frontend)
@@ -395,7 +395,7 @@ directly — never wrap it in a `use:action` helper.
 
 ## Creating Svelte Widgets (High-Level)
 
-WinUIRev supports standalone Svelte widgets. Prefer following existing widget patterns; do not invent new build
+KestrelUI supports standalone Svelte widgets. Prefer following existing widget patterns; do not invent new build
 plumbing.
 
 Typical pieces:
@@ -458,7 +458,7 @@ pub enum Action {
 - Prefer quick feedback loops (`cargo check`, `npm run type-check`, `deno lint`).
 - Keep changes scoped; add tests when behavior changes.
 - Runtime logs can be read directly (no need to ask the user for them):
-  `%LOCALAPPDATA%\com.seelen.seelen-ui\logs\WinUIRev.log` (service: `SLU Service.log` in the same folder; previous
+  `%LOCALAPPDATA%\com.seelen.seelen-ui\logs\KestrelUI.log` (service: `SLU Service.log` in the same folder; previous
   session in `*.log.bak`).
 
 ## Documentation & Custom Resources
@@ -485,7 +485,7 @@ The three external resource types and their required files:
 
 All resource IDs follow `@username/resource-name`.
 
-Dev workflow with the `slu` CLI (WinUIRev must be running):
+Dev workflow with the `slu` CLI (KestrelUI must be running):
 
 ```bash
 slu resource load theme ./my-theme     # live-load without bundling

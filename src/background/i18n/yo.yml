@@ -2,7 +2,7 @@ cancel: Fagilee
 done: Ṣe
 elevated:
   description: |-
-    WinUIRev nṣiṣẹ pẹlu awọn anfani alakoso.
+    KestrelUI nṣiṣẹ pẹlu awọn anfani alakoso.
     Eyi ko ṣafikun tabi mu awọn ẹya eyikeyi dara, ati pe o le jẹ eewu aabo.
     Fun aabo to dara julọ, jọwọ tun bẹrẹ laisi awọn igbanilaaye alakoso.
   title: Nṣiṣẹ bi Alakoso
@@ -24,19 +24,19 @@ runtime:
   files_integrity: |-
     A ko le mọ daju otitọ ti awọn faili ohun elo naa.
     Eyi le ṣẹlẹ ti awọn faili ba yipada, bajẹ, tabi fifi sori ẹrọ ko pe.
-    Fun awọn idi aabo, WinUIRev ko le tẹsiwaju.
+    Fun awọn idi aabo, KestrelUI ko le tẹsiwaju.
     Jọwọ tun fi sii lati oju opo wẹẹbu osise.
   files_integrity_title: Itaniji Aabo - Ṣayẹwo Iduroṣinṣin Awọn faili kuna
   not_found: WebView2 asiko isise ko ri
-  not_found_description: WinUIRev nilo Webview2 Runtime. Jọwọ fi sii.
+  not_found_description: KestrelUI nilo Webview2 Runtime. Jọwọ fi sii.
   outdated: WebView2 Runtime ti igba atijọ
   outdated_description: >-
-    WinUIRev nilo Webview2 Runtime %{min_version} tabi ga julọ. Jọwọ ṣe
+    KestrelUI nilo Webview2 Runtime %{min_version} tabi ga julọ. Jọwọ ṣe
     imudojuiwọn rẹ.
 service:
-  not_running: WinUIRev Service ko nṣiṣẹ
+  not_running: KestrelUI Service ko nṣiṣẹ
   not_running_description: >-
-    Iṣẹ WinUIRev (iṣẹ slu-slu) jẹ igbẹkẹle/oluranlọwọ fun ohun elo lati ṣiṣẹ
+    Iṣẹ KestrelUI (iṣẹ slu-slu) jẹ igbẹkẹle/oluranlọwọ fun ohun elo lati ṣiṣẹ
     daradara.
   not_running_ok: Bẹrẹ iṣẹ
 shortcut:
@@ -57,7 +57,7 @@ widget_liveness:
 widget_permissions:
   perm_kill_processes: ipa pa awọn ohun elo
   perm_manage_app_windows: ṣakoso awọn window ti awọn ohun elo miiran (idojukọ, sunmọ, gbe, gbe)
-  perm_modify_configuration: yipada WinUIRev iṣeto ni
+  perm_modify_configuration: yipada KestrelUI iṣeto ni
   perm_open_file: ṣii awọn faili
   perm_run: ṣiṣe awọn eto
   request_description: |-

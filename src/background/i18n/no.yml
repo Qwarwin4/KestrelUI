@@ -2,7 +2,7 @@ cancel: Kansellere
 done: Ferdig
 elevated:
   description: >-
-    WinUIRev kjører med administratorrettigheter.
+    KestrelUI kjører med administratorrettigheter.
 
     Dette legger ikke til eller forbedrer noen funksjoner, og det kan utgjøre en
     sikkerhetsrisiko.
@@ -14,7 +14,7 @@ resource:
   added: En ny ressurs er lagt til
   download_failed_body: >-
     Noe gikk galt mens du lastet ned ressursen, vennligst rapporter den til
-    WinUIRev -utviklerteamet.
+    KestrelUI -utviklerteamet.
   download_failed_title: Ressursnedlasting mislyktes
   downloading: Last ned eiendeler ...
   downloading_body: Dette kan ta noen sekunder, ikke lukk vinduet.
@@ -30,20 +30,20 @@ runtime:
     Dette kan skje hvis filene ble endret, ødelagt eller installasjonen er
     ufullstendig.
 
-    Av sikkerhetsgrunner kan ikke WinUIRev fortsette.
+    Av sikkerhetsgrunner kan ikke KestrelUI fortsette.
 
     Installer den på nytt fra den offisielle nettsiden.
   files_integrity_title: Sikkerhetsvarsel - Kontroll av filers integritet mislyktes
   not_found: WebView2 Runtime ikke funnet
-  not_found_description: WinUIRev krever Webview2 Runtime. Vennligst installer den.
+  not_found_description: KestrelUI krever Webview2 Runtime. Vennligst installer den.
   outdated: WebView2 Runtime utdatert
   outdated_description: >-
-    WinUIRev krever Webview2 Runtime %{min_version} eller høyere. Vennligst
+    KestrelUI krever Webview2 Runtime %{min_version} eller høyere. Vennligst
     oppdater den.
 service:
-  not_running: WinUIRev Service kjører ikke
+  not_running: KestrelUI Service kjører ikke
   not_running_description: >-
-    WinUIRev Service (winuirev-service) er en avhengighet/hjelper for at appen skal
+    KestrelUI Service (kestrelui-service) er en avhengighet/hjelper for at appen skal
     fungere skikkelig.
   not_running_ok: Start tjenesten
 shortcut:
@@ -66,7 +66,7 @@ widget_liveness:
 widget_permissions:
   perm_kill_processes: tvinge lukkede søknader
   perm_manage_app_windows: kontroller vinduene til andre applikasjoner (fokus, lukk, minimer, flytt)
-  perm_modify_configuration: endre WinUIRev-konfigurasjonen
+  perm_modify_configuration: endre KestrelUI-konfigurasjonen
   perm_open_file: åpne filer
   perm_run: kjøre programmer
   request_description: |-

@@ -16,6 +16,6 @@ profile:
   open_onedrive: OneDrive qovluğunu açın
   open_user_folder: İstifadəçi kataloqunu açın
 seelen_options:
-  open_installation_folder: WinUIRev parametrləri qovluğunu açın
-  open_log_folder: WinUIRev log qovluğunu açın
+  open_installation_folder: KestrelUI parametrləri qovluğunu açın
+  open_log_folder: KestrelUI log qovluğunu açın
   title: Görünən kataloqlar

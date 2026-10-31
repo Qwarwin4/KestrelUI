@@ -16,6 +16,6 @@ profile:
   open_onedrive: ເປີດໄດເລກະທໍລີ OneDrive
   open_user_folder: ເປີດໄດເລກະທໍລີຜູ້ໃຊ້
 seelen_options:
-  open_installation_folder: ເປີດໂຟນເດີ WinUIRev settings
-  open_log_folder: ເປີດໂຟນເດີບັນທຶກ WinUIRev
-  title: WinUIRev directory
+  open_installation_folder: ເປີດໂຟນເດີ KestrelUI settings
+  open_log_folder: ເປີດໂຟນເດີບັນທຶກ KestrelUI
+  title: KestrelUI directory

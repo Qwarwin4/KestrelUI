@@ -2,7 +2,7 @@ cancel: Hætta við
 done: Gert
 elevated:
   description: >-
-    WinUIRev er í gangi með stjórnandaréttindi.
+    KestrelUI er í gangi með stjórnandaréttindi.
 
     Þetta bætir ekki við eða bætir neina eiginleika og það getur valdið
     öryggisáhættu.
@@ -14,7 +14,7 @@ resource:
   added: Nýjum auðlind hefur verið bætt við
   download_failed_body: >-
     Eitthvað fór úrskeiðis þegar hún halaði niður auðlindinni, vinsamlegast
-    tilkynntu það til WinUIRev Developer teymisins.
+    tilkynntu það til KestrelUI Developer teymisins.
   download_failed_title: Auðlind niðurhal mistókst
   downloading: Að hlaða niður eignum ...
   downloading_body: Þetta gæti tekið nokkrar sekúndur, vinsamlegast ekki loka glugganum.
@@ -30,19 +30,19 @@ runtime:
     Þetta getur gerst ef skrár voru breyttar, skemmdar eða uppsetningunni er
     ófullnægjandi.
 
-    Af öryggisástæðum getur WinUIRev ekki haldið áfram.
+    Af öryggisástæðum getur KestrelUI ekki haldið áfram.
 
     Vinsamlegast settu það upp aftur frá opinberu vefsíðunni.
   files_integrity_title: Öryggisviðvörun - Athugun á heiðarleika skráa mistókst
   not_found: WebView2 Runtime fannst ekki
-  not_found_description: WinUIRev krefst Webview2 Runtime. Vinsamlegast settu það upp.
+  not_found_description: KestrelUI krefst Webview2 Runtime. Vinsamlegast settu það upp.
   outdated: WebView2 Runtime úreltur
   outdated_description: >-
-    WinUIRev notendaviðmót krefst Webview2 Runtime %{min_version} eða hærri.
+    KestrelUI notendaviðmót krefst Webview2 Runtime %{min_version} eða hærri.
     Vinsamlegast uppfærðu það.
 service:
-  not_running: WinUIRev þjónusta er ekki í gangi
-  not_running_description: WinUIRev Service (slu-þjónusta) er háð/hjálp til að appið virki rétt.
+  not_running: KestrelUI þjónusta er ekki í gangi
+  not_running_description: KestrelUI Service (slu-þjónusta) er háð/hjálp til að appið virki rétt.
   not_running_ok: Byrjaðu þjónustu
 shortcut:
   conflicts:
@@ -64,7 +64,7 @@ widget_liveness:
 widget_permissions:
   perm_kill_processes: þvinga loka umsóknir
   perm_manage_app_windows: stjórna gluggum annarra forrita (fókus, loka, lágmarka, færa)
-  perm_modify_configuration: breyta WinUIRev stillingu
+  perm_modify_configuration: breyta KestrelUI stillingu
   perm_open_file: opna skrár
   perm_run: keyra forrit
   request_description: |-

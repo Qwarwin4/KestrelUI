@@ -2,7 +2,7 @@ cancel: გაუქმება
 done: გაკეთებული
 elevated:
   description: >-
-    WinUIRev მუშაობს ადმინისტრატორის პრივილეგიებით.
+    KestrelUI მუშაობს ადმინისტრატორის პრივილეგიებით.
 
     ეს არ ამატებს ან არ აუმჯობესებს რაიმე ფუნქციას და შეიძლება საფრთხე შეუქმნას
     უსაფრთხოებას.
@@ -15,7 +15,7 @@ resource:
   added: დაემატა ახალი რესურსი
   download_failed_body: >-
     რესურსის ჩამოტვირთვისას რამე არასწორედ დასრულდა, გთხოვთ, შეატყობინოთ მას
-    WinUIRev Developer- ის გუნდს.
+    KestrelUI Developer- ის გუნდს.
   download_failed_title: რესურსის ჩამოტვირთვა ვერ მოხერხდა
   downloading: აქტივების ჩამოტვირთვა ...
   downloading_body: ამას შეიძლება რამდენიმე წამი დასჭირდეს, გთხოვთ, არ დახუროთ ფანჯარა.
@@ -33,20 +33,20 @@ runtime:
     ეს შეიძლება მოხდეს, თუ ფაილები შეცვლილია, დაზიანებულია ან ინსტალაცია
     არასრულია.
 
-    უსაფრთხოების მიზეზების გამო, WinUIRev ვერ გააგრძელებს.
+    უსაფრთხოების მიზეზების გამო, KestrelUI ვერ გააგრძელებს.
 
     გთხოვთ ხელახლა დააინსტალიროთ ოფიციალური საიტიდან.
   files_integrity_title: უსაფრთხოების გაფრთხილება - ფაილების მთლიანობის შემოწმება ვერ მოხერხდა
   not_found: WebView2 Runtime ვერ მოიძებნა
-  not_found_description: WinUIRev მოითხოვს Webview2 Runtime-ს. გთხოვთ დააინსტალიროთ.
+  not_found_description: KestrelUI მოითხოვს Webview2 Runtime-ს. გთხოვთ დააინსტალიროთ.
   outdated: WebView2 Runtime მოძველებულია
   outdated_description: >-
-    WinUIRev მოითხოვს Webview2 Runtime %{min_version} ან უფრო მაღალს. გთხოვთ
+    KestrelUI მოითხოვს Webview2 Runtime %{min_version} ან უფრო მაღალს. გთხოვთ
     განაახლოთ იგი.
 service:
-  not_running: WinUIRev სერვისი არ მუშაობს
+  not_running: KestrelUI სერვისი არ მუშაობს
   not_running_description: >-
-    WinUIRev Service (winuirev-service) არის დამოკიდებულება/დამხმარე აპის გამართულად
+    KestrelUI Service (kestrelui-service) არის დამოკიდებულება/დამხმარე აპის გამართულად
     მუშაობისთვის.
   not_running_ok: სერვისის დაწყება
 shortcut:
@@ -71,7 +71,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     სხვა აპლიკაციების ფანჯრების კონტროლი (ფოკუსირება, დახურვა, მინიმიზაცია,
     გადაადგილება)
-  perm_modify_configuration: შეცვალეთ WinUIRev-ის კონფიგურაცია
+  perm_modify_configuration: შეცვალეთ KestrelUI-ის კონფიგურაცია
   perm_open_file: ფაილების გახსნა
   perm_run: პროგრამების გაშვება
   request_description: |-

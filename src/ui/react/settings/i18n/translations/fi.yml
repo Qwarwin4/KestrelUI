@@ -37,7 +37,7 @@ apps_configurations:
   export: Viedä
   export_full: Vie asetukset sovelluksittain
   extra_info: >-
-    WinUIRev -käyttöliittymä käyttää vain yhtä tunnistetta sovellusta kohden
+    KestrelUI -käyttöliittymä käyttää vain yhtä tunnistetta sovellusta kohden
     (ensimmäinen ottelu löydetty), joten tilaus kuinka spesifikaatio on tärkeä,
     viimeisin lisätty lisätään etusijalle, kuten huomaa, että taulukko
     lajitellaan oletuksena viimeisimmästä vanhaan.
@@ -80,7 +80,7 @@ devtools:
   data_folder: Tietokansio
   enable: Ota kehittäjätyökalut käyttöön
   enable_description: >-
-    Avaa edistyneet työkalut WinUIRev-käyttöliittymän sisäosien tarkastamiseen ja
+    Avaa edistyneet työkalut KestrelUI-käyttöliittymän sisäosien tarkastamiseen ja
     virheenkorjaukseen. Ei tarkoitettu säännölliseen käyttöön.
   icons: Välimuistissa olevat kuvakkeet
   install_folder: Asennuskansio
@@ -120,7 +120,7 @@ devtools:
     widget_id: Widgetin tunnus
 discord_banner:
   message: >-
-    Ota yhteyttä muihin WinUIRev-käyttöliittymän käyttäjiin, hanki apua, jaa
+    Ota yhteyttä muihin KestrelUI-käyttöliittymän käyttäjiin, hanki apua, jaa
     teemoja ja pysy ajan tasalla viimeisimmistä uutisista.
   title: Liity yhteisöömme
 extras:
@@ -167,7 +167,7 @@ general:
     plugged: Kytketty tai lataus
   polling_interval: Järjestelmän äänestysväli
   polling_interval_description: >-
-    Kuinka usein (sekunneissa) WinUIRev tarkistaa järjestelmäresurssit, kuten
+    Kuinka usein (sekunneissa) KestrelUI tarkistaa järjestelmäresurssit, kuten
     suorittimen, RAM-muistin, verkon ja levytoiminnan. Pienempi luku tarkoittaa
     useammin päivityksiä, mutta hieman suurempaa resurssien käyttöä.
   saturday: lauantai
@@ -220,7 +220,7 @@ reset_configurations: Palauta asetukset
 reset_to_default: Nollaa oletusarvoon
 resources:
   affected_widgets: Asianomaiset widgetit
-  app_outdated: Tämä resurssi vaatii uudemman version WinUIRev:sta toimiakseen oikein.
+  app_outdated: Tämä resurssi vaatii uudemman version KestrelUI:sta toimiakseen oikein.
   coming_soon: Tulossa pian
   corrupted_wallpaper: >-
     Pikkukuvan purkaminen epäonnistui – videomuoto on vioittunut tai sitä ei
@@ -234,7 +234,7 @@ resources:
   modified: Muokattu
   open_folder: Avaa resurssikansio
   outdated: >-
-    Tämä resurssi on suunniteltu WinUIRev:n vanhemmalle versiolle, eikä se
+    Tämä resurssi on suunniteltu KestrelUI:n vanhemmalle versiolle, eikä se
     välttämättä toimi oikein.
   see_on_website: Katso nettisivuilta
   update_now: Päivittää
@@ -243,7 +243,7 @@ resources:
 review_request:
   not_now: Ei nyt
   sure: Varma!
-  title: Pidätkö WinUIRev-käyttöliittymästä?
+  title: Pidätkö KestrelUI-käyttöliittymästä?
 save: Tallentaa
 save_and_restart: Tallenna ja käynnistä uudelleen
 search: Haku
@@ -252,7 +252,7 @@ security:
   perms:
     kill_processes: Pakota sovellukset sulkemaan
     manage_app_windows: Hallitse muiden sovellusten ikkunoita
-    modify_configuration: Muokkaa WinUIRev -kokoonpanoa
+    modify_configuration: Muokkaa KestrelUI -kokoonpanoa
     open_file: Avaa tiedostot
     run: Suorita ohjelmia
 see_more: Katso lisää
@@ -271,7 +271,7 @@ shortcuts:
     uudelleen ratkaistaksesi.
   enable: Ota sisäänrakennettu pikakuvausjärjestelmä
   enable_tooltip: >-
-    Poista käytöstä, jos otat käyttöön omat pikakuvausjärjestelmäsi WinUIRev
+    Poista käytöstä, jos otat käyttöön omat pikakuvausjärjestelmäsi KestrelUI
     -asiakkaan avulla
   labels:
     create_new_workspace: Luo uusi työtila
@@ -429,15 +429,15 @@ weg:
 welcome:
   give_a_review: Anna arvostelu
   message: >-
-    WinUIRev on ilmainen ja avoimen lähdekoodin työpöytäympäristö Windowsille.
+    KestrelUI on ilmainen ja avoimen lähdekoodin työpöytäympäristö Windowsille.
     Täällä voit hallita täysin sitä, miten työpöytäsi näyttää ja käyttäytyy,
     joten voit mukauttaa jokaisen yksityiskohdan työnkulkusi ja tyylisi
     mukaiseksi.
   ok: Aloitetaan!
   review: >-
-    Jos pidät WinUIRev-käyttöliittymän käytöstä, harkitse arvostelun jättämistä
+    Jos pidät KestrelUI-käyttöliittymän käytöstä, harkitse arvostelun jättämistä
     kauppaan – palautteesi auttaa projektia kasvamaan ja kehittymään.
-  title: Tervetuloa WinUIRev-käyttöliittymään!
+  title: Tervetuloa KestrelUI-käyttöliittymään!
 widget:
   add_workspace_override: Ohita työtilassa
   default_instance: Oletusinstanssi

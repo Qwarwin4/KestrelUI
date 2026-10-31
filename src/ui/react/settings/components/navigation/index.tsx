@@ -56,8 +56,10 @@ export const Navigation = memo(() => {
       })}
     >
       <div className={cs.header} onClick={() => setCollapsed(!collapsed)}>
-        <img src="./logo.svg" />
-        <h1>WinUIRev</h1>
+        <span className={cs.logo} aria-hidden="true">
+          <span style={{ maskImage: "url(./logo-mark.svg)" }} />
+        </span>
+        <h1>KestrelUI</h1>
         <Icon className={cs.chevron} iconName="FaChevronLeft" />
       </div>
 
@@ -177,7 +179,7 @@ const SessionAvatar = ({ collapsed, isActive }: SessionAvatarProps) => {
           <Icon iconName="LuSparkles" />
         </div>
         <div className={cs.sessionInfo}>
-          <span className={cs.label}>WinUIRev</span>
+          <span className={cs.label}>KestrelUI</span>
           <span className={cs.email}>{t("header.labels.extras")}</span>
         </div>
       </NavLink>

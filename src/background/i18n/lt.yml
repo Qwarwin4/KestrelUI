@@ -2,7 +2,7 @@ cancel: Atšaukti
 done: Padaryta
 elevated:
   description: >-
-    WinUIRev vartotojo sąsaja veikia su administratoriaus teisėmis.
+    KestrelUI vartotojo sąsaja veikia su administratoriaus teisėmis.
 
     Tai neprideda ir nepatobulina jokių funkcijų ir gali kelti pavojų saugumui.
 
@@ -13,7 +13,7 @@ file_explorer: Failų naršyklė
 resource:
   added: Pridėtas naujas išteklius
   download_failed_body: >-
-    Atsisiunčiant išteklių kažkas nepavyko, praneškite apie tai "WinUIRev" kūrėjų
+    Atsisiunčiant išteklių kažkas nepavyko, praneškite apie tai "KestrelUI" kūrėjų
     komandai.
   download_failed_title: Išteklių atsisiuntimas nepavyko
   downloading: Turto atsisiuntimas...
@@ -32,20 +32,20 @@ runtime:
     Taip gali nutikti, jei failai buvo modifikuoti, sugadinti arba diegimas
     nebaigtas.
 
-    Saugumo sumetimais WinUIRev vartotojo sąsaja negali tęstis.
+    Saugumo sumetimais KestrelUI vartotojo sąsaja negali tęstis.
 
     Įdiekite jį iš naujo iš oficialios svetainės.
   files_integrity_title: Saugos įspėjimas – nepavyko patikrinti failų vientisumo
   not_found: WebView2 vykdymo laikas nerastas
-  not_found_description: „WinUIRev“ vartotojo sąsajai reikalinga „Webview2 Runtime“. Įdiekite jį.
+  not_found_description: „KestrelUI“ vartotojo sąsajai reikalinga „Webview2 Runtime“. Įdiekite jį.
   outdated: „WebView2“ vykdymo laikas pasenęs
   outdated_description: >-
-    „WinUIRev“ vartotojo sąsajai reikalinga „Webview2 Runtime“ %{min_version} arba
+    „KestrelUI“ vartotojo sąsajai reikalinga „Webview2 Runtime“ %{min_version} arba
     naujesnė versija. Prašome atnaujinti.
 service:
-  not_running: WinUIRev paslauga neveikia
+  not_running: KestrelUI paslauga neveikia
   not_running_description: >-
-    WinUIRev paslauga (winuirev-service) yra priklausomybė / pagalbininkas, kad
+    KestrelUI paslauga (kestrelui-service) yra priklausomybė / pagalbininkas, kad
     programa tinkamai veiktų.
   not_running_ok: Pradėti paslaugą
 shortcut:
@@ -68,7 +68,7 @@ widget_liveness:
 widget_permissions:
   perm_kill_processes: priverstinai uždaryti programas
   perm_manage_app_windows: valdyti kitų programų langus (fokusuoti, uždaryti, sumažinti, perkelti)
-  perm_modify_configuration: pakeisti WinUIRev vartotojo sąsajos konfigūraciją
+  perm_modify_configuration: pakeisti KestrelUI vartotojo sąsajos konfigūraciją
   perm_open_file: atidaryti failus
   perm_run: paleisti programas
   request_description: |-

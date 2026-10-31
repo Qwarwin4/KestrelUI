@@ -2,7 +2,7 @@ cancel: Cancelar
 done: Feita
 elevated:
   description: >-
-    WinUIRev está sendo executado com privilégios de administrador.
+    KestrelUI está sendo executado com privilégios de administrador.
 
     Isso não adiciona nem melhora nenhum recurso e pode representar um risco à
     segurança.
@@ -14,7 +14,7 @@ resource:
   added: Um novo recurso foi adicionado
   download_failed_body: >-
     Algo deu errado durante o download do recurso. Informe à equipe de
-    desenvolvedores da WinUIRev.
+    desenvolvedores da KestrelUI.
   download_failed_title: Falha no download do recurso
   downloading: Download de ativos...
   downloading_body: Isso pode levar alguns segundos, mas não feche a janela.
@@ -32,20 +32,20 @@ runtime:
     Isso pode acontecer se os arquivos forem modificados, corrompidos ou se a
     instalação estiver incompleta.
 
-    Por motivos de segurança, o WinUIRev não pode continuar.
+    Por motivos de segurança, o KestrelUI não pode continuar.
 
     Por favor, reinstale-o no site oficial.
   files_integrity_title: Alerta de segurança - Falha na verificação de integridade dos arquivos
   not_found: WebView2 Runtime não encontrado
-  not_found_description: A WinUIRev requer o WebView2 Runtime. Por favor, instale-o.
+  not_found_description: A KestrelUI requer o WebView2 Runtime. Por favor, instale-o.
   outdated: WebView2 Runtime desatualizado
   outdated_description: >-
-    A WinUIRev requer Webview2 Runtime %{min_version} ou superior. Por favor
+    A KestrelUI requer Webview2 Runtime %{min_version} ou superior. Por favor
     atualize-o.
 service:
-  not_running: WinUIRev Service não está em execução
+  not_running: KestrelUI Service não está em execução
   not_running_description: >-
-    WinUIRev Service (winuirev-service) é uma dependência/ajudante para o aplicativo
+    KestrelUI Service (kestrelui-service) é uma dependência/ajudante para o aplicativo
     funcionar corretamente.
   not_running_ok: Iniciar serviço
 shortcut:
@@ -66,7 +66,7 @@ widget_liveness:
 widget_permissions:
   perm_kill_processes: forçar o fechamento de aplicativos
   perm_manage_app_windows: controlar as janelas de outros aplicativos (focar, fechar, minimizar, mover)
-  perm_modify_configuration: modificar a configuração da IU do WinUIRev
+  perm_modify_configuration: modificar a configuração da IU do KestrelUI
   perm_open_file: abrir arquivos
   perm_run: executar programas
   request_description: |-

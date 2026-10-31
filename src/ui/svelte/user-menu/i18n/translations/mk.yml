@@ -16,6 +16,6 @@ profile:
   open_onedrive: Отворете го директориумот OneDrive
   open_user_folder: Отворете го корисничкиот директориум
 seelen_options:
-  open_installation_folder: Отворете ја папката за поставки WinUIRev
-  open_log_folder: Отворете ја папката за дневник WinUIRev
+  open_installation_folder: Отворете ја папката за поставки KestrelUI
+  open_log_folder: Отворете ја папката за дневник KestrelUI
   title: Селенски директориуми

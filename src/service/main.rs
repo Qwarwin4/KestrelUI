@@ -34,9 +34,9 @@ use windows_api::WindowsApi;
 use crate::{app_management::launch_seelen_ui, hotkeys::stop_app_shortcuts};
 
 pub static SERVICE_NAME: LazyLock<WindowsString> =
-    LazyLock::new(|| WindowsString::from_str("winuirev-service"));
+    LazyLock::new(|| WindowsString::from_str("kestrelui-service"));
 pub static SERVICE_DISPLAY_NAME: LazyLock<WindowsString> =
-    LazyLock::new(|| WindowsString::from_str("WinUIRev Service"));
+    LazyLock::new(|| WindowsString::from_str("KestrelUI Service"));
 
 static ASYNC_RUNTIME_HANDLE: OnceLock<tokio::runtime::Handle> = OnceLock::new();
 
@@ -97,7 +97,7 @@ pub fn setup() -> Result<()> {
 fn is_svc_already_running() -> bool {
     unsafe {
         let session_id = WindowsApi::current_session_id();
-        let mutex_name = format!("Local\\WinUIRev-Service-Instance-{}", session_id);
+        let mutex_name = format!("Local\\KestrelUI-Service-Instance-{}", session_id);
         let mutex_name_wide = WindowsString::from_str(&mutex_name);
 
         // Try to create a named mutex specific to the current session
@@ -128,7 +128,7 @@ async fn main() {
     }
 
     if let Err(err) = SluServiceLogger::init() {
-        let fallback = std::env::temp_dir().join("winuirev-service-logger-error.log");
+        let fallback = std::env::temp_dir().join("kestrelui-service-logger-error.log");
         let _ = std::fs::write(&fallback, format!("Failed to initialize logger: {err:?}"));
         std::process::exit(1);
     }
@@ -139,7 +139,7 @@ async fn main() {
     }
 
     if is_svc_already_running() {
-        println!("WinUIRev Service is already running");
+        println!("KestrelUI Service is already running");
         return;
     }
 
@@ -159,7 +159,7 @@ async fn main() {
     let debug = if is_development() { " (debug)" } else { "" };
     let local = if is_local_dev() { " (local)" } else { "" };
     log::info!("──────────────────────────────────────────────────-");
-    log::info!("Starting WinUIRev Service v{version}{local}{debug}");
+    log::info!("Starting KestrelUI Service v{version}{local}{debug}");
     log::info!("Arguments: {:?}", std::env::args().collect_vec());
 
     if let Err(err) = setup() {
@@ -176,6 +176,6 @@ async fn main() {
     // shutdown tasks:
     log_error!(restore_native_taskbar());
     stop_app_shortcuts();
-    log::info!("WinUIRev Service exited with code {exit_code}");
+    log::info!("KestrelUI Service exited with code {exit_code}");
     std::process::exit(exit_code as i32);
 }

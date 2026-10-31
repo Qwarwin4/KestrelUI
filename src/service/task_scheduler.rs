@@ -16,9 +16,9 @@ use crate::{
 
 pub struct TaskSchedulerHelper {}
 
-static GROUP_FOLDER: &str = "\\WinUIRev";
-static OLD_APP_TASK_NAME: &str = "WinUIRev-legacy";
-static SERVICE_TASK_NAME: &str = "WinUIRev Service";
+static GROUP_FOLDER: &str = "\\KestrelUI";
+static OLD_APP_TASK_NAME: &str = "KestrelUI-legacy";
+static SERVICE_TASK_NAME: &str = "KestrelUI Service";
 
 impl TaskSchedulerHelper {
     unsafe fn get_task_service() -> Result<ITaskService> {
@@ -55,7 +55,7 @@ impl TaskSchedulerHelper {
         log::debug!("Creating service task...");
         let service_path = if was_installed_using_msix() {
             WindowsApi::known_folder(FOLDERID_LocalAppData)?
-                .join("Microsoft\\WindowsApps\\winuirev-service.exe")
+                .join("Microsoft\\WindowsApps\\kestrelui-service.exe")
         } else {
             std::env::current_exe()?
         };

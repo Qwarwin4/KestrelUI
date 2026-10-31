@@ -22,9 +22,9 @@ use crate::{
     utils::{http, lock_free::TracedMutex},
 };
 
-const CLIENT_ID: Option<&str> = option_env!("WINUIREV_GITHUB_CLIENT_ID");
+const CLIENT_ID: Option<&str> = option_env!("KESTREL_GITHUB_CLIENT_ID");
 const API: &str = "https://api.github.com";
-const VAULT: &str = "WinUIRev GitHub";
+const VAULT: &str = "KestrelUI GitHub";
 const SHAREABLE: &[&str] = &[
     "byWidget",
     "byTheme",
@@ -183,7 +183,7 @@ pub fn capture_preview() -> Result<String> {
     Ok(url)
 }
 
-/// Puts the current setup into the user's own `winuirev-<name>` repository and tags it
+/// Puts the current setup into the user's own `kestrelui-<name>` repository and tags it
 /// so the showcase search finds it. Publishing the same name again updates that repo.
 /// Returns the repository url.
 pub async fn publish(sub: ShowcaseSubmission) -> Result<String> {
@@ -210,7 +210,7 @@ pub async fn publish(sub: ShowcaseSubmission) -> Result<String> {
     if base.is_empty() {
         base = "setup".to_owned();
     }
-    let repo = format!("{}/winuirev-{base}", me.login);
+    let repo = format!("{}/kestrelui-{base}", me.login);
 
     let res = api(&token, reqwest::Method::POST, "/user/repos")
         .json(&json!({
@@ -243,7 +243,7 @@ pub async fn publish(sub: ShowcaseSubmission) -> Result<String> {
         put_file(&token, &repo, file, &bytes).await?;
     }
 
-    let mut topics = vec![super::TOPIC.to_owned(), "winuirev-preset".to_owned()];
+    let mut topics = vec![super::TOPIC.to_owned(), "kestrelui-preset".to_owned()];
     topics.extend(tags);
     topics.dedup();
     api(

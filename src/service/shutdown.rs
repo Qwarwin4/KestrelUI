@@ -96,8 +96,8 @@ unsafe extern "system" fn shutdown_window_proc(
 /// will lock until the window is closed
 unsafe fn create_shutdown_window(done: &crossbeam_channel::Sender<()>) -> Result<()> {
     unsafe {
-        let title = WindowsString::from_str("WinUIRev Service Shutdown Window");
-        let class = WindowsString::from_str("WinUIRevServiceShutdownWindow");
+        let title = WindowsString::from_str("KestrelUI Service Shutdown Window");
+        let class = WindowsString::from_str("KestrelUIServiceShutdownWindow");
 
         let h_module = GetModuleHandleW(None)?;
 

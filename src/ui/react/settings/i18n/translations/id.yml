@@ -30,14 +30,14 @@ apps_configurations:
     Konfigurasi yang dibundel ini tidak dapat diedit dan dirancang untuk memberi
     Anda pengalaman terbaik tanpa kustomisasi. Mereka secara otomatis
     mengonfigurasi aplikasi yang paling umum untuk Anda.
-  bundled_title: Aplikasi Config dibundel dengan WinUIRev
+  bundled_title: Aplikasi Config dibundel dengan KestrelUI
   confirm_delete: Anda yakin ingin menghapus konfigurasi ini?
   confirm_delete_title: Konfirmasi hapus
   delete: Menghapus
   export: Ekspor
   export_full: Pengaturan ekspor menurut aplikasi
   extra_info: >-
-    WinUIRev Gunakan hanya satu pengidentifikasi per aplikasi (Pertandingan
+    KestrelUI Gunakan hanya satu pengidentifikasi per aplikasi (Pertandingan
     Pertama Ditemukan) sehingga pesanan dalam bagaimana spesifisasi itu penting,
     yang ditambahkan terbaru akan diprioritaskan, seperti yang dicatat tabel
     diurutkan secara default dari yang terbaru ke yang lama.
@@ -81,7 +81,7 @@ devtools:
   data_folder: Folder Data
   enable: Aktifkan alat pengembang
   enable_description: >-
-    Membuka alat canggih untuk memeriksa dan men-debug internal WinUIRev. Tidak
+    Membuka alat canggih untuk memeriksa dan men-debug internal KestrelUI. Tidak
     dimaksudkan untuk penggunaan biasa.
   icons: Ikon yang di-cache
   install_folder: Folder Instalasi
@@ -120,7 +120,7 @@ devtools:
     widget_id: ID Widget
 discord_banner:
   message: >-
-    Terhubung dengan pengguna WinUIRev lainnya, dapatkan bantuan, berbagi tema,
+    Terhubung dengan pengguna KestrelUI lainnya, dapatkan bantuan, berbagi tema,
     dan ikuti terus berita terkini.
   title: Bergabunglah dengan Komunitas kami
 extras:
@@ -167,7 +167,7 @@ general:
     plugged: Terhubung atau pengisian daya
   polling_interval: Interval pemungutan suara sistem
   polling_interval_description: >-
-    Seberapa sering (dalam hitungan detik) WinUIRev memeriksa sumber daya
+    Seberapa sering (dalam hitungan detik) KestrelUI memeriksa sumber daya
     sistem seperti CPU, RAM, jaringan, dan aktivitas disk. Angka yang lebih
     kecil berarti pembaruan yang lebih sering, namun penggunaan sumber daya
     sedikit lebih tinggi.
@@ -222,7 +222,7 @@ reset_to_default: Atur ulang ke nilai default
 resources:
   affected_widgets: Widget yang Terkena Dampak
   app_outdated: >-
-    Sumber daya ini membutuhkan versi terbaru dari WinUIRev agar dapat
+    Sumber daya ini membutuhkan versi terbaru dari KestrelUI agar dapat
     berfungsi dengan baik.
   coming_soon: Segera hadir
   corrupted_wallpaper: Gagal mengekstrak thumbnail - format video rusak atau tidak didukung
@@ -235,7 +235,7 @@ resources:
   modified: Dimodifikasi
   open_folder: Buka folder sumber daya
   outdated: >-
-    Sumber daya ini dirancang untuk versi lama WinUIRev dan mungkin tidak
+    Sumber daya ini dirancang untuk versi lama KestrelUI dan mungkin tidak
     berfungsi dengan baik.
   see_on_website: Lihat di situs web
   update_now: Memperbarui
@@ -244,7 +244,7 @@ resources:
 review_request:
   not_now: Tidak sekarang
   sure: Tentu!
-  title: Menikmati WinUIRev?
+  title: Menikmati KestrelUI?
 save: Menyimpan
 save_and_restart: Simpan & restart
 search: Mencari
@@ -253,7 +253,7 @@ security:
   perms:
     kill_processes: Tutup paksa aplikasi
     manage_app_windows: Kontrol jendela aplikasi lain
-    modify_configuration: Ubah konfigurasi WinUIRev
+    modify_configuration: Ubah konfigurasi KestrelUI
     open_file: Buka file
     run: Jalankan program
 see_more: Lihat Lebih Lanjut
@@ -273,7 +273,7 @@ shortcuts:
   enable: Aktifkan sistem pintasan bawaan
   enable_tooltip: >-
     Nonaktifkan jika Anda akan mengimplementasikan sistem pintasan Anda sendiri
-    menggunakan klien WinUIRev
+    menggunakan klien KestrelUI
   labels:
     create_new_workspace: Buat ruang kerja baru
     create_new_workspace_row: Buat Baris Ruang Kerja Baru
@@ -432,15 +432,15 @@ weg:
 welcome:
   give_a_review: Berikan Ulasan
   message: >-
-    WinUIRev adalah lingkungan desktop sumber terbuka dan gratis untuk Windows.
+    KestrelUI adalah lingkungan desktop sumber terbuka dan gratis untuk Windows.
     Di sini Anda memiliki kendali penuh atas tampilan dan perilaku desktop Anda,
     memungkinkan Anda menyesuaikan setiap detail agar sesuai dengan alur kerja
     dan gaya Anda.
   ok: Mari kita mulai!
   review: >-
-    Jika Anda senang menggunakan WinUIRev, pertimbangkan untuk meninggalkan
+    Jika Anda senang menggunakan KestrelUI, pertimbangkan untuk meninggalkan
     ulasan di toko — masukan Anda membantu proyek tumbuh dan meningkat.
-  title: Selamat datang di WinUIRev!
+  title: Selamat datang di KestrelUI!
 widget:
   add_workspace_override: Ganti di ruang kerja
   default_instance: Mesin Virtual Bawaan

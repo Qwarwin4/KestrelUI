@@ -2,7 +2,7 @@ cancel: Скасувати
 done: Виконаний
 elevated:
   description: |-
-    WinUIRev працює з правами адміністратора.
+    KestrelUI працює з правами адміністратора.
     Це не додає та не покращує жодних функцій і може становити загрозу безпеці.
     Для кращої безпеки перезапустіть його без прав адміністратора.
   title: Запуск від імені адміністратора
@@ -11,7 +11,7 @@ resource:
   added: Додано новий ресурс
   download_failed_body: >-
     Під час завантаження ресурсу сталася помилка, будь ласка, повідомте про неї
-    команді розробників WinUIRev.
+    команді розробників KestrelUI.
   download_failed_title: Не вдалося завантажити ресурс
   downloading: Завантаження активів...
   downloading_body: Це може зайняти кілька секунд, будь ласка, не закривайте вікно.
@@ -29,22 +29,22 @@ runtime:
     Це може статися, якщо файли були змінені, пошкоджені або інсталяція не
     завершена.
 
-    З міркувань безпеки WinUIRev не може продовжувати роботу.
+    З міркувань безпеки KestrelUI не може продовжувати роботу.
 
     Перевстановіть його з офіційного сайту.
   files_integrity_title: Сповіщення системи безпеки – не вдалося перевірити цілісність файлів
   not_found: WebView2 Runtime не знайдено
   not_found_description: >-
-    Інтерфейс користувача WinUIRev потребує Webview2 Runtime. Будь ласка,
+    Інтерфейс користувача KestrelUI потребує Webview2 Runtime. Будь ласка,
     встановіть його.
   outdated: WebView2 Runtime застаріла
   outdated_description: >-
-    Інтерфейс користувача WinUIRev вимагає Webview2 Runtime %{min_version} або
+    Інтерфейс користувача KestrelUI вимагає Webview2 Runtime %{min_version} або
     новішої версії. Будь ласка, оновіть його.
 service:
-  not_running: Служба інтерфейсу користувача WinUIRev не працює
+  not_running: Служба інтерфейсу користувача KestrelUI не працює
   not_running_description: >-
-    WinUIRev Service (winuirev-service) — це залежність/помічник для належної роботи
+    KestrelUI Service (kestrelui-service) — це залежність/помічник для належної роботи
     програми.
   not_running_ok: Запустити службу
 shortcut:
@@ -65,7 +65,7 @@ widget_liveness:
 widget_permissions:
   perm_kill_processes: примусове закриття програм
   perm_manage_app_windows: керувати вікнами інших програм (фокусувати, закривати, згортати, переміщати)
-  perm_modify_configuration: змінити конфігурацію інтерфейсу користувача WinUIRev
+  perm_modify_configuration: змінити конфігурацію інтерфейсу користувача KestrelUI
   perm_open_file: відкритих файлів
   perm_run: запускати програми
   request_description: |-

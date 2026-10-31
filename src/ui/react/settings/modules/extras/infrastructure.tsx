@@ -46,7 +46,7 @@ export function Information() {
   return (
     <div className={cs.info}>
       <SettingsGroup>
-        <SettingsSubGroup label="WinUIRev">
+        <SettingsSubGroup label="KestrelUI">
           <SettingsOption
             label={t("extras.version")}
             description={isFixed ? t("extras.version_fixed") : false}
@@ -78,7 +78,7 @@ export function Information() {
             description={t("extras.license_notice")}
             action={
               <Flex gap={4}>
-                <Button type="link" href="https://github.com/Qwarwin4/WinUIRev" target="_blank">
+                <Button type="link" href="https://github.com/Qwarwin4/KestrelUI" target="_blank">
                   {t("extras.source_code")}
                 </Button>
                 <Button type="link" href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">

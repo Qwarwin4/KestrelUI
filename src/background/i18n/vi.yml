@@ -2,7 +2,7 @@ cancel: Hủy
 done: Hoàn tất
 elevated:
   description: >-
-    WinUIRev hiện đang chạy dưới quyền Quản trị viên (Administrator).
+    KestrelUI hiện đang chạy dưới quyền Quản trị viên (Administrator).
 
     Điều này không giúp tăng thêm tính năng nào mà có thể tiềm ẩn rủi ro bảo
     mật.
@@ -15,7 +15,7 @@ resource:
   added: Đã thêm một tài nguyên mới
   download_failed_body: >-
     Đã xảy ra lỗi trong quá trình tải tài nguyên, vui lòng báo lại cho đội ngũ
-    phát triển WinUIRev.
+    phát triển KestrelUI.
   download_failed_title: Tải tài nguyên thất bại
   downloading: Đang tải gói dữ liệu...
   downloading_body: Quá trình này có thể mất vài giây, vui lòng không đóng cửa sổ.
@@ -31,22 +31,22 @@ runtime:
     Điều này có thể xảy ra khi tệp bị chỉnh sửa, hư hỏng hoặc quá trình cài đặt
     bị gián đoạn.
 
-    Vì lý do an toàn, WinUIRev không thể tiếp tục hoạt động.
+    Vì lý do an toàn, KestrelUI không thể tiếp tục hoạt động.
 
     Vui lòng cài đặt lại ứng dụng từ trang chủ chính thức.
   files_integrity_title: Cảnh báo bảo mật - Kiểm tra toàn vẹn tệp thất bại
   not_found: Không tìm thấy WebView2 Runtime
   not_found_description: >-
-    WinUIRev yêu cầu Microsoft WebView2 Runtime để hoạt động. Vui lòng cài đặt
+    KestrelUI yêu cầu Microsoft WebView2 Runtime để hoạt động. Vui lòng cài đặt
     bổ sung.
   outdated: WebView2 Runtime đã lỗi thời
   outdated_description: >-
-    WinUIRev yêu cầu WebView2 Runtime phiên bản %{min_version} trở lên. Vui
+    KestrelUI yêu cầu WebView2 Runtime phiên bản %{min_version} trở lên. Vui
     lòng cập nhật phiên bản mới hơn.
 service:
-  not_running: Dịch vụ WinUIRev Service chưa chạy
+  not_running: Dịch vụ KestrelUI Service chưa chạy
   not_running_description: >-
-    Dịch vụ nền WinUIRev (winuirev-service) là thành phần phụ trợ bắt buộc để ứng
+    Dịch vụ nền KestrelUI (kestrelui-service) là thành phần phụ trợ bắt buộc để ứng
     dụng hoạt động ổn định và an toàn.
   not_running_ok: Khởi động dịch vụ
 shortcut:
@@ -69,7 +69,7 @@ widget_liveness:
 widget_permissions:
   perm_kill_processes: buộc đóng các ứng dụng khác
   perm_manage_app_windows: điều khiển cửa sổ của các ứng dụng khác (focus, đóng, thu nhỏ, di chuyển)
-  perm_modify_configuration: chỉnh sửa cấu hình WinUIRev
+  perm_modify_configuration: chỉnh sửa cấu hình KestrelUI
   perm_open_file: mở tệp tin
   perm_run: khởi chạy chương trình
   request_description: |-

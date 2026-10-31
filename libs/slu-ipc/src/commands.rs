@@ -19,9 +19,9 @@ pub trait SluCliCommand {
 
 // ===== Top-level =====
 
-/// WinUIRev Command Line Interface
+/// KestrelUI Command Line Interface
 #[derive(Debug, clap::Parser)]
-#[command(version, name = "WinUIRev")]
+#[command(version, name = "KestrelUI")]
 pub struct AppCli {
     /// Prints some extra information on the console.
     #[arg(long, default_value_t)]
@@ -115,7 +115,7 @@ pub enum ResourceSubCommand {
         kind: ClapResourceKind,
         path: PathBuf,
     },
-    /// Translates a resource text file to all the supported languages by WinUIRev
+    /// Translates a resource text file to all the supported languages by KestrelUI
     /// this file should contain the source language key and value in order to be translated.
     ///
     /// Example:

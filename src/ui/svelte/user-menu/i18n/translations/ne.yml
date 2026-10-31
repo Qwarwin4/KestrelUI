@@ -16,6 +16,6 @@ profile:
   open_onedrive: OneDrive डाइरेक्टरी खोल्नुहोस्
   open_user_folder: प्रयोगकर्ता निर्देशिका खोल्नुहोस्
 seelen_options:
-  open_installation_folder: WinUIRev सेटिंग्स फोल्डर खोल्नुहोस्
-  open_log_folder: WinUIRev लग फोल्डर खोल्नुहोस्
-  title: WinUIRev निर्देशिकाहरू
+  open_installation_folder: KestrelUI सेटिंग्स फोल्डर खोल्नुहोस्
+  open_log_folder: KestrelUI लग फोल्डर खोल्नुहोस्
+  title: KestrelUI निर्देशिकाहरू

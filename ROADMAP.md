@@ -1,20 +1,21 @@
-# WinUIRev roadmap
+# KestrelUI roadmap
 
 ## 0 — Clean fork (done)
 
 - Account system, Sky plan, cloud backup, telemetry, news feed, store integration and promo content removed
-- Rebranded: name, bundle id `com.qwarwin.winuirev`, executables, pipes, mutexes, task scheduler entries,
-  installer, icons — WinUIRev installs side by side with Seelen UI without fighting over the same names
-- Release signing and Discord presence moved to build-time variables (`WINUIREV_PUBKEY`, `WINUIREV_DISCORD_ID`)
-- Showcase: GitHub registry (`Qwarwin4/winuirev-showcase`), in-app page, one-click install, settings
-  snapshots with undo, `winuirev.uri:showcase/<id>` deep links, update checks against the index
+- Rebranded: name, bundle id `com.qwarwin.kestrelui`, executables, pipes, mutexes, task scheduler entries,
+  installer, icons — KestrelUI installs side by side with Seelen UI without fighting over the same names
+- Release signing and Discord presence moved to build-time variables (`KESTREL_PUBKEY`, `KESTREL_DISCORD_ID`)
+- Showcase: community repos tagged `kestrelui-config` found through GitHub search, publishing via GitHub sign-in,
+  one-click install, settings snapshots with undo, `kestrelui.uri:showcase/<owner>/<repo>` deep links
+- Neon Moss default theme: dark glass, neon and icon colors from presets, HEX, RGB or a color square
 
 ## 1 — First release
 
-- [ ] Create `Qwarwin4/WinUIRev` and `Qwarwin4/winuirev-showcase` on GitHub, push both
+- [ ] Rename the GitHub repo to `Qwarwin4/KestrelUI`, create the GitHub OAuth App for publishing
 - [ ] Generate the signing key pair, add repo secrets, tag `v2.8.9-rev.1`
 - [ ] Windows smoke test: install, autostart, service, dock/toolbar/WM, settings, showcase install + undo
-- [ ] Real screenshots for the two official presets
+- [ ] Publish the official presets from the app
 - [ ] Clean remaining Seelen-specific docs in `documentation/`
 
 ## 2 — Stability and speed
@@ -24,7 +25,7 @@
 - [ ] Startup time budget: measure integrity check + widget spawn, lazy-load rarely used widgets
 - [ ] Crash reporting stays local: a "copy diagnostics" button instead of telemetry
 
-## 3 — WinUIRev design and customization
+## 3 — KestrelUI design and customization
 
 - [ ] Own design system on top of the token layer (accent, surfaces, radius, motion presets)
 - [ ] Live theme editor in settings: tweak tokens with instant preview, save as a theme, publish to showcase

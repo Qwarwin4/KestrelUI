@@ -2,7 +2,7 @@ cancel: İptal etmek
 done: Tamamlamak
 elevated:
   description: >-
-    WinUIRev yönetici ayrıcalıklarıyla çalışıyor.
+    KestrelUI yönetici ayrıcalıklarıyla çalışıyor.
 
     Bu, herhangi bir özelliği eklemez veya iyileştirmez ve güvenlik riski
     oluşturabilir.
@@ -13,7 +13,7 @@ file_explorer: Dosya Gezgini
 resource:
   added: Yeni bir kaynak eklendi
   download_failed_body: >-
-    Kaynak indirilirken bir şeyler ters gitti, lütfen bunu WinUIRev geliştirici
+    Kaynak indirilirken bir şeyler ters gitti, lütfen bunu KestrelUI geliştirici
     ekibine bildirin.
   download_failed_title: Kaynak indirme başarısız oldu
   downloading: Varlıklar indiriliyor...
@@ -32,22 +32,22 @@ runtime:
     Dosyalar değiştirilmiş, bozulmuşsa veya yükleme tamamlanmamışsa bu durum
     meydana gelebilir.
 
-    Güvenlik nedeniyle WinUIRev kullanıcı arayüzü devam edemiyor.
+    Güvenlik nedeniyle KestrelUI kullanıcı arayüzü devam edemiyor.
 
     Lütfen resmi web sitesinden yeniden yükleyin.
   files_integrity_title: Güvenlik Uyarısı - Dosya Bütünlüğü Denetimi Başarısız
   not_found: WebView2 Çalışma Zamanı bulunamadı
   not_found_description: >-
-    WinUIRev kullanıcı arayüzü Webview2 Çalışma Zamanı gerektirir. Lütfen
+    KestrelUI kullanıcı arayüzü Webview2 Çalışma Zamanı gerektirir. Lütfen
     yükleyin.
   outdated: WebView2 Çalışma Zamanı güncel değil
   outdated_description: >-
-    WinUIRev kullanıcı arayüzü, Webview2 Çalışma Zamanı %{min_version} veya üstünü
+    KestrelUI kullanıcı arayüzü, Webview2 Çalışma Zamanı %{min_version} veya üstünü
     gerektirir. Lütfen güncelleyin.
 service:
-  not_running: WinUIRev Hizmeti çalışmıyor
+  not_running: KestrelUI Hizmeti çalışmıyor
   not_running_description: >-
-    WinUIRev Hizmeti (winuirev-service), uygulamanın düzgün çalışması için bir
+    KestrelUI Hizmeti (kestrelui-service), uygulamanın düzgün çalışması için bir
     bağımlılık/yardımcıdır.
   not_running_ok: Hizmeti başlat
 shortcut:
@@ -72,7 +72,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     diğer uygulamaların pencerelerini kontrol edin (odaklayın, kapatın, simge
     durumuna küçültün, taşıyın)
-  perm_modify_configuration: WinUIRev kullanıcı arayüzü yapılandırmasını değiştirin
+  perm_modify_configuration: KestrelUI kullanıcı arayüzü yapılandırmasını değiştirin
   perm_open_file: dosyaları aç
   perm_run: programları çalıştır
   request_description: |-

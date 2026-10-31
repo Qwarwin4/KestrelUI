@@ -2,14 +2,14 @@ cancel: לְבַטֵל
 done: נַעֲשָׂה
 elevated:
   description: |-
-    WinUIRev פועל עם הרשאות מנהל.
+    KestrelUI פועל עם הרשאות מנהל.
     זה לא מוסיף או משפר תכונות כלשהן, וזה עלול להוות סיכון אבטחה.
     לאבטחה טובה יותר, אנא הפעל אותו מחדש ללא הרשאות מנהל.
   title: פועל כמנהל
 file_explorer: סייר הקבצים
 resource:
   added: נוסף משאב חדש
-  download_failed_body: משהו השתבש בזמן הורדת המשאב, אנא דווח עליו לצוות המפתחים של WinUIRev.
+  download_failed_body: משהו השתבש בזמן הורדת המשאב, אנא דווח עליו לצוות המפתחים של KestrelUI.
   download_failed_title: הורדת משאבים נכשלה
   downloading: הורדת נכסים ...
   downloading_body: זה עשוי לקחת מספר שניות, אנא אל תסגור את החלון.
@@ -22,18 +22,18 @@ runtime:
   files_integrity: |-
     לא הצלחנו לאמת את תקינות קבצי היישום.
     זה יכול לקרות אם הקבצים שונו, נפגמו או שההתקנה לא הושלמה.
-    מסיבות אבטחה, WinUIRev לא יכול להמשיך.
+    מסיבות אבטחה, KestrelUI לא יכול להמשיך.
     נא להתקין אותו מחדש מהאתר הרשמי.
   files_integrity_title: התראת אבטחה - בדיקת תקינות הקבצים נכשלה
   not_found: זמן ריצה של WebView2 לא נמצא
-  not_found_description: WinUIRev דורש זמן ריצה של Webview2. נא להתקין אותו.
+  not_found_description: KestrelUI דורש זמן ריצה של Webview2. נא להתקין אותו.
   outdated: זמן ריצה של WebView2 מיושן
   outdated_description: >-
-    WinUIRev דורש זמן ריצה של Webview2 %{min_version} ומעלה. אנא
+    KestrelUI דורש זמן ריצה של Webview2 %{min_version} ומעלה. אנא
     עדכן אותו.
 service:
-  not_running: שירות WinUIRev לא פועל
-  not_running_description: WinUIRev Service (winuirev-service) הוא תלות/עוזר כדי שהאפליקציה תפעל כראוי.
+  not_running: שירות KestrelUI לא פועל
+  not_running_description: KestrelUI Service (kestrelui-service) הוא תלות/עוזר כדי שהאפליקציה תפעל כראוי.
   not_running_ok: התחל שירות
 shortcut:
   conflicts:
@@ -53,7 +53,7 @@ widget_liveness:
 widget_permissions:
   perm_kill_processes: לאלץ סגירת יישומים
   perm_manage_app_windows: לשלוט בחלונות של יישומים אחרים (מיקוד, סגירה, מזעור, הזז)
-  perm_modify_configuration: שנה את תצורת WinUIRev
+  perm_modify_configuration: שנה את תצורת KestrelUI
   perm_open_file: לפתוח קבצים
   perm_run: להפעיל תוכניות
   request_description: |-

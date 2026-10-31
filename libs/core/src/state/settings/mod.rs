@@ -544,7 +544,7 @@ impl Default for Settings {
             shortcuts: SluShortcutsSettings::default(),
             drpc: false,
             old_active_themes: Vec::new(),
-            active_themes: vec!["@default/theme".into()],
+            active_themes: vec!["@default/theme".into(), "@kestrel/neon-moss".into()],
             active_icon_packs: vec!["@system/icon-pack".into()],
             monitors_v3: HashMap::new(),
             dev_tools: false,

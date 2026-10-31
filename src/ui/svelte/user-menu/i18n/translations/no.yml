@@ -16,6 +16,6 @@ profile:
   open_onedrive: Åpne OneDrive-katalogen
   open_user_folder: Åpne brukerkatalogen
 seelen_options:
-  open_installation_folder: Åpne mappen WinUIRev-innstillinger
-  open_log_folder: Åpne WinUIRev-loggmappen
-  title: WinUIRev-kataloger
+  open_installation_folder: Åpne mappen KestrelUI-innstillinger
+  open_log_folder: Åpne KestrelUI-loggmappen
+  title: KestrelUI-kataloger

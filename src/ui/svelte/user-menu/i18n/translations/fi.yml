@@ -16,6 +16,6 @@ profile:
   open_onedrive: Avaa OneDrive-hakemisto
   open_user_folder: Avaa käyttäjähakemisto
 seelen_options:
-  open_installation_folder: Avaa WinUIRev-asetuskansio
-  open_log_folder: Avaa WinUIRev-lokikansio
-  title: WinUIRev-hakemistot
+  open_installation_folder: Avaa KestrelUI-asetuskansio
+  open_log_folder: Avaa KestrelUI-lokikansio
+  title: KestrelUI-hakemistot

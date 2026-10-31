@@ -30,14 +30,14 @@ apps_configurations:
     Hierdie saamgevoegde konfigurasies is nie bewerkbaar nie en is ontwerp om u
     die beste ervaring sonder aanpassing te bied. Hulle stel outomaties die
     algemeenste toepassings vir u op.
-  bundled_title: App -konfigurasie saam met WinUIRev
+  bundled_title: App -konfigurasie saam met KestrelUI
   confirm_delete: Is u seker dat u hierdie konfigurasie/s wil uitvee?
   confirm_delete_title: Bevestig delete
   delete: Verwyder
   export: Uitvoer
   export_full: Uitvoerinstellings volgens aansoek
   extra_info: >-
-    WinUIRev gebruik slegs een identifiseerder per app (eerste wedstryd
+    KestrelUI gebruik slegs een identifiseerder per app (eerste wedstryd
     gevind), dus die volgorde in hoe dit gespesifiseer is, is belangrik, die
     nuutste bygevoeg sal geprioritiseer word, aangesien die tabel standaard van
     die nuutste na oud gesorteer is.
@@ -81,7 +81,7 @@ devtools:
   data_folder: Datapap
   enable: Aktiveer ontwikkelaarsgereedskap
   enable_description: >-
-    Ontsluit gevorderde nutsgoed vir die inspeksie en ontfouting van WinUIRev
+    Ontsluit gevorderde nutsgoed vir die inspeksie en ontfouting van KestrelUI
     UI-interne. Nie bedoel vir gereelde gebruik nie.
   icons: Gekas ikone
   install_folder: Installasie -lêergids
@@ -120,7 +120,7 @@ devtools:
     widget_id: Widget ID
 discord_banner:
   message: >-
-    Maak kontak met ander WinUIRev-gebruikers, kry hulp, deel temas en bly op
+    Maak kontak met ander KestrelUI-gebruikers, kry hulp, deel temas en bly op
     hoogte van die jongste nuus.
   title: Sluit aan by ons gemeenskap
 extras:
@@ -164,7 +164,7 @@ general:
     plugged: Ingeprop of laai
   polling_interval: Stelselpeilingsinterval
   polling_interval_description: >-
-    Hoe gereeld (in sekondes) WinUIRev stelselhulpbronne soos SVE, RAM, netwerk
+    Hoe gereeld (in sekondes) KestrelUI stelselhulpbronne soos SVE, RAM, netwerk
     en skyfaktiwiteit nagaan. 'n Kleiner getal beteken meer gereelde
     opdaterings, maar effens hoër hulpbrongebruik.
   saturday: Saterdag
@@ -218,7 +218,7 @@ reset_to_default: Stel weer in standaardwaarde
 resources:
   affected_widgets: Geaffekteerde widgets
   app_outdated: >-
-    Hierdie hulpbron vereis dat 'n nuwer weergawe van WinUIRev behoorlik moet
+    Hierdie hulpbron vereis dat 'n nuwer weergawe van KestrelUI behoorlik moet
     werk.
   coming_soon: Binnekort
   corrupted_wallpaper: Kon nie kleinkiekie onttrek nie - korrupte of ongesteunde videoformaat
@@ -231,7 +231,7 @@ resources:
   modified: Gewysig
   open_folder: Open Resource Folder
   outdated: >-
-    Hierdie hulpbron is ontwerp vir 'n ouer weergawe van WinUIRev en werk
+    Hierdie hulpbron is ontwerp vir 'n ouer weergawe van KestrelUI en werk
     moontlik nie behoorlik nie.
   see_on_website: Sien op webwerf
   update_now: Dateer op
@@ -240,7 +240,7 @@ resources:
 review_request:
   not_now: Nie nou nie
   sure: Sekerlik!
-  title: Geniet jy van WinUIRev?
+  title: Geniet jy van KestrelUI?
 save: Red
 save_and_restart: Stoor en herbegin
 search: Soek
@@ -249,7 +249,7 @@ security:
   perms:
     kill_processes: Forseer geslote aansoeke
     manage_app_windows: Beheer die vensters van ander toepassings
-    modify_configuration: Verander die WinUIRev-konfigurasie
+    modify_configuration: Verander die KestrelUI-konfigurasie
     open_file: Maak lêers oop
     run: Begin programme
 see_more: Sien meer
@@ -268,7 +268,7 @@ shortcuts:
     los.
   enable: Aktiveer ingeboude kortpadstelsel
   enable_tooltip: >-
-    Deaktiveer as u u eie kortpadstelsel met behulp van die WinUIRev -kliënt
+    Deaktiveer as u u eie kortpadstelsel met behulp van die KestrelUI -kliënt
     implementeer
   labels:
     create_new_workspace: Skep nuwe werkruimte
@@ -428,14 +428,14 @@ weg:
 welcome:
   give_a_review: Gee 'n resensie
   message: >-
-    WinUIRev is 'n gratis en oopbron lessenaaromgewing vir Windows. Hier het jy
+    KestrelUI is 'n gratis en oopbron lessenaaromgewing vir Windows. Hier het jy
     volle beheer oor hoe jou lessenaar lyk en optree, sodat jy elke detail kan
     aanpas om by jou werkvloei en styl te pas.
   ok: Kom ons begin!
   review: >-
-    As jy daarvan hou om WinUIRev te gebruik, oorweeg dit om 'n resensie in die
+    As jy daarvan hou om KestrelUI te gebruik, oorweeg dit om 'n resensie in die
     winkel te gee - jou terugvoer help die projek om te groei en te verbeter.
-  title: Welkom by WinUIRev!
+  title: Welkom by KestrelUI!
 widget:
   add_workspace_override: Ignoreer op 'n werkspasie
   default_instance: Verstek instansie

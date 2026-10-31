@@ -2,7 +2,7 @@ cancel: Anula
 done: Făcut
 elevated:
   description: >-
-    WinUIRev rulează cu privilegii de administrator.
+    KestrelUI rulează cu privilegii de administrator.
 
     Acest lucru nu adaugă sau îmbunătățește nicio caracteristică și poate
     prezenta un risc de securitate.
@@ -14,7 +14,7 @@ resource:
   added: O nouă resursă a fost adăugată
   download_failed_body: >-
     Ceva nu a mers bine în timpul descărcării resursei, vă rugăm să raportați
-    acest lucru echipei de dezvoltatori WinUIRev.
+    acest lucru echipei de dezvoltatori KestrelUI.
   download_failed_title: Descărcarea resurselor a eșuat
   downloading: Descărcarea activelor...
   downloading_body: Aceasta poate dura câteva secunde, vă rugăm să nu închideți fereastra.
@@ -32,20 +32,20 @@ runtime:
     Acest lucru se poate întâmpla dacă fișierele au fost modificate, corupte sau
     instalarea este incompletă.
 
-    Din motive de securitate, WinUIRev nu poate continua.
+    Din motive de securitate, KestrelUI nu poate continua.
 
     Vă rugăm să-l reinstalați de pe site-ul oficial.
   files_integrity_title: Alertă de securitate - Verificarea integrității fișierelor a eșuat
   not_found: WebView2 Runtime nu a fost găsit
-  not_found_description: WinUIRev necesită Webview2 Runtime. Vă rugăm să o instalați.
+  not_found_description: KestrelUI necesită Webview2 Runtime. Vă rugăm să o instalați.
   outdated: WebView2 Runtime depășit
   outdated_description: >-
-    WinUIRev necesită Webview2 Runtime %{min_version} sau mai mare. Vă rugăm să
+    KestrelUI necesită Webview2 Runtime %{min_version} sau mai mare. Vă rugăm să
     o actualizați.
 service:
-  not_running: Serviciul WinUIRev nu rulează
+  not_running: Serviciul KestrelUI nu rulează
   not_running_description: >-
-    WinUIRev Service (serviciul slu) este o dependență/ajutor pentru ca
+    KestrelUI Service (serviciul slu) este o dependență/ajutor pentru ca
     aplicația să funcționeze corect.
   not_running_ok: Începeți serviciul
 shortcut:
@@ -70,7 +70,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     controlați ferestrele altor aplicații (focalizare, închidere, minimizare,
     mutare)
-  perm_modify_configuration: modificați configurația WinUIRev
+  perm_modify_configuration: modificați configurația KestrelUI
   perm_open_file: deschide fișiere
   perm_run: rulați programe
   request_description: |-

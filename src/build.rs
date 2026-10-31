@@ -14,20 +14,20 @@ fn main() {
     let sums_path = target_dir.join("SHA256SUMS");
     checksums.write(&sums_path).unwrap();
 
-    println!("cargo:rerun-if-env-changed=WINUIREV_PUBKEY");
-    println!("cargo:rerun-if-env-changed=WINUIREV_DISCORD_ID");
-    println!("cargo:rerun-if-env-changed=WINUIREV_GITHUB_CLIENT_ID");
+    println!("cargo:rerun-if-env-changed=KESTREL_PUBKEY");
+    println!("cargo:rerun-if-env-changed=KESTREL_DISCORD_ID");
+    println!("cargo:rerun-if-env-changed=KESTREL_GITHUB_CLIENT_ID");
 
     println!("cargo:rerun-if-env-changed=TAURI_SIGNING_PRIVATE_KEY");
 
-    // local release builds go unsigned: without WINUIREV_PUBKEY the app skips
+    // local release builds go unsigned: without KESTREL_PUBKEY the app skips
     // the signature check and the updater, so a placeholder is enough
-    let signed = !cfg!(debug_assertions) && env_set("WINUIREV_PUBKEY");
+    let signed = !cfg!(debug_assertions) && env_set("KESTREL_PUBKEY");
     if signed {
         sign_sha256sums(&sums_path);
     } else {
         if !cfg!(debug_assertions) {
-            println!("cargo:warning=unsigned build: set WINUIREV_PUBKEY to enable updates");
+            println!("cargo:warning=unsigned build: set KESTREL_PUBKEY to enable updates");
         }
         std::fs::write(sums_path.with_extension("sig"), "UNSIGNED").unwrap();
     }

@@ -16,6 +16,6 @@ profile:
   open_onedrive: Atveriet OneDrive direktoriju
   open_user_folder: Atveriet lietotāja direktoriju
 seelen_options:
-  open_installation_folder: Atveriet WinUIRev iestatījumu mapi
-  open_log_folder: Atveriet WinUIRev žurnāla mapi
-  title: WinUIRev katalogi
+  open_installation_folder: Atveriet KestrelUI iestatījumu mapi
+  open_log_folder: Atveriet KestrelUI žurnāla mapi
+  title: KestrelUI katalogi

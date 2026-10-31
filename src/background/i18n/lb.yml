@@ -2,7 +2,7 @@ cancel: Ofbriechen
 done: Verdataktioun
 elevated:
   description: >-
-    WinUIRev leeft mat Administrator Privilegien.
+    KestrelUI leeft mat Administrator Privilegien.
 
     Dëst addt oder verbessert keng Features, an et kann e Sécherheetsrisiko
     duerstellen.
@@ -30,20 +30,20 @@ runtime:
     Dëst ka geschéien wann Dateien geännert goufen, korrupt sinn oder
     d'Installatioun onkomplett ass.
 
-    Aus Sécherheetsgrënn kann WinUIRev net weidergoen.
+    Aus Sécherheetsgrënn kann KestrelUI net weidergoen.
 
     Installéiert w.e.g. et vun der offizieller Websäit.
   files_integrity_title: Sécherheetsalarm - Dateien Integritéitscheck ausgefall
   not_found: WebView2 Runtime net fonnt
-  not_found_description: WinUIRev erfuerdert Webview2 Runtime. Weg installéieren et.
+  not_found_description: KestrelUI erfuerdert Webview2 Runtime. Weg installéieren et.
   outdated: WebView2 Runtime veroudert
   outdated_description: >-
-    WinUIRev erfuerdert Webview2 Runtime %{min_version} oder méi héich. Weg
+    KestrelUI erfuerdert Webview2 Runtime %{min_version} oder méi héich. Weg
     update et.
 service:
-  not_running: WinUIRev Service net lafen
+  not_running: KestrelUI Service net lafen
   not_running_description: >-
-    WinUIRev Service (slu-Service) ass eng Ofhängegkeet / Helfer fir d'App
+    KestrelUI Service (slu-Service) ass eng Ofhängegkeet / Helfer fir d'App
     richteg ze schaffen.
   not_running_ok: Start Service
 shortcut:
@@ -68,7 +68,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     Kontrolléiert d'Fënstere vun aneren Uwendungen (fokusséieren, zoumaachen,
     minimiséieren, réckelen)
-  perm_modify_configuration: d'WinUIRev Konfiguratioun änneren
+  perm_modify_configuration: d'KestrelUI Konfiguratioun änneren
   perm_open_file: opmaachen Dateien
   perm_run: lafen Programmer
   request_description: |-

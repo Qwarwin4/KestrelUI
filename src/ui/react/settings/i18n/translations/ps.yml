@@ -118,7 +118,7 @@ devtools:
     widget_id: د ویجټ ID
 discord_banner:
   message: >-
-    د نورو WinUIRev کاروونکو سره اړیکه ونیسئ، مرسته ترلاسه کړئ، موضوعات شریک
+    د نورو KestrelUI کاروونکو سره اړیکه ونیسئ، مرسته ترلاسه کړئ، موضوعات شریک
     کړئ، او د وروستي خبرونو سره تازه اوسئ.
   title: زموږ په ټولنه کې ګډون وکړئ
 extras:
@@ -234,7 +234,7 @@ resources:
 review_request:
   not_now: اوس نه
   sure: ډاډه!
-  title: د WinUIRev څخه خوند اخلئ؟
+  title: د KestrelUI څخه خوند اخلئ؟
 save: خوندي کړئ
 save_and_restart: خوندي کول او بیا پیل کړئ
 search: لټون
@@ -243,7 +243,7 @@ security:
   perms:
     kill_processes: په زور سره غوښتنلیکونه تړل
     manage_app_windows: د نورو غوښتنلیکونو کړکۍ کنټرول کړئ
-    modify_configuration: د WinUIRev ترتیب بدل کړئ
+    modify_configuration: د KestrelUI ترتیب بدل کړئ
     open_file: فایلونه خلاص کړئ
     run: پروګرامونه چلول
 see_more: نور وګوره
@@ -426,7 +426,7 @@ welcome:
   review: >-
     که تاسو د سیلین UI کارولو څخه خوند اخلئ ، په پلورنځي کې بیاکتنه پریږدئ -
     ستاسو نظر د پروژې وده او وده کې مرسته کوي.
-  title: WinUIRev ته ښه راغلاست!
+  title: KestrelUI ته ښه راغلاست!
 widget:
   add_workspace_override: په یوه کاري ځای کې وګرځئ
   default_instance: ډیفالټ مثال

@@ -2,7 +2,7 @@ cancel: Otkazati
 done: Završen
 elevated:
   description: >-
-    WinUIRev radi s administratorskim ovlastima.
+    KestrelUI radi s administratorskim ovlastima.
 
     Ovo ne dodaje niti poboljšava nikakve značajke i može predstavljati
     sigurnosni rizik.
@@ -15,7 +15,7 @@ resource:
   added: Dodan je novi resurs
   download_failed_body: >-
     Nešto je pošlo po zlu prilikom preuzimanja resursa, molimo da ga prijavite
-    timu za razvojne programere WinUIRev.
+    timu za razvojne programere KestrelUI.
   download_failed_title: Preuzimanje resursa nije uspjelo
   downloading: Preuzimanje imovine ...
   downloading_body: >-
@@ -33,20 +33,20 @@ runtime:
     To se može dogoditi ako su datoteke izmijenjene, oštećene ili instalacija
     nije dovršena.
 
-    Iz sigurnosnih razloga, WinUIRev ne može nastaviti.
+    Iz sigurnosnih razloga, KestrelUI ne može nastaviti.
 
     Ponovno ga instalirajte sa službene web stranice.
   files_integrity_title: Sigurnosno upozorenje - Provjera integriteta datoteka nije uspjela
   not_found: WebView2 Runtime nije pronađen
-  not_found_description: WinUIRev zahtijeva Webview2 Runtime. Molimo instalirajte ga.
+  not_found_description: KestrelUI zahtijeva Webview2 Runtime. Molimo instalirajte ga.
   outdated: WebView2 Runtime je zastario
   outdated_description: >-
-    WinUIRev zahtijeva Webview2 Runtime %{min_version} ili noviji. Molimo
+    KestrelUI zahtijeva Webview2 Runtime %{min_version} ili noviji. Molimo
     ažurirajte ga.
 service:
-  not_running: Usluga WinUIRev nije pokrenuta
+  not_running: Usluga KestrelUI nije pokrenuta
   not_running_description: >-
-    WinUIRev Service (winuirev-service) je ovisnost/pomoć za ispravan rad
+    KestrelUI Service (kestrelui-service) je ovisnost/pomoć za ispravan rad
     aplikacije.
   not_running_ok: Pokrenite uslugu
 shortcut:
@@ -69,7 +69,7 @@ widget_permissions:
   perm_manage_app_windows: >-
     kontrolirati prozore drugih aplikacija (fokusirati, zatvoriti, minimizirati,
     premjestiti)
-  perm_modify_configuration: izmijenite konfiguraciju korisničkog sučelja WinUIRev
+  perm_modify_configuration: izmijenite konfiguraciju korisničkog sučelja KestrelUI
   perm_open_file: otvorene datoteke
   perm_run: pokretati programe
   request_description: |-
