@@ -69,13 +69,9 @@ async fn _process_action(command: SvcAction) -> Result<()> {
             // Full settings are no longer used by the service for shortcut registration.
             // The background sends a pre-resolved SetShortcuts action instead.
         }
-        SvcAction::SetShortcuts(shortcuts) => {
-            if shortcuts.is_empty() {
-                crate::hotkeys::stop_app_shortcuts();
-            } else {
-                crate::hotkeys::apply_shortcuts(shortcuts)?;
-            }
-        }
+        // an empty list only clears the hotkeys: stopping the hook here killed it for good,
+        // win-hotkeys can't start it again in the same process (dead Win key after a restart)
+        SvcAction::SetShortcuts(shortcuts) => crate::hotkeys::apply_shortcuts(shortcuts)?,
         SvcAction::StartShortcutRegistration => {
             crate::hotkeys::start_shortcut_registration().await?;
         }

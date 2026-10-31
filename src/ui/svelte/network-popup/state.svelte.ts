@@ -32,7 +32,6 @@ await hotspot.init();
 
 let isScanning = $state(false);
 let selectedSsid = $state<string | null>(null);
-let scanInterval: ReturnType<typeof setInterval> | null = null;
 let currentView = $state<"main" | "hotspot">("main");
 
 widget.window.onFocusChanged((e) => {
@@ -51,16 +50,13 @@ $effect.root(() => {
       (radio) => radio.kind === RadioDeviceKind.WiFi && radio.isEnabled,
     );
 
-    if (isScanning && wifiEnabled) {
-      invoke(SeelenCommand.WlanScan);
-      scanInterval = setInterval(() => invoke(SeelenCommand.WlanScan), 2000);
-      return;
-    }
+    if (!isScanning || !wifiEnabled) return;
 
-    if (scanInterval !== null) {
-      clearInterval(scanInterval);
-      scanInterval = null;
-    }
+    // every radios update re-runs this effect, without the cleanup the
+    // intervals piled up and the popup kept scanning after closing
+    invoke(SeelenCommand.WlanScan);
+    const id = setInterval(() => invoke(SeelenCommand.WlanScan), 2000);
+    return () => clearInterval(id);
   });
 });
 

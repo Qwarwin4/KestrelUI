@@ -10,7 +10,8 @@ plugin:
   tooltip: >-
     return online ? t("placeholder.ethernet_connected") : t("placeholder.ethernet_disconnected")
   template: >-
-    if (!online) return icon("TbWorldCancel");
+    const wifi = interfaces.some((i) => i.type === "IEEE80211");
+    if (!online) return icon(wifi ? "TbWifiOff" : "TbWorldCancel");
     if (usingInterface?.type === "IEEE80211") return icon("FaWifi");
     return icon("FaComputer");
   onClickV2: |-

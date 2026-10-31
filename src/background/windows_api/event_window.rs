@@ -14,9 +14,10 @@ use windows::Win32::{
         WindowsAndMessaging::{
             ChangeWindowMessageFilterEx, CreateWindowExW, DEVICE_NOTIFY_WINDOW_HANDLE,
             DefWindowProcW, DispatchMessageW, GetMessageW, MSG, MSGFLT_ALLOW, PostQuitMessage,
-            RegisterClassW, RegisterShellHookWindow, RegisterWindowMessageW, TranslateMessage,
-            WINDOW_EX_STYLE, WINDOW_STYLE, WM_APP, WM_CLIPBOARDUPDATE, WM_DESTROY,
-            WM_WTSSESSION_CHANGE, WNDCLASSW, WTS_SESSION_LOCK, WTS_SESSION_UNLOCK,
+            RegisterClassW, RegisterShellHookWindow, RegisterWindowMessageW, SPI_SETWORKAREA,
+            TranslateMessage, WINDOW_EX_STYLE, WINDOW_STYLE, WM_APP, WM_CLIPBOARDUPDATE,
+            WM_DESTROY, WM_SETTINGCHANGE, WM_WTSSESSION_CHANGE, WNDCLASSW, WTS_SESSION_LOCK,
+            WTS_SESSION_UNLOCK,
         },
     },
 };
@@ -31,6 +32,7 @@ use crate::{
 use super::{WindowsApi, string_utils::WindowsString};
 
 pub static WM_SHELLHOOKMESSAGE: AtomicU32 = AtomicU32::new(u32::MAX);
+static WM_TASKBARCREATED: AtomicU32 = AtomicU32::new(u32::MAX);
 // pub const HSHELL_FULLSCREEN_ENTER: u32 = 53;
 // pub const HSHELL_FULLSCREEN_EXIT: u32 = 54;
 
@@ -97,6 +99,8 @@ impl BgWindowProc {
                 let msg = WindowsString::from("SHELLHOOK");
                 WM_SHELLHOOKMESSAGE
                     .store(RegisterWindowMessageW(msg.as_pcwstr()), Ordering::Relaxed);
+                let msg = WindowsString::from("TaskbarCreated");
+                WM_TASKBARCREATED.store(RegisterWindowMessageW(msg.as_pcwstr()), Ordering::Relaxed);
             }
 
             // https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-registersuspendresumenotification
@@ -177,6 +181,15 @@ impl BgWindowProc {
             if msg == WM_DESTROY {
                 PostQuitMessage(0);
                 return LRESULT(0);
+            }
+
+            let explorer_restarted = msg == WM_TASKBARCREATED.load(Ordering::Relaxed);
+            if explorer_restarted
+                || (msg == WM_SETTINGCHANGE && w_param.0 as u32 == SPI_SETWORKAREA.0)
+            {
+                std::thread::spawn(move || {
+                    super::app_bar::reassert_bars(explorer_restarted);
+                });
             }
 
             // Handle session change notifications to pause background processing

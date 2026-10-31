@@ -32,13 +32,18 @@ pub fn run() -> Result<()> {
         log::info!("importing Seelen UI data from {src:?}");
         copy_dir(&src, data)?;
     }
-    std::fs::write(data.join(MARKER), if accepted { "imported" } else { "declined" })?;
+    std::fs::write(
+        data.join(MARKER),
+        if accepted { "imported" } else { "declined" },
+    )?;
     Ok(())
 }
 
 fn find_seelen_dir() -> Option<PathBuf> {
     let path = get_app_handle().path();
-    let roaming = path.resolve("com.seelen.seelen-ui", BaseDirectory::Config).ok();
+    let roaming = path
+        .resolve("com.seelen.seelen-ui", BaseDirectory::Config)
+        .ok();
     // old store builds kept roaming data inside the package container
     let store = path
         .resolve(
