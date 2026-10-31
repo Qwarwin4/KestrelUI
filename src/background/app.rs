@@ -64,6 +64,7 @@ pub struct SeelenUI {}
 impl SeelenUI {
     /// this fn prepares the app loading assets and settings in memory parallelly
     pub async fn pre_start() -> Result<()> {
+        crate::seelen_import::run().log_error();
         Migrations::run_all()?;
 
         let webview_check = tokio::task::spawn(async {

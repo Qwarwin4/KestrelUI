@@ -11,6 +11,7 @@ mod logger;
 mod migrations;
 mod modules;
 mod resources;
+mod seelen_import;
 mod server;
 mod showcase;
 mod state;

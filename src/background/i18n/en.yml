@@ -37,6 +37,11 @@ runtime:
   outdated_description: >-
     WinUIRev requires Webview2 Runtime %{min_version} or higher. Please update
     it.
+seelen_import:
+  title: Import from Seelen UI
+  body: >-
+    Seelen UI settings were found in %{path}. Import your settings, themes,
+    widgets, icon packs and wallpapers into WinUIRev?
 service:
   not_running: WinUIRev Service not running
   not_running_description: >-

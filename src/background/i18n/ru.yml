@@ -39,6 +39,11 @@ runtime:
   outdated_description: >-
     Для WinUIRev требуется среда выполнения Webview2 %{min_version} или выше.
     Пожалуйста, обновите ее.
+seelen_import:
+  title: Импорт из Seelen UI
+  body: >-
+    Найдены настройки Seelen UI в %{path}. Перенести настройки, темы,
+    виджеты, иконки и обои в WinUIRev?
 service:
   not_running: Служба WinUIRev не запущена
   not_running_description: >-
