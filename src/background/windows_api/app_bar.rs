@@ -14,9 +14,29 @@ use windows::Win32::{
 
 use crate::{error::Result, utils::lock_free::TracedMutex};
 
-// keeps the whole APPBARDATA so lost reservations can be sent again
-static REGISTERED_BARS: LazyLock<TracedMutex<Vec<APPBARDATA>>> =
+// what is needed to send a lost reservation again; APPBARDATA itself holds a raw
+// HWND pointer and can't live in a static
+static REGISTERED_BARS: LazyLock<TracedMutex<Vec<Bar>>> =
     LazyLock::new(|| TracedMutex::new(Vec::new()));
+
+#[derive(Clone, Copy)]
+struct Bar {
+    hwnd: isize,
+    edge: u32,
+    rc: RECT,
+}
+
+impl Bar {
+    fn data(&self) -> APPBARDATA {
+        APPBARDATA {
+            cbSize: std::mem::size_of::<APPBARDATA>() as u32,
+            hWnd: HWND(self.hwnd as _),
+            uEdge: self.edge,
+            rc: self.rc,
+            ..Default::default()
+        }
+    }
+}
 
 /// https://learn.microsoft.com/en-us/windows/win32/shell/abm-setstate#parameters
 #[derive(Debug, Clone, Copy)]
@@ -78,17 +98,27 @@ impl AppBarData {
 
     pub fn register_as_new_bar(&mut self) -> Result<()> {
         let mut data = self.0;
-        let mut guard = REGISTERED_BARS.lock();
-
-        match guard.iter_mut().find(|b| b.hWnd == data.hWnd) {
-            Some(bar) => *bar = data,
-            None => {
-                let ok = unsafe { SHAppBarMessage(ABM_NEW, &mut data) };
-                if ok == 0 {
-                    return Err("Failed to register App Bar".into());
+        let bar = Bar {
+            hwnd: data.hWnd.0 as isize,
+            edge: data.uEdge,
+            rc: data.rc,
+        };
+        let known = {
+            let mut guard = REGISTERED_BARS.lock();
+            match guard.iter_mut().find(|b| b.hwnd == bar.hwnd) {
+                Some(b) => {
+                    *b = bar;
+                    true
                 }
-                guard.push(data);
+                None => false,
             }
+        };
+
+        if !known {
+            if unsafe { SHAppBarMessage(ABM_NEW, &mut data) } == 0 {
+                return Err("Failed to register App Bar".into());
+            }
+            REGISTERED_BARS.lock().push(bar);
         }
 
         unsafe { SHAppBarMessage(ABM_SETPOS, &mut data) };
@@ -97,9 +127,9 @@ impl AppBarData {
 
     pub fn unregister_bar(&mut self) -> Result<()> {
         let mut data = self.0;
-        let mut guard = REGISTERED_BARS.lock();
         unsafe { SHAppBarMessage(ABM_REMOVE, &mut data) };
-        guard.retain(|b| b.hWnd != data.hWnd);
+        let hwnd = data.hWnd.0 as isize;
+        REGISTERED_BARS.lock().retain(|b| b.hwnd != hwnd);
         Ok(())
     }
 }
@@ -109,17 +139,22 @@ impl AppBarData {
 /// its auto-hide state and on some display changes, and then maximized windows
 /// end up under the toolbar/dock.
 pub fn reassert_bars(explorer_restarted: bool) {
-    let mut guard = REGISTERED_BARS.lock();
-    guard.retain(|b| unsafe { IsWindow(Some(b.hWnd)).as_bool() });
+    let bars: Vec<Bar> = {
+        let mut guard = REGISTERED_BARS.lock();
+        guard.retain(|b| unsafe { IsWindow(Some(HWND(b.hwnd as _))).as_bool() });
+        guard.clone()
+    };
 
-    for bar in guard.iter_mut() {
+    // SHAppBarMessage talks to explorer, so no lock is held here
+    for bar in bars {
+        let mut data = bar.data();
         if explorer_restarted {
-            unsafe { SHAppBarMessage(ABM_NEW, bar) };
-        } else if reserved(bar) {
+            unsafe { SHAppBarMessage(ABM_NEW, &mut data) };
+        } else if reserved(&data) {
             continue;
         }
-        log::debug!("re-reserving app bar space for {:?}", bar.hWnd);
-        unsafe { SHAppBarMessage(ABM_SETPOS, bar) };
+        log::debug!("re-reserving app bar space for {:x}", bar.hwnd);
+        unsafe { SHAppBarMessage(ABM_SETPOS, &mut data) };
     }
 }
 
