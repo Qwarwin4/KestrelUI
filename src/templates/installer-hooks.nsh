@@ -23,7 +23,7 @@
   ; Include PDB file only for nightly builds
   ${StrLoc} $0 "${VERSION}" "nightly" ">"
   ${If} $0 != ""
-    File /a "${__FILEDIR__}\..\..\seelen_ui.pdb"
+    File /a "${__FILEDIR__}\..\..\kestrelui.pdb"
   ${EndIf}
 !macroend
 
@@ -51,7 +51,7 @@
   Delete "$INSTDIR\sluhk.dll"
   Delete "$INSTDIR\SHA256SUMS"
   Delete "$INSTDIR\SHA256SUMS.sig"
-  Delete "$INSTDIR\seelen_ui.pdb"
+  Delete "$INSTDIR\kestrelui.pdb"
 
   ; Refresh file associations icons
   !insertmacro UPDATEFILEASSOC
