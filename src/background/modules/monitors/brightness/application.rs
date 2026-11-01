@@ -43,6 +43,10 @@ const DDCCI_VERIFY_DELAY: Duration = Duration::from_millis(400);
 /// Ignored writes in a row before a monitor is switched to software dimming.
 const DDCCI_MAX_MISSES: u8 = 2;
 
+/// Monitors without DDC/CI are probed again every 6 polls (30 s), 10 times after a scan.
+const REPROBE_EVERY_POLLS: u32 = 6;
+const REPROBE_COUNT: u32 = 10;
+
 /// Serializes every DDC/CI transaction (polling and writes) *together with* the publication
 /// of its result into `BrightnessManager::ddcci`. Holding the lock across both steps means a
 /// read that started before a write can never overwrite the written value afterwards.
@@ -175,12 +179,15 @@ impl BrightnessManager {
             return;
         }
         Self::scan();
+        let mut reprobes_left = REPROBE_COUNT;
+        let mut polls_to_reprobe = REPROBE_EVERY_POLLS;
         loop {
             match rx.recv_timeout(DDCCI_POLL_INTERVAL) {
                 Ok(WorkerMessage::Rescan) => {
                     // collapse bursts of display events into a single scan
                     while rx.try_recv().is_ok() {}
                     Self::scan();
+                    reprobes_left = REPROBE_COUNT;
                 }
                 Ok(WorkerMessage::Verify(first)) => {
                     // give the panel time to apply the value before reading it back; a slider
@@ -202,7 +209,19 @@ impl BrightnessManager {
                         Self::ddcci_verify(&id);
                     }
                 }
-                Err(crossbeam_channel::RecvTimeoutError::Timeout) => Self::ddcci_poll(),
+                Err(crossbeam_channel::RecvTimeoutError::Timeout) => {
+                    Self::ddcci_poll();
+                    // DDC/CI on cheap monitors often fails right after boot, wake or an input
+                    // switch: monitors left on software dimming are probed again for a while
+                    if reprobes_left > 0 && Self::instance().has_reprobable() {
+                        polls_to_reprobe -= 1;
+                        if polls_to_reprobe == 0 {
+                            polls_to_reprobe = REPROBE_EVERY_POLLS;
+                            reprobes_left -= 1;
+                            Self::scan();
+                        }
+                    }
+                }
                 Err(crossbeam_channel::RecvTimeoutError::Disconnected) => return,
             }
         }
@@ -581,9 +600,26 @@ impl BrightnessManager {
             });
         }
 
+        // monitors that left the list (now reachable over DDC/CI, or unplugged) get their
+        // gamma back, the hardware brightness takes over
+        for gone in previous
+            .iter()
+            .filter(|p| !found.iter().any(|f| f.monitor_id == p.monitor_id))
+        {
+            if gone.percent < 100 {
+                set_gamma_dimming(&gone.device, 1.0).log_error();
+            }
+        }
+
         let changed = previous != found;
         self.soft.replace(found);
         changed
+    }
+
+    /// Some monitor is on software dimming without having been caught ignoring DDC/CI.
+    fn has_reprobable(&self) -> bool {
+        let ignored = self.ddcci_ignored.to_vec();
+        self.soft.any(|panel| !ignored.contains(&panel.monitor_id))
     }
 
     fn soft_set(&self, id: &MonitorId, percent: u8) -> Result<()> {
