@@ -67,8 +67,11 @@ impl WidgetWebview {
             .visible(false);
 
         if opaque {
-            // same as the Neon Moss page background, see settings/styles/neon.css
-            builder = builder.background_color(tauri::window::Color(6, 10, 8, 255));
+            // same as the Neon Moss page background, see settings/styles/neon.css;
+            // the page draws its own title bar, no native frame from the start
+            builder = builder
+                .background_color(tauri::window::Color(6, 10, 8, 255))
+                .decorations(false);
         }
 
         if matches!(
@@ -125,6 +128,9 @@ impl WidgetWebview {
         // Widgets handle their own show/hide animations, avoid the ones from the system.
         // SAFETY: HWND in windows 0.61 (tauri) and 0.62 (ours) share the same memory layout
         WindowsApi::set_system_transitions_disabled(HWND(window.hwnd()?.0), true).log_error();
+        if opaque {
+            WindowsApi::set_dark_borderless_frame(HWND(window.hwnd()?.0)).log_error();
+        }
         Ok(Self(window))
     }
 

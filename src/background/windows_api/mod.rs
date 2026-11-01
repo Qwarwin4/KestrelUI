@@ -53,10 +53,11 @@ use windows::{
         },
         Graphics::{
             Dwm::{
-                DWM_CLOAKED_APP, DWM_CLOAKED_INHERITED, DWM_CLOAKED_SHELL, DWMWA_CLOAKED,
-                DWMWA_EXTENDED_FRAME_BOUNDS, DWMWA_TRANSITIONS_FORCEDISABLED,
-                DWMWA_VISIBLE_FRAME_BORDER_THICKNESS, DWMWINDOWATTRIBUTE, DwmGetWindowAttribute,
-                DwmSetWindowAttribute,
+                DWM_CLOAKED_APP, DWM_CLOAKED_INHERITED, DWM_CLOAKED_SHELL, DWMWA_BORDER_COLOR,
+                DWMWA_CLOAKED, DWMWA_COLOR_NONE, DWMWA_EXTENDED_FRAME_BOUNDS,
+                DWMWA_TRANSITIONS_FORCEDISABLED, DWMWA_USE_IMMERSIVE_DARK_MODE,
+                DWMWA_VISIBLE_FRAME_BORDER_THICKNESS, DWMWA_WINDOW_CORNER_PREFERENCE, DWMWCP_ROUND,
+                DWMWINDOWATTRIBUTE, DwmGetWindowAttribute, DwmSetWindowAttribute,
             },
             Gdi::{
                 EnumDisplayMonitors, GetMonitorInfoW, HMONITOR, MONITOR_DEFAULTTOPRIMARY,
@@ -838,6 +839,17 @@ impl WindowsApi {
     pub fn set_system_transitions_disabled(hwnd: HWND, disabled: bool) -> Result<()> {
         let value = windows_core::BOOL::from(disabled);
         Self::dwm_set_window_attribute(hwnd, DWMWA_TRANSITIONS_FORCEDISABLED, &value)
+    }
+
+    /// Dark frame without the outline for our own undecorated windows: Windows 11 draws a
+    /// 1px light border around them otherwise. Rounded corners like native windows.
+    pub fn set_dark_borderless_frame(hwnd: HWND) -> Result<()> {
+        let dark = windows_core::BOOL::from(true);
+        Self::dwm_set_window_attribute(hwnd, DWMWA_USE_IMMERSIVE_DARK_MODE, &dark)?;
+        // both exist only on Windows 11, on 10 the dark mode above is all there is
+        let _ = Self::dwm_set_window_attribute(hwnd, DWMWA_BORDER_COLOR, &DWMWA_COLOR_NONE);
+        let _ = Self::dwm_set_window_attribute(hwnd, DWMWA_WINDOW_CORNER_PREFERENCE, &DWMWCP_ROUND);
+        Ok(())
     }
 
     /// Get the window rect including drop shadow

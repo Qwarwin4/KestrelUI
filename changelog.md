@@ -16,7 +16,7 @@ First KestrelUI release, based on Seelen UI 2.8.11.
 - resources from disk: every resource page imports a folder or a .yml, .json or .slu file, opens the user folder
   and rereads it; icon packs can be made from a folder of pictures named after the programs (`chrome.png` is the
   icon of chrome.exe, `.pdf.png` the icon of PDF files).
-- settings window is opaque, no white strips at its edges.
+- settings window is opaque with a dark, borderless, rounded frame: no white strips or light outline at its edges.
 - brightness: monitors that ignore the high level DDC/CI call are driven through the raw VCP 0x10 request, and
   screens without any hardware control (no DDC/CI, no WMI) are dimmed through the gamma ramp, restored on exit.
   Monitors that answer DDC/CI reads but ignore writes are detected and switched to the gamma ramp too.
