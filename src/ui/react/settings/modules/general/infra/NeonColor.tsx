@@ -88,9 +88,7 @@ export function NeonColor() {
               </Flex>
             }
           />
-          {!iconFollows && (
-            <ColorPicker value={icon} onChange={(hex) => setThemeVar("--neon-icon-color", hex)} />
-          )}
+          {!iconFollows && <ColorPicker value={icon} onChange={(hex) => setThemeVar("--neon-icon-color", hex)} />}
         </SettingsGroup>
       )}
 

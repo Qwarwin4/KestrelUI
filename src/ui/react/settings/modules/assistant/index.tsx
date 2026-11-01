@@ -82,7 +82,11 @@ function Chat() {
             <p>{t("assistant.empty")}</p>
             <div className={cs.suggestions}>
               {SUGGESTIONS.map((s) => (
-                <button key={s} type="button" onClick={() => submit(t(`assistant.suggestions.${s}`))}>
+                <button
+                  key={s}
+                  type="button"
+                  onClick={() => submit(t(`assistant.suggestions.${s}`))}
+                >
                   {t(`assistant.suggestions.${s}`)}
                 </button>
               ))}

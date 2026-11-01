@@ -12,7 +12,18 @@ export const START_PRESETS: PixelSprite[] = [
   {
     id: "mint",
     group: "girls",
-    colors: { S: "#ffe2cf", B: "#ff9fae", M: "#c4566b", O: "#1a1420", w: "#ffffff", H: "#45dc95", h: "#1f9e63", e: "#1b6b4a", A: "#24302b", a: "#5ef0a0" },
+    colors: {
+      S: "#ffe2cf",
+      B: "#ff9fae",
+      M: "#c4566b",
+      O: "#1a1420",
+      w: "#ffffff",
+      H: "#45dc95",
+      h: "#1f9e63",
+      e: "#1b6b4a",
+      A: "#24302b",
+      a: "#5ef0a0",
+    },
     rows: [
       "......OAAAAAAO......",
       "....OAA......AAO....",
@@ -37,7 +48,17 @@ export const START_PRESETS: PixelSprite[] = [
   {
     id: "sakura",
     group: "girls",
-    colors: { S: "#ffe2cf", B: "#ff9fae", M: "#c4566b", O: "#1a1420", w: "#ffffff", H: "#ff8fc4", h: "#d65a96", e: "#a8336f", A: "#ffd166" },
+    colors: {
+      S: "#ffe2cf",
+      B: "#ff9fae",
+      M: "#c4566b",
+      O: "#1a1420",
+      w: "#ffffff",
+      H: "#ff8fc4",
+      h: "#d65a96",
+      e: "#a8336f",
+      A: "#ffd166",
+    },
     rows: [
       "....................",
       "....................",
@@ -62,7 +83,17 @@ export const START_PRESETS: PixelSprite[] = [
   {
     id: "neko",
     group: "girls",
-    colors: { S: "#ffe2cf", B: "#ff9fae", M: "#c4566b", O: "#1a1420", w: "#ffffff", H: "#dfe3ee", h: "#9aa3b8", e: "#6b5bd6", a: "#ffb3c7" },
+    colors: {
+      S: "#ffe2cf",
+      B: "#ff9fae",
+      M: "#c4566b",
+      O: "#1a1420",
+      w: "#ffffff",
+      H: "#dfe3ee",
+      h: "#9aa3b8",
+      e: "#6b5bd6",
+      a: "#ffb3c7",
+    },
     rows: [
       "..O..............O..",
       "..OO............OO..",
@@ -87,7 +118,17 @@ export const START_PRESETS: PixelSprite[] = [
   {
     id: "star",
     group: "girls",
-    colors: { S: "#ffe2cf", B: "#ff9fae", M: "#c4566b", O: "#1a1420", w: "#ffffff", H: "#5b8cff", h: "#3555c9", e: "#e0a91f", A: "#ffd23f" },
+    colors: {
+      S: "#ffe2cf",
+      B: "#ff9fae",
+      M: "#c4566b",
+      O: "#1a1420",
+      w: "#ffffff",
+      H: "#5b8cff",
+      h: "#3555c9",
+      e: "#e0a91f",
+      A: "#ffd23f",
+    },
     rows: [
       "....................",
       "....................",
@@ -112,7 +153,17 @@ export const START_PRESETS: PixelSprite[] = [
   {
     id: "fox",
     group: "girls",
-    colors: { S: "#ffe2cf", B: "#ff9fae", M: "#c4566b", O: "#1a1420", w: "#ffffff", H: "#ff9a3d", h: "#d4691a", e: "#2f7a52", a: "#fff3e6" },
+    colors: {
+      S: "#ffe2cf",
+      B: "#ff9fae",
+      M: "#c4566b",
+      O: "#1a1420",
+      w: "#ffffff",
+      H: "#ff9a3d",
+      h: "#d4691a",
+      e: "#2f7a52",
+      a: "#fff3e6",
+    },
     rows: [
       "..O..............O..",
       "..OO............OO..",
@@ -137,7 +188,18 @@ export const START_PRESETS: PixelSprite[] = [
   {
     id: "noir",
     group: "girls",
-    colors: { S: "#ffe2cf", B: "#ff9fae", M: "#c4566b", O: "#1a1420", w: "#ffffff", H: "#2e2b3a", h: "#17151f", e: "#e0425a", A: "#e0425a", a: "#9e1f36" },
+    colors: {
+      S: "#ffe2cf",
+      B: "#ff9fae",
+      M: "#c4566b",
+      O: "#1a1420",
+      w: "#ffffff",
+      H: "#2e2b3a",
+      h: "#17151f",
+      e: "#e0425a",
+      A: "#e0425a",
+      a: "#9e1f36",
+    },
     rows: [
       "....................",
       "............AA.AA...",
@@ -162,7 +224,17 @@ export const START_PRESETS: PixelSprite[] = [
   {
     id: "lavender",
     group: "girls",
-    colors: { S: "#ffe2cf", B: "#ff9fae", M: "#c4566b", O: "#1a1420", w: "#ffffff", H: "#b9a2f0", h: "#8a6fd1", e: "#4b3a8f", A: "#3a2d5c" },
+    colors: {
+      S: "#ffe2cf",
+      B: "#ff9fae",
+      M: "#c4566b",
+      O: "#1a1420",
+      w: "#ffffff",
+      H: "#b9a2f0",
+      h: "#8a6fd1",
+      e: "#4b3a8f",
+      A: "#3a2d5c",
+    },
     rows: [
       "....................",
       "....................",
@@ -187,7 +259,18 @@ export const START_PRESETS: PixelSprite[] = [
   {
     id: "ember",
     group: "girls",
-    colors: { S: "#ffe2cf", B: "#ff9fae", M: "#c4566b", O: "#1a1420", w: "#ffffff", H: "#ff6a4d", h: "#c7402b", e: "#3b6fd4", A: "#2e3a55", a: "#f2f2f2" },
+    colors: {
+      S: "#ffe2cf",
+      B: "#ff9fae",
+      M: "#c4566b",
+      O: "#1a1420",
+      w: "#ffffff",
+      H: "#ff6a4d",
+      h: "#c7402b",
+      e: "#3b6fd4",
+      A: "#2e3a55",
+      a: "#f2f2f2",
+    },
     rows: [
       "....................",
       ".......OOOOOO.......",
@@ -212,7 +295,18 @@ export const START_PRESETS: PixelSprite[] = [
   {
     id: "oni",
     group: "girls",
-    colors: { S: "#ffe2cf", B: "#ff9fae", M: "#c4566b", O: "#1a1420", w: "#ffffff", H: "#f0f0f5", h: "#b5b8c8", e: "#d23c5a", A: "#ff8a4c", a: "#c45a2a" },
+    colors: {
+      S: "#ffe2cf",
+      B: "#ff9fae",
+      M: "#c4566b",
+      O: "#1a1420",
+      w: "#ffffff",
+      H: "#f0f0f5",
+      h: "#b5b8c8",
+      e: "#d23c5a",
+      A: "#ff8a4c",
+      a: "#c45a2a",
+    },
     rows: [
       "......A......A......",
       "......AA....AA......",
@@ -237,7 +331,18 @@ export const START_PRESETS: PixelSprite[] = [
   {
     id: "cyber",
     group: "girls",
-    colors: { S: "#ffe2cf", B: "#ff9fae", M: "#c4566b", O: "#1a1420", w: "#ffffff", H: "#2fd1e6", h: "#1691a8", e: "#0b3a44", A: "#11161c", a: "#5ef0a0" },
+    colors: {
+      S: "#ffe2cf",
+      B: "#ff9fae",
+      M: "#c4566b",
+      O: "#1a1420",
+      w: "#ffffff",
+      H: "#2fd1e6",
+      h: "#1691a8",
+      e: "#0b3a44",
+      A: "#11161c",
+      a: "#5ef0a0",
+    },
     rows: [
       "....................",
       "....................",
@@ -262,7 +367,17 @@ export const START_PRESETS: PixelSprite[] = [
   {
     id: "sunny",
     group: "girls",
-    colors: { S: "#ffe2cf", B: "#ff9fae", M: "#c4566b", O: "#1a1420", w: "#ffffff", H: "#ffd45c", h: "#d9a521", e: "#7a4a1d", A: "#ffd45c" },
+    colors: {
+      S: "#ffe2cf",
+      B: "#ff9fae",
+      M: "#c4566b",
+      O: "#1a1420",
+      w: "#ffffff",
+      H: "#ffd45c",
+      h: "#d9a521",
+      e: "#7a4a1d",
+      A: "#ffd45c",
+    },
     rows: [
       "..........O.........",
       ".........OAO........",
@@ -287,7 +402,18 @@ export const START_PRESETS: PixelSprite[] = [
   {
     id: "kestrel",
     group: "other",
-    colors: { O: "#1a1420", G: "#7f93ad", w: "#ffffff", K: "#1a1420", Y: "#f2c14e", C: "#f5e6cc", c: "#6b4a2e", m: "#2a2433", R: "#c8643b", b: "#3a2a24" },
+    colors: {
+      O: "#1a1420",
+      G: "#7f93ad",
+      w: "#ffffff",
+      K: "#1a1420",
+      Y: "#f2c14e",
+      C: "#f5e6cc",
+      c: "#6b4a2e",
+      m: "#2a2433",
+      R: "#c8643b",
+      b: "#3a2a24",
+    },
     rows: [
       "..................",
       "..........OOOO....",

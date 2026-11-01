@@ -6,12 +6,7 @@ import { useTranslation } from "react-i18next";
 import { displayVersion, EnvConfig } from "../shared/config/infra.ts";
 import cs from "./infra.module.css";
 
-import {
-  getStreamingMode,
-  getUpdaterSettings,
-  patchUpdaterSettings,
-  setStreamingMode,
-} from "./application.ts";
+import { getStreamingMode, getUpdaterSettings, patchUpdaterSettings, setStreamingMode } from "./application.ts";
 
 import { SettingsGroup, SettingsOption, SettingsSubGroup } from "../../components/SettingsBox/index.tsx";
 import { UpdateChannel } from "@seelen-ui/lib/types";
@@ -45,7 +40,8 @@ export function Information() {
             description={isFixed ? t("extras.version_fixed") : false}
             action={
               <span className={cs.version}>
-                v{displayVersion(EnvConfig.version)} {isDevMode && "(dev)"} {isMsixBuild && "(msix)"} {isFixed && "(fixed)"}
+                v{displayVersion(EnvConfig.version)} {isDevMode && "(dev)"} {isMsixBuild && "(msix)"}{" "}
+                {isFixed && "(fixed)"}
               </span>
             }
           />

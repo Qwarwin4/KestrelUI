@@ -166,13 +166,11 @@ function Account({ collapsed, active }: { collapsed: boolean; active: boolean })
   return (
     <Tooltip placement="right" title={collapsed ? t("header.labels.extras") : null}>
       <NavLink to={RoutePath.Extras} className={cx(cs.account, { [cs.active!]: active })}>
-        {user
-          ? <img className={cs.avatar} src={user.avatarUrl} alt="" />
-          : (
-            <span className={cs.avatar}>
-              <Icon iconName="LuInfo" />
-            </span>
-          )}
+        {user ? <img className={cs.avatar} src={user.avatarUrl} alt="" /> : (
+          <span className={cs.avatar}>
+            <Icon iconName="LuInfo" />
+          </span>
+        )}
         <span className={cs.accountText}>
           <b>{user ? `@${user.login}` : "KestrelUI"}</b>
           <span>{user ? t("nav.github") : t("header.labels.extras")}</span>

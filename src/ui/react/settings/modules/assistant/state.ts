@@ -30,9 +30,7 @@ export async function saveConfig(next: AssistantSettings) {
 }
 
 /** only the newest change can be undone, snapshots are a stack */
-export const undoableIndex = computed(() =>
-  chat.value.findLastIndex((m) => m.changed && !m.undone)
-);
+export const undoableIndex = computed(() => chat.value.findLastIndex((m) => m.changed && !m.undone));
 
 export async function send(text: string) {
   const content = text.trim();

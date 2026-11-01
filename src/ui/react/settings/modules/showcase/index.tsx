@@ -108,7 +108,11 @@ export function Showcase() {
           ))}
 
         {shown.map((e) => (
-          <Card key={e.id} entry={e} installed={e.resourceIds.length > 0 && e.resourceIds.every((id) => installed.has(id))} />
+          <Card
+            key={e.id}
+            entry={e}
+            installed={e.resourceIds.length > 0 && e.resourceIds.every((id) => installed.has(id))}
+          />
         ))}
       </div>
     </div>

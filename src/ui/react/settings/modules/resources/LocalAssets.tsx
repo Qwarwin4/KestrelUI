@@ -81,7 +81,9 @@ export function LocalAssets({ discover }: { discover: ShowcaseKind }) {
               t("resources.local.imported"),
             ))}
         {button("LuFolderOpen", t("resources.local.open_folder"), () =>
-          run(() => invoke(SeelenCommand.OpenUserResourceFolder, { kind })))}
+          run(() =>
+            invoke(SeelenCommand.OpenUserResourceFolder, { kind })
+          ))}
         {button("LuRefreshCw", t("resources.local.reload"), () =>
           run(
             () => invoke(SeelenCommand.ReloadUserResources, { kind }).then(() => true),

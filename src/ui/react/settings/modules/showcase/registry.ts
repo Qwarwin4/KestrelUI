@@ -56,14 +56,18 @@ function readCache(): ShowcaseEntry[] | null {
   try {
     const c = JSON.parse(localStorage.getItem(CACHE_KEY) ?? "null");
     if (c && Date.now() - c.at < CACHE_TTL) return c.entries;
-  } catch {}
+  } catch {
+    // no storage or a broken entry, load from GitHub
+  }
   return null;
 }
 
 function writeCache(entries: ShowcaseEntry[]) {
   try {
     localStorage.setItem(CACHE_KEY, JSON.stringify({ at: Date.now(), entries }));
-  } catch {}
+  } catch {
+    // the cache is only a speedup
+  }
 }
 
 async function toEntry(repo: SearchRepo): Promise<ShowcaseEntry | null> {

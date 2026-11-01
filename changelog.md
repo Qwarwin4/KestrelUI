@@ -2,36 +2,36 @@
 
 ## [0.1.0]
 
-First KestrelUI release, based on Seelen UI 2.8.11.
+First KestrelUI release: a fork of Seelen UI 2.8.11 without accounts, ads or telemetry, with its own look and a few
+things Seelen never had. Themes, widgets, plugins and icon packs made for Seelen UI keep working.
+
+### highlights
+
+- **Showcase.** Community setups straight from GitHub repositories: install in one click, roll back in one click,
+  publish your own from the app with a GitHub sign-in.
+- **Neon Moss.** The new default look: dark glass with one accent color. Pick the neon from presets, HEX, RGB or a color
+  square; the whole settings window follows it, a white neon gives a neutral dark window.
+- **Assistant.** Connect GPT, Claude, OpenRouter or any OpenAI-compatible API with your own key and ask it to restyle
+  things or explain them. Every change it makes can be undone in one click; keys stay in the Windows credential vault.
+- **Your own files.** Every resource page imports a folder or a .yml, .json or .slu file from disk. Icon packs can be
+  made from a plain folder of pictures: `chrome.png` becomes the icon of chrome.exe, `.pdf.png` the icon of PDF files.
+- **Brightness that works on more screens.** Monitors that ignore the usual DDC/CI call get the raw VCP request, the
+  ones that ignore writes or have no control at all are dimmed through the gamma ramp, restored on exit. Brightness
+  presets (night, reading, day, max) in quick settings.
 
 ### features
 
-- showcase: community setups from GitHub repositories, one-click install with undo, publishing via GitHub sign-in.
-- Neon Moss theme by default, neon and icon colors from presets, HEX, RGB or a color square.
-- wallpaper manager can show the current Windows wallpaper and follows it when it changes.
-- one-time import of an existing Seelen UI setup.
-- assistant in the settings app over the GPT, Claude, OpenRouter or any OpenAI-compatible API, changes settings
-  through tools with one-click undo.
-- "Start with Windows" checkbox in the toolbar context menu.
-- resources from disk: every resource page imports a folder or a .yml, .json or .slu file, opens the user folder
-  and rereads it; icon packs can be made from a folder of pictures named after the programs (`chrome.png` is the
-  icon of chrome.exe, `.pdf.png` the icon of PDF files).
-- settings window is opaque with a dark, borderless, rounded frame: no white strips or light outline at its edges.
-- brightness: monitors that ignore the high level DDC/CI call are driven through the raw VCP 0x10 request, and
-  screens without any hardware control (no DDC/CI, no WMI) are dimmed through the gamma ramp, restored on exit.
-  Monitors that answer DDC/CI reads but ignore writes are detected and switched to the gamma ramp too.
-- settings: neon used for tabs, monitor previews, tiling layouts, notes and links instead of blue; no white
-  scrollbar corner or window background showing at the edges; the splash screen uses your neon color.
-- installer: no Seelen name in the page footer, the start menu folder or the MSIX manifest.
-- redesigned settings window: grouped sidebar with short names, GitHub account card, page titles with a terminal
-  style path, Manrope and JetBrains Mono fonts, hairline-split setting cards, page transitions. Neon Moss keeps it
-  dark whatever the Windows color mode is.
-- start button on the dock: own picture or 24 pixel presets (eleven original pixel girls, a kestrel mascot, cat, ghost,
+- redesigned settings window: grouped sidebar, GitHub account card, page titles with a terminal style path, Manrope and
+  JetBrains Mono fonts, hairline-split cards, page transitions.
+- start button on the dock: your own picture or 24 pixel presets (eleven pixel girls, a kestrel mascot, cat, ghost,
   heart, mushroom, terminal, root prompt, moon, floppy, gamepad, chip, coffee, flame).
-- own toolbar and dock colors and glass opacity in General.
-- brightness presets in quick settings (night, reading, day, max) for every screen at once.
-- "Neon on the dock and toolbar" switch, off by default: the dock, the toolbar and the start button stay neutral.
-- wallpaper previews in settings show the current Windows wallpaper instead of the grey placeholder.
+- toolbar and dock colors and glass opacity in General; "Neon on the dock and toolbar" switch, off by default.
+- the wallpaper manager can show the current Windows wallpaper and follows it when it changes; wallpaper previews in
+  settings show it too.
+- one-time import of an existing Seelen UI setup on first start.
+- "Start with Windows" checkbox in the toolbar context menu; autostart works without admin rights.
+- the splash screen and the window frame match your neon; the settings window is opaque with a dark rounded frame.
+- installer and start menu entries carry the KestrelUI name only.
 
 ### performance
 
@@ -43,15 +43,17 @@ First KestrelUI release, based on Seelen UI 2.8.11.
 ### removed
 
 - accounts, plans, cloud backup, telemetry, news feed and promo content.
-- the welcome dialog's store review button and the weekly "rate us" prompt.
+- the store review button and the weekly "rate us" prompt.
 - Discord rich presence.
 
 ### fix
 
 - start menu key and shortcuts stopped working after saving an empty shortcut list.
 - maximized windows going under the toolbar after explorer restarts or the work area changes.
-- autostart works without admin rights (HKCU Run key), a disabled autostart is no longer re-enabled on start.
+- a disabled autostart is no longer re-enabled on start.
 - no console windows in debug builds.
+- white strips, a light outline and a green tint around the settings window.
+- `build.bat` retries when node_modules is locked by a leftover node or esbuild process.
 
 ## [2.8.11-dev]
 

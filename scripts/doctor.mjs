@@ -66,9 +66,9 @@ if (vs) ok(`MSVC build tools: ${vs}`);
 else {
   fail(
     "MSVC build tools not found",
-    "Install Visual Studio Build Tools 2022 with the \"Desktop development with C++\" workload " +
-      "(winget install Microsoft.VisualStudio.2022.BuildTools --override \"--wait --passive " +
-      "--add Microsoft.VisualStudio.Workload.VCTools --includeRecommended\")",
+    'Install Visual Studio Build Tools 2022 with the "Desktop development with C++" workload ' +
+      '(winget install Microsoft.VisualStudio.2022.BuildTools --override "--wait --passive ' +
+      '--add Microsoft.VisualStudio.Workload.VCTools --includeRecommended")',
   );
 }
 
@@ -81,10 +81,12 @@ else {
   );
 }
 
-for (const [cmd, fix] of [
-  ["rustup", "Install Rust: https://rustup.rs (the pinned nightly installs itself on first build)"],
-  ["deno", "Install Deno 2: winget install DenoLand.Deno"],
-]) {
+for (
+  const [cmd, fix] of [
+    ["rustup", "Install Rust: https://rustup.rs (the pinned nightly installs itself on first build)"],
+    ["deno", "Install Deno 2: winget install DenoLand.Deno"],
+  ]
+) {
   if (has(cmd)) ok(cmd);
   else fail(`${cmd} not found in PATH`, fix);
 }

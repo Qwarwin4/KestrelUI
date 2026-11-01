@@ -113,9 +113,9 @@ metadata:
 The only fields that are truly required are `displayName` and `description`. Everything else is optional but filling
 them in makes your resource look much better in the marketplace.
 
-> **Images (portrait, banner, screenshots):** these are uploaded directly through the KestrelUI website when you publish or
-> edit your resource — you do not write URLs in `metadata.yml` yourself. Only images hosted on `seelen.io` are accepted;
-> any other URL will be ignored and KestrelUI will display the default resource icon as the portrait instead.
+> **Images (portrait, banner, screenshots):** these are uploaded directly through the KestrelUI website when you publish
+> or edit your resource — you do not write URLs in `metadata.yml` yourself. Only images hosted on `seelen.io` are
+> accepted; any other URL will be ignored and KestrelUI will display the default resource icon as the portrait instead.
 
 ---
 

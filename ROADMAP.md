@@ -3,8 +3,8 @@
 ## 0 — Clean fork (done)
 
 - Account system, Sky plan, cloud backup, telemetry, news feed, store integration and promo content removed
-- Rebranded: name, bundle id `com.qwarwin.kestrelui`, executables, pipes, mutexes, task scheduler entries,
-  installer, icons — KestrelUI installs side by side with Seelen UI without fighting over the same names
+- Rebranded: name, bundle id `com.qwarwin.kestrelui`, executables, pipes, mutexes, task scheduler entries, installer,
+  icons — KestrelUI installs side by side with Seelen UI without fighting over the same names
 - Release signing moved to a build-time variable (`KESTREL_PUBKEY`); Discord rich presence removed
 - Showcase: community repos tagged `kestrelui-config` found through GitHub search, publishing via GitHub sign-in,
   one-click install, settings snapshots with undo, `kestrelui.uri:showcase/<owner>/<repo>` deep links
@@ -36,5 +36,5 @@
 ## Upstream sync
 
 `upstream` remote points at `eythaann/seelen-ui`. Merge upstream releases after reviewing them for new
-account/telemetry/store code. Internal names (`@seelen/*` ids, `SeelenCommand`, `seelen-core`) are kept on
-purpose to keep merges cheap and community resources compatible.
+account/telemetry/store code. Internal names (`@seelen/*` ids, `SeelenCommand`, `seelen-core`) are kept on purpose to
+keep merges cheap and community resources compatible.

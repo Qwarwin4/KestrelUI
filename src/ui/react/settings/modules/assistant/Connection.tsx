@@ -137,8 +137,7 @@ export function Connection({ onDone }: { onDone?: () => void }) {
             value={draft.model}
             placeholder={MODEL_HINTS[provider]}
             options={models.map((m) => ({ value: m }))}
-            filterOption={(input, option) =>
-              String(option?.value ?? "").toLowerCase().includes(input.toLowerCase())}
+            filterOption={(input, option) => String(option?.value ?? "").toLowerCase().includes(input.toLowerCase())}
             onChange={(model) => setDraft({ ...draft, model })}
           />
           <Button onClick={loadModels} loading={loadingModels} title={t("assistant.load_models")}>
