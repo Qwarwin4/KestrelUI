@@ -1,5 +1,8 @@
 <h1 align="center">
   <img src="documentation/images/logo.svg" width="44" align="top" alt="KestrelUI logo" />
+  [![Discord](https://img.shields.io/badge/Discord-%D0%92%D1%81%D1%82%D1%83%D0%BF%D0%B8%D1%82%D1%8C-5ef0a0?style=for-the-badge&logo=discord&logoColor=5ef0a0&labelColor=0b1410)](https://discord.gg/ТВОЙ_ИНВАЙТ)
+[![Telegram](https://img.shields.io/badge/Telegram-%D0%9F%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F-5ef0a0?style=for-the-badge&logo=telegram&logoColor=5ef0a0&labelColor=0b1410)](https://t.me/ТВОЙ_КАНАЛ)
+[![Gmail](https://img.shields.io/badge/Gmail-%D0%9D%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C-5ef0a0?style=for-the-badge&logo=gmail&logoColor=5ef0a0&labelColor=0b1410)](mailto:ТВОЯ_ПОЧТА@gmail.com)
   KestrelUI
 </h1>
 
