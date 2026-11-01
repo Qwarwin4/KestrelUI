@@ -12,6 +12,7 @@ rem Everything is logged to build.log next to this file.
 set "MODE=%~1"
 if "%MODE%"=="" call :menu
 if "%MODE%"=="" exit /b 0
+set "ROOT=%~dp0"
 set "LOG=%~dp0build.log"
 set "VSWHERE=%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vswhere.exe"
 set "VSSETUP=%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\setup.exe"
@@ -32,7 +33,7 @@ if /i "%MODE%"=="deps" goto :end_ok
 
 echo.
 echo [build] npm install (also generates the core library, first time takes a while)
-call :live npm install || goto :fail
+call :npm_install || goto :fail
 
 if /i "%MODE%"=="dev" (
   echo [build] starting dev mode, close the app or press Ctrl+C to stop
@@ -187,6 +188,23 @@ rem pick up tools installed a moment ago without opening a new terminal
 for /f "usebackq delims=" %%p in (`powershell -NoProfile -Command "[Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [Environment]::GetEnvironmentVariable('Path','User')"`) do set "PATH=%%p"
 set "PATH=%USERPROFILE%\.cargo\bin;%USERPROFILE%\.deno\bin;%LOCALAPPDATA%\Microsoft\WinGet\Links;%ProgramFiles%\nodejs;%PATH%"
 exit /b 0
+
+:npm_install
+call :live npm install && exit /b 0
+rem EBUSY/EPERM: something still holds node_modules, usually node or esbuild left from
+rem an earlier dev run of this folder. Stop only those, drop the stale workspace link
+rem (rmdir on a junction removes the link, not the files) and try once more.
+echo.
+echo [build] node_modules is locked, stopping node/esbuild started from this folder and retrying...
+powershell -NoProfile -Command "$d='%ROOT%'; Get-CimInstance Win32_Process -Filter \"Name='node.exe' or Name='esbuild.exe'\" | Where-Object { ($_.CommandLine -and $_.CommandLine.Contains($d)) -or ($_.ExecutablePath -and $_.ExecutablePath.Contains($d)) } | ForEach-Object { Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue }"
+if exist "node_modules\@seelen-ui\lib" rmdir "node_modules\@seelen-ui\lib" 2>nul
+timeout /t 3 /nobreak >nul
+call :live npm install && exit /b 0
+echo.
+echo [build] node_modules is still locked by another program. Close code editors and terminals
+echo [build] with this folder open, then run build.bat again. If it keeps failing, delete the
+echo [build] node_modules folder by hand or add this folder to the antivirus exclusions.
+exit /b 1
 
 :live
 rem like :run but the output also shows in the window, long steps look alive
