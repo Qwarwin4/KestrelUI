@@ -32,7 +32,7 @@ if /i "%MODE%"=="deps" goto :end_ok
 
 echo.
 echo [build] npm install (also generates the core library, first time takes a while)
-call :run npm install || goto :fail
+call :live npm install || goto :fail
 
 if /i "%MODE%"=="dev" (
   echo [build] starting dev mode, close the app or press Ctrl+C to stop
@@ -51,13 +51,15 @@ if /i "%MODE%"=="release" (
 )
 
 echo [build] hook dll
-call :run cargo build %CARGO_FLAGS% -p sluhk || goto :fail
+call :live cargo build %CARGO_FLAGS% -p sluhk || goto :fail
 
-echo [build] app and installer (Rust compile, can take 10-30 minutes the first time)
+echo [build] app and installer
+echo         Rust compiles ~700 crates the first time, 10-30 minutes. Lines keep scrolling,
+echo         that is progress. Do not press Ctrl+C or close the window.
 if defined TAURI_SIGNING_PRIVATE_KEY (
-  call :run npx tauri build %TAURI_FLAGS% || goto :fail
+  call :live npx tauri build %TAURI_FLAGS% || goto :fail
 ) else (
-  call :run npx tauri build %TAURI_FLAGS% -c src\tauri.local.conf.json || goto :fail
+  call :live npx tauri build %TAURI_FLAGS% -c src\tauri.local.conf.json || goto :fail
 )
 
 echo.
@@ -115,6 +117,7 @@ echo   Rust toolchain from rust-toolchain.toml (downloads on first run)
 call :run rustup show active-toolchain || (
   call :run rustup toolchain install || exit /b 1
 )
+call :run rustup component add rustfmt
 exit /b 0
 
 
@@ -184,6 +187,13 @@ rem pick up tools installed a moment ago without opening a new terminal
 for /f "usebackq delims=" %%p in (`powershell -NoProfile -Command "[Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [Environment]::GetEnvironmentVariable('Path','User')"`) do set "PATH=%%p"
 set "PATH=%USERPROFILE%\.cargo\bin;%USERPROFILE%\.deno\bin;%LOCALAPPDATA%\Microsoft\WinGet\Links;%ProgramFiles%\nodejs;%PATH%"
 exit /b 0
+
+:live
+rem like :run but the output also shows in the window, long steps look alive
+echo.>> "%LOG%"
+echo ^> %*>> "%LOG%"
+powershell -NoProfile -ExecutionPolicy Bypass -Command "cmd /c '%* 2>&1' | ForEach-Object { $_; Add-Content -LiteralPath '%LOG%' -Value $_ }; exit $LASTEXITCODE"
+exit /b %errorlevel%
 
 :run
 echo.>> "%LOG%"
