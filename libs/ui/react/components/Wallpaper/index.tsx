@@ -1,6 +1,6 @@
-import { useSignal } from "@preact/signals";
-import { WallpaperConfiguration } from "@seelen-ui/lib";
-import { WallpaperKind } from "@seelen-ui/lib/types";
+import { signal, useSignal } from "@preact/signals";
+import { invoke, SeelenCommand, SeelenEvent, subscribe, WallpaperConfiguration } from "@seelen-ui/lib";
+import { type Wallpaper as WallpaperDefinition, WallpaperKind } from "@seelen-ui/lib/types";
 import { cx } from "libs/ui/react/utils/styling.ts";
 import type { ComponentChildren } from "preact";
 
@@ -12,8 +12,17 @@ import cs from "./index.module.css";
 
 const defaultWallpaperConfig = await WallpaperConfiguration.default();
 
+// previews without a wallpaper of their own show what the desktop shows anyway: the
+// wallpaper set in Windows, instead of the grey placeholder
+const windowsWallpaper = signal<WallpaperDefinition | null>(null);
+invoke(SeelenCommand.WallpaperGetWindows)
+  .then((wallpaper) => (windowsWallpaper.value = wallpaper))
+  .catch(() => {});
+subscribe(SeelenEvent.WallpaperWindowsChanged, ({ payload }) => (windowsWallpaper.value = payload));
+
 export function Wallpaper(props: BaseProps) {
-  const { definition, config = defaultWallpaperConfig } = props;
+  const definition = props.definition ?? windowsWallpaper.value ?? undefined;
+  const config = props.config ?? defaultWallpaperConfig;
 
   const $loaded = useSignal(false);
 

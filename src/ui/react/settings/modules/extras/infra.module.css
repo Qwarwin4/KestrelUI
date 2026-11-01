@@ -1,8 +1,8 @@
 .info {
   a {
-    color: var(--color-blue-500);
+    color: var(--neon);
     &:hover {
-      color: var(--color-blue-700);
+      color: color-mix(in srgb, var(--neon) 75%, white);
     }
   }
 

@@ -9,8 +9,16 @@
   <body>
     <div id="root"></div>
 
+    <script>
+      try {
+        const color = localStorage.getItem("kestrel.splash-color");
+        if (/^#[0-9a-f]{6}$/i.test(color || "")) {
+          document.documentElement.style.setProperty("--splash", color);
+        }
+      } catch {}
+    </script>
     <div id="splashscreen">
-      <img class="splashscreen-logo" src="./logo.svg" alt="" />
+      <span class="splashscreen-logo" aria-hidden="true"><span></span></span>
       <span class="splashscreen-name">KestrelUI</span>
     </div>
     <style>
@@ -25,7 +33,7 @@
       gap: 24px;
 
       background:
-        radial-gradient(circle at 50% 45%, rgb(94 240 160 / 0.14), transparent 55%),
+        radial-gradient(circle at 50% 45%, color-mix(in srgb, var(--splash, #5ef0a0) 14%, transparent), transparent 55%),
         #070b09;
       transition: opacity 300ms linear;
       opacity: 1;
@@ -39,9 +47,20 @@
       }
 
       .splashscreen-logo {
+        position: relative;
         width: 96px;
         height: 96px;
-        filter: drop-shadow(0 0 24px rgb(94 240 160 / 0.35));
+        border-radius: 26px;
+        background-color: #0f1a14;
+        border: 1px solid color-mix(in srgb, var(--splash, #5ef0a0) 35%, transparent);
+        box-shadow: 0 0 48px -12px color-mix(in srgb, var(--splash, #5ef0a0) 45%, transparent);
+
+        > span {
+          position: absolute;
+          inset: 16px;
+          background-color: var(--splash, #5ef0a0);
+          mask: url("./logo-mark.svg") center / contain no-repeat;
+        }
       }
 
       .splashscreen-name {

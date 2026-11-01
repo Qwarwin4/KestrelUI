@@ -16,9 +16,9 @@
     border-radius: 8px;
     background: linear-gradient(
       40deg,
-      var(--color-blue-500) 2%,
-      var(--color-blue-300) 60%,
-      var(--color-blue-100) 100%
+      color-mix(in oklch, var(--neon) 70%, #05100b) 2%,
+      color-mix(in oklch, var(--neon) 35%, #0c1611) 60%,
+      #0c1611 100%
     );
     width: 100%;
     height: 100%;

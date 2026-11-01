@@ -1,3 +1,8 @@
+:root {
+  // neon on the dock and the toolbar only when the user asked for it
+  --neon-accent: color-mix(in oklch, var(--neon-color) calc(var(--neon-shell) * 100%), #dfe6e2);
+}
+
 .ft-bar {
   background-color: oklch(from var(--neon-bar-bg) l c h / var(--neon-glass));
   backdrop-filter: blur(18px) saturate(140%);
@@ -9,7 +14,7 @@
 }
 
 .ft-bar-item.ft-bar-item-clickable:hover {
-  background-color: oklch(from var(--neon-color) l c h / 0.12);
+  background-color: oklch(from var(--neon-accent) l c h / 0.12);
 }
 
 .ft-bar-item-content {

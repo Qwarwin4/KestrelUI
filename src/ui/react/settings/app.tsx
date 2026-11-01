@@ -34,6 +34,12 @@ export function App() {
     root.style.setProperty("--neon", color);
     // dark text on light accents (the neon), white on dark ones (most Windows accents)
     root.style.setProperty("--neon-ink", luminance(color) > 0.45 ? "#04130b" : "#ffffff");
+    // the splash screen in index.html paints itself with this before the app loads
+    try {
+      localStorage.setItem("kestrel.splash-color", color);
+    } catch {
+      // first start keeps the default splash
+    }
   }, [neon, color]);
 
   return (

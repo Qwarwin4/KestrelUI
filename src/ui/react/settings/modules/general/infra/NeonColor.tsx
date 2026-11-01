@@ -106,8 +106,15 @@ function Surfaces() {
   const { t } = useTranslation();
   const glass = Number(themeVar("--neon-glass") ?? 0.62);
 
+  const shell = themeVar("--neon-shell") === "1";
+
   return (
     <SettingsGroup>
+      <SettingsOption
+        label={t("general.neon.shell")}
+        description={t("general.neon.shell_description")}
+        action={<Switch value={shell} onChange={(on) => setThemeVar("--neon-shell", on ? "1" : "0")} />}
+      />
       <SettingsOption
         label={t("general.neon.glass")}
         description={t("general.neon.glass_description")}

@@ -21,7 +21,7 @@
 
   <Properties>
     <DisplayName>KestrelUI</DisplayName>
-    <PublisherDisplayName>Seelen</PublisherDisplayName>
+    <PublisherDisplayName>Qwarwin</PublisherDisplayName>
     <Description>Fully Customizable Desktop Enviroment for Windows.</Description>
     <Logo>static\icons\256x256.png</Logo>
 
@@ -73,7 +73,7 @@
         Square44x44Logo="static\icons\48x48.png"
         BackgroundColor="transparent"
         AppListEntry="default"
-        VisualGroup="Seelen"
+        VisualGroup="KestrelUI"
       ></uap3:VisualElements>
 
       <Extensions>
@@ -108,7 +108,7 @@
         Square44x44Logo="static\icons\48x48.png"
         BackgroundColor="transparent"
         AppListEntry="default"
-        VisualGroup="Seelen"
+        VisualGroup="KestrelUI"
       ></uap3:VisualElements>
 
       <Extensions>
@@ -132,7 +132,7 @@
         Square44x44Logo="static\icons\48x48.png"
         BackgroundColor="transparent"
         AppListEntry="default"
-        VisualGroup="Seelen"
+        VisualGroup="KestrelUI"
       ></uap3:VisualElements>
 
       <Extensions>

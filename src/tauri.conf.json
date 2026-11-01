@@ -35,7 +35,7 @@
     "createUpdaterArtifacts": true,
     "publisher": "Qwarwin",
     "category": "Utility",
-    "copyright": "Copyright © 2024 Seelen Corp., © 2026 KestrelUI contributors (AGPL-3.0)",
+    "copyright": "© 2026 KestrelUI contributors and the original authors · AGPL-3.0",
     "shortDescription": "KestrelUI",
     "longDescription": "KestrelUI Fully Customizable Desktop Environment for Windows",
     "licenseFile": "../LICENSE",
@@ -59,7 +59,7 @@
         "template": "templates/installer.nsi",
         "installerHooks": "templates/installer-hooks.nsh",
         "installMode": "perMachine",
-        "startMenuFolder": "Seelen",
+        "startMenuFolder": "KestrelUI",
         "displayLanguageSelector": true,
         "languages": [
           "arabic",

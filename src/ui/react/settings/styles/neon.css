@@ -162,6 +162,11 @@ html[data-neon] {
   --faint: #6f8a7c;
 }
 
+html[data-neon],
+html[data-neon] body {
+  background-color: #060a08;
+}
+
 html[data-neon] #root {
   /* the blurred blobs of the mockup, as gradients: a blur filter on a full-window layer
      would repaint on every scroll */

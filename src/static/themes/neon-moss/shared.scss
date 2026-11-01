@@ -3,26 +3,30 @@
 :root {
   color-scheme: dark !important;
 
-  --system-accent-color: var(--neon-color) !important;
-  --system-accent-light-color: oklch(from var(--neon-color) calc(l + 0.06) c h) !important;
-  --system-accent-lighter-color: oklch(from var(--neon-color) calc(l + 0.12) c h) !important;
-  --system-accent-lightest-color: oklch(from var(--neon-color) calc(l + 0.18) calc(c * 0.8) h) !important;
-  --system-accent-dark-color: oklch(from var(--neon-color) calc(l - 0.08) c h) !important;
-  --system-accent-darker-color: oklch(from var(--neon-color) calc(l - 0.16) c h) !important;
-  --system-accent-darkest-color: oklch(from var(--neon-color) calc(l - 0.24) c h) !important;
+  // what the accent-derived colors below are made from. The dock and the toolbar redefine
+  // it in their own (later) layer: neon when --neon-shell is on, a neutral light otherwise
+  --neon-accent: var(--neon-color);
+
+  --system-accent-color: var(--neon-accent) !important;
+  --system-accent-light-color: oklch(from var(--neon-accent) calc(l + 0.06) c h) !important;
+  --system-accent-lighter-color: oklch(from var(--neon-accent) calc(l + 0.12) c h) !important;
+  --system-accent-lightest-color: oklch(from var(--neon-accent) calc(l + 0.18) calc(c * 0.8) h) !important;
+  --system-accent-dark-color: oklch(from var(--neon-accent) calc(l - 0.08) c h) !important;
+  --system-accent-darker-color: oklch(from var(--neon-accent) calc(l - 0.16) c h) !important;
+  --system-accent-darkest-color: oklch(from var(--neon-accent) calc(l - 0.24) c h) !important;
 
   // the KestrelUI mark (start button, settings logo) either follows the neon or has its own color
   --kestrel-icon-color: color-mix(
     in oklch,
-    var(--neon-color) calc(var(--neon-icon-follow) * 100%),
+    var(--neon-accent) calc(var(--neon-icon-follow) * 100%),
     var(--neon-icon-color)
   );
 
   // surfaces are tinted with the neon hue so the whole UI shifts with it
-  --neon-surface: oklch(from var(--neon-color) 0.16 0.02 h);
-  --neon-surface-raised: oklch(from var(--neon-color) 0.21 0.025 h);
-  --neon-line: oklch(from var(--neon-color) l c h / 0.14);
-  --neon-shine: oklch(from var(--neon-color) l c h / calc(var(--neon-glow) * 0.45));
+  --neon-surface: oklch(from var(--neon-accent) 0.16 min(0.02, c) h);
+  --neon-surface-raised: oklch(from var(--neon-accent) 0.21 min(0.025, c) h);
+  --neon-line: oklch(from var(--neon-accent) l c h / 0.14);
+  --neon-shine: oklch(from var(--neon-accent) l c h / calc(var(--neon-glow) * 0.45));
 
   // toolbar and dock follow the neon tinted surface unless the user picked a color
   --neon-bar-bg: color-mix(
@@ -39,8 +43,8 @@
   --slu-std-bg-dark-color: oklch(from var(--neon-surface) calc(l - 0.03) c h);
   --slu-std-bg-color: var(--neon-surface);
   --slu-std-bg-light-color: var(--neon-surface-raised);
-  --slu-std-ui-color: var(--neon-color);
-  --slu-std-ui-fg-color: oklch(from var(--neon-color) 0.18 0.03 h);
+  --slu-std-ui-color: var(--neon-accent);
+  --slu-std-ui-fg-color: oklch(from var(--neon-accent) 0.18 min(0.03, c) h);
   --slu-std-ui-hover-color: var(--system-accent-lighter-color);
 }
 

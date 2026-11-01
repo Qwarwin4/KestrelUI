@@ -175,6 +175,8 @@ general:
     presets: Preset colors
     hue: Hue
     reset: Reset
+    shell: Neon on the dock and toolbar
+    shell_description: "Off: the dock, the toolbar and the start button stay neutral and only the rest of KestrelUI uses the neon."
     glass: Glass opacity
     glass_description: How see-through the toolbar, the dock and popups are.
     bar: Toolbar color

@@ -38,6 +38,11 @@ const WBEM_E_NOT_SUPPORTED: i32 = 0x8004100C_u32 as i32;
 /// (~60 ms on a healthy monitor) on a background thread.
 const DDCCI_POLL_INTERVAL: Duration = Duration::from_secs(5);
 
+/// How long a panel gets to apply a written value before it is read back.
+const DDCCI_VERIFY_DELAY: Duration = Duration::from_millis(400);
+/// Ignored writes in a row before a monitor is switched to software dimming.
+const DDCCI_MAX_MISSES: u8 = 2;
+
 /// Serializes every DDC/CI transaction (polling and writes) *together with* the publication
 /// of its result into `BrightnessManager::ddcci`. Holding the lock across both steps means a
 /// read that started before a write can never overwrite the written value afterwards.
@@ -70,6 +75,9 @@ pub struct BrightnessManager {
     ddcci: SyncVec<DdcciPanel>,
     /// Displays with neither, dimmed through the gamma ramp.
     soft: SyncVec<SoftPanel>,
+    /// Monitors that answer DDC/CI reads but ignore writes (seen on cheap panels, or with
+    /// DDC/CI switched off in the OSD). They get software dimming for the rest of the session.
+    ddcci_ignored: SyncVec<MonitorId>,
     worker_tx: crossbeam_channel::Sender<WorkerMessage>,
 }
 
@@ -97,6 +105,7 @@ impl BrightnessManager {
             wmi: SyncVec::new(),
             ddcci: SyncVec::new(),
             soft: SyncVec::new(),
+            ddcci_ignored: SyncVec::new(),
             worker_tx,
         }
     }
@@ -172,6 +181,26 @@ impl BrightnessManager {
                     // collapse bursts of display events into a single scan
                     while rx.try_recv().is_ok() {}
                     Self::scan();
+                }
+                Ok(WorkerMessage::Verify(first)) => {
+                    // give the panel time to apply the value before reading it back; a slider
+                    // drag sends one request per step, they are checked once
+                    std::thread::sleep(DDCCI_VERIFY_DELAY);
+                    let mut ids = vec![first];
+                    let mut rescan = false;
+                    while let Ok(message) = rx.try_recv() {
+                        match message {
+                            WorkerMessage::Verify(id) if !ids.contains(&id) => ids.push(id),
+                            WorkerMessage::Verify(_) => {}
+                            WorkerMessage::Rescan => rescan = true,
+                        }
+                    }
+                    if rescan {
+                        Self::scan();
+                    }
+                    for id in ids {
+                        Self::ddcci_verify(&id);
+                    }
                 }
                 Err(crossbeam_channel::RecvTimeoutError::Timeout) => Self::ddcci_poll(),
                 Err(crossbeam_channel::RecvTimeoutError::Disconnected) => return,
@@ -324,6 +353,9 @@ impl BrightnessManager {
         let mut found = Vec::new();
         for target in targets {
             let ScanTarget { monitor, id, name } = target;
+            if self.ddcci_ignored.contains(id) {
+                continue;
+            }
             let Ok(panels) = monitor.physical_monitors() else {
                 continue;
             };
@@ -339,6 +371,7 @@ impl BrightnessManager {
                             handle: Arc::new(handle),
                             values,
                             api,
+                            misses: 0,
                         });
                     }
                     Err(err) => {
@@ -402,9 +435,13 @@ impl BrightnessManager {
 
         for target in &panels {
             let raw = target.raw_from_percent(percent);
-            match target.api {
-                DdcApi::Mccs => target.handle.ddcci_set_brightness(raw)?,
-                DdcApi::Vcp => target.handle.vcp_set_brightness(raw)?,
+            let written = match target.api {
+                DdcApi::Mccs => target.handle.ddcci_set_brightness(raw),
+                DdcApi::Vcp => target.handle.vcp_set_brightness(raw),
+            };
+            if let Err(err) = written {
+                log::debug!("DDC/CI brightness write failed on {id}: {err}");
+                continue;
             }
             self.ddcci.for_each(|panel| {
                 if Arc::ptr_eq(&panel.handle, &target.handle) {
@@ -416,8 +453,45 @@ impl BrightnessManager {
 
         if !panels.is_empty() {
             self.emit_changed();
+            // failed writes are caught here too: the read back won't match
+            let _ = self.worker_tx.send(WorkerMessage::Verify(id.clone()));
         }
         Ok(!panels.is_empty())
+    }
+
+    /// Reads the panels back after a write and compares with the last value written. A panel
+    /// that keeps reporting something else is not obeying DDC/CI, so its monitor falls back
+    /// to software dimming.
+    fn ddcci_verify(id: &MonitorId) {
+        let manager = Self::instance();
+        let guard = DDCCI_LOCK.lock();
+        let mut ignoring = None;
+        for known in manager.ddcci.to_vec() {
+            if &known.monitor_id != id {
+                continue;
+            }
+            let expected = known.values.current;
+            let obeyed = Self::ddcci_read(&known.handle, known.api)
+                .is_ok_and(|values| values.current.abs_diff(expected) <= 1);
+            manager.ddcci.for_each(|panel| {
+                if Arc::ptr_eq(&panel.handle, &known.handle) {
+                    panel.misses = if obeyed { 0 } else { panel.misses + 1 };
+                    if panel.misses >= DDCCI_MAX_MISSES {
+                        ignoring = Some(panel.percent());
+                    }
+                }
+            });
+        }
+        drop(guard);
+
+        if let Some(percent) = ignoring {
+            log::warn!(
+                "Monitor {id} ignores DDC/CI brightness writes, switching to software dimming"
+            );
+            manager.ddcci_ignored.push(id.clone());
+            Self::scan();
+            manager.soft_set(id, percent).log_error();
+        }
     }
 
     fn emit_changed(&self) {
@@ -556,6 +630,8 @@ struct SoftPanel {
 enum WorkerMessage {
     /// A display was added/removed, re-enumerate monitors.
     Rescan,
+    /// Check that the panels of a monitor took the brightness just written.
+    Verify(MonitorId),
 }
 
 /// A connected monitor to look for panels on.
@@ -582,6 +658,8 @@ struct DdcciPanel {
     handle: Arc<PhysicalMonitorHandle>,
     values: DdcciBrightnessValues,
     api: DdcApi,
+    /// writes in a row the panel didn't apply
+    misses: u8,
 }
 
 impl DdcciPanel {

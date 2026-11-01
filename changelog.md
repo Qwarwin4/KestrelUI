@@ -15,12 +15,18 @@ First KestrelUI alpha, based on Seelen UI 2.8.11.
 - "Start with Windows" checkbox in the toolbar context menu.
 - brightness: monitors that ignore the high level DDC/CI call are driven through the raw VCP 0x10 request, and
   screens without any hardware control (no DDC/CI, no WMI) are dimmed through the gamma ramp, restored on exit.
+  Monitors that answer DDC/CI reads but ignore writes are detected and switched to the gamma ramp too.
+- settings: neon used for tabs, monitor previews, tiling layouts, notes and links instead of blue; no white
+  scrollbar corner or window background showing at the edges; the splash screen uses your neon color.
+- installer: no Seelen name in the page footer, the start menu folder or the MSIX manifest.
 - redesigned settings window: grouped sidebar with short names, GitHub account card, page titles with a terminal
   style path, Manrope and JetBrains Mono fonts, hairline-split setting cards, page transitions. Neon Moss keeps it
   dark whatever the Windows color mode is.
 - start button on the dock: own picture or presets (pixel girls, cat, ghost, heart, mushroom, terminal, moon).
 - own toolbar and dock colors and glass opacity in General.
 - brightness presets in quick settings (night, reading, day, max) for every screen at once.
+- "Neon on the dock and toolbar" switch, off by default: the dock, the toolbar and the start button stay neutral.
+- wallpaper previews in settings show the current Windows wallpaper instead of the grey placeholder.
 
 ### performance
 

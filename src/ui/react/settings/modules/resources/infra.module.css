@@ -43,9 +43,14 @@
 
     gap: var(--spacing-xs);
 
-    border: 2px solid var(--color-gray-200);
-    border-radius: 8px;
-    color: var(--color-gray-900);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background-color: var(--surface);
+    color: var(--text);
+    transition:
+      border-color 0.16s,
+      background-color 0.16s,
+      transform 0.16s;
 
     &.kindDisabled {
       opacity: 0.5;
@@ -54,15 +59,20 @@
     }
 
     &.kindActive {
-      background-color: var(--color-blue-100);
-      border-color: var(--color-blue-500);
-      color: var(--color-blue-900);
+      background-color: var(--neon-soft);
+      border-color: var(--neon);
+      color: var(--text);
     }
 
     &:hover {
-      background-color: var(--color-blue-100);
-      border-color: var(--color-blue-300);
-      color: var(--color-blue-900);
+      background-color: var(--neon-soft);
+      border-color: color-mix(in srgb, var(--neon) 55%, transparent);
+      transform: translateY(-2px);
+    }
+
+    &:hover .kindIcon,
+    &.kindActive .kindIcon {
+      color: var(--neon);
     }
 
     .kindIcon {

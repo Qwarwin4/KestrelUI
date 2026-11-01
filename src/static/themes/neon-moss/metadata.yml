@@ -41,6 +41,12 @@ settings:
       ru: Свечение
     initialValue: true
   - syntax: <boolean>
+    name: --neon-shell
+    label:
+      en: Neon on the dock and toolbar
+      ru: Неон на доке и панели
+    initialValue: false
+  - syntax: <boolean>
     name: --neon-bar-custom
     label:
       en: Own toolbar color

@@ -11,9 +11,9 @@
 }
 
 .info {
-  border-left: 3px solid var(--color-blue-400);
-  background-color: var(--color-blue-50);
-  color: var(--color-blue-800);
+  border-left: 3px solid var(--neon);
+  background-color: var(--neon-soft);
+  color: var(--text);
 }
 
 .warning {
