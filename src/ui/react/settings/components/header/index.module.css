@@ -1,63 +1,76 @@
 .header {
   height: 100%;
-
-  background-color: light-dark(#00000008, #0000001a);
-  border-bottom: 1px solid var(--color-gray-200);
-
-  font-weight: 600;
-  padding: 0 var(--spacing-s);
   display: flex;
-  display: grid;
-  grid-template-columns: 1fr auto;
   align-items: center;
+  justify-content: space-between;
   gap: var(--spacing-s);
+  padding: 0 var(--spacing-l);
+  border-bottom: 1px solid var(--line);
   app-region: drag;
 
-  button {
+  button,
+  a {
     app-region: no-drag;
-  }
-
-  .title {
-    font-size: 1.2rem;
-    line-height: 1.8rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-s);
-    overflow: hidden;
-
-    a:hover {
-      color: var(--color-blue-500);
-      cursor: pointer;
-    }
-
-    .part {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-  }
-
-  .actions {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-2xs);
   }
 }
 
-/* Neon Moss (variant A) */
-:global(html[data-neon]) .header {
-  background-color: transparent;
-  border-bottom-color: var(--neon-line);
-  padding: 0 var(--spacing-l);
+.path {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--faint);
+  white-space: nowrap;
+  overflow: hidden;
+}
 
-  .title {
-    font-size: 1.35rem;
+.home {
+  color: var(--neon);
+  font-weight: 600;
+}
+
+.slash {
+  opacity: 0.6;
+}
+
+.part {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--muted);
+
+  &:last-of-type {
+    color: var(--text);
+  }
+}
+
+a.part:hover {
+  color: var(--neon);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  flex-shrink: 0;
+}
+
+.heading {
+  margin-bottom: var(--spacing-l);
+
+  h1 {
+    font-size: 1.85rem;
+    line-height: 1.15;
     font-weight: 800;
     letter-spacing: -0.02em;
+    color: var(--text);
+  }
 
-    a:hover {
-      color: var(--neon);
-    }
+  p {
+    margin-top: 6px;
+    max-width: 640px;
+    font-size: 0.9rem;
+    color: var(--muted);
   }
 }

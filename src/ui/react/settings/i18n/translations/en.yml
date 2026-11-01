@@ -279,7 +279,33 @@ monitors_configurations:
   label: Monitor {{index}}
 more: More
 'no': 'No'
+nav:
+  label: Settings sections
+  collapse: Collapse the menu
+  expand: Expand the menu
+  github: GitHub · for publishing
+  groups:
+    main: Main
+    desktop: Desktop
+    themes: Themes
+    system: System
+  widgets:
+    dock: Dock
+    toolbar: Toolbar
+    tiling: Window tiling
+    wallpaper: Wallpapers
+    start: Start menu
+    switcher: Task switcher
 open: Open
+pages:
+  general: Language, startup, the neon, the start button and how KestrelUI uses your PC.
+  resources: Themes, widgets, plugins, icon packs and wallpapers you have installed.
+  security: What each widget is allowed to do.
+  monitors: Layout and wallpapers for every screen and workspace.
+  specific_apps: Rules for single apps, like keeping them out of tiling.
+  shortcuts: Every keyboard shortcut, and the ones you changed.
+  developer: Tools for theme and widget authors.
+  extras: Version, license and where KestrelUI comes from.
 quit: Quit
 remove: Remove
 reset_all_to_default: Reset all to default values
@@ -305,10 +331,6 @@ resources:
   update_now: Update
   updates_available: Updates Available
   updates_available_description: The following resources have updates available.
-review_request:
-  not_now: Not now
-  sure: Sure!
-  title: Enjoying KestrelUI?
 save: Save
 save_and_restart: Save & Restart
 search: Search
@@ -543,16 +565,10 @@ weg:
   show_end_task: Show end task in taskbar
   width: Width
 welcome:
-  give_a_review: Give a Review
-  message: >-
-    KestrelUI is a free and open source desktop environment for Windows. Here
-    you have full control over how your desktop looks and behaves, allowing you
-    to customize every detail to match your workflow and style.
-  ok: Let's start!
-  review: >-
-    If you enjoy using KestrelUI, consider leaving a review on the store — your
-    feedback helps the project grow and improve.
-  title: Welcome to KestrelUI!
+  title: Welcome to KestrelUI
+  message: "Your own Windows desktop: a dock, a toolbar, window tiling and themes. No accounts, ads or telemetry. Start from a ready setup in the showcase or make it yours."
+  customize: Customize
+  ok: "Let's go"
 widget:
   add_workspace_override: Override on a workspace
   default_instance: Default Instance

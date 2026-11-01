@@ -8,23 +8,22 @@
 
 .hero {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   gap: var(--spacing-m);
-  padding: var(--spacing-l);
-  border-radius: var(--config-border-radius);
-  background-color: var(--color-gray-50);
-  box-shadow: var(--shadow-s);
+  padding: var(--spacing-xs) 0 var(--spacing-xs);
 
   h1 {
-    font-size: 1.6rem;
-    line-height: 1.3em;
-    font-weight: 600;
+    font-size: 1.85rem;
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -0.02em;
   }
 
+
   p {
-    color: var(--color-gray-600);
-    margin-top: var(--spacing-2xs);
+    color: var(--muted);
+    margin-top: 6px;
   }
 }
 
@@ -49,9 +48,9 @@
   flex-direction: column;
   gap: var(--spacing-s);
   padding: var(--spacing-l);
-  border-radius: var(--config-border-radius);
-  background-color: var(--color-gray-50);
-  box-shadow: var(--shadow-s);
+  border-radius: 16px;
+  background-color: var(--surface);
+  border: 1px solid var(--line);
 
   h2 {
     font-size: 1.1rem;
@@ -93,9 +92,9 @@
   min-height: 420px;
   display: flex;
   flex-direction: column;
-  border-radius: var(--config-border-radius);
-  background-color: var(--color-gray-50);
-  box-shadow: var(--shadow-s);
+  border-radius: 16px;
+  background-color: var(--surface);
+  border: 1px solid var(--line);
   overflow: hidden;
 }
 
@@ -137,7 +136,7 @@
     transition: border-color 0.15s, color 0.15s;
 
     &:hover {
-      border-color: var(--color-accent, var(--color-gray-500));
+      border-color: var(--neon);
       color: var(--color-gray-900);
     }
   }
@@ -155,8 +154,8 @@
     align-items: flex-end;
 
     .bubble {
-      background-color: var(--color-accent, var(--color-gray-300));
-      color: var(--color-accent-text, var(--color-gray-900));
+      background-color: var(--neon);
+      color: var(--neon-ink);
       border-bottom-right-radius: 4px;
     }
   }

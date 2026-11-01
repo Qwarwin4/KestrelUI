@@ -1,32 +1,46 @@
 .group {
   flex: 1;
-  background-color: light-dark(rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.1));
-  border-radius: var(--config-border-radius);
-  padding: var(--spacing-s);
+  padding: 4px var(--spacing-l);
+  border-radius: 16px;
+  background-color: var(--surface);
+  border: 1px solid var(--line);
   overflow: hidden;
+  transition: border-color 0.2s;
 
-  &:not(:last-child) {
-    margin-bottom: var(--spacing-s);
+  &:hover {
+    border-color: var(--line-strong);
   }
 
-  .content {
+  &:not(:last-child) {
+    margin-bottom: var(--spacing-m);
+  }
+
+  > .content {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-s);
+
+    /* rows of one card are split by hairlines, like native settings */
+    > * {
+      padding: 14px 0;
+    }
+
+    > * + * {
+      border-top: 1px solid var(--line);
+    }
   }
 
   .setting {
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: var(--spacing-s);
+    gap: var(--spacing-m);
     align-items: center;
 
     &.disabled {
-      opacity: 0.6;
+      opacity: 0.5;
     }
 
     :global(.ant-input) {
-      max-width: 150px;
+      max-width: 160px;
     }
 
     :global(.ant-slider) {
@@ -42,21 +56,26 @@
       grid-column: 1 / 2;
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      gap: 3px;
 
       .label {
-        gap: var(--spacing-2xs);
         display: flex;
         align-items: center;
-        font-weight: 600;
+        gap: var(--spacing-2xs);
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--text);
       }
 
       .description {
-        color: var(--color-gray-600);
+        max-width: 560px;
+        color: var(--muted);
         font-size: 0.8rem;
-        line-height: 1.4em;
+        line-height: 1.45em;
 
         a {
-          color: var(--color-blue-500);
+          color: var(--neon);
         }
       }
     }
@@ -76,16 +95,23 @@
   .subgroup {
     .subtitle {
       margin-bottom: var(--spacing-s);
-      font-weight: 600;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--faint);
     }
 
     .content {
-      padding-left: var(--spacing-s);
-      border-left: 1.5px solid light-dark(#0002, #fff2);
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-s);
+      padding-left: var(--spacing-m);
+      border-left: 2px solid var(--line-strong);
 
       .label {
-        font-size: 0.9rem;
-        font-weight: normal;
+        font-size: 0.85rem;
+        font-weight: 600;
       }
     }
   }
@@ -97,20 +123,5 @@
   :global(.ant-input),
   :global(.ant-input-number) {
     min-width: 90px;
-  }
-}
-
-/* Neon Moss (variant A) */
-:global(html[data-neon]) .group {
-  padding: var(--spacing-m);
-  background-color: var(--neon-surface);
-  border: 1px solid var(--neon-line);
-
-  .setting .info .description {
-    color: var(--neon-muted);
-  }
-
-  .subgroup .content {
-    border-left-color: var(--neon-line-strong);
   }
 }

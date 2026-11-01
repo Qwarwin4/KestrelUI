@@ -18,3 +18,7 @@ Main modifications (see git history for details):
 
 "Seelen" and "Seelen UI" are names of the original project; KestrelUI is not
 affiliated with or endorsed by Seelen Corp.
+
+Bundled fonts (src/ui/react/settings/public/fonts): Manrope (c) The Manrope Project Authors
+and JetBrains Mono (c) The JetBrains Mono Project Authors, both under the SIL Open Font
+License 1.1, included next to the font files.

@@ -19,8 +19,8 @@ const { window } = Widget.self;
 
 await Promise.all([
   window.setDecorations(false),
-  window.setSizeConstraints({ minWidth: 600, minHeight: 400 }),
-  window.setSize(new LogicalSize(960, 620)),
+  window.setSizeConstraints({ minWidth: 720, minHeight: 460 }),
+  window.setSize(new LogicalSize(1040, 680)),
 ]);
 await window.center();
 

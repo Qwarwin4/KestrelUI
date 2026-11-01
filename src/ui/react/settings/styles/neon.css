@@ -152,34 +152,32 @@ html[data-neon] {
   --color-magenta-800: oklch(86% 0.085 360);
   --color-magenta-900: oklch(92% 0.046 360);
 
-  --neon-ink: #04130b;
-  --neon-line: rgb(125 255 178 / 0.1);
-  --neon-line-strong: rgb(125 255 178 / 0.18);
-  --neon-surface: rgb(255 255 255 / 0.035);
-  --neon-text: #e6f2ec;
-  --neon-muted: #8fa89b;
-  --config-border-radius: 14px;
-
-  color: var(--neon-text);
-  font-family: "Segoe UI Variable Text", "Segoe UI", sans-serif;
+  /* lines and surfaces carry a bit of the neon instead of plain grey */
+  --line: color-mix(in srgb, var(--neon) 11%, transparent);
+  --line-strong: color-mix(in srgb, var(--neon) 20%, transparent);
+  --surface: rgb(255 255 255 / 0.035);
+  --surface-hover: rgb(255 255 255 / 0.06);
+  --text: #e6f2ec;
+  --muted: #8fa89b;
+  --faint: #6f8a7c;
 }
 
 html[data-neon] #root {
-  /* the three blurred blobs of the mockup, as gradients: a blur filter on a full-window
-     layer would repaint on every scroll */
+  /* the blurred blobs of the mockup, as gradients: a blur filter on a full-window layer
+     would repaint on every scroll */
   background:
-    radial-gradient(760px 760px at -2% -10%, rgb(15 58 40 / 0.9), transparent 62%),
+    radial-gradient(760px 760px at -2% -10%, color-mix(in oklch, var(--neon) 22%, #060a08), transparent 62%),
     radial-gradient(820px 820px at 104% 112%, rgb(11 44 51 / 0.9), transparent 62%),
-    radial-gradient(420px 420px at 78% 26%, rgb(31 107 71 / 0.35), transparent 70%),
+    radial-gradient(420px 420px at 78% 26%, color-mix(in oklch, var(--neon) 14%, transparent), transparent 70%),
     #060a08;
 }
 
 html[data-neon] * {
   ::-webkit-scrollbar-thumb {
-    background-color: rgb(125 255 178 / 0.16);
+    background-color: color-mix(in srgb, var(--neon) 18%, transparent);
 
     &:active {
-      background-color: rgb(125 255 178 / 0.3);
+      background-color: color-mix(in srgb, var(--neon) 34%, transparent);
     }
   }
 }
@@ -194,5 +192,5 @@ html[data-neon] .ant-btn-primary:not(.ant-btn-dangerous):not(:disabled) {
 html[data-neon] .ant-modal-content,
 html[data-neon] .ant-popover-inner,
 html[data-neon] .ant-select-dropdown {
-  border: 1px solid var(--neon-line);
+  border: 1px solid var(--line);
 }

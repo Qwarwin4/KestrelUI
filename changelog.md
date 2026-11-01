@@ -13,7 +13,9 @@ First KestrelUI alpha, based on Seelen UI 2.8.11.
 - assistant in the settings app over the GPT, Claude, OpenRouter or any OpenAI-compatible API, changes settings
   through tools with one-click undo.
 - "Start with Windows" checkbox in the toolbar context menu.
-- settings window in the Neon Moss look (dark glass, neon navigation), whatever the Windows color mode is.
+- redesigned settings window: grouped sidebar with short names, GitHub account card, page titles with a terminal
+  style path, Manrope and JetBrains Mono fonts, hairline-split setting cards, page transitions. Neon Moss keeps it
+  dark whatever the Windows color mode is.
 - start button on the dock: own picture or presets (pixel girls, cat, ghost, heart, mushroom, terminal, moon).
 - own toolbar and dock colors and glass opacity in General.
 
@@ -27,6 +29,7 @@ First KestrelUI alpha, based on Seelen UI 2.8.11.
 ### removed
 
 - accounts, plans, cloud backup, telemetry, news feed and promo content.
+- the welcome dialog's store review button and the weekly "rate us" prompt.
 
 ### fix
 

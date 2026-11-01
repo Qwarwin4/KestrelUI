@@ -179,7 +179,7 @@ export function StartLogo() {
       </div>
       {group("girls")}
       {group("other")}
-      <input ref={fileRef} type="file" accept="image/*" hidden onChange={onFile} />
+      <input ref={fileRef} type="file" accept="image/*" style={{ display: "none" }} onChange={onFile} />
     </SettingsGroup>
   );
 }

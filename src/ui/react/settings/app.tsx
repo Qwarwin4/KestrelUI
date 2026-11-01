@@ -32,13 +32,15 @@ export function App() {
     const root = document.documentElement;
     root.toggleAttribute("data-neon", neon);
     root.style.setProperty("--neon", color);
+    // dark text on light accents (the neon), white on dark ones (most Windows accents)
+    root.style.setProperty("--neon-ink", luminance(color) > 0.45 ? "#04130b" : "#ffffff");
   }, [neon, color]);
 
   return (
     <ConfigProvider
       componentSize="small"
       theme={{
-        token: neon ? NEON_TOKENS(color) : { colorPrimary: color },
+        token: neon ? NEON_TOKENS(color) : { colorPrimary: color, borderRadius: 10, fontFamily: FONT },
         algorithm: isDarkMode ? theme.darkAlgorithm : theme.defaultAlgorithm,
       }}
     >
@@ -49,6 +51,8 @@ export function App() {
   );
 }
 
+const FONT = '"Manrope Variable", "Segoe UI Variable Text", "Segoe UI", sans-serif';
+
 const NEON_TOKENS = (color: string) => ({
   colorPrimary: color,
   colorBgBase: "#08100c",
@@ -57,5 +61,15 @@ const NEON_TOKENS = (color: string) => ({
   colorBorder: "rgba(125, 255, 178, 0.16)",
   colorBorderSecondary: "rgba(125, 255, 178, 0.1)",
   borderRadius: 10,
-  fontFamily: '"Segoe UI Variable Text", "Segoe UI", sans-serif',
+  fontFamily: FONT,
 });
+
+/** relative luminance of a #rrggbb color, 0..1 */
+function luminance(hex: string): number {
+  const n = parseInt(hex.replace("#", "").slice(0, 6), 16);
+  const channel = (c: number) => {
+    const v = c / 255;
+    return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4;
+  };
+  return 0.2126 * channel((n >> 16) & 255) + 0.7152 * channel((n >> 8) & 255) + 0.0722 * channel(n & 255);
+}

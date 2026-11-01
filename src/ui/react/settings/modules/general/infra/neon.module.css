@@ -142,8 +142,8 @@
   justify-content: center;
   padding: 6px;
   border-radius: 12px;
-  border: 1px solid var(--neon-line, var(--color-gray-200));
-  background-color: #0c1611;
+  border: 1px solid var(--line);
+  background-color: light-dark(#0f1a14, #0c1611);
   color: var(--color-gray-700);
   cursor: pointer;
   transition: border-color 0.15s, transform 0.12s;
