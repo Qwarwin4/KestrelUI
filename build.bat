@@ -1,53 +1,190 @@
 @echo off
-setlocal
+setlocal EnableExtensions
 cd /d "%~dp0"
 
-rem build.bat          debug installer in target\debug\bundle\nsis
-rem build.bat dev      run from sources with hot reload
-rem build.bat release  release installer in target\release\bundle\nsis
-
-set "PATH=%USERPROFILE%\.cargo\bin;%USERPROFILE%\.deno\bin;%LOCALAPPDATA%\Microsoft\WinGet\Links;%ProgramFiles%\nodejs;%PATH%"
+rem build.bat           install what is missing, build a debug installer
+rem build.bat release   same, release installer (slower, smaller and faster app)
+rem build.bat dev       install what is missing, run from sources with hot reload
+rem build.bat deps      only install / check the build tools
+rem Everything is logged to build.log next to this file.
 
 set "MODE=%~1"
 if "%MODE%"=="" set "MODE=debug"
+set "LOG=%~dp0build.log"
+set "VSWHERE=%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vswhere.exe"
+set "VSSETUP=%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\setup.exe"
+set "KITS=%ProgramFiles(x86)%\Windows Kits\10\Lib"
 
-call node scripts\doctor.mjs || goto :fail
+echo KestrelUI build, mode: %MODE%> "%LOG%"
+echo.
+echo KestrelUI build (%MODE%). Full log: build.log
+echo.
 
-if not exist node_modules (
-  echo Installing dependencies...
-  call npm install || goto :fail
+if /i not "%MODE%"=="debug" if /i not "%MODE%"=="release" if /i not "%MODE%"=="dev" if /i not "%MODE%"=="deps" (
+  echo Unknown mode "%MODE%". Use: build.bat [debug^|release^|dev^|deps]
+  goto :end_fail
 )
+
+call :deps || goto :end_fail
+if /i "%MODE%"=="deps" goto :end_ok
+
+echo.
+echo [build] npm install (also generates the core library, first time takes a while)
+call :run npm install || goto :fail
 
 if /i "%MODE%"=="dev" (
-  call npm run dev || goto :fail
-  exit /b 0
-)
-
-if /i "%MODE%"=="debug" (
-  cargo build -p sluhk || goto :fail
-  call npx tauri build --debug -c src\tauri.local.conf.json || goto :fail
-  echo.
-  echo Installer: target\debug\bundle\nsis
-  exit /b 0
+  echo [build] starting dev mode, close the app or press Ctrl+C to stop
+  call npm run dev
+  goto :end_ok
 )
 
 if /i "%MODE%"=="release" (
-  cargo build --release -p sluhk || goto :fail
-  if defined TAURI_SIGNING_PRIVATE_KEY (
-    call npx tauri build || goto :fail
-  ) else (
-    echo No TAURI_SIGNING_PRIVATE_KEY: building an unsigned installer without auto-updates
-    call npx tauri build -c src\tauri.local.conf.json || goto :fail
-  )
-  echo.
-  echo Installer: target\release\bundle\nsis
-  exit /b 0
+  set "PROFILE=release"
+  set "CARGO_FLAGS=--release"
+  set "TAURI_FLAGS="
+) else (
+  set "PROFILE=debug"
+  set "CARGO_FLAGS="
+  set "TAURI_FLAGS=--debug"
 )
 
-echo Unknown mode "%MODE%". Use: build.bat [debug^|dev^|release]
-exit /b 1
+echo [build] hook dll
+call :run cargo build %CARGO_FLAGS% -p sluhk || goto :fail
+
+echo [build] app and installer (Rust compile, can take 10-30 minutes the first time)
+if defined TAURI_SIGNING_PRIVATE_KEY (
+  call :run npx tauri build %TAURI_FLAGS% || goto :fail
+) else (
+  call :run npx tauri build %TAURI_FLAGS% -c src\tauri.local.conf.json || goto :fail
+)
+
+echo.
+echo Done.
+echo   Installer: target\%PROFILE%\bundle\nsis\
+echo   App:       target\%PROFILE%\kestrelui.exe
+start "" "%~dp0target\%PROFILE%\bundle\nsis"
+goto :end_ok
+
+
+:deps
+echo [deps] checking build tools
+call :refresh_path
+
+where winget >nul 2>&1
+if errorlevel 1 (
+  echo   winget is missing. Install "App Installer" from Microsoft Store, then run this again.
+  exit /b 1
+)
+
+call :has_msvc
+if errorlevel 1 (
+  echo   MSVC + Windows SDK: installing Visual Studio Build Tools, accept the admin prompt
+  call :winget Microsoft.VisualStudio.2022.BuildTools --override "--wait --passive --norestart --add Microsoft.VisualStudio.Workload.VCTools --includeRecommended"
+  call :has_msvc || call :add_vctools
+  call :has_msvc || (
+    echo   MSVC or the Windows SDK is still missing. Open "Visual Studio Installer",
+    echo   modify Build Tools 2022 and tick "Desktop development with C++".
+    exit /b 1
+  )
+)
+echo   ok  MSVC + Windows SDK
+
+call :ensure rustup Rustlang.Rustup || exit /b 1
+call :ensure node OpenJS.NodeJS.LTS || exit /b 1
+call :ensure deno DenoLand.Deno || exit /b 1
+call :ensure git Git.Git || exit /b 1
+
+reg query "HKLM\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\Clients\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}" >nul 2>&1
+if errorlevel 1 (
+  reg query "HKCU\Software\Microsoft\EdgeUpdate\Clients\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}" >nul 2>&1
+  if errorlevel 1 call :winget Microsoft.EdgeWebView2Runtime
+)
+echo   ok  WebView2
+
+set "NODE_MAJOR=0"
+for /f %%v in ('node -p "parseInt(process.versions.node)"') do set "NODE_MAJOR=%%v"
+if %NODE_MAJOR% LSS 22 (
+  echo   Node.js %NODE_MAJOR% is too old, need 22 or newer
+  call :winget OpenJS.NodeJS.LTS
+  call :refresh_path
+)
+
+echo   Rust toolchain from rust-toolchain.toml (downloads on first run)
+call :run rustup show active-toolchain || (
+  call :run rustup toolchain install || exit /b 1
+)
+exit /b 0
+
+
+rem --- helpers ---
+
+:ensure
+rem %1 command to look for, %2 winget package id
+where %1 >nul 2>&1
+if not errorlevel 1 (
+  echo   ok  %1
+  exit /b 0
+)
+echo   %1: installing %2
+call :winget %2
+call :refresh_path
+where %1 >nul 2>&1
+if errorlevel 1 (
+  echo   %1 is still not found after installing %2. See build.log.
+  exit /b 1
+)
+echo   ok  %1
+exit /b 0
+
+:winget
+rem winget exits non-zero for "already installed", so presence is checked afterwards instead
+echo winget install %*>> "%LOG%"
+winget install -e --silent --accept-package-agreements --accept-source-agreements --id %* >> "%LOG%" 2>&1
+exit /b 0
+
+:has_msvc
+if not exist "%VSWHERE%" exit /b 1
+set "VSPATH="
+for /f "usebackq delims=" %%i in (`"%VSWHERE%" -latest -products * -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath`) do set "VSPATH=%%i"
+if not defined VSPATH exit /b 1
+dir /s /b "%KITS%\kernel32.lib" >nul 2>&1 || exit /b 1
+exit /b 0
+
+:add_vctools
+if not exist "%VSWHERE%" exit /b 1
+set "VSPATH="
+for /f "usebackq delims=" %%i in (`"%VSWHERE%" -latest -products * -property installationPath`) do set "VSPATH=%%i"
+if not defined VSPATH exit /b 1
+echo   adding the C++ workload to the existing Build Tools
+"%VSSETUP%" modify --installPath "%VSPATH%" --add Microsoft.VisualStudio.Workload.VCTools --includeRecommended --passive --norestart --wait >> "%LOG%" 2>&1
+exit /b 0
+
+:refresh_path
+rem pick up tools installed a moment ago without opening a new terminal
+for /f "usebackq delims=" %%p in (`powershell -NoProfile -Command "[Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [Environment]::GetEnvironmentVariable('Path','User')"`) do set "PATH=%%p"
+set "PATH=%USERPROFILE%\.cargo\bin;%USERPROFILE%\.deno\bin;%LOCALAPPDATA%\Microsoft\WinGet\Links;%ProgramFiles%\nodejs;%PATH%"
+exit /b 0
+
+:run
+echo.>> "%LOG%"
+echo ^> %*>> "%LOG%"
+call %* >> "%LOG%" 2>&1
+exit /b %errorlevel%
 
 :fail
 echo.
-echo Build failed. Run setup.bat if tools are missing, then try again in a new terminal.
+echo ---------------- last lines of build.log ----------------
+powershell -NoProfile -Command "Get-Content -Tail 40 -LiteralPath '%LOG%'"
+echo ---------------------------------------------------------
+echo Build failed. Send build.log if the error above is unclear.
+goto :end_fail
+
+:end_fail
+echo.
+pause
 exit /b 1
+
+:end_ok
+echo.
+pause
+exit /b 0

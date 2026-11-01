@@ -17,9 +17,8 @@ removes everything that got in the way:
 - **No ads.** No "Upgrade" banners, no news feed, no promo buttons in your Discord status.
 - **No telemetry.** Nothing is sent home on startup. The only network requests are update checks and the showcase,
   both against public GitHub URLs.
-- **Showcase.** Ready-made presets and community configs, installable in one click and reversible in one click.
-  Publishing your own is a pull request to
-  [kestrelui-showcase](https://github.com/Qwarwin4/KestrelUI-showcase).
+- **Showcase.** Community setups from GitHub, installable and reversible in one click. Publish yours from the app
+  with a GitHub sign-in, see [documentation/showcase.md](documentation/showcase.md).
 
 ## Status
 
@@ -31,20 +30,18 @@ ids and the `SeelenCommand` plugin API are intentionally left untouched.
 
 ## Building
 
-Windows 10/11 only.
+Windows 10/11 only. Run `build.bat` (double-click works). It installs whatever is missing through winget — Visual
+Studio Build Tools with the Windows SDK, Rust, Node.js, Deno, Git, WebView2 — and then builds:
 
-1. Run `setup.bat` once. It installs Visual Studio Build Tools (MSVC + Windows SDK), Rust, Node.js, Deno,
-   Git and WebView2 through winget, then the pinned Rust toolchain.
-2. Open a new terminal and run `build.bat`:
+| command             | result                                                |
+| ------------------- | ----------------------------------------------------- |
+| `build.bat`         | debug installer in `target\debug\bundle\nsis`          |
+| `build.bat release` | release installer in `target\release\bundle\nsis`      |
+| `build.bat dev`     | run from sources with hot reload                      |
+| `build.bat deps`    | only install and check the build tools                |
 
-   | command             | result                                           |
-   | ------------------- | ------------------------------------------------ |
-   | `build.bat`         | debug installer in `target\debug\bundle\nsis`     |
-   | `build.bat dev`     | run from sources with hot reload                 |
-   | `build.bat release` | release installer in `target\release\bundle\nsis` |
-
-Both scripts work from any folder, including an unpacked zip. `npm run doctor` checks the prerequisites and says
-what is missing — the usual one is the Windows SDK (`rust-lld: could not open 'kernel32.lib'`).
+The window stays open at the end and the full output goes to `build.log`; on failure the last lines are shown
+right away.
 
 Local release builds are unsigned and have auto-updates off.
 Signed releases with auto-updates need your own key pair:
