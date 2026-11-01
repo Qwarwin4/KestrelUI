@@ -1,13 +1,22 @@
-<h1 align="center">
-  <img src="documentation/images/logo.svg" width="44" align="top" alt="KestrelUI logo" />
-  [![Discord](https://img.shields.io/badge/Discord-%D0%92%D1%81%D1%82%D1%83%D0%BF%D0%B8%D1%82%D1%8C-5ef0a0?style=for-the-badge&logo=discord&logoColor=5ef0a0&labelColor=0b1410)](https://discord.gg/ТВОЙ_ИНВАЙТ)
-[![Telegram](https://img.shields.io/badge/Telegram-%D0%9F%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F-5ef0a0?style=for-the-badge&logo=telegram&logoColor=5ef0a0&labelColor=0b1410)](https://t.me/ТВОЙ_КАНАЛ)
-[![Gmail](https://img.shields.io/badge/Gmail-%D0%9D%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C-5ef0a0?style=for-the-badge&logo=gmail&logoColor=5ef0a0&labelColor=0b1410)](mailto:ТВОЯ_ПОЧТА@gmail.com)
-  KestrelUI
-</h1>
+<p align="center">
+  <img src="documentation/images/logo.svg" width="112" alt="KestrelUI logo" />
+</p>
+
+<h1 align="center">KestrelUI</h1>
 
 <p align="center">
   Customizable desktop environment for Windows — no accounts, no ads, no telemetry.
+</p>
+
+<!-- TODO: replace the Discord invite, Telegram channel and e-mail placeholders with the real ones -->
+<p align="center">
+  <a href="https://discord.gg/YOUR_INVITE"><img src="https://img.shields.io/badge/Discord-Join_server-5ef0a0?style=for-the-badge&logo=discord&logoColor=5ef0a0&labelColor=0b1410" height="40" alt="Discord: join the server"></a>
+  <a href="https://t.me/YOUR_CHANNEL"><img src="https://img.shields.io/badge/Telegram-Follow-5ef0a0?style=for-the-badge&logo=telegram&logoColor=5ef0a0&labelColor=0b1410" height="40" alt="Telegram: follow the channel"></a>
+  <a href="mailto:YOUR_MAIL@gmail.com"><img src="https://img.shields.io/badge/Gmail-Contact-5ef0a0?style=for-the-badge&logo=gmail&logoColor=5ef0a0&labelColor=0b1410" height="40" alt="Gmail: contact"></a>
+</p>
+<p align="center">
+  <a href="https://github.com/Qwarwin4/KestrelUI"><img src="https://img.shields.io/badge/KestrelUI-v0.1.0-5ef0a0?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij4gPHBhdGggZD0iTTcwIDQ4aDMwdjE2MEg3MHoiIGZpbGw9IiM1ZWYwYTAiLz4gPHBhdGggZD0iTTEwNiAxMjQgMjA2IDQ2bC0xNiAyMiAxMi0yLTE4IDIyIDEwLTEtNTggNDd6IiBmaWxsPSIjNWVmMGEwIi8%2BIDxwYXRoIGQ9Ik0xMTAgMTMybDk0IDc2aC00MmwtNjItNTB6IiBmaWxsPSIjNWVmMGEwIiBvcGFjaXR5PSIuNjUiLz4gPC9zdmc%2B&logoColor=5ef0a0&labelColor=0b1410" height="40" alt="KestrelUI v0.1.0"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-AGPL--3.0-5ef0a0?style=for-the-badge&logo=gnu&logoColor=5ef0a0&labelColor=0b1410" height="40" alt="License: AGPL-3.0"></a>
 </p>
 
 ---
