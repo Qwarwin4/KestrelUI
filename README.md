@@ -8,11 +8,10 @@
   Customizable desktop environment for Windows — no accounts, no ads, no telemetry.
 </p>
 
-<!-- TODO: replace the Discord invite, Telegram channel and e-mail placeholders with the real ones -->
 <p align="center">
   <a href="https://discord.gg/YOUR_INVITE"><img src="https://img.shields.io/badge/Discord-Join_server-5ef0a0?style=for-the-badge&logo=discord&logoColor=5ef0a0&labelColor=0b1410" height="40" alt="Discord: join the server"></a>
-  <a href="https://t.me/YOUR_CHANNEL"><img src="https://img.shields.io/badge/Telegram-Follow-5ef0a0?style=for-the-badge&logo=telegram&logoColor=5ef0a0&labelColor=0b1410" height="40" alt="Telegram: follow the channel"></a>
-  <a href="mailto:YOUR_MAIL@gmail.com"><img src="https://img.shields.io/badge/Gmail-Contact-5ef0a0?style=for-the-badge&logo=gmail&logoColor=5ef0a0&labelColor=0b1410" height="40" alt="Gmail: contact"></a>
+  <a href="https://t.me/qwarwin4git"><img src="https://img.shields.io/badge/Telegram-Follow-5ef0a0?style=for-the-badge&logo=telegram&logoColor=5ef0a0&labelColor=0b1410" height="40" alt="Telegram: follow the channel"></a>
+  <a href="mailto:qwarwin@gmail.com"><img src="https://img.shields.io/badge/Gmail-Contact-5ef0a0?style=for-the-badge&logo=gmail&logoColor=5ef0a0&labelColor=0b1410" height="40" alt="Gmail: contact"></a>
 </p>
 <p align="center">
   <a href="https://github.com/Qwarwin4/KestrelUI"><img src="https://img.shields.io/badge/KestrelUI-v0.1.0-5ef0a0?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij4gPHBhdGggZD0iTTcwIDQ4aDMwdjE2MEg3MHoiIGZpbGw9IiM1ZWYwYTAiLz4gPHBhdGggZD0iTTEwNiAxMjQgMjA2IDQ2bC0xNiAyMiAxMi0yLTE4IDIyIDEwLTEtNTggNDd6IiBmaWxsPSIjNWVmMGEwIi8%2BIDxwYXRoIGQ9Ik0xMTAgMTMybDk0IDc2aC00MmwtNjItNTB6IiBmaWxsPSIjNWVmMGEwIiBvcGFjaXR5PSIuNjUiLz4gPC9zdmc%2B&logoColor=5ef0a0&labelColor=0b1410" height="40" alt="KestrelUI v0.1.0"></a>
