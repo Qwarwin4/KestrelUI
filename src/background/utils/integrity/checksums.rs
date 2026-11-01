@@ -9,8 +9,6 @@ use crate::error::Result;
 use tauri::Manager;
 use tauri_plugin_dialog::{DialogExt, MessageDialogKind};
 
-/// Public key for minisign verification (same as updater)
-
 pub async fn ensure_bundle_files_integrity(app: &tauri::AppHandle) -> Result<()> {
     log::trace!("Validating bundle files integrity");
 

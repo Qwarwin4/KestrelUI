@@ -40,7 +40,11 @@ async function completeTranslationsFor(localesDir: string) {
   const { obj, hashTable } = fileTranslator.source();
 
   writeFileSync(enPath, yaml.dump(obj)); // overwrite sorted
-  writeFileSync(`${localesDir}/hash.yml`, yaml.dump(Object.fromEntries(hashTable)));
+  // quoted: a hash like 5241e670 reads as a float to rust-i18n, which parses this folder too
+  writeFileSync(
+    `${localesDir}/hash.yml`,
+    yaml.dump(Object.fromEntries(hashTable), { forceQuotes: true, quotingType: '"' }),
+  );
 }
 
 await completeTranslationsFor("src/ui/react/settings/i18n/translations");

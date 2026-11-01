@@ -142,11 +142,21 @@ async fn pick(folder: bool, extensions: &'static [&'static str]) -> Result<Optio
 /// Loads the resource where it is, so a broken one never replaces a working copy.
 async fn validate(kind: &ResourceKind, path: &Path) -> Result<()> {
     match kind {
-        ResourceKind::Theme => drop(Theme::load(path).await?),
-        ResourceKind::Widget => drop(Widget::load(path).await?),
-        ResourceKind::Plugin => drop(Plugin::load(path).await?),
-        ResourceKind::IconPack => drop(IconPack::load(path).await?),
-        ResourceKind::Wallpaper => drop(Wallpaper::load(path).await?),
+        ResourceKind::Theme => {
+            Theme::load(path).await?;
+        }
+        ResourceKind::Widget => {
+            Widget::load(path).await?;
+        }
+        ResourceKind::Plugin => {
+            Plugin::load(path).await?;
+        }
+        ResourceKind::IconPack => {
+            IconPack::load(path).await?;
+        }
+        ResourceKind::Wallpaper => {
+            Wallpaper::load(path).await?;
+        }
         ResourceKind::SoundPack => return Err("Sound packs are not supported yet".into()),
     }
     Ok(())
