@@ -30,15 +30,16 @@ ids and the `SeelenCommand` plugin API are intentionally left untouched.
 
 ## Building
 
-Windows 10/11 only. Run `build.bat` (double-click works). It installs whatever is missing through winget — Visual
-Studio Build Tools with the Windows SDK, Rust, Node.js, Deno, Git, WebView2 — and then builds:
+Windows 10/11 only. Run `build.bat` (double-click works) and press a number in the menu, or pass the mode as an
+argument. It installs whatever is missing through winget — Visual Studio Build Tools with the Windows SDK, Rust,
+Node.js, Deno, Git, WebView2 — and then builds:
 
-| command             | result                                                |
-| ------------------- | ----------------------------------------------------- |
-| `build.bat`         | debug installer in `target\debug\bundle\nsis`          |
-| `build.bat release` | release installer in `target\release\bundle\nsis`      |
-| `build.bat dev`     | run from sources with hot reload                      |
-| `build.bat deps`    | only install and check the build tools                |
+| menu / command          | result                                            |
+| ----------------------- | ----------------------------------------------------- |
+| 1 `build.bat debug`     | debug installer in `target\debug\bundle\nsis`          |
+| 2 `build.bat release`   | release installer in `target\release\bundle\nsis`      |
+| 3 `build.bat dev`       | run from sources with hot reload                      |
+| 4 `build.bat deps`      | only install and check the build tools                |
 
 The window stays open at the end and the full output goes to `build.log`; on failure the last lines are shown
 right away.

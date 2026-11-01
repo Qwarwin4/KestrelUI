@@ -2,14 +2,16 @@
 setlocal EnableExtensions
 cd /d "%~dp0"
 
-rem build.bat           install what is missing, build a debug installer
+rem build.bat           menu: press 1-4 to pick what to do
+rem build.bat debug     install what is missing, build a debug installer
 rem build.bat release   same, release installer (slower, smaller and faster app)
 rem build.bat dev       install what is missing, run from sources with hot reload
 rem build.bat deps      only install / check the build tools
 rem Everything is logged to build.log next to this file.
 
 set "MODE=%~1"
-if "%MODE%"=="" set "MODE=debug"
+if "%MODE%"=="" call :menu
+if "%MODE%"=="" exit /b 0
 set "LOG=%~dp0build.log"
 set "VSWHERE=%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vswhere.exe"
 set "VSSETUP=%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\setup.exe"
@@ -117,6 +119,24 @@ exit /b 0
 
 
 rem --- helpers ---
+
+:menu
+echo.
+echo   KestrelUI
+echo.
+echo   1  Debug build      installer for testing, builds faster
+echo   2  Release build    final installer, smaller and faster app
+echo   3  Dev mode         run from sources with hot reload
+echo   4  Install tools    only install and check the build tools
+echo   0  Exit
+echo.
+choice /c 12340 /n /m "Choose 1-4 or 0: "
+if errorlevel 5 exit /b 0
+if errorlevel 4 set "MODE=deps"& exit /b 0
+if errorlevel 3 set "MODE=dev"& exit /b 0
+if errorlevel 2 set "MODE=release"& exit /b 0
+set "MODE=debug"
+exit /b 0
 
 :ensure
 rem %1 command to look for, %2 winget package id
