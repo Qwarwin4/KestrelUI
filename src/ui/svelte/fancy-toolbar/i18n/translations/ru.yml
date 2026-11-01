@@ -16,6 +16,7 @@ bluetooth:
   scanning: Сканирование для поиска устройств
 context_menu:
   add_custom_text: Добавить пользовательский текстовый элемент
+  autostart: Запускать вместе с Windows
   modules: Модули
   remove: Удалить модуль
   reorder_disable: Заблокировать панель

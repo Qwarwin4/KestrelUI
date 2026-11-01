@@ -74,6 +74,9 @@
         if (key === "restore") {
           restoreStateToDefault();
         }
+        if (key === "autostart") {
+          invoke(SeelenCommand.SetAutoStart, { enabled: !!(payload as any).checked });
+        }
       })
       .then((fn) => {
         unlistenContextMenuClick = fn;
@@ -98,7 +101,7 @@
     unlistenTogglePlugin?.();
   });
 
-  function buildContextMenu(): ContextMenu {
+  function buildContextMenu(autostart: boolean | null): ContextMenu {
     const language = locale.value;
 
     function isAlreadyAdded(id: PluginId): boolean {
@@ -155,6 +158,16 @@
           checked: null,
           disabled: false,
         },
+        { type: "Separator" },
+        {
+          type: "Item",
+          key: "autostart",
+          icon: "TbPower",
+          label: $t("context_menu.autostart"),
+          callbackEvent: onContextMenuClickEvent,
+          checked: autostart ?? false,
+          disabled: autostart === null,
+        },
         {
           type: "Item",
           key: "settings",
@@ -166,11 +179,13 @@
     };
   }
 
-  function handleContextMenu() {
+  async function handleContextMenu() {
     const alignY =
       settingsState.position === FancyToolbarSide.Bottom ? Alignment.End : Alignment.Start;
+    // asked on every open, the state can also change from the settings window
+    const autostart = await invoke(SeelenCommand.GetAutoStartStatus).catch(() => null);
     invoke(SeelenCommand.TriggerContextMenu, {
-      menu: { ...buildContextMenu(), alignX: Alignment.Center, alignY },
+      menu: { ...buildContextMenu(autostart), alignX: Alignment.Center, alignY },
       forwardTo: null,
     });
   }

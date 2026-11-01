@@ -16,6 +16,7 @@ bluetooth:
   scanning: Scanning for devices
 context_menu:
   add_custom_text: Add custom text item
+  autostart: Start with Windows
   modules: Modules
   remove: Remove Module
   reorder_disable: Lock toolbar
