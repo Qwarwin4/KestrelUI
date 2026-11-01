@@ -150,9 +150,11 @@ async fn main() {
     let (tx, mut rx) = tokio::sync::mpsc::channel(1);
     EXIT_CHANNEL.set(tx).unwrap();
 
+    // registering the logon task needs admin rights. Without them (UAC declined, the app
+    // started straight from the build folder) the service still works, only autostart
+    // stays off until the next elevated start, so this must not be fatal
     if let Err(err) = TaskSchedulerHelper::create_service_task() {
-        log::error!("Failed to create service task: {err:?}");
-        std::process::exit(1);
+        log::warn!("Could not register the startup task, autostart stays off: {err:?}");
     }
 
     let version = env!("CARGO_PKG_VERSION");
