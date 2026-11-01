@@ -65,6 +65,49 @@ apps_configurations:
   new: Новый
   search: Поиск
   swap: Сменить
+assistant:
+  title: Ассистент
+  subtitle: Попросите изменить оформление или объяснить, как что-то работает. Любое изменение можно отменить.
+  connect_title: Подключите модель
+  connect_description: Свой API-ключ OpenAI, Anthropic или OpenRouter, любой OpenAI-совместимый сервер или бесплатная локальная модель через Ollama.
+  connection: Подключение
+  provider: Провайдер
+  providers:
+    OpenAI: OpenAI (GPT)
+    Anthropic: Anthropic (Claude)
+    OpenRouter: OpenRouter
+    Ollama: Локальная модель (Ollama)
+    Custom: Другой, OpenAI-совместимый
+  base_url: Адрес сервера
+  api_key: API-ключ
+  optional: необязательно
+  key_saved: Сохранён, введите новый для замены
+  forget_key: Удалить ключ
+  key_vault: Ключ хранится в диспетчере учётных данных Windows и отправляется только провайдеру.
+  get_key: Получить ключ
+  model: Модель
+  load_models: Загрузить список моделей
+  save: Сохранить
+  saved: Подключение сохранено
+  ollama:
+    missing: Ollama не запущен. Установите его, запустите и проверьте ещё раз. Модель работает на вашем компьютере, данные никуда не уходят.
+    install: Скачать Ollama
+    check: Проверить
+    pick: Скачайте маленькую модель или выберите уже установленную.
+    tiny: Самая лёгкая, справится с простыми изменениями, пойдёт почти на любом ПК.
+    small: Лучше понимает настройки, нужно 8 ГБ ОЗУ.
+    download: Скачать
+    use: Выбрать
+  empty: Попросите что-нибудь изменить или спросите про KestrelUI.
+  suggestions:
+    neon: Сделай неон фиолетовым
+    dock: Перенеси док влево
+    glass: Сделай панели прозрачнее
+    tiling: Как включить тайлинг окон?
+  placeholder: Сообщение, Enter — отправить
+  undo: Отменить эти изменения
+  undone: Изменения отменены
+  clear: Очистить чат
 cancel: Отменить
 close: Закрыть
 delete: Удалить
@@ -199,6 +242,7 @@ general:
 global: Глобальный
 header:
   labels:
+    assistant: Ассистент
     config: Конфигурации
     developer: Для разработчиков
     extras: Доп. информация

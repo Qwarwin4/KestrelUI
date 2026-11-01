@@ -3,6 +3,7 @@ import type React from "react";
 
 export enum RoutePath {
   Home = "/",
+  Assistant = "/assistant",
   General = "/general",
   Security = "/security",
   Resource = "/resources",
@@ -15,6 +16,7 @@ export enum RoutePath {
 
 export const RouteIcons: { [key in RoutePath]?: React.ReactNode } = {
   [RoutePath.Home]: <Icon iconName="LuStore" />,
+  [RoutePath.Assistant]: <Icon iconName="LuSparkles" />,
   [RoutePath.General]: <Icon iconName="RiSettings3Fill" />,
   [RoutePath.Security]: <Icon iconName="MdSecurity" />,
   [RoutePath.Resource]: <Icon iconName="IoColorPalette" />,

@@ -16,9 +16,12 @@ removes everything that got in the way:
 - **No account.** The login flow, plan tiers and the cloud vault are gone. Every feature works offline.
 - **No ads.** No "Upgrade" banners, no news feed, no promo buttons in your Discord status.
 - **No telemetry.** Nothing is sent home on startup. The only network requests are update checks and the showcase,
-  both against public GitHub URLs.
+  both against public GitHub URLs, plus the model provider you connect the assistant to, if any.
 - **Showcase.** Community setups from GitHub, installable and reversible in one click. Publish yours from the app
   with a GitHub sign-in, see [documentation/showcase.md](documentation/showcase.md).
+- **Assistant.** Ask a model to restyle things or explain them: GPT, Claude, OpenRouter, any OpenAI-compatible
+  server, or a small local model through Ollama that the app downloads for you. Changes are applied through a
+  limited set of settings and can be undone in one click; API keys stay in the Windows credential vault.
 
 ## Status
 

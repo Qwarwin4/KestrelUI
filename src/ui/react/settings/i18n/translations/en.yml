@@ -65,6 +65,49 @@ apps_configurations:
   new: New
   search: Search
   swap: Swap
+assistant:
+  title: Assistant
+  subtitle: Ask it to change the look or explain how something works. Any change can be undone.
+  connect_title: Connect a model
+  connect_description: Use your own API key from OpenAI, Anthropic or OpenRouter, any OpenAI-compatible server, or a free local model through Ollama.
+  connection: Connection
+  provider: Provider
+  providers:
+    OpenAI: OpenAI (GPT)
+    Anthropic: Anthropic (Claude)
+    OpenRouter: OpenRouter
+    Ollama: Local model (Ollama)
+    Custom: Other, OpenAI-compatible
+  base_url: Server address
+  api_key: API key
+  optional: optional
+  key_saved: Saved, type to replace
+  forget_key: Forget the key
+  key_vault: The key is kept in the Windows credential vault and is only sent to the provider.
+  get_key: Get a key
+  model: Model
+  load_models: Load the model list
+  save: Save
+  saved: Connection saved
+  ollama:
+    missing: Ollama is not running. Install it, start it and check again. Models run on your computer, nothing leaves it.
+    install: Download Ollama
+    check: Check again
+    pick: Download a small model or pick one you have.
+    tiny: The smallest one, fine for simple changes, runs on almost any PC.
+    small: Understands the settings better, wants 8 GB of RAM.
+    download: Download
+    use: Use
+  empty: Ask for a change or a question about KestrelUI.
+  suggestions:
+    neon: Make the neon purple
+    dock: Move the dock to the left
+    glass: Make the panels more transparent
+    tiling: How do I turn on window tiling?
+  placeholder: Message, Enter to send
+  undo: Undo these changes
+  undone: Changes undone
+  clear: Clear the chat
 cancel: Cancel
 close: Close
 delete: Delete
@@ -191,6 +234,7 @@ general:
 global: Global
 header:
   labels:
+    assistant: Assistant
     config: Configurations
     developer: For developers
     extras: Extras

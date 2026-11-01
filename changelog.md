@@ -10,6 +10,9 @@ First KestrelUI alpha, based on Seelen UI 2.8.11.
 - Neon Moss theme by default, neon and icon colors from presets, HEX, RGB or a color square.
 - wallpaper manager can show the current Windows wallpaper and follows it when it changes.
 - one-time import of an existing Seelen UI setup.
+- assistant in the settings app: GPT, Claude, OpenRouter, OpenAI-compatible servers or local models through Ollama,
+  changes settings through tools with one-click undo.
+- "Start with Windows" checkbox in the toolbar context menu.
 
 ### removed
 
