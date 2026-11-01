@@ -1,6 +1,6 @@
 {
   "name": "kestrelui",
-  "version": "0.1.0-a",
+  "version": "0.1.0",
   "description": "KestrelUI Project",
   "type": "module",
   "license": "AGPL-3.0-or-later",

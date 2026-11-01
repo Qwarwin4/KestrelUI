@@ -197,12 +197,24 @@ general:
       star: Star, hair clip
       fox: Fox ears
       noir: Noir, red bow
+      kestrel: Kestrel, the mascot
       cat: Cat
       ghost: Ghost
       heart: Heart
       mushroom: Mushroom
       terminal: Terminal
       moon: Moon
+      lavender: Lavender, glasses
+      ember: Ember, beanie
+      oni: Oni, little horns
+      cyber: Cyber, visor
+      sunny: Sunny, ahoge
+      root: Root prompt
+      floppy: Floppy disk
+      gamepad: Gamepad
+      chip: Chip
+      coffee: Coffee
+      flame: Flame
   accent_color: Accent color
   date_format: Date format
   date_format_how_to: How to write a date format?

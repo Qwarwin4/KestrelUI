@@ -1,8 +1,8 @@
 # Changelog
 
-## [0.1.0-a]
+## [0.1.0]
 
-First KestrelUI alpha, based on Seelen UI 2.8.11.
+First KestrelUI release, based on Seelen UI 2.8.11.
 
 ### features
 
@@ -22,7 +22,8 @@ First KestrelUI alpha, based on Seelen UI 2.8.11.
 - redesigned settings window: grouped sidebar with short names, GitHub account card, page titles with a terminal
   style path, Manrope and JetBrains Mono fonts, hairline-split setting cards, page transitions. Neon Moss keeps it
   dark whatever the Windows color mode is.
-- start button on the dock: own picture or presets (pixel girls, cat, ghost, heart, mushroom, terminal, moon).
+- start button on the dock: own picture or 24 pixel presets (eleven original pixel girls, a kestrel mascot, cat, ghost,
+  heart, mushroom, terminal, root prompt, moon, floppy, gamepad, chip, coffee, flame).
 - own toolbar and dock colors and glass opacity in General.
 - brightness presets in quick settings (night, reading, day, max) for every screen at once.
 - "Neon on the dock and toolbar" switch, off by default: the dock, the toolbar and the start button stay neutral.

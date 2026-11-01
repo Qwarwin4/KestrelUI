@@ -204,12 +204,24 @@ general:
       star: Звёздочка, заколка
       fox: Лисьи ушки
       noir: Нуар, красный бант
+      kestrel: Пустельга, маскот
       cat: Кот
       ghost: Призрак
       heart: Сердце
       mushroom: Гриб
       terminal: Терминал
       moon: Луна
+      lavender: Лаванда, в очках
+      ember: Уголёк, в шапке
+      oni: Они, рожки
+      cyber: Кибер, визор
+      sunny: Солнце, хохолок
+      root: Root-терминал
+      floppy: Дискета
+      gamepad: Геймпад
+      chip: Чип
+      coffee: Кофе
+      flame: Огонь
   accent_color: Акцентный цвет
   date_format: Формат даты
   date_format_how_to: Как написать формат даты?

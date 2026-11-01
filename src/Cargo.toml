@@ -1,6 +1,6 @@
 [package]
 name = "kestrelui"
-version = "0.1.0-a"
+version = "0.1.0"
 description = "KestrelUI Background"
 authors = ["eythaann", "Qwarwin4"]
 license = "AGPL-3.0-or-later"

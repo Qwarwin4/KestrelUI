@@ -2863,7 +2863,7 @@ dependencies = [
 
 [[package]]
 name = "kestrelui"
-version = "0.1.0-a"
+version = "0.1.0"
 dependencies = [
  "arc-swap",
  "backtrace",
@@ -5778,7 +5778,7 @@ dependencies = [
 
 [[package]]
 name = "sluhk"
-version = "0.1.0-a"
+version = "0.1.0"
 dependencies = [
  "slu-ipc",
  "uuid",

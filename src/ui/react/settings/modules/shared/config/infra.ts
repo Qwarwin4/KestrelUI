@@ -7,7 +7,7 @@ export const EnvConfig = {
   seelenVersion: "2.8.11",
 };
 
-// "0.1.0-a" -> "0.1-a"
+// "0.1.0" -> "0.1", "0.2.0-beta" -> "0.2-beta"
 export function displayVersion(version: string): string {
   return version.replace(/^(\d+\.\d+)\.0(?=$|-)/, "$1");
 }
