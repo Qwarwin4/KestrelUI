@@ -1,5 +1,5 @@
 .ft-bar {
-  background-color: oklch(from var(--neon-surface) l c h / var(--neon-glass));
+  background-color: oklch(from var(--neon-bar-bg) l c h / var(--neon-glass));
   backdrop-filter: blur(18px) saturate(140%);
   border: 1px solid var(--neon-line);
 

@@ -24,12 +24,29 @@
   --neon-line: oklch(from var(--neon-color) l c h / 0.14);
   --neon-shine: oklch(from var(--neon-color) l c h / calc(var(--neon-glow) * 0.45));
 
+  // toolbar and dock follow the neon tinted surface unless the user picked a color
+  --neon-bar-bg: color-mix(
+    in oklch,
+    var(--neon-surface) calc((1 - var(--neon-bar-custom)) * 100%),
+    var(--neon-bar-color)
+  );
+  --neon-dock-bg: color-mix(
+    in oklch,
+    var(--neon-surface) calc((1 - var(--neon-dock-custom)) * 100%),
+    var(--neon-dock-color)
+  );
+
   --slu-std-bg-dark-color: oklch(from var(--neon-surface) calc(l - 0.03) c h);
   --slu-std-bg-color: var(--neon-surface);
   --slu-std-bg-light-color: var(--neon-surface-raised);
   --slu-std-ui-color: var(--neon-color);
   --slu-std-ui-fg-color: oklch(from var(--neon-color) 0.18 0.03 h);
   --slu-std-ui-hover-color: var(--system-accent-lighter-color);
+}
+
+// without blur (performance mode "Extreme") see-through panels get hard to read
+html[data-performance-mode="Extreme"] {
+  --neon-glass: 0.96 !important;
 }
 
 .slu-std-popover {

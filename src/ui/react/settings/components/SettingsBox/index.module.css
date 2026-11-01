@@ -99,3 +99,18 @@
     min-width: 90px;
   }
 }
+
+/* Neon Moss (variant A) */
+:global(html[data-neon]) .group {
+  padding: var(--spacing-m);
+  background-color: var(--neon-surface);
+  border: 1px solid var(--neon-line);
+
+  .setting .info .description {
+    color: var(--neon-muted);
+  }
+
+  .subgroup .content {
+    border-left-color: var(--neon-line-strong);
+  }
+}

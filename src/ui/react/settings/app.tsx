@@ -27,13 +27,18 @@ export function App() {
     ? neonColor()
     : new Color(isDarkMode ? uiColors.value.accent_light : uiColors.value.accent_dark).toHexString();
 
+  // the variant A styles hang off this attribute, see styles/neon.css
+  useEffect(() => {
+    const root = document.documentElement;
+    root.toggleAttribute("data-neon", neon);
+    root.style.setProperty("--neon", color);
+  }, [neon, color]);
+
   return (
     <ConfigProvider
       componentSize="small"
       theme={{
-        token: {
-          colorPrimary: color,
-        },
+        token: neon ? NEON_TOKENS(color) : { colorPrimary: color },
         algorithm: isDarkMode ? theme.darkAlgorithm : theme.defaultAlgorithm,
       }}
     >
@@ -43,3 +48,14 @@ export function App() {
     </ConfigProvider>
   );
 }
+
+const NEON_TOKENS = (color: string) => ({
+  colorPrimary: color,
+  colorBgBase: "#08100c",
+  colorBgContainer: "#0c1611",
+  colorBgElevated: "#0f1a14",
+  colorBorder: "rgba(125, 255, 178, 0.16)",
+  colorBorderSecondary: "rgba(125, 255, 178, 0.1)",
+  borderRadius: 10,
+  fontFamily: '"Segoe UI Variable Text", "Segoe UI", sans-serif',
+});

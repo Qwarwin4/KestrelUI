@@ -113,3 +113,68 @@
   font-size: 0.8rem;
   color: var(--color-gray-600);
 }
+
+.glassSlider {
+  width: 180px;
+}
+
+.logoGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+
+  > span {
+    font-size: 0.8rem;
+    color: var(--color-gray-600);
+  }
+}
+
+.logoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
+  gap: var(--spacing-xs);
+}
+
+.logoTile {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 12px;
+  border: 1px solid var(--neon-line, var(--color-gray-200));
+  background-color: #0c1611;
+  color: var(--color-gray-700);
+  cursor: pointer;
+  transition: border-color 0.15s, transform 0.12s;
+
+  &:hover:not(:disabled) {
+    transform: translateY(-1px);
+    border-color: var(--neon, var(--color-gray-400));
+  }
+
+  &:disabled {
+    cursor: progress;
+    opacity: 0.7;
+  }
+
+  &[data-selected="true"] {
+    border-color: var(--neon, var(--color-gray-900));
+    box-shadow: 0 0 0 1px var(--neon, var(--color-gray-900));
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+  }
+}
+
+.logoMark {
+  width: 70%;
+  height: 70%;
+  background-color: var(--neon, #5ef0a0);
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}

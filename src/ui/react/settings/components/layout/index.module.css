@@ -15,3 +15,7 @@
     overflow: auto;
   }
 }
+
+:global(html[data-neon]) .layout .content {
+  padding: var(--spacing-m) var(--spacing-l);
+}

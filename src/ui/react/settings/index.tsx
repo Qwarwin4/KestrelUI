@@ -12,6 +12,7 @@ import i18n from "./i18n/index.ts";
 import "./styles/variables.css";
 import "@seelen-ui/lib/styles/reset.css";
 import "./styles/global.css";
+import "./styles/neon.css";
 import "./styles/RichText.css";
 
 const { window } = Widget.self;
@@ -19,7 +20,7 @@ const { window } = Widget.self;
 await Promise.all([
   window.setDecorations(false),
   window.setSizeConstraints({ minWidth: 600, minHeight: 400 }),
-  window.setSize(new LogicalSize(800, 500)),
+  window.setSize(new LogicalSize(960, 620)),
 ]);
 await window.center();
 

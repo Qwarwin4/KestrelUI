@@ -36,6 +36,8 @@ ${withDescendants("html:not([data-widget-ready])")} {
 
 ${withDescendants(`html[data-performance-mode="Extreme"]`)} {
   ${DISABLED_ANIMATIONS_CSS}
+  /* glass blur is recomputed on every repaint behind it, the costliest effect themes use */
+  backdrop-filter: none !important;
 }
 
 @media (prefers-reduced-motion: reduce) {

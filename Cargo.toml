@@ -1,8 +1,16 @@
 [profile.dev]
-debug = "full"
+# file:line is all the logged backtraces use; full debug info made linking slow and the
+# PDBs hundreds of megabytes
+debug = "line-tables-only"
 strip = false
 opt-level = 0
 incremental = true
+
+# our crates stay quick to rebuild, dependencies (image decoding, serde, webview glue) get
+# light optimizations so a debug build doesn't feel sluggish to use
+[profile.dev.package."*"]
+opt-level = 1
+debug = false
 
 [profile.rust-analyzer]
 inherits = "dev"
@@ -11,7 +19,8 @@ debug = false
 [profile.release]
 debug = "limited"
 strip = true
-opt-level = "z"
+# speed over size: icon extraction, thumbnails and window bookkeeping run on every event
+opt-level = 3
 lto = true
 codegen-units = 1
 

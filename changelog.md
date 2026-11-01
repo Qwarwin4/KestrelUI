@@ -13,6 +13,16 @@ First KestrelUI alpha, based on Seelen UI 2.8.11.
 - assistant in the settings app over the GPT, Claude, OpenRouter or any OpenAI-compatible API, changes settings
   through tools with one-click undo.
 - "Start with Windows" checkbox in the toolbar context menu.
+- settings window in the Neon Moss look (dark glass, neon navigation), whatever the Windows color mode is.
+- start button on the dock: own picture or presets (pixel girls, cat, ghost, heart, mushroom, terminal, moon).
+- own toolbar and dock colors and glass opacity in General.
+
+### performance
+
+- release builds optimized for speed instead of size.
+- debug builds: optimized dependencies and lighter debug info, faster to use and to link.
+- the UI build keeps the extracted icon set between builds (~20s less per build).
+- "Extreme" performance mode turns off glass blur.
 
 ### removed
 

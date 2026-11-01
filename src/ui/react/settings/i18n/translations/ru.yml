@@ -189,6 +189,32 @@ general:
     presets: Готовые цвета
     hue: Оттенок
     reset: Сбросить
+    glass: Прозрачность стекла
+    glass_description: Насколько просвечивают панель, док и всплывающие окна.
+    bar: Цвет панели
+    dock: Цвет дока
+    surface_theme: Как у темы
+  start_logo:
+    title: Кнопка «Пуск» в доке
+    description: Замените значок KestrelUI на пресет или свою картинку. PNG, JPG, SVG, GIF или WebP, лучше квадратную.
+    default: KestrelUI
+    custom: Своя картинка
+    bad_file: Не получилось открыть картинку
+    girls: Пиксельные девочки
+    other: Другое
+    presets:
+      mint: Мята, в наушниках
+      sakura: Сакура, два хвостика
+      neko: Неко, кошачьи ушки
+      star: Звёздочка, заколка
+      fox: Лисьи ушки
+      noir: Нуар, красный бант
+      cat: Кот
+      ghost: Призрак
+      heart: Сердце
+      mushroom: Гриб
+      terminal: Терминал
+      moon: Луна
   accent_color: Акцентный цвет
   date_format: Формат даты
   date_format_how_to: Как написать формат даты?

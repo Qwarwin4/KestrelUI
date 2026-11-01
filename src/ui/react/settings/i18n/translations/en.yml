@@ -182,6 +182,32 @@ general:
     presets: Preset colors
     hue: Hue
     reset: Reset
+    glass: Glass opacity
+    glass_description: How see-through the toolbar, the dock and popups are.
+    bar: Toolbar color
+    dock: Dock color
+    surface_theme: Like the theme
+  start_logo:
+    title: Start button on the dock
+    description: Replace the KestrelUI mark with a preset or your own picture. PNG, JPG, SVG, GIF or WebP; square pictures look best.
+    default: KestrelUI
+    custom: Your own picture
+    bad_file: Can't read this picture
+    girls: Pixel girls
+    other: Other
+    presets:
+      mint: Mint, with headphones
+      sakura: Sakura, twin tails
+      neko: Neko, cat ears
+      star: Star, hair clip
+      fox: Fox ears
+      noir: Noir, red bow
+      cat: Cat
+      ghost: Ghost
+      heart: Heart
+      mushroom: Mushroom
+      terminal: Terminal
+      moon: Moon
   accent_color: Accent color
   date_format: Date format
   date_format_how_to: How to write a date format?

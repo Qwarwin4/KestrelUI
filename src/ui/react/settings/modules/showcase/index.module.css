@@ -234,3 +234,38 @@
   color: var(--color-red-800);
   overflow-wrap: anywhere;
 }
+
+/* Neon Moss (variant A) */
+:global(html[data-neon]) .hero {
+  background-color: var(--neon-surface);
+  border: 1px solid var(--neon-line);
+  box-shadow: none;
+
+  h1 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    color: var(--neon-muted);
+  }
+}
+
+:global(html[data-neon]) .card {
+  background-color: var(--neon-surface);
+  border: 1px solid var(--neon-line);
+  box-shadow: none;
+
+  &:hover {
+    border-color: var(--neon-line-strong);
+    box-shadow: 0 16px 40px rgb(0 0 0 / 0.35);
+  }
+}
+
+:global(html[data-neon]) .kind,
+:global(html[data-neon]) .official {
+  background-color: rgb(4 19 11 / 0.85);
+  color: var(--neon);
+  box-shadow: none;
+}

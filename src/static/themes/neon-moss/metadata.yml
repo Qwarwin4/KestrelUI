@@ -40,6 +40,30 @@ settings:
       en: Glow
       ru: Свечение
     initialValue: true
+  - syntax: <boolean>
+    name: --neon-bar-custom
+    label:
+      en: Own toolbar color
+      ru: Свой цвет панели
+    initialValue: false
+  - syntax: <color>
+    name: --neon-bar-color
+    label:
+      en: Toolbar color
+      ru: Цвет панели
+    initialValue: "#0b1410"
+  - syntax: <boolean>
+    name: --neon-dock-custom
+    label:
+      en: Own dock color
+      ru: Свой цвет дока
+    initialValue: false
+  - syntax: <color>
+    name: --neon-dock-color
+    label:
+      en: Dock color
+      ru: Цвет дока
+    initialValue: "#0b1410"
 styles:
   "@seelen/fancy-toolbar": !include styles/toolbar.scss
   "@seelen/weg": !include styles/weg.scss

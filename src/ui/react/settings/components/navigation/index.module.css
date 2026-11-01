@@ -224,3 +224,99 @@
     color: var(--system-accent-dark-color);
   }
 }
+
+/* Neon Moss (variant A) */
+:global(html[data-neon]) .navigation {
+  width: 13.5rem;
+  background-color: rgb(255 255 255 / 0.02);
+  border-right: 1px solid var(--neon-line);
+  color: #b8cdc1;
+
+  &.collapsed {
+    width: 52px;
+  }
+
+  .header {
+    padding: 0 var(--spacing-s);
+    border-bottom-color: var(--neon-line);
+
+    > .logo {
+      width: min(30px, 100%);
+      border-radius: 9px;
+      background-color: #0f1a14;
+      border: 1px solid rgb(125 255 178 / 0.25);
+
+      > span {
+        inset: 4px;
+      }
+    }
+
+    > h1 {
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: var(--neon-text);
+    }
+  }
+
+  .separator {
+    background-color: var(--neon-line);
+  }
+
+  .footer {
+    border-top-color: var(--neon-line);
+  }
+}
+
+:global(html[data-neon]) .item {
+  height: 36px;
+  gap: 10px;
+  padding: 0 10px;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: rgb(125 255 178 / 0.08);
+  }
+
+  &.active {
+    background-color: var(--neon);
+    color: var(--neon-ink);
+
+    .label {
+      font-weight: 800;
+    }
+  }
+
+  .label {
+    font-size: 0.85rem;
+  }
+}
+
+:global(html[data-neon]) .sessionItem {
+  padding: var(--spacing-xs);
+  border-radius: 12px;
+  background-color: rgb(125 255 178 / 0.06);
+  border: 1px solid var(--neon-line);
+
+  &:hover {
+    background-color: rgb(125 255 178 / 0.1);
+  }
+
+  &.active {
+    background-color: var(--neon);
+    color: var(--neon-ink);
+
+    .sessionInfo .email {
+      color: inherit;
+      opacity: 0.75;
+    }
+  }
+
+  .sessionAvatar {
+    background: #1b2b22;
+    color: var(--neon);
+  }
+
+  .sessionInfo .email {
+    color: var(--neon-muted);
+  }
+}

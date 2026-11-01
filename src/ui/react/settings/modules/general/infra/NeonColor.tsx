@@ -1,5 +1,5 @@
 import type { ResourceId } from "@seelen-ui/lib/types";
-import { Button, Flex, Input, InputNumber, Switch } from "antd";
+import { Button, Flex, Input, InputNumber, Slider, Switch } from "antd";
 import { useEffect, useRef, useState } from "preact/hooks";
 import { useTranslation } from "react-i18next";
 
@@ -10,7 +10,7 @@ import cs from "./neon.module.css";
 export const NEON_THEME = "@kestrel/neon-moss" as ResourceId;
 const DEFAULT = "#5ef0a0";
 
-const presets = [
+const NEON_PRESETS = [
   "#5ef0a0",
   "#a3e635",
   "#22d3ee",
@@ -93,11 +93,100 @@ export function NeonColor() {
           )}
         </SettingsGroup>
       )}
+
+      {enabled && <Surfaces />}
     </>
   );
 }
 
-function ColorPicker({ value, onChange }: { value: string; onChange: (hex: string) => void }) {
+const SURFACE_DEFAULT = "#0b1410";
+
+/** toolbar and dock backgrounds: the neon tinted glass by default, or a color of their own */
+function Surfaces() {
+  const { t } = useTranslation();
+  const glass = Number(themeVar("--neon-glass") ?? 0.62);
+
+  return (
+    <SettingsGroup>
+      <SettingsOption
+        label={t("general.neon.glass")}
+        description={t("general.neon.glass_description")}
+        action={
+          <Slider
+            className={cs.glassSlider}
+            min={0.3}
+            max={1}
+            step={0.02}
+            value={glass}
+            tooltip={{ formatter: (v) => `${Math.round((v ?? 0) * 100)}%` }}
+            onChange={(v) => setThemeVar("--neon-glass", String(v))}
+          />
+        }
+      />
+      <SurfaceColor part="bar" />
+      <SurfaceColor part="dock" />
+    </SettingsGroup>
+  );
+}
+
+function SurfaceColor({ part }: { part: "bar" | "dock" }) {
+  const { t } = useTranslation();
+  const custom = themeVar(`--neon-${part}-custom`) === "1";
+  const color = themeVar(`--neon-${part}-color`) ?? SURFACE_DEFAULT;
+
+  return (
+    <>
+      <SettingsOption
+        label={t(`general.neon.${part}`)}
+        action={
+          <Flex align="center" gap={8}>
+            <span className={cs.iconHint}>{t("general.neon.surface_theme")}</span>
+            <Switch
+              value={!custom}
+              onChange={(follow) => {
+                setThemeVar(`--neon-${part}-custom`, follow ? "0" : "1");
+                if (!follow && !themeVar(`--neon-${part}-color`)) {
+                  setThemeVar(`--neon-${part}-color`, SURFACE_DEFAULT);
+                }
+              }}
+            />
+          </Flex>
+        }
+      />
+      {custom && (
+        <ColorPicker
+          value={color}
+          defaultValue={SURFACE_DEFAULT}
+          presets={SURFACE_PRESETS}
+          onChange={(hex) => setThemeVar(`--neon-${part}-color`, hex)}
+        />
+      )}
+    </>
+  );
+}
+
+// dark glass tints that keep white text readable, plus black and white
+const SURFACE_PRESETS = [
+  "#0b1410",
+  "#0d1420",
+  "#160f24",
+  "#22101a",
+  "#1f160b",
+  "#101010",
+  "#000000",
+  "#2a2f36",
+  "#3b3f46",
+  "#f5f5f4",
+];
+
+interface ColorPickerProps {
+  value: string;
+  onChange: (hex: string) => void;
+  presets?: string[];
+  defaultValue?: string;
+}
+
+function ColorPicker({ value, onChange, presets = NEON_PRESETS, defaultValue = DEFAULT }: ColorPickerProps) {
   const { t } = useTranslation();
   const [hsv, setHsv] = useState<Hsv>(() => rgbToHsv(hexToRgb(value) ?? hexToRgb(DEFAULT)!));
   const [hexText, setHexText] = useState(value);
@@ -180,7 +269,7 @@ function ColorPicker({ value, onChange }: { value: string; onChange: (hex: strin
               </label>
             ))}
           </div>
-          <Button size="small" onClick={() => onChange(DEFAULT)}>
+          <Button size="small" onClick={() => onChange(defaultValue)}>
             {t("general.neon.reset")}
           </Button>
         </div>

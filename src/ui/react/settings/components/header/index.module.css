@@ -44,3 +44,20 @@
     gap: var(--spacing-2xs);
   }
 }
+
+/* Neon Moss (variant A) */
+:global(html[data-neon]) .header {
+  background-color: transparent;
+  border-bottom-color: var(--neon-line);
+  padding: 0 var(--spacing-l);
+
+  .title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+
+    a:hover {
+      color: var(--neon);
+    }
+  }
+}
