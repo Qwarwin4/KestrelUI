@@ -2,8 +2,8 @@ use std::path::PathBuf;
 
 use base64::Engine;
 use seelen_core::{
-    resource::WidgetId,
-    state::{Widget, WidgetLoader, WidgetPreset},
+    resource::{ThemeId, WidgetId},
+    state::{Settings, Widget, WidgetLoader, WidgetPreset},
     system_state::MonitorId,
 };
 
@@ -72,6 +72,13 @@ impl WidgetWebview {
             builder = builder
                 .background_color(tauri::window::Color(6, 10, 8, 255))
                 .decorations(false);
+            // the splash screen paints before any script of the page can ask for the color
+            if let Some(color) = neon_color(&state.settings) {
+                builder = builder.initialization_script(format!(
+                    "window.__KESTREL_SPLASH = {};",
+                    serde_json::to_string(&color)?
+                ));
+            }
         }
 
         if matches!(
@@ -144,6 +151,22 @@ impl WidgetWebview {
     pub fn handle(&self) -> tauri::WebviewWindow {
         self.0.clone()
     }
+}
+
+/// Neon Moss color when that theme is on, the default one if the user never picked any.
+fn neon_color(settings: &Settings) -> Option<String> {
+    const NEON_THEME: &str = "@kestrel/neon-moss";
+    if !settings.active_themes.contains(&ThemeId::from(NEON_THEME)) {
+        return None;
+    }
+    // the theme variables are private to seelen_core, read them through serde
+    let by_theme = serde_json::to_value(&settings.by_theme).ok()?;
+    let color = by_theme
+        .get(NEON_THEME)
+        .and_then(|vars| vars.get("--neon-color"))
+        .and_then(|c| c.as_str())
+        .unwrap_or("#5ef0a0");
+    Some(color.to_owned())
 }
 
 /// Makes the webview render 1 CSS px = 1 physical px (`devicePixelRatio` = 1) on every monitor.

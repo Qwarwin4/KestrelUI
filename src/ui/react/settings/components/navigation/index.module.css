@@ -36,7 +36,7 @@
   width: 34px;
   height: 34px;
   border-radius: 10px;
-  background-color: #0f1a14;
+  background-color: var(--panel);
   border: 1px solid color-mix(in srgb, var(--neon) 30%, transparent);
   box-shadow: 0 0 22px -8px var(--neon-glow);
 
@@ -110,6 +110,15 @@
   &::-webkit-scrollbar {
     width: 3px;
   }
+}
+
+/* the scrollbar read as a stray strip along the sidebar, show it only while in use */
+.navigation .body::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.navigation:hover .body::-webkit-scrollbar-thumb {
+  background-color: var(--line-strong);
 }
 
 .group {

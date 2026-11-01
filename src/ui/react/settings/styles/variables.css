@@ -22,6 +22,9 @@
   --text: var(--color-gray-900);
   --muted: var(--color-gray-600);
   --faint: var(--color-gray-500);
+  --bg: var(--color-gray-25);
+  --panel: #0f1a14;
+  --panel-deep: #0c1611;
 
   --font-ui: "Manrope Variable", "Segoe UI Variable Text", "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono Variable", "Cascadia Mono", Consolas, monospace;

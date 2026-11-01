@@ -1,24 +1,25 @@
 /* Neon Moss look of the settings window (design variant A). Applied when the Neon Moss
    theme is active, whatever the Windows light/dark setting is: the palette below is the
-   dark one from libs/core/styles/colors.css with green-tinted greys. Generated, keep the
-   palette in sync with that file if it changes. */
+   dark one from libs/core/styles/colors.css with greys tinted by the neon: its hue and a
+   small share of its chroma, so a white neon gives neutral greys. Keep the lightness
+   steps in sync with that file if it changes. */
 
 html[data-neon] {
   color-scheme: dark;
   --color-white: oklch(0% 0 0);
   --color-black: oklch(100% 0 0);
-  --color-gray-25: oklch(18% 0.012 160);
-  --color-gray-50: oklch(21% 0.012 160);
-  --color-gray-75: oklch(24% 0.012 160);
-  --color-gray-100: oklch(27% 0.012 160);
-  --color-gray-200: oklch(36% 0.012 160);
-  --color-gray-300: oklch(45% 0.012 160);
-  --color-gray-400: oklch(54% 0.012 160);
-  --color-gray-500: oklch(63% 0.012 160);
-  --color-gray-600: oklch(72% 0.012 160);
-  --color-gray-700: oklch(79% 0.012 160);
-  --color-gray-800: oklch(86% 0.012 160);
-  --color-gray-900: oklch(92% 0.012 160);
+  --color-gray-25: oklch(from var(--neon) 18% calc(c * 0.07) h);
+  --color-gray-50: oklch(from var(--neon) 21% calc(c * 0.07) h);
+  --color-gray-75: oklch(from var(--neon) 24% calc(c * 0.07) h);
+  --color-gray-100: oklch(from var(--neon) 27% calc(c * 0.07) h);
+  --color-gray-200: oklch(from var(--neon) 36% calc(c * 0.07) h);
+  --color-gray-300: oklch(from var(--neon) 45% calc(c * 0.07) h);
+  --color-gray-400: oklch(from var(--neon) 54% calc(c * 0.07) h);
+  --color-gray-500: oklch(from var(--neon) 63% calc(c * 0.07) h);
+  --color-gray-600: oklch(from var(--neon) 72% calc(c * 0.07) h);
+  --color-gray-700: oklch(from var(--neon) 79% calc(c * 0.07) h);
+  --color-gray-800: oklch(from var(--neon) 86% calc(c * 0.07) h);
+  --color-gray-900: oklch(from var(--neon) 92% calc(c * 0.07) h);
   --color-red-25: oklch(18% 0.064 30);
   --color-red-50: oklch(21% 0.075 30);
   --color-red-75: oklch(24% 0.086 30);
@@ -157,24 +158,28 @@ html[data-neon] {
   --line-strong: color-mix(in srgb, var(--neon) 20%, transparent);
   --surface: rgb(255 255 255 / 0.035);
   --surface-hover: rgb(255 255 255 / 0.06);
-  --text: #e6f2ec;
-  --muted: #8fa89b;
-  --faint: #6f8a7c;
+  --text: oklch(from var(--neon) 95% calc(c * 0.09) h);
+  --muted: oklch(from var(--neon) 71% calc(c * 0.17) h);
+  --faint: oklch(from var(--neon) 61% calc(c * 0.17) h);
+  --bg: oklch(from var(--neon) 13.5% calc(c * 0.06) h);
+  --panel: oklch(from var(--neon) 20.5% calc(c * 0.1) h);
+  --panel-deep: oklch(from var(--neon) 18.5% calc(c * 0.1) h);
 }
 
 html[data-neon],
 html[data-neon] body {
-  background-color: #060a08;
+  background-color: var(--bg);
 }
 
 html[data-neon] #root {
   /* the blurred blobs of the mockup, as gradients: a blur filter on a full-window layer
      would repaint on every scroll */
   background:
-    radial-gradient(760px 760px at -2% -10%, color-mix(in oklch, var(--neon) 22%, #060a08), transparent 62%),
-    radial-gradient(820px 820px at 104% 112%, rgb(11 44 51 / 0.9), transparent 62%),
+    radial-gradient(760px 760px at -2% -10%, color-mix(in oklch, var(--neon) 22%, var(--bg)), transparent 62%),
+    radial-gradient(820px 820px at 104% 112%, oklch(from var(--neon) 27% calc(c * 0.35) calc(h + 50) / 0.9), transparent
+    62%),
     radial-gradient(420px 420px at 78% 26%, color-mix(in oklch, var(--neon) 14%, transparent), transparent 70%),
-    #060a08;
+    var(--bg);
 }
 
 html[data-neon] * {

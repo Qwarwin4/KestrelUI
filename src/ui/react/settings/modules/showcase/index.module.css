@@ -19,7 +19,6 @@
     color: var(--text);
   }
 
-
   p {
     color: var(--muted);
     margin-top: 6px;
@@ -108,8 +107,8 @@
   border-radius: 999px;
   font-size: 0.72rem;
   font-weight: 700;
-  background-color: rgb(4 19 11 / 0.85);
-  color: #e6f2ec;
+  background-color: oklch(from var(--panel) l c h / 0.85);
+  color: var(--text);
   backdrop-filter: blur(6px);
 }
 

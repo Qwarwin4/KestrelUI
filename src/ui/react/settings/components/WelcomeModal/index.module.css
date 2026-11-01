@@ -30,7 +30,7 @@
   width: 64px;
   height: 64px;
   border-radius: 18px;
-  background-color: #0f1a14;
+  background-color: var(--panel);
   border: 1px solid color-mix(in srgb, var(--neon) 35%, transparent);
   box-shadow: 0 0 40px -10px var(--neon-glow);
 

@@ -10,12 +10,17 @@
     <div id="root"></div>
 
     <script>
-      try {
-        const color = localStorage.getItem("kestrel.splash-color");
-        if (/^#[0-9a-f]{6}$/i.test(color || "")) {
-          document.documentElement.style.setProperty("--splash", color);
-        }
-      } catch {}
+    // the backend injects the neon color before load, localStorage is the fallback
+    // (the Windows accent when Neon Moss is off)
+    let color = window.__KESTREL_SPLASH;
+    try {
+      color = color || localStorage.getItem("kestrel.splash-color");
+    } catch {
+      // no storage, default splash
+    }
+    if (color && CSS.supports("color", color)) {
+      document.documentElement.style.setProperty("--splash", color);
+    }
     </script>
     <div id="splashscreen">
       <span class="splashscreen-logo" aria-hidden="true"><span></span></span>
@@ -34,7 +39,7 @@
 
       background:
         radial-gradient(circle at 50% 45%, color-mix(in srgb, var(--splash, #5ef0a0) 14%, transparent), transparent 55%),
-        #070b09;
+        oklch(from var(--splash, #5ef0a0) 14% calc(c * 0.06) h);
       transition: opacity 300ms linear;
       opacity: 1;
 
@@ -51,7 +56,7 @@
         width: 96px;
         height: 96px;
         border-radius: 26px;
-        background-color: #0f1a14;
+        background-color: oklch(from var(--splash, #5ef0a0) 20.5% calc(c * 0.1) h);
         border: 1px solid color-mix(in srgb, var(--splash, #5ef0a0) 35%, transparent);
         box-shadow: 0 0 48px -12px color-mix(in srgb, var(--splash, #5ef0a0) 45%, transparent);
 
@@ -66,7 +71,7 @@
       .splashscreen-name {
         font: 600 56px/1 "Segoe UI Variable Display", "Segoe UI", sans-serif;
         letter-spacing: -0.02em;
-        color: #e8fff2;
+        color: oklch(from var(--splash, #5ef0a0) 96% calc(c * 0.1) h);
       }
     }
     </style>

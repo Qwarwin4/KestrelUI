@@ -12,8 +12,8 @@
     background: linear-gradient(
       40deg,
       color-mix(in oklch, var(--neon) 70%, #05100b) 2%,
-      color-mix(in oklch, var(--neon) 35%, #0c1611) 60%,
-      #0c1611 100%
+      color-mix(in oklch, var(--neon) 35%, var(--panel-deep)) 60%,
+      var(--panel-deep) 100%
     );
 
     display: flex;
