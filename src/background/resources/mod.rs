@@ -1,6 +1,7 @@
 pub mod cli;
 pub mod commands;
 mod emitters;
+mod local;
 mod system_icon_pack;
 pub mod user_icon_pack;
 

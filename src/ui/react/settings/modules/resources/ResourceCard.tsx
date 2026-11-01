@@ -24,6 +24,8 @@ import { installFromShowcase } from "../showcase/actions.ts";
 import type { ShowcaseKind } from "../showcase/registry.ts";
 import { useNavigate } from "react-router";
 
+import { LocalAssets } from "./LocalAssets.tsx";
+
 type AnyResource = {
   id: ResourceId;
   metadata: ResourceMetadata;
@@ -226,6 +228,7 @@ export function ResourceListHeader({
           {t("showcase.open")}
         </Button>
       </SettingsOption>
+      <LocalAssets discover={discover} />
       {children}
     </SettingsGroup>
   );

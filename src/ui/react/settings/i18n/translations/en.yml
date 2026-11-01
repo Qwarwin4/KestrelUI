@@ -329,6 +329,18 @@ resources:
   high_impact: High impact on performance
   import_wallpapers: Import local wallpapers
   included_plugins: Included Plugins
+  local:
+    title: Your files
+    hint: Import a resource folder or a .yml, .json or .slu file from your PC.
+    hint_icons: Make an icon pack from a folder of pictures, chrome.png becomes the icon of chrome.exe and .pdf.png the icon of PDF files.
+    from_images: Icon pack from a folder of pictures
+    import_folder: Import a folder
+    import_file: Import a file
+    import_slu: Import a .slu file
+    open_folder: Open the folder with your resources
+    reload: Reread the folder
+    imported: Imported and turned on
+    reloaded: Folder reread
   modified: Modified
   open_folder: Open resource folder
   outdated: >-

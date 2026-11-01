@@ -58,7 +58,7 @@ pub async fn process_uri(uri: &str) -> Result<()> {
     Err("Invalid URI format".into())
 }
 
-fn path_by_resource_kind(kind: &ResourceKind) -> &Path {
+pub fn path_by_resource_kind(kind: &ResourceKind) -> &'static Path {
     match kind {
         ResourceKind::Theme => SEELEN_COMMON.user_themes_path(),
         ResourceKind::IconPack => SEELEN_COMMON.user_icons_path(),
@@ -117,20 +117,26 @@ pub fn downloading_dialog(dialog_id: Uuid) -> Dialog {
 }
 
 /// Stores a decoded resource in the user folder and pulls its remote assets.
-pub async fn install_resource_file(file: &SluResourceFile) -> Result<()> {
+/// Returns the path the resource loads from: its folder for icon packs and wallpapers,
+/// the `.slu` file itself for everything else.
+pub async fn install_resource_file(file: &SluResourceFile) -> Result<PathBuf> {
     let saved_path = store_file_on_respective_user_folder(file).await?;
 
     if file.resource.kind == ResourceKind::IconPack {
-        let mut pack = IconPack::load(saved_path.parent().unwrap()).await?;
+        let dir = saved_path.parent().ok_or("No parent")?.to_path_buf();
+        let mut pack = IconPack::load(&dir).await?;
         download_remote_icons(&mut pack).await?;
+        return Ok(dir);
     }
 
     if file.resource.kind == ResourceKind::Wallpaper {
-        let mut wallpaper = Wallpaper::load(saved_path.parent().unwrap()).await?;
+        let dir = saved_path.parent().ok_or("No parent")?.to_path_buf();
+        let mut wallpaper = Wallpaper::load(&dir).await?;
         download_remote_wallpapers(&mut wallpaper).await?;
+        return Ok(dir);
     }
 
-    Ok(())
+    Ok(saved_path)
 }
 
 pub fn update_dialog_to_added_resource(dialog_id: Uuid, resource: &Resource) -> Result<()> {

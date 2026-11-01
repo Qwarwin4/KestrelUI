@@ -289,6 +289,23 @@ slu_commands_declaration! {
         @async()
         @fallible()
         remove_resource(id: ResourceId, kind: ResourceKind),
+    ImportLocalResource =
+        @webview()
+        @async()
+        @fallible()
+        import_local_resource(kind: ResourceKind, folder: bool) -> Option<ResourceId>,
+    CreateIconPackFromImages =
+        @webview()
+        @async()
+        @fallible()
+        create_icon_pack_from_images() -> Option<ResourceId>,
+    OpenUserResourceFolder =
+        @fallible()
+        open_user_resource_folder(kind: ResourceKind),
+    ReloadUserResources =
+        @async()
+        @fallible()
+        reload_user_resources(kind: ResourceKind),
 
     StateGetWegItems = state_get_weg_items() -> WegItems,
     StateWriteWegItems =

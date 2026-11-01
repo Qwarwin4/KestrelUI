@@ -335,8 +335,20 @@ resources:
   discover: Откройте для себя больше ресурсов
   has_update: Доступно обновление
   high_impact: Высокое влияние на производительность
-  import_wallpapers: Импорт местных обоев
+  import_wallpapers: Импорт своих обоев
   included_plugins: Включенные плагины
+  local:
+    title: Свои файлы
+    hint: Импорт папки ресурса или файла .yml, .json или .slu с компьютера.
+    hint_icons: Пак из папки с картинками, chrome.png станет иконкой chrome.exe, а .pdf.png иконкой PDF-файлов.
+    from_images: Иконпак из папки с картинками
+    import_folder: Импорт папки
+    import_file: Импорт файла
+    import_slu: Импорт файла .slu
+    open_folder: Открыть папку со своими ресурсами
+    reload: Перечитать папку
+    imported: Импортировано и включено
+    reloaded: Папка перечитана
   modified: Модифицированный
   open_folder: Откройте папку с ресурсами
   outdated: >-

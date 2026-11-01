@@ -252,3 +252,31 @@
     }
   }
 }
+
+.localAssets {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-m);
+
+  > div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+
+    span {
+      color: var(--muted);
+      font-size: 0.8rem;
+      line-height: 1.45em;
+    }
+  }
+}
+
+.localActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--spacing-xs);
+  flex-shrink: 0;
+}
