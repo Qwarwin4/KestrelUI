@@ -57,10 +57,19 @@ impl WidgetWebview {
             }
         };
 
+        // the settings window is a plain opaque window: when it was transparent, every gap
+        // between the webview and the frame (resize, dpi rounding) showed as a white strip
+        let opaque = widget.id == WidgetId::known_settings();
+
         let mut builder = tauri::WebviewWindowBuilder::new(get_app_handle(), &label.raw, url)
             .title(title)
-            .transparent(true)
+            .transparent(!opaque)
             .visible(false);
+
+        if opaque {
+            // same as the Neon Moss page background, see settings/styles/neon.css
+            builder = builder.background_color(tauri::window::Color(6, 10, 8, 255));
+        }
 
         if matches!(
             widget.preset,
