@@ -18,6 +18,10 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-AGPL--3.0-5ef0a0?style=for-the-badge&logo=gnu&logoColor=5ef0a0&labelColor=0b1410" height="40" alt="License: AGPL-3.0"></a>
 </p>
 
+<p align="center">
+  <img src="documentation/images/screenshots/hero.webp" width="900" alt="KestrelUI settings window with the Neon Moss look">
+</p>
+
 ---
 
 KestrelUI is a community fork of [Seelen UI](https://github.com/eythaann/seelen-ui). It keeps everything that made
@@ -33,6 +37,23 @@ removes everything that got in the way:
 - **Assistant.** Connect GPT, Claude, OpenRouter or any OpenAI-compatible API with your own key and ask it to
   restyle things or explain them. Changes are applied through a limited set of settings and can be undone in one
   click; API keys stay in the Windows credential vault.
+
+## Screenshots
+
+<table>
+  <tr>
+    <td width="50%"><img src="documentation/images/screenshots/theme-settings.webp" alt="Neon Moss theme settings"><p align="center">Neon Moss: neon color, glass, glow, neon on the dock and toolbar</p></td>
+    <td width="50%"><img src="documentation/images/screenshots/start-button.webp" alt="Start button presets"><p align="center">Start button: pixel presets or your own picture</p></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="documentation/images/screenshots/icon-packs.webp" alt="Icon packs with local import"><p align="center">Icon packs from a folder of pictures, resources from disk</p></td>
+    <td width="50%"><img src="documentation/images/screenshots/assistant.webp" alt="Assistant"><p align="center">Assistant over your own GPT, Claude or OpenRouter key</p></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="documentation/images/screenshots/monitors.webp" alt="Monitors and wallpapers"><p align="center">Monitors and wallpapers, the Windows wallpaper by default</p></td>
+    <td width="50%"><img src="documentation/images/screenshots/neon-color.webp" alt="General settings"><p align="center">General: startup, language, neon presets and color picker</p></td>
+  </tr>
+</table>
 
 ## Status
 
