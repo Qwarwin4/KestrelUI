@@ -1,4 +1,3 @@
-mod assistant;
 mod bluetooth;
 mod clipboard;
 mod components;
@@ -20,7 +19,6 @@ mod user;
 mod user_apps;
 mod win_explorer;
 
-pub use assistant::*;
 pub use bluetooth::*;
 pub use clipboard::*;
 pub use components::*;

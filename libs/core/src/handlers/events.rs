@@ -111,7 +111,6 @@ slu_events_declaration! {
     WidgetPermissionsChanged(HashMap<WidgetId, HashMap<WidgetPerm, WidgetPermState>>) as "widget::permissions-changed",
     StateWallpapersChanged(Vec<Wallpaper>) as "UserResources::wallpapers-changed",
     WallpaperWindowsChanged(Option<Wallpaper>) as "wallpaper::windows-changed",
-    AssistantPullProgress(OllamaPullProgress) as "assistant::pull-progress",
 
     // system tray
     SystemTrayChanged(Vec<SysTrayIcon>) as "system-tray::changed",

@@ -108,8 +108,7 @@ pub fn watch() {
             let mut last = signature();
             loop {
                 // slideshows don't always broadcast the change, so look every half minute too
-                if let Err(RecvTimeoutError::Disconnected) =
-                    rx.recv_timeout(Duration::from_secs(30))
+                if let Err(RecvTimeoutError::Disconnected) = rx.recv_timeout(Duration::from_secs(30))
                 {
                     break;
                 }

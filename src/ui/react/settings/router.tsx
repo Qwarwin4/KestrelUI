@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router";
 
-import { Assistant } from "./modules/assistant/index.tsx";
 import { AppsConfiguration } from "./modules/appsConfigurations/infra/infra.tsx";
 import { SettingsByMonitor } from "./modules/ByMonitor/infra/index.tsx";
 import { DeveloperTools } from "./modules/developer/infra.tsx";
@@ -22,7 +21,6 @@ export function Routing() {
     <Routes>
       <Route Component={Layout}>
         <Route index Component={Showcase} />
-        <Route path={RoutePath.Assistant} Component={Assistant} />
         <Route path={RoutePath.General} Component={General} />
         <Route path={RoutePath.Security} Component={Security} />
         <Route path={RoutePath.Resource + "/*"} Component={ResourcesView} />

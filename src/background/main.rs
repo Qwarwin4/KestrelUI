@@ -4,7 +4,6 @@
 #![feature(never_type)]
 
 mod app;
-mod assistant;
 mod cli;
 mod error;
 mod exposed;

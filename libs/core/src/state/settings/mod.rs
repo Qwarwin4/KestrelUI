@@ -537,34 +537,6 @@ pub struct Settings {
     pub suspend_on_game_mode: bool,
     /// Allow editing read-only shortcuts (e.g. system overrides). Only effective when dev_tools is enabled.
     pub unlock_shortcuts: bool,
-    /// AI assistant connection. API keys are kept in the Windows credential vault, not here
-    pub assistant: AssistantSettings,
-}
-
-#[derive(Debug, Default, Clone, Copy, PartialEq, Eq, Serialize, Deserialize, JsonSchema)]
-#[cfg_attr(all(feature = "gen-binds", not(feature = "salvo")), derive(ts_rs::TS))]
-#[cfg_attr(all(feature = "gen-binds", not(feature = "salvo")), ts(repr(enum = name)))]
-pub enum AssistantProvider {
-    #[default]
-    OpenAI,
-    Anthropic,
-    OpenRouter,
-    /// local models through Ollama's OpenAI-compatible endpoint
-    Ollama,
-    /// any other OpenAI-compatible server (LM Studio, llama.cpp, vLLM, DeepSeek, Groq...)
-    Custom,
-}
-
-#[derive(Debug, Default, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema)]
-#[cfg_attr(all(feature = "gen-binds", not(feature = "salvo")), derive(ts_rs::TS))]
-#[serde(default, rename_all = "camelCase")]
-#[cfg_attr(all(feature = "gen-binds", not(feature = "salvo")), ts(export))]
-pub struct AssistantSettings {
-    pub provider: AssistantProvider,
-    /// model id as the provider names it, e.g. `gpt-4.1-mini`, `claude-haiku-4-5`, `qwen3:4b`
-    pub model: String,
-    /// only used by `Custom`, the base url ending in `/v1`
-    pub base_url: String,
 }
 
 impl Default for Settings {
@@ -593,7 +565,6 @@ impl Default for Settings {
             streaming_mode: false,
             suspend_on_game_mode: false,
             unlock_shortcuts: false,
-            assistant: AssistantSettings::default(),
         }
     }
 }
