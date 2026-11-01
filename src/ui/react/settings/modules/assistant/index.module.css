@@ -1,0 +1,244 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+  height: 100%;
+  min-height: 0;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-m);
+  padding: var(--spacing-l);
+  border-radius: var(--config-border-radius);
+  background-color: var(--color-gray-50);
+  box-shadow: var(--shadow-s);
+
+  h1 {
+    font-size: 1.6rem;
+    line-height: 1.3em;
+    font-weight: 600;
+  }
+
+  p {
+    color: var(--color-gray-600);
+    margin-top: var(--spacing-2xs);
+  }
+}
+
+.heroActions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-s);
+  flex-shrink: 0;
+}
+
+.model {
+  font-size: 0.8rem;
+  color: var(--color-gray-600);
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+  padding: var(--spacing-l);
+  border-radius: var(--config-border-radius);
+  background-color: var(--color-gray-50);
+  box-shadow: var(--shadow-s);
+
+  h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  > p {
+    color: var(--color-gray-600);
+  }
+}
+
+.connection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xs);
+
+  > span {
+    font-size: 0.8rem;
+    color: var(--color-gray-600);
+  }
+
+  small {
+    color: var(--color-gray-600);
+  }
+}
+
+.grow {
+  flex: 1;
+}
+
+.chat {
+  flex: 1;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--config-border-radius);
+  background-color: var(--color-gray-50);
+  box-shadow: var(--shadow-s);
+  overflow: hidden;
+}
+
+.messages {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+  padding: var(--spacing-m);
+}
+
+.empty {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-s);
+  text-align: center;
+  color: var(--color-gray-600);
+  max-width: 420px;
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-xs);
+
+  button {
+    padding: 6px 12px;
+    border: 1px solid var(--color-gray-200);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--color-gray-800);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: border-color 0.15s, color 0.15s;
+
+    &:hover {
+      border-color: var(--color-accent, var(--color-gray-500));
+      color: var(--color-gray-900);
+    }
+  }
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-2xs);
+  max-width: 85%;
+
+  &[data-role="User"] {
+    align-self: flex-end;
+    align-items: flex-end;
+
+    .bubble {
+      background-color: var(--color-accent, var(--color-gray-300));
+      color: var(--color-accent-text, var(--color-gray-900));
+      border-bottom-right-radius: 4px;
+    }
+  }
+
+  &[data-role="Assistant"] .bubble {
+    border-bottom-left-radius: 4px;
+  }
+
+  &[data-error] .bubble {
+    color: var(--color-red-800);
+  }
+}
+
+.bubble {
+  padding: 8px 12px;
+  border-radius: 14px;
+  background-color: var(--color-gray-100);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.45;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.75rem;
+  color: var(--color-gray-600);
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  li[data-ok="false"] {
+    color: var(--color-yellow-800);
+  }
+}
+
+.undone {
+  font-size: 0.75rem;
+  color: var(--color-gray-500);
+}
+
+.dots {
+  display: inline-flex;
+  gap: 4px;
+
+  i {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--color-gray-500);
+    animation: blink 1.2s infinite ease-in-out;
+  }
+
+  i:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  i:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+}
+
+@keyframes blink {
+  0%,
+  80%,
+  100% {
+    opacity: 0.25;
+  }
+
+  40% {
+    opacity: 1;
+  }
+}
+
+.composer {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-s);
+  border-top: 1px solid var(--color-gray-100);
+}

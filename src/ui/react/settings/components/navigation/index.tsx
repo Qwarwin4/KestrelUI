@@ -72,7 +72,7 @@ export const Navigation = memo(() => {
             icon={<Icon iconName="LuStore" />}
             collapsed={collapsed}
           />
-          {[RoutePath.General, RoutePath.Security, RoutePath.Resource].map(Mapper)}
+          {[RoutePath.Assistant, RoutePath.General, RoutePath.Security, RoutePath.Resource].map(Mapper)}
         </div>
 
         <div className={cs.separator} />

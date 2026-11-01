@@ -74,7 +74,7 @@ fn snapshots_dir() -> PathBuf {
     SEELEN_COMMON.app_data_dir().join("snapshots")
 }
 
-fn snapshot_settings() -> Result<()> {
+pub(crate) fn snapshot_settings() -> Result<()> {
     let dir = snapshots_dir();
     std::fs::create_dir_all(&dir)?;
     let name = format!(
@@ -116,7 +116,7 @@ fn merge(base: &mut serde_json::Value, patch: serde_json::Value) {
     }
 }
 
-fn apply_settings(patch: serde_json::Value) -> Result<()> {
+pub(crate) fn apply_settings(patch: serde_json::Value) -> Result<()> {
     let mut current = serde_json::to_value(&FULL_STATE.load().settings)?;
     merge(&mut current, patch);
     let mut next: Settings = serde_json::from_value(current)?;
@@ -233,7 +233,7 @@ pub fn undo() -> Result<bool> {
     Ok(true)
 }
 
-fn ensure_settings(webview: &tauri::WebviewWindow) -> Result<()> {
+pub(crate) fn ensure_settings(webview: &tauri::WebviewWindow) -> Result<()> {
     use crate::widgets::webview::WidgetWebviewLabel;
     use seelen_core::resource::WidgetId;
     let label = WidgetWebviewLabel::try_from_raw(webview.label())

@@ -650,6 +650,26 @@ slu_commands_declaration! {
         @fallible()
         showcase_publish(submission: ShowcaseSubmission) -> String,
 
+    // AI assistant
+    AssistantChat =
+        @webview()
+        @async()
+        @fallible()
+        assistant_chat(messages: Vec<AssistantMessage>) -> AssistantReply,
+    AssistantSetKey =
+        @webview()
+        @fallible()
+        assistant_set_key(provider: AssistantProvider, key: Option<String>),
+    AssistantHasKey =
+        @webview()
+        @fallible()
+        assistant_has_key(provider: AssistantProvider) -> bool,
+    AssistantListModels =
+        @webview()
+        @async()
+        @fallible()
+        assistant_list_models() -> Vec<String>,
+
     // Clipboard
     ClipboardGetData = clipboard_get_data() -> ClipboardData,
     ClipboardDeleteEntry =
