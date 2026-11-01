@@ -105,14 +105,9 @@ devtools:
     status: 状態
     tab: ウィジェット
     widget_id: ウィジェットID
-discord_banner:
-  message: 他の KestrelUI ユーザーとつながり、ヘルプを得たり、テーマを共有したり、最新ニュースを入手したりできます。
-  title: コミュニティに参加してください
 extras:
   clear_icons: システムアイコンキャッシュをクリアする
   clear_icons_tooltip: すべてのウィジェットに完全に反映させるには、再起動が必要な場合があります。
-  discord_rpc: Discordの豊かな存在感
-  discord_rpc_description: あなたのスタイルをみんなに見せましょう！
   exit: SeelenUIを終了
   relaunch: SeelenUIを再起動
   streaming_mode: ストリーミングモード

@@ -1,7 +1,7 @@
 ; Custom KestrelUI installer, forked from the Tauri NSIS template:
 ; https://github.com/tauri-apps/tauri/blob/dev/crates/tauri-bundler/src/bundle/windows/nsis/installer.nsi
 ; Last synced with upstream commit: bca4ca58da02f182ef00ef1165e40e400a3cd8dd (2026-09-15)
-; Seelen-specific changes: install dir under ${MANUFACTURER}, dark colors, finish page (discord link +
+; Custom changes: install dir under ${MANUFACTURER}, dark colors, finish page (GitHub link +
 ; start kestrelui-service instead of the app). On each tauri-bundler update, diff the upstream file from the
 ; commit above to `dev` and port the changes here.
 Unicode true
@@ -417,7 +417,7 @@ Var AppStartMenuFolder
 ; Don't auto jump to finish page after installation page,
 ; because the installation page has useful info that can be used debug any issues with the installer.
 !define MUI_FINISHPAGE_NOAUTOCLOSE
-; Show discord link
+; Show the GitHub link
 !define MUI_FINISHPAGE_LINK_COLOR 59a7f6
 !define MUI_FINISHPAGE_LINK "KestrelUI on GitHub"
 !define MUI_FINISHPAGE_LINK_LOCATION "https://github.com/Qwarwin4/KestrelUI"

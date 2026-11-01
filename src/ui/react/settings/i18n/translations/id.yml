@@ -118,18 +118,11 @@ devtools:
     status: Status
     tab: Widget
     widget_id: ID Widget
-discord_banner:
-  message: >-
-    Terhubung dengan pengguna KestrelUI lainnya, dapatkan bantuan, berbagi tema,
-    dan ikuti terus berita terkini.
-  title: Bergabunglah dengan Komunitas kami
 extras:
   clear_icons: Menghapus Cache Ikon Sistem
   clear_icons_tooltip: >-
     Pengaktifan ulang mungkin diperlukan untuk menerapkan efek sepenuhnya pada
     semua widget
-  discord_rpc: Kehadiran yang kaya akan perselisihan
-  discord_rpc_description: Tunjukkan kepada semua orang bahwa Anda punya gaya!
   exit: Berhenti/keluar
   relaunch: Peluncuran kembali
   streaming_mode: Modus Streaming

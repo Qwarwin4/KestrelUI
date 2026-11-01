@@ -1,5 +1,10 @@
 app_settings: Настройки приложения
 brightness: Яркость
+brightness_presets:
+  night: Ночь
+  reading: Чтение
+  day: День
+  max: Максимум
 dark_mode: Темный режим
 default_multimedia_volume: Громкость мультимедиа по умолчанию
 disabled: Отключено

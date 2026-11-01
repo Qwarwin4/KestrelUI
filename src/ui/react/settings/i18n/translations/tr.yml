@@ -117,16 +117,9 @@ devtools:
     status: Durum
     tab: Widget'lar
     widget_id: Widget kimliği
-discord_banner:
-  message: >-
-    Diğer KestrelUI kullanıcılarıyla bağlantı kurun, yardım alın, temaları
-    paylaşın ve en son haberlerle güncel kalın.
-  title: Topluluğumuza katılın
 extras:
   clear_icons: Sistem Simgeleri Önbelleğini Temizle
   clear_icons_tooltip: Tüm widget'larda tam olarak etkili olması için yeniden başlatma gerekebilir
-  discord_rpc: Discord'un zengin varlığı
-  discord_rpc_description: Herkese tarzınız olduğunu gösterin!
   exit: Çık
   relaunch: Yeniden Başlat
   streaming_mode: Akış Modu

@@ -3,13 +3,6 @@ import type { UpdaterSettings } from "@seelen-ui/lib/types";
 import { settings } from "../../state/mod";
 
 /**
- * Gets the Discord RPC setting
- */
-export function getDrpc(): boolean {
-  return settings.value.drpc;
-}
-
-/**
  * Gets the streaming mode setting
  */
 export function getStreamingMode(): boolean {
@@ -23,16 +16,6 @@ export function setStreamingMode(streamingMode: boolean) {
   settings.value = {
     ...settings.value,
     streamingMode,
-  };
-}
-
-/**
- * Sets the Discord RPC setting
- */
-export function setDrpc(drpc: boolean) {
-  settings.value = {
-    ...settings.value,
-    drpc,
   };
 }
 

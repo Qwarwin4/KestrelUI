@@ -117,16 +117,9 @@ devtools:
     status: حیثیت
     tab: وجیٹس
     widget_id: ویجیٹ ID
-discord_banner:
-  message: >-
-    دوسرے KestrelUI صارفین کے ساتھ جڑیں، مدد حاصل کریں، تھیمز کا اشتراک کریں،
-    اور تازہ ترین خبروں سے باخبر رہیں۔
-  title: ہماری کمیونٹی میں شامل ہوں۔
 extras:
   clear_icons: صاف نظام شبیہیں کیشے
   clear_icons_tooltip: دوبارہ شروع کرنے کے لئے تمام ویجٹوں پر مکمل اثر ڈالنے کی ضرورت ہوسکتی ہے
-  discord_rpc: امیر کی موجودگی کو مسترد کریں۔
-  discord_rpc_description: ہر ایک کو دکھائیں جس کا آپ کا انداز ہے!
   exit: چھوڑ دیں/باہر نکلیں
   relaunch: دوبارہ لانچ
   streaming_mode: اسٹریمنگ موڈ

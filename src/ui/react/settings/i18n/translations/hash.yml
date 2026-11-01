@@ -88,8 +88,6 @@ devtools.widgets_debug.refresh: d7a89070
 devtools.widgets_debug.status: '63379045'
 devtools.widgets_debug.tab: 9cfe3028
 devtools.widgets_debug.widget_id: 2c6fa7f8
-discord_banner.message: 3a18aeea
-discord_banner.title: 2fd73cdc
 extras.backup_group: 65b4d760
 extras.backup_last_sync: '99902879'
 extras.backup_never_synced: b74b23fc
@@ -97,8 +95,6 @@ extras.backup_sync: d1f55d18
 extras.backup_sync_description: 43e043ca
 extras.clear_icons: fe606300
 extras.clear_icons_tooltip: c44c0ec1
-extras.discord_rpc: e464f750
-extras.discord_rpc_description: 3b18e06c
 extras.exit: a9218188
 extras.relaunch: 7e2b5b63
 extras.streaming_mode: a77bfa6f

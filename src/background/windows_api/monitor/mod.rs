@@ -1,4 +1,5 @@
 pub mod brightness;
+pub mod gamma;
 
 use windows::{
     Devices::Display::Core::{

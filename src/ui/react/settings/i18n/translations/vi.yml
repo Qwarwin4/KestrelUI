@@ -117,16 +117,9 @@ devtools:
     status: Trạng thái
     tab: Tiện ích (Widgets)
     widget_id: ID tiện ích
-discord_banner:
-  message: >-
-    Kết nối với cộng đồng người dùng KestrelUI, nhận trợ giúp, chia sẻ giao diện
-    và cập nhật tin tức mới nhất.
-  title: Tham gia cộng đồng của chúng tôi
 extras:
   clear_icons: Xóa bộ nhớ đệm biểu tượng hệ thống
   clear_icons_tooltip: Có thể cần khởi động lại để áp dụng đầy đủ trên tất cả tiện ích
-  discord_rpc: Discord Rich Presence
-  discord_rpc_description: Hiển thị trạng thái phong cách của bạn trên Discord!
   exit: Thoát ứng dụng
   relaunch: Khởi động lại ứng dụng
   streaming_mode: Chế độ Livestream / Quay màn hình

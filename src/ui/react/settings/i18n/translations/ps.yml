@@ -116,16 +116,9 @@ devtools:
     status: حالت
     tab: ویجټونه
     widget_id: د ویجټ ID
-discord_banner:
-  message: >-
-    د نورو KestrelUI کاروونکو سره اړیکه ونیسئ، مرسته ترلاسه کړئ، موضوعات شریک
-    کړئ، او د وروستي خبرونو سره تازه اوسئ.
-  title: زموږ په ټولنه کې ګډون وکړئ
 extras:
   clear_icons: د ایکسین عکس کې کیچ
   clear_icons_tooltip: یو چالان ته اړتیا لیدل کیدی شي چې په بشپړ پوړ کې په بشپړ ډول پلي شي
-  discord_rpc: د بډایه شتون سره مخالفت وکړئ
-  discord_rpc_description: هرڅوک وښایاست چې تاسو سټایل لرئ!
   exit: پریښودل / وتل
   relaunch: بیا پیل کول
   streaming_mode: د جریان حالت

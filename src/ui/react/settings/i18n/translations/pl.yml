@@ -119,18 +119,11 @@ devtools:
     status: Status
     tab: Widżety
     widget_id: Identyfikator widgetu
-discord_banner:
-  message: >-
-    Połącz się z innymi użytkownikami interfejsu KestrelUI, uzyskaj pomoc,
-    udostępniaj motywy i bądź na bieżąco z najnowszymi wiadomościami.
-  title: Dołącz do naszej społeczności
 extras:
   clear_icons: Wyczyść pamięć podręczną ikon systemowych
   clear_icons_tooltip: >-
     Do poprawnego uruchomienia wszystkich widżetów może być wymagane ponowne
     uruchomienie systemu
-  discord_rpc: Bogata obecność w Discord
-  discord_rpc_description: Pokaż wszystkim, że masz styl!
   exit: Wyjdź
   relaunch: Wznów
   streaming_mode: Tryb przesyłania strumieniowego

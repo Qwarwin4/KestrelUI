@@ -119,19 +119,11 @@ devtools:
     status: Status
     tab: Widgets
     widget_id: Widget-ID
-discord_banner:
-  message: >-
-    Vernetzen Sie sich mit anderen Benutzern der KestrelUI-Benutzeroberfläche,
-    erhalten Sie Hilfe, tauschen Sie Themen aus und bleiben Sie über die
-    neuesten Nachrichten auf dem Laufenden.
-  title: Treten Sie unserer Community bei
 extras:
   clear_icons: System-Symbol-Cache löschen
   clear_icons_tooltip: >-
     Ein Neustart könnte erforderlich sein, um alle Widgets vollständig zu
     aktivieren.
-  discord_rpc: Zwietrachtreiche Präsenz
-  discord_rpc_description: Zeigen Sie allen, dass Sie Stil haben!
   exit: Beenden
   relaunch: Neu starten
   streaming_mode: Streaming-Modus

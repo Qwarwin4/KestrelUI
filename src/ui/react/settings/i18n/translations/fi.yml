@@ -118,18 +118,11 @@ devtools:
     status: Status
     tab: Widgetit
     widget_id: Widgetin tunnus
-discord_banner:
-  message: >-
-    Ota yhteyttä muihin KestrelUI-käyttöliittymän käyttäjiin, hanki apua, jaa
-    teemoja ja pysy ajan tasalla viimeisimmistä uutisista.
-  title: Liity yhteisöömme
 extras:
   clear_icons: Tyhjennä järjestelmän kuvakkeiden välimuisti
   clear_icons_tooltip: >-
     Uudelleenkäynnistystä saatetaan tarvita, jotta kaikki widgetit tulisivat
     täysin voimaan.
-  discord_rpc: Eripurainen läsnäolo
-  discord_rpc_description: Näytä kaikille, että sinulla on tyyliä!
   exit: Lopettaa/poistua
   relaunch: Käynnistää uudelleen
   streaming_mode: Suoratoistotila

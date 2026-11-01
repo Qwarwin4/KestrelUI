@@ -117,16 +117,9 @@ devtools:
     status: સ્થિતિ
     tab: વિજેટ્સ
     widget_id: વિજેટ ID
-discord_banner:
-  message: >-
-    અન્ય KestrelUI વપરાશકર્તાઓ સાથે કનેક્ટ થાઓ, મદદ મેળવો, થીમ્સ શેર કરો અને
-    નવીનતમ સમાચાર સાથે અદ્યતન રહો.
-  title: અમારા સમુદાયમાં જોડાઓ
 extras:
   clear_icons: સ્પષ્ટ સિસ્ટમ ચિહ્નો કેશ
   clear_icons_tooltip: બધા વિજેટો પર સંપૂર્ણ અસર કરવા માટે ફરીથી પ્રારંભ કરવાની જરૂર પડી શકે છે
-  discord_rpc: અસંખ્ય સમૃદ્ધ હાજરી
-  discord_rpc_description: દરેકને બતાવો કે તમારી પાસે શૈલી છે!
   exit: છોડો/બહાર નીકળો
   relaunch: ફરીથી લોંચ કરો
   streaming_mode: સ્ટ્રીમિંગ મોડ

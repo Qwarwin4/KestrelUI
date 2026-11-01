@@ -495,8 +495,6 @@ pub struct Settings {
     pub active_icon_packs: Vec<IconPackId>,
     /// enable or disable dev tools tab in settings
     pub dev_tools: bool,
-    /// discord rich presence
-    pub drpc: bool,
     /// language to use, if null the system locale is used
     pub language: String,
     /// MomentJS date format
@@ -571,7 +569,6 @@ impl Default for Settings {
             by_app: AppsConfigurationList::default(),
             performance_mode: PerformanceModeSettings::default(),
             shortcuts: SluShortcutsSettings::default(),
-            drpc: false,
             old_active_themes: Vec::new(),
             active_themes: vec!["@default/theme".into(), "@kestrel/neon-moss".into()],
             active_icon_packs: vec!["@system/icon-pack".into()],

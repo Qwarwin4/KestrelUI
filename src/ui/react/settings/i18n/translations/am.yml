@@ -110,16 +110,9 @@ devtools:
     status: ሁኔታ
     tab: መግብሮች
     widget_id: መግብር መታወቂያ
-discord_banner:
-  message: >-
-    ከሌሎች የKestrelUI ተጠቃሚዎች ጋር ይገናኙ፣ እገዛ ያግኙ፣ ገጽታዎችን ያጋሩ እና በቅርብ ዜናዎች እንደተዘመኑ
-    ይቆዩ።
-  title: ማህበረሰባችንን ይቀላቀሉ
 extras:
   clear_icons: የስርዓት አዶዎች መሸጎጫ
   clear_icons_tooltip: ዳግም ማስጀመር በሁሉም ፍርግሞች ላይ ሙሉ በሙሉ እንዲተገበር ሊፈልግ ይችላል
-  discord_rpc: የበለጸገ መገኘት አለመግባባት
-  discord_rpc_description: ቅጥ ያላችሁትን ሁሉ ያሳዩ!
   exit: ማቆም / መውጣት
   relaunch: እንደገና መነገር
   streaming_mode: የዥረት ሁነታ

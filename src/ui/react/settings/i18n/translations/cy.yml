@@ -117,16 +117,9 @@ devtools:
     status: Statws
     tab: Teclynnau
     widget_id: ID teclyn
-discord_banner:
-  message: >-
-    Cysylltwch â defnyddwyr KestrelUI eraill, cael help, rhannu themâu, a chael
-    y newyddion diweddaraf.
-  title: Ymunwch â'n Cymuned
 extras:
   clear_icons: Storfa eiconau system glir
   clear_icons_tooltip: Gellid bod yn ofynnol i ailgychwyn ddod i rym yn llawn ar bob teclyn
-  discord_rpc: Presenoldeb cyfoethog anghytgord
-  discord_rpc_description: Dangoswch i bawb fod gennych chi steil!
   exit: Rhoi'r gorau iddi/allanfa
   relaunch: Hail -deirion
   streaming_mode: Modd Ffrydio

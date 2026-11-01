@@ -15,7 +15,6 @@ fn main() {
     checksums.write(&sums_path).unwrap();
 
     println!("cargo:rerun-if-env-changed=KESTREL_PUBKEY");
-    println!("cargo:rerun-if-env-changed=KESTREL_DISCORD_ID");
     println!("cargo:rerun-if-env-changed=KESTREL_GITHUB_CLIENT_ID");
 
     println!("cargo:rerun-if-env-changed=TAURI_SIGNING_PRIVATE_KEY");

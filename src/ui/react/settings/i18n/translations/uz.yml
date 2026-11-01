@@ -119,18 +119,11 @@ devtools:
     status: Status
     tab: Vidjetlar
     widget_id: Vidjet identifikatori
-discord_banner:
-  message: >-
-    Boshqa KestrelUI foydalanuvchilari bilan bog'laning, yordam oling,
-    mavzularni baham ko'ring va so'nggi yangiliklardan xabardor bo'ling.
-  title: Hamjamiyatimizga qo'shiling
 extras:
   clear_icons: Tozalash tizimi piktogrammalari kesh
   clear_icons_tooltip: >-
     Barcha vidjetlarga to'liq ta'sir qilish uchun qayta boshlash talab qilinishi
     mumkin
-  discord_rpc: Ko'p ishtirok etish
-  discord_rpc_description: O'zingizning uslubingiz borligini hammaga ko'rsating!
   exit: Chiqish / chiqish
   relaunch: Qolma
   streaming_mode: Oqim rejimi

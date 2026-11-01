@@ -117,18 +117,11 @@ devtools:
     status: Status
     tab: Widgets
     widget_id: ID tal-widget
-discord_banner:
-  message: >-
-    Ikkonnettja ma' utenti oħra ta' KestrelUI, ikseb għajnuna, taqsam it-temi, u
-    żomm ruħek aġġornat bl-aħħar aħbarijiet.
-  title: Ingħaqad fil-Komunità tagħna
 extras:
   clear_icons: Ikoni tas-sistema ċara cache
   clear_icons_tooltip: >-
     Jista 'jkun meħtieġ li jerġa' jkun meħtieġ biex jidħol fis-seħħ fuq
     il-widgets kollha
-  discord_rpc: Discord preżenza rikka
-  discord_rpc_description: Uri lil kulħadd li għandek stil!
   exit: Nieqaf / ħruġ
   relaunch: Tnedija mill-ġdid
   streaming_mode: Modalità Streaming

@@ -118,18 +118,11 @@ devtools:
     status: Állapot
     tab: Widgetek
     widget_id: Widget azonosító
-discord_banner:
-  message: >-
-    Lépjen kapcsolatba más KestrelUI-felhasználókkal, kérjen segítséget, osszon
-    meg témákat, és maradjon naprakész a legfrissebb hírekről.
-  title: Csatlakozz közösségünkhöz
 extras:
   clear_icons: Rendszerikonok gyorsítótárának törlése
   clear_icons_tooltip: >-
     Újraindítás szükséges lehet ahhoz, hogy az összes widget teljes mértékben
     érvénybe lépjen.
-  discord_rpc: Discord gazdag jelenlét
-  discord_rpc_description: Mutasd meg mindenkinek, hogy van stílusod!
   exit: Kilépés/kilépés
   relaunch: Újraindít
   streaming_mode: Streaming mód

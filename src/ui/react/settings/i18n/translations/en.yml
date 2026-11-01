@@ -147,11 +147,6 @@ devtools:
     status: Status
     tab: Widgets
     widget_id: Widget ID
-discord_banner:
-  message: >-
-    Connect with other KestrelUI users, get help, share themes, and stay up to
-    date with the latest news.
-  title: Join our Community
 extras:
   license: License
   license_notice: >-
@@ -159,8 +154,6 @@ extras:
   source_code: Source code
   clear_icons: Clear System Icons Cache
   clear_icons_tooltip: A restart could be required to fully take effect on all widgets
-  discord_rpc: Discord rich presence
-  discord_rpc_description: Show everyone you've got style!
   exit: Quit/Exit
   relaunch: Relaunch
   streaming_mode: Streaming Mode

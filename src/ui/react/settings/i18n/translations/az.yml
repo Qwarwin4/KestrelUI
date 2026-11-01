@@ -116,16 +116,9 @@ devtools:
     status: Vəziyyət
     tab: Vidjetlər
     widget_id: Widget ID
-discord_banner:
-  message: >-
-    Digər KestrelUI istifadəçiləri ilə əlaqə saxlayın, kömək alın, mövzuları
-    paylaşın və ən son xəbərlərdən xəbərdar olun.
-  title: İcmamıza qoşulun
 extras:
   clear_icons: Sistem nişanlar önbelleği təmizləyin
   clear_icons_tooltip: Bütün vidjetlərə tam təsir göstərmək üçün yenidən başlama tələb oluna bilər
-  discord_rpc: Zəngin varlığı ayırın
-  discord_rpc_description: Stiliniz olan hər kəsə göstərin!
   exit: Çıxmaq / çıxmaq
   relaunch: Başsız
   streaming_mode: Yayım rejimi

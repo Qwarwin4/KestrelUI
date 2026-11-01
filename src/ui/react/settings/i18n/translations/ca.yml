@@ -117,16 +117,9 @@ devtools:
     status: Estat
     tab: Ginys
     widget_id: ID del widget
-discord_banner:
-  message: >-
-    Connecteu-vos amb altres usuaris de la interfície d'usuari de KestrelUI,
-    obteniu ajuda, compartiu temes i estigueu al dia de les últimes notícies.
-  title: Uneix-te a la nostra comunitat
 extras:
   clear_icons: Esborrar la memòria cau de les icones del sistema
   clear_icons_tooltip: Es pot requerir un reinici per tenir efecte sobre tots els ginys
-  discord_rpc: Presència rica en discòrdia
-  discord_rpc_description: Mostra a tothom que tens estil!
   exit: Deixar/sortir
   relaunch: Rellançar
   streaming_mode: Mode de streaming

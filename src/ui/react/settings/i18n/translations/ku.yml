@@ -115,18 +115,11 @@ devtools:
     status: Cî
     tab: Widgets
     widget_id: ID widget
-discord_banner:
-  message: >-
-    Bi bikarhênerên din ên KestrelUI re têkilî daynin, alîkariyê bistînin,
-    mijaran parve bikin û bi nûçeyên herî dawî re bimînin.
-  title: Tevlî Civata me bibin
 extras:
   clear_icons: Îkonên pergala zelal cache
   clear_icons_tooltip: >-
     Pêdivî ye ku ji nû ve destpêkirinê were xwestin ku bi tevahî li ser hemî
     widgetan bandor bike
-  discord_rpc: Hebûna dewlemend a nakokiyê
-  discord_rpc_description: Ji her kesî re nîşan bide ku we stîla we heye!
   exit: Qut / derketin
   relaunch: Berxwedêr
   streaming_mode: Mode Streaming

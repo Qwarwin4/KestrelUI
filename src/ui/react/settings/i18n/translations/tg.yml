@@ -119,16 +119,9 @@ devtools:
     status: Статус
     tab: Виҷетҳо
     widget_id: ID виджет
-discord_banner:
-  message: >-
-    Бо дигар корбарони KestrelUI пайваст шавед, ёрӣ гиред, мавзӯъҳоро мубодила
-    кунед ва аз хабарҳои охирин огоҳ бошед.
-  title: Ба ҷомеаи мо ҳамроҳ шавед
 extras:
   clear_icons: Нишондиҳандаи системаи тозагӣ
   clear_icons_tooltip: Бозоғоз кардан мумкин аст, ки ба ҳама виджет пурра таъсир расонад
-  discord_rpc: Ҳузури бойро ҷудо кунед
-  discord_rpc_description: Ба ҳама нишон диҳед, ки услуб доред!
   exit: Курат / баромадан
   relaunch: Радкунӣ
   streaming_mode: Ҳолати ҷараён

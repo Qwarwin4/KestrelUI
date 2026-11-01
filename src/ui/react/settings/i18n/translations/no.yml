@@ -117,16 +117,9 @@ devtools:
     status: Status
     tab: Widgets
     widget_id: Widget-ID
-discord_banner:
-  message: >-
-    Koble til andre KestrelUI-brukere, få hjelp, del temaer og hold deg
-    oppdatert med de siste nyhetene.
-  title: Bli med i fellesskapet vårt
 extras:
   clear_icons: Klare systemikoner cache
   clear_icons_tooltip: Det kan kreves en omstart for å tre i kraft alle widgeter
-  discord_rpc: Discord rik tilstedeværelse
-  discord_rpc_description: Vis alle at du har stil!
   exit: Avslutt/avslutte
   relaunch: Relanseres
   streaming_mode: Strømmemodus

@@ -151,11 +151,6 @@ devtools:
     status: Статус
     tab: Виджеты
     widget_id: ID виджета
-discord_banner:
-  message: >-
-    Общайтесь с другими пользователями KestrelUI, получайте помощь, делитесь
-    темами и будьте в курсе последних новостей.
-  title: Присоединяйтесь к нашему сообществу
 extras:
   license: Лицензия
   license_notice: >-
@@ -165,8 +160,6 @@ extras:
   clear_icons_tooltip: >-
     Для полного вступления в силу всех виджетов может потребоваться
     перезагрузка.
-  discord_rpc: Богатое присутствие Discord
-  discord_rpc_description: Покажите всем, что у вас есть стиль!
   exit: Выйти
   relaunch: Перезапустить
   streaming_mode: Режим потоковой передачи

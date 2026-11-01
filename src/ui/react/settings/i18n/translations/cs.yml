@@ -118,16 +118,9 @@ devtools:
     status: Postavení
     tab: Widgety
     widget_id: ID widgetu
-discord_banner:
-  message: >-
-    Spojte se s ostatními uživateli uživatelského rozhraní KestrelUI, získejte
-    nápovědu, sdílejte témata a buďte informováni o nejnovějších zprávách.
-  title: Připojte se k naší komunitě
 extras:
   clear_icons: Vymazání mezipaměti systémových ikon
   clear_icons_tooltip: Aby se plně projevily všechny widgety, mohlo by být nutné restartování.
-  discord_rpc: Neshoda bohatá přítomnost
-  discord_rpc_description: Ukažte všem, že máte styl!
   exit: Ukončit
   relaunch: Znovu spustit
   streaming_mode: Režim streamování

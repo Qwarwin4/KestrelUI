@@ -1,5 +1,8 @@
 use std::{
-    sync::{Arc, LazyLock},
+    sync::{
+        Arc, LazyLock,
+        atomic::{AtomicBool, Ordering},
+    },
     time::Duration,
 };
 
@@ -22,6 +25,7 @@ use crate::{
         monitor::{
             Monitor,
             brightness::{DdcciBrightnessValues, PhysicalMonitorHandle},
+            gamma::set_gamma_dimming,
         },
     },
 };
@@ -40,6 +44,23 @@ const DDCCI_POLL_INTERVAL: Duration = Duration::from_secs(5);
 /// Concurrent transactions over the same I2C bus can also corrupt each other.
 static DDCCI_LOCK: TracedMutex<()> = TracedMutex::new(());
 
+/// Some screen is dimmed through its gamma ramp, which outlives the process: it has to be
+/// put back on exit (see `restore_software_dimming`).
+static SOFT_DIMMED: AtomicBool = AtomicBool::new(false);
+
+/// Lowest gamma factor asked for. Drivers usually refuse much below half anyway, and a
+/// black screen at 0% would be a trap.
+const SOFT_MIN_FACTOR: f64 = 0.15;
+
+/// Puts back every screen dimmed in software. Called when KestrelUI exits.
+pub fn restore_software_dimming() {
+    if SOFT_DIMMED.swap(false, Ordering::AcqRel) {
+        for panel in BrightnessManager::instance().soft.to_vec() {
+            set_gamma_dimming(&panel.device, 1.0).log_error();
+        }
+    }
+}
+
 /// Tracks the brightness of every panel, keyed by the stable id of the monitor showing it.
 /// A monitor usually has a single panel, but a cloned/mirrored group has one per display.
 pub struct BrightnessManager {
@@ -47,6 +68,8 @@ pub struct BrightnessManager {
     wmi: SyncVec<WmiPanel>,
     /// External displays, managed through DDC/CI. Written only while holding `DDCCI_LOCK`.
     ddcci: SyncVec<DdcciPanel>,
+    /// Displays with neither, dimmed through the gamma ramp.
+    soft: SyncVec<SoftPanel>,
     worker_tx: crossbeam_channel::Sender<WorkerMessage>,
 }
 
@@ -73,6 +96,7 @@ impl BrightnessManager {
         Self {
             wmi: SyncVec::new(),
             ddcci: SyncVec::new(),
+            soft: SyncVec::new(),
             worker_tx,
         }
     }
@@ -175,7 +199,8 @@ impl BrightnessManager {
         let manager = Self::instance();
         let wmi_changed = manager.wmi_scan(&targets);
         let ddcci_changed = manager.ddcci_scan(&targets);
-        if wmi_changed || ddcci_changed {
+        let soft_changed = manager.soft_scan(&targets);
+        if wmi_changed || ddcci_changed || soft_changed {
             manager.emit_changed();
         }
     }
@@ -272,12 +297,25 @@ impl BrightnessManager {
     /// Reads the brightness of a panel and validates the answer. Panels that don't speak
     /// DDC/CI fail the read; panels that answer nonsense are treated the same way, since
     /// writing to them could leave the panel in a bad state. Caller must hold `DDCCI_LOCK`.
-    fn ddcci_read(handle: &PhysicalMonitorHandle) -> Result<DdcciBrightnessValues> {
-        let values = handle.ddcci_get_brightness()?;
+    fn ddcci_read(handle: &PhysicalMonitorHandle, api: DdcApi) -> Result<DdcciBrightnessValues> {
+        let values = match api {
+            DdcApi::Mccs => handle.ddcci_get_brightness()?,
+            DdcApi::Vcp => handle.vcp_get_brightness()?,
+        };
         if values.max <= values.min || values.current < values.min || values.current > values.max {
             return Err(format!("panel reported an invalid brightness range: {values:?}").into());
         }
         Ok(values)
+    }
+
+    /// The high level call first, then the raw VCP request that more monitors answer.
+    fn ddcci_probe(handle: &PhysicalMonitorHandle) -> Result<(DdcciBrightnessValues, DdcApi)> {
+        match Self::ddcci_read(handle, DdcApi::Mccs) {
+            Ok(values) => Ok((values, DdcApi::Mccs)),
+            Err(mccs_err) => Self::ddcci_read(handle, DdcApi::Vcp)
+                .map(|values| (values, DdcApi::Vcp))
+                .map_err(|vcp_err| format!("{mccs_err}; VCP 0x10: {vcp_err}").into()),
+        }
     }
 
     /// Returns whether the known DDC/CI panels changed.
@@ -291,15 +329,16 @@ impl BrightnessManager {
             };
             for handle in panels {
                 let description = handle.description();
-                match Self::ddcci_read(&handle) {
-                    Ok(values) => {
+                match Self::ddcci_probe(&handle) {
+                    Ok((values, api)) => {
                         log::debug!(
-                            "DDC/CI brightness available on {name} / {description} ({id}): {values:?}"
+                            "DDC/CI brightness available on {name} / {description} ({id}) via {api:?}: {values:?}"
                         );
                         found.push(DdcciPanel {
                             monitor_id: id.clone(),
                             handle: Arc::new(handle),
                             values,
+                            api,
                         });
                     }
                     Err(err) => {
@@ -331,7 +370,7 @@ impl BrightnessManager {
         let guard = DDCCI_LOCK.lock();
         let mut changed = false;
         for known in manager.ddcci.to_vec() {
-            let Ok(values) = Self::ddcci_read(&known.handle) else {
+            let Ok(values) = Self::ddcci_read(&known.handle, known.api) else {
                 continue;
             };
             if values != known.values {
@@ -363,7 +402,10 @@ impl BrightnessManager {
 
         for target in &panels {
             let raw = target.raw_from_percent(percent);
-            target.handle.ddcci_set_brightness(raw)?;
+            match target.api {
+                DdcApi::Mccs => target.handle.ddcci_set_brightness(raw)?,
+                DdcApi::Vcp => target.handle.vcp_set_brightness(raw)?,
+            }
             self.ddcci.for_each(|panel| {
                 if Arc::ptr_eq(&panel.handle, &target.handle) {
                     panel.values.current = raw;
@@ -392,6 +434,11 @@ impl BrightnessManager {
                     .find_and_clone(|panel| &panel.monitor_id == id)
                     .map(|panel| panel.percent())
             })
+            .or_else(|| {
+                self.soft
+                    .find_and_clone(|panel| &panel.monitor_id == id)
+                    .map(|panel| panel.percent)
+            })
     }
 
     /// Sets the brightness of every panel behind the monitor. `percent` goes from 0 to 100
@@ -410,10 +457,100 @@ impl BrightnessManager {
         supported |= self.ddcci_set(id, percent)?;
 
         if !supported {
-            return Err("Monitor does not support brightness control".into());
+            return self.soft_set(id, percent);
         }
         Ok(())
     }
+
+    /// Monitors that answered neither WMI nor DDC/CI get software dimming. Returns whether
+    /// the known software panels changed.
+    fn soft_scan(&self, targets: &[ScanTarget]) -> bool {
+        static SCANNED: AtomicBool = AtomicBool::new(false);
+        let first_scan = !SCANNED.swap(true, Ordering::AcqRel);
+        let wmi = self.wmi.to_vec();
+        let ddcci = self.ddcci.to_vec();
+        let previous = self.soft.to_vec();
+
+        let mut found = Vec::new();
+        for target in targets {
+            let hardware = wmi.iter().any(|p| p.monitor_id == target.id)
+                || ddcci.iter().any(|p| p.monitor_id == target.id);
+            if hardware {
+                continue;
+            }
+            let Ok(info) = target.monitor.info() else {
+                continue;
+            };
+            let device =
+                crate::windows_api::string_utils::WindowsString::from_slice(&info.szDevice)
+                    .to_string();
+            let percent = previous
+                .iter()
+                .find(|p| p.monitor_id == target.id)
+                .map_or(100, |p| p.percent);
+            // a display change can reset the ramp, put the dimming back. On the first scan the
+            // ramp is reset instead, in case a crash left the screen dimmed
+            if percent < 100 {
+                set_gamma_dimming(&device, soft_factor(percent)).log_error();
+            } else if first_scan {
+                set_gamma_dimming(&device, 1.0).log_error();
+            }
+            log::debug!(
+                "Software brightness on {} ({}) through {device}",
+                target.name,
+                target.id
+            );
+            found.push(SoftPanel {
+                monitor_id: target.id.clone(),
+                device,
+                percent,
+            });
+        }
+
+        let changed = previous != found;
+        self.soft.replace(found);
+        changed
+    }
+
+    fn soft_set(&self, id: &MonitorId, percent: u8) -> Result<()> {
+        let panel = self
+            .soft
+            .find_and_clone(|panel| &panel.monitor_id == id)
+            .ok_or("Monitor does not support brightness control")?;
+        set_gamma_dimming(&panel.device, soft_factor(percent))?;
+        if percent < 100 {
+            SOFT_DIMMED.store(true, Ordering::Release);
+        }
+        self.soft.for_each(|p| {
+            if &p.monitor_id == id {
+                p.percent = percent;
+            }
+        });
+        self.emit_changed();
+        Ok(())
+    }
+}
+
+fn soft_factor(percent: u8) -> f64 {
+    (percent.min(100) as f64 / 100.0).max(SOFT_MIN_FACTOR)
+}
+
+/// Which dxva2 call a DDC/CI panel answers.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+enum DdcApi {
+    /// `GetMonitorBrightness` / `SetMonitorBrightness`, needs a capabilities string
+    Mccs,
+    /// raw VCP feature 0x10
+    Vcp,
+}
+
+/// A display dimmed through its gamma ramp, brightness is the percent last asked for.
+#[derive(Debug, Clone, PartialEq, Eq)]
+struct SoftPanel {
+    monitor_id: MonitorId,
+    /// GDI device name, e.g. `\\.\DISPLAY1`
+    device: String,
+    percent: u8,
 }
 
 enum WorkerMessage {
@@ -444,6 +581,7 @@ struct DdcciPanel {
     monitor_id: MonitorId,
     handle: Arc<PhysicalMonitorHandle>,
     values: DdcciBrightnessValues,
+    api: DdcApi,
 }
 
 impl DdcciPanel {

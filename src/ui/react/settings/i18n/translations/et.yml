@@ -116,16 +116,9 @@ devtools:
     status: Olek
     tab: Vidinad
     widget_id: Vidina ID
-discord_banner:
-  message: >-
-    Võtke ühendust teiste KestrelUI kasutajatega, hankige abi,
-    jagage teemasid ja olge kursis viimaste uudistega.
-  title: Liituge meie kogukonnaga
 extras:
   clear_icons: Tühjenda süsteemi ikoonide vahemälu
   clear_icons_tooltip: Kõigi vidinate täielikuks jõustumiseks võib olla vajalik taaskäivitamine.
-  discord_rpc: Discord rikas kohalolek
-  discord_rpc_description: Näidake kõigile, et teil on stiil!
   exit: Lõpeta/väljumine
   relaunch: Taaskäivitama
   streaming_mode: Voogesitusrežiim

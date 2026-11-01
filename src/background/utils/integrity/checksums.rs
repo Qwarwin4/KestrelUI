@@ -30,7 +30,11 @@ pub async fn ensure_bundle_files_integrity(app: &tauri::AppHandle) -> Result<()>
 
     // Skip signature validation in development mode
     if !tauri::is_dev() && !crate::utils::constants::PUB_KEY.is_empty() {
-        verify_external_signature(&checksums_path, &signature_path, crate::utils::constants::PUB_KEY)?;
+        verify_external_signature(
+            &checksums_path,
+            &signature_path,
+            crate::utils::constants::PUB_KEY,
+        )?;
     }
     validate_directory_checksums(&static_path, &checksums_path).await?;
 

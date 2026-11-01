@@ -101,14 +101,9 @@ devtools:
     status: 状态
     tab: 部件
     widget_id: 部件 ID
-discord_banner:
-  message: 与其他 KestrelUI 用户联系、获取帮助、分享主题并了解最新消息。
-  title: 加入我们的社区
 extras:
   clear_icons: 清除系统图标缓存
   clear_icons_tooltip: 可能需要重启才能在所有部件上完全生效
-  discord_rpc: Discord 活动状态
-  discord_rpc_description: 向大家展示您的风格
   exit: 退出
   relaunch: 重启应用
   streaming_mode: 直播模式

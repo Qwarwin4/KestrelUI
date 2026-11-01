@@ -115,16 +115,9 @@ devtools:
     status: Ipo
     tab: Awọn ẹrọ ailorukọ
     widget_id: ID ailorukọ
-discord_banner:
-  message: >-
-    Sopọ pẹlu awọn olumulo KestrelUI miiran, gba iranlọwọ, pin awọn akori, ki o
-    duro titi di oni pẹlu awọn iroyin tuntun.
-  title: Darapọ mọ Agbegbe wa
 extras:
   clear_icons: Ko awọn ilana eto kuro
   clear_icons_tooltip: A le nilo atunbere lati ṣe ipa ni kikun lori gbogbo awọn ẹrọ ailorukọ
-  discord_rpc: Discord ọlọrọ niwaju
-  discord_rpc_description: Ṣe afihan gbogbo eniyan ti o ni aṣa!
   exit: Duro / Jade
   relaunch: Ṣadi
   streaming_mode: Ipo ṣiṣanwọle

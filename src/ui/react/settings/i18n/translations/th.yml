@@ -112,16 +112,9 @@ devtools:
     status: สถานะ
     tab: วิดเจ็ต
     widget_id: รหัสวิดเจ็ต
-discord_banner:
-  message: >-
-    เชื่อมต่อกับผู้ใช้ KestrelUI คนอื่นๆ รับความช่วยเหลือ แบ่งปันธีม
-    และติดตามข่าวสารล่าสุด
-  title: เข้าร่วมชุมชนของเรา
 extras:
   clear_icons: ล้างไอคอนระบบแคช
   clear_icons_tooltip: การรีสตาร์ทอาจจำเป็นต้องมีผลอย่างเต็มที่กับวิดเจ็ตทั้งหมด
-  discord_rpc: ไม่ลงรอยกันการปรากฏตัวที่อุดมไปด้วย
-  discord_rpc_description: แสดงให้ทุกคนเห็นว่าคุณมีสไตล์!
   exit: ออก/ออก
   relaunch: เปิดใหม่
   streaming_mode: โหมดสตรีมมิ่ง

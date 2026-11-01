@@ -747,7 +747,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a347dcabdae9c31b0825fd6a8bed285ec9c2acb89c47827126d52fa4f59cece3"
 dependencies = [
  "fnv",
- "uuid 1.27.0",
+ "uuid",
  "web-time",
 ]
 
@@ -1256,21 +1256,6 @@ dependencies = [
  "option-ext",
  "redox_users",
  "windows-sys 0.59.0",
-]
-
-[[package]]
-name = "discord-rich-presence"
-version = "1.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "90c55d69cab17c19677ce3a5f8face993a9e6eaf847fecac3547f3a3ff4a2494"
-dependencies = [
- "log",
- "serde",
- "serde_derive",
- "serde_json",
- "serde_repr",
- "thiserror 2.0.21",
- "uuid 0.8.2",
 ]
 
 [[package]]
@@ -2886,7 +2871,6 @@ dependencies = [
  "battery",
  "clap",
  "crossbeam-channel",
- "discord-rich-presence",
  "encoding_rs",
  "fern",
  "futures",
@@ -2926,7 +2910,7 @@ dependencies = [
  "tokio",
  "url",
  "urlencoding",
- "uuid 1.27.0",
+ "uuid",
  "walkdir",
  "webp",
  "webview2-com",
@@ -4744,7 +4728,7 @@ dependencies = [
  "rkyv_derive",
  "seahash",
  "tinyvec",
- "uuid 1.27.0",
+ "uuid",
 ]
 
 [[package]]
@@ -5098,7 +5082,7 @@ dependencies = [
  "tracing",
  "ulid",
  "url",
- "uuid 1.27.0",
+ "uuid",
 ]
 
 [[package]]
@@ -5270,7 +5254,7 @@ dependencies = [
  "serde",
  "serde_json",
  "url",
- "uuid 1.27.0",
+ "uuid",
 ]
 
 [[package]]
@@ -5298,7 +5282,7 @@ dependencies = [
  "serde",
  "serde_json",
  "url",
- "uuid 1.27.0",
+ "uuid",
 ]
 
 [[package]]
@@ -5403,7 +5387,7 @@ dependencies = [
  "tokio",
  "ts-rs",
  "url",
- "uuid 1.27.0",
+ "uuid",
 ]
 
 [[package]]
@@ -5768,7 +5752,7 @@ dependencies = [
  "serde_json",
  "thiserror 2.0.21",
  "tokio",
- "uuid 1.27.0",
+ "uuid",
  "widestring",
  "windows 0.62.2",
 ]
@@ -5797,7 +5781,7 @@ name = "sluhk"
 version = "0.1.0-a"
 dependencies = [
  "slu-ipc",
- "uuid 1.27.0",
+ "uuid",
  "windows 0.62.2",
  "windows-core 0.62.2",
 ]
@@ -6245,7 +6229,7 @@ dependencies = [
  "thiserror 2.0.21",
  "time",
  "url",
- "uuid 1.27.0",
+ "uuid",
  "walkdir",
 ]
 
@@ -6439,7 +6423,7 @@ dependencies = [
  "toml 1.1.6+spec-1.1.0",
  "url",
  "urlpattern",
- "uuid 1.27.0",
+ "uuid",
  "walkdir",
 ]
 
@@ -6927,7 +6911,7 @@ dependencies = [
  "thiserror 2.0.21",
  "ts-rs-macros",
  "url",
- "uuid 1.27.0",
+ "uuid",
 ]
 
 [[package]]
@@ -7086,15 +7070,6 @@ name = "utf8parse"
 version = "0.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "06abde3611657adf66d383f00b093d7faecc7fa57071cce2578660c9f1010821"
-
-[[package]]
-name = "uuid"
-version = "0.8.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bc5cf98d8186244414c848017f0e2676b3fcb46807f6668a97dfe67359a3c4b7"
-dependencies = [
- "getrandom 0.2.17",
-]
 
 [[package]]
 name = "uuid"

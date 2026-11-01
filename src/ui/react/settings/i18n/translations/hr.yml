@@ -118,16 +118,9 @@ devtools:
     status: Status
     tab: Widgeti
     widget_id: ID widgeta
-discord_banner:
-  message: >-
-    Povežite se s drugim korisnicima KestrelUI, potražite pomoć, dijelite teme i
-    ostanite u tijeku s najnovijim vijestima.
-  title: Pridružite se našoj zajednici
 extras:
   clear_icons: Očistite predmemoriju ikona sustava
   clear_icons_tooltip: Ponovno pokretanje moglo bi se u potpunosti stupiti na sve widgete
-  discord_rpc: Discord bogata prisutnost
-  discord_rpc_description: Pokažite svima da imate stila!
   exit: Prestati/izaći
   relaunch: Ponovno pokretanje
   streaming_mode: Način strujanja

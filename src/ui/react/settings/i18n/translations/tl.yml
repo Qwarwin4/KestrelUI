@@ -121,18 +121,11 @@ devtools:
     status: Katayuan
     tab: Mga Widget
     widget_id: Widget ID
-discord_banner:
-  message: >-
-    Kumonekta sa iba pang user ng KestrelUI, humingi ng tulong, magbahagi ng mga
-    tema, at manatiling napapanahon sa pinakabagong balita.
-  title: Sumali sa aming Komunidad
 extras:
   clear_icons: I -clear ang Mga Icon ng System Cache
   clear_icons_tooltip: >-
     Ang isang pag -restart ay maaaring kailanganin upang ganap na maisakatuparan
     ang lahat ng mga widget
-  discord_rpc: Discord rich presence
-  discord_rpc_description: Ipakita sa lahat na mayroon kang istilo!
   exit: Huminto/exit
   relaunch: Muling pagsasaayos
   streaming_mode: Streaming Mode

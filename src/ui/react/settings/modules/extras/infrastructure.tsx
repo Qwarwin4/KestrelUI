@@ -7,11 +7,9 @@ import { displayVersion, EnvConfig } from "../shared/config/infra.ts";
 import cs from "./infra.module.css";
 
 import {
-  getDrpc,
   getStreamingMode,
   getUpdaterSettings,
   patchUpdaterSettings,
-  setDrpc,
   setStreamingMode,
 } from "./application.ts";
 
@@ -25,15 +23,10 @@ const [isDevMode, isMsixBuild, isFixed] = await Promise.all([
 ]);
 
 export function Information() {
-  const drpc = getDrpc();
   const streamingMode = getStreamingMode();
   const updaterSettings = getUpdaterSettings();
 
   const { t } = useTranslation();
-
-  function onToggleDrpc(value: boolean) {
-    setDrpc(value);
-  }
 
   function onToggleStreamingMode(value: boolean) {
     setStreamingMode(value);
@@ -91,12 +84,6 @@ export function Information() {
       </SettingsGroup>
 
       <SettingsGroup>
-        <SettingsOption
-          label={t("extras.discord_rpc")}
-          description={t("extras.discord_rpc_description")}
-          action={<Switch value={drpc} onChange={onToggleDrpc} />}
-        />
-
         <SettingsOption
           label={t("extras.streaming_mode")}
           description={t("extras.streaming_mode_description")}

@@ -117,18 +117,11 @@ devtools:
     status: Statuss
     tab: Logrīki
     widget_id: "Logrīka\_ID"
-discord_banner:
-  message: >-
-    Sazinieties ar citiem KestrelUI lietotājiem, saņemiet palīdzību, kopīgojiet
-    motīvus un esiet informēts par jaunākajām ziņām.
-  title: Pievienojieties mūsu kopienai
 extras:
   clear_icons: Iztīrīt sistēmas ikonu kešatmiņu
   clear_icons_tooltip: >-
     Varētu būt nepieciešams restartēt, lai tas pilnībā stātos spēkā visos
     logrīkos.
-  discord_rpc: Nesaskaņu bagāta klātbūtne
-  discord_rpc_description: Parādiet visiem, ka jums ir stils!
   exit: Atmest/iziet
   relaunch: Atsākšana
   streaming_mode: Straumēšanas režīms

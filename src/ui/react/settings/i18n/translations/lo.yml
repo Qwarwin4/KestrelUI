@@ -113,16 +113,9 @@ devtools:
     status: ສະຖານະ
     tab: ວິດເຈັດ
     widget_id: ໄອດີວິດເຈັດ
-discord_banner:
-  message: >-
-    ເຊື່ອມ​ຕໍ່​ກັບ​ຜູ້​ໃຊ້ KestrelUI ຄົນ​ອື່ນ, ຂໍ​ຄວາມ​ຊ່ວຍ​ເຫຼືອ,
-    ແບ່ງ​ປັນ​ຮູບ​ແບບ, ແລະ​ຕິດ​ຕໍ່​ກັບ​ຂ່າວ​ຫລ້າ​ສຸດ.
-  title: ເຂົ້າຮ່ວມຊຸມຊົນຂອງພວກເຮົາ
 extras:
   clear_icons: ລະບົບໄອຄອນລະບົບໄອຄອນ
   clear_icons_tooltip: ການເລີ່ມຕົ້ນໃຫມ່ອາດຈະມີຜົນບັງຄັບໃຊ້ຢ່າງເຕັມສ່ວນໃນທຸກໆ widget
-  discord_rpc: ຄວາມຂັດແຍ້ງທີ່ອຸດົມສົມບູນ
-  discord_rpc_description: ສະແດງໃຫ້ທຸກຄົນມີສະໄຕລ໌!
   exit: ອອກ/ອອກ
   relaunch: ເປີດຄືນໃໝ່
   streaming_mode: ໂໝດສະຕຣີມ

@@ -119,18 +119,11 @@ devtools:
     status: Xaalada
     tab: Widgets
     widget_id: Aqoonsiga widget
-discord_banner:
-  message: >-
-    Ku xidh isticmaalayaasha kale ee KestrelUI, hel caawimo, wadaag mawduucyada,
-    oo la soco wararkii ugu dambeeyay
-  title: Ku Soo Biir Bulshadeena
 extras:
   clear_icons: Calaamadaha Calaamadaha Camis Cast
   clear_icons_tooltip: >-
     Dib-u-bilaabi kara ayaa loo baahan karaa inuu si buuxda u dhaqan geliyo
     dhammaan waxyaabaha widgets
-  discord_rpc: Khilaaf joogitaan qani ah
-  discord_rpc_description: Tus qof kasta oo aad leedahay qaab!
   exit: Jooji / bixitaan
   relaunch: Dib u beer
   streaming_mode: Habka socodka

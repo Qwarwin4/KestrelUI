@@ -111,16 +111,9 @@ devtools:
     status: סטָטוּס
     tab: ווידג'טים
     widget_id: מזהה יישומון
-discord_banner:
-  message: >-
-    התחבר עם משתמשי ממשק משתמש אחרים של KestrelUI, קבל עזרה, שתף ערכות נושא והישאר
-    מעודכן בחדשות האחרונות.
-  title: הצטרף לקהילה שלנו
 extras:
   clear_icons: מטמון סמלי מערכת נקה
   clear_icons_tooltip: ניתן להידרש להפעלה מחדש כדי להיכנס לתוקף באופן מלא על כל הווידג'טים
-  discord_rpc: נוכחות עשירה בדיסקורד
-  discord_rpc_description: תראה לכולם שיש לך סטייל!
   exit: צא
   relaunch: השקה מחדש
   streaming_mode: מצב סטרימינג

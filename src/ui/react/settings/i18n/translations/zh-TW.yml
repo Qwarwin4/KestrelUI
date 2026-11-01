@@ -103,14 +103,9 @@ devtools:
     status: 地位
     tab: 小部件
     widget_id: 小部件 ID
-discord_banner:
-  message: 與其他 KestrelUI 使用者聯繫、獲取協助、分享主題並了解最新消息。
-  title: 加入我們的社群
 extras:
   clear_icons: 清除系統圖示快取
   clear_icons_tooltip: 小工具可能需要重新啟動才會生效
-  discord_rpc: Discord富狀態
-  discord_rpc_description: 向大家展示您的風格！
   exit: 退出KestrelUI
   relaunch: 重新啟動KestrelUI
   streaming_mode: 串流模式

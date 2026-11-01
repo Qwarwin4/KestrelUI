@@ -118,16 +118,9 @@ devtools:
     status: Status
     tab: Widgets
     widget_id: Widget ID
-discord_banner:
-  message: >-
-    Connectéiert mat anere KestrelUI Benotzer, kritt Hëllef, deelt Themen a
-    bleift um neisten Neiegkeeten.
-  title: Maacht mat bei eiser Gemeinschaft
 extras:
   clear_icons: Kloer System Symboler Cache
   clear_icons_tooltip: E Restart konnt noutwendeg sinn fir ganz wéi all Widgets ze maachen
-  discord_rpc: Discord räich Präsenz
-  discord_rpc_description: Weist jidderengem datt Dir Stil hutt!
   exit: Ophalen / erausfannen
   relaunch: Relatioun
   streaming_mode: Streaming Modus

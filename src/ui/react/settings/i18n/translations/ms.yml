@@ -118,16 +118,9 @@ devtools:
     status: Status
     tab: Widget
     widget_id: ID Widget
-discord_banner:
-  message: >-
-    Berhubung dengan pengguna KestrelUI yang lain, dapatkan bantuan, kongsi tema
-    dan kekalkan perkembangan terkini dengan berita terkini.
-  title: Sertai Komuniti kami
 extras:
   clear_icons: Cacon Ikon Sistem Jelas
   clear_icons_tooltip: Restart boleh dikehendaki sepenuhnya pada semua widget
-  discord_rpc: Kehadiran yang kaya dengan perselisihan
-  discord_rpc_description: Tunjukkan kepada semua orang bahawa anda mempunyai gaya!
   exit: Berhenti/keluar
   relaunch: Pelancaran semula
   streaming_mode: Mod Penstriman

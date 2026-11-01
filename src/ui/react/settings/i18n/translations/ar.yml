@@ -113,16 +113,9 @@ devtools:
     status: حالة
     tab: الحاجيات
     widget_id: معرف القطعة
-discord_banner:
-  message: >-
-    تواصل مع مستخدمي KestrelUI الآخرين، واحصل على المساعدة، وشارك السمات، وابق
-    على اطلاع على آخر الأخبار.
-  title: انضم إلى مجتمعنا
 extras:
   clear_icons: مسح ذاكرة التخزين المؤقت لأيقونات النظام
   clear_icons_tooltip: قد تكون إعادة التشغيل مطلوبة لتدخل جميع الأدوات حيز التنفيذ بالكامل
-  discord_rpc: حضور غني بالخلاف
-  discord_rpc_description: أظهر للجميع أن لديك أسلوبًا!
   exit: إنهاء/خروج
   relaunch: إعادة التشغيل
   streaming_mode: وضع الدفق

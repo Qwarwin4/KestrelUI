@@ -119,16 +119,9 @@ devtools:
     status: Stav
     tab: Widgety
     widget_id: ID miniaplikácie
-discord_banner:
-  message: >-
-    Spojte sa s ostatnými používateľmi používateľského rozhrania KestrelUI,
-    získajte pomoc, zdieľajte témy a buďte informovaní o najnovších správach.
-  title: Pripojte sa k našej komunite
 extras:
   clear_icons: Vymazanie vyrovnávacej pamäte systémových ikon
   clear_icons_tooltip: Aby sa všetky widgety plne prejavili, môže byť potrebný reštart.
-  discord_rpc: Rozpor bohatá prítomnosť
-  discord_rpc_description: Ukážte všetkým, že máte štýl!
   exit: Prestať
   relaunch: Reštart
   streaming_mode: Režim streamovania

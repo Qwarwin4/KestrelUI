@@ -1,7 +1,7 @@
 use windows::Win32::{
     Devices::Display::{
-        DestroyPhysicalMonitor, GetMonitorBrightness, GetMonitorCapabilities, PHYSICAL_MONITOR,
-        SetMonitorBrightness,
+        DestroyPhysicalMonitor, GetMonitorBrightness, GetMonitorCapabilities,
+        GetVCPFeatureAndVCPFeatureReply, PHYSICAL_MONITOR, SetMonitorBrightness, SetVCPFeature,
     },
     Foundation::HANDLE,
     Storage::FileSystem::{
@@ -18,6 +18,9 @@ use crate::{
 };
 
 use super::Monitor;
+
+/// MCCS VCP code of the luminance (backlight) control.
+const VCP_LUMINANCE: u8 = 0x10;
 
 #[derive(Debug, Clone, Copy, Default, PartialEq, Eq)]
 pub struct DdcciBrightnessValues {
@@ -137,6 +140,37 @@ impl PhysicalMonitorHandle {
     pub fn ddcci_set_brightness(&self, value: u32) -> Result<()> {
         unsafe {
             BOOL(SetMonitorBrightness(self.0.hPhysicalMonitor, value)).ok()?;
+        }
+        Ok(())
+    }
+
+    /// Brightness through the raw VCP feature 0x10. `GetMonitorBrightness` first parses the
+    /// monitor's capabilities string and gives up when it is missing or malformed, which is
+    /// common; plenty of those monitors still answer the plain VCP request (this is how
+    /// Monitorian and Twinkle Tray reach them).
+    pub fn vcp_get_brightness(&self) -> Result<DdcciBrightnessValues> {
+        let mut current = 0u32;
+        let mut max = 0u32;
+        unsafe {
+            BOOL(GetVCPFeatureAndVCPFeatureReply(
+                self.0.hPhysicalMonitor,
+                VCP_LUMINANCE,
+                None,
+                &mut current,
+                Some(&mut max as *mut u32),
+            ))
+            .ok()?;
+        }
+        Ok(DdcciBrightnessValues {
+            min: 0,
+            current,
+            max,
+        })
+    }
+
+    pub fn vcp_set_brightness(&self, value: u32) -> Result<()> {
+        unsafe {
+            BOOL(SetVCPFeature(self.0.hPhysicalMonitor, VCP_LUMINANCE, value)).ok()?;
         }
         Ok(())
     }

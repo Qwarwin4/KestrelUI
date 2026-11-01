@@ -117,16 +117,9 @@ devtools:
     status: Hali
     tab: Wijeti
     widget_id: Kitambulisho cha Wijeti
-discord_banner:
-  message: >-
-    Ungana na watumiaji wengine wa KestrelUI, pata usaidizi, shiriki mandhari na
-    usasishe habari za hivi punde.
-  title: Jiunge na Jumuiya yetu
 extras:
   clear_icons: Kashe ya icons za mfumo wazi
   clear_icons_tooltip: Kuanza tena kunaweza kuhitajika kuchukua kikamilifu kwa vilivyoandikwa vyote
-  discord_rpc: Tofautisha uwepo wa tajiri
-  discord_rpc_description: Onyesha kila mtu ambaye una mtindo!
   exit: Acha/exit
   relaunch: Kuzindua tena
   streaming_mode: Hali ya Kutiririsha

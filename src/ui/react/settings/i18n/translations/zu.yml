@@ -119,18 +119,11 @@ devtools:
     status: Isimo
     tab: Amawijethi
     widget_id: I-ID Yewijethi
-discord_banner:
-  message: >-
-    Xhumana nabanye abasebenzisi be-KestrelUI, thola usizo, yabelana
-    ngezindikimba, futhi uhlale unolwazi lwakamuva ngezindaba zakamuva.
-  title: Joyina umphakathi wethu
 extras:
   clear_icons: Sula i-Cold yesistimu ye-System
   clear_icons_tooltip: >-
     Ukuqalisa kabusha kungadingeka ukuthi kusebenze ngokuphelele kuwo wonke
     amawijethi
-  discord_rpc: Hlukanisa ubukhona obucebile
-  discord_rpc_description: Bonisa wonke umuntu onesitayela!
   exit: Quit / Phuma
   relaunch: Qondisa amandla ehlehliseyo
   streaming_mode: Imodi yokusakaza

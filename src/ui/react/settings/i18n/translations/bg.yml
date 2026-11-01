@@ -119,18 +119,11 @@ devtools:
     status: Статус
     tab: Джаджи
     widget_id: ID на джаджа
-discord_banner:
-  message: >-
-    Свържете се с други потребители на KestrelUI, получете помощ, споделяйте
-    теми и бъдете в течение с последните новини.
-  title: Присъединете се към нашата общност
 extras:
   clear_icons: Изчистване на кеша на системните икони
   clear_icons_tooltip: >-
     Може да се наложи рестартиране, за да се прояви напълно ефектът върху всички
     джаджи.
-  discord_rpc: Богато присъствие на Discord
-  discord_rpc_description: Покажете на всички, че имате стил!
   exit: QUIT/EXIT
   relaunch: Рестартиране
   streaming_mode: Режим на поточно предаване

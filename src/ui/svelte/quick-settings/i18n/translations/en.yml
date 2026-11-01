@@ -1,5 +1,10 @@
 app_settings: App Settings
 brightness: Brightness
+brightness_presets:
+  night: Night
+  reading: Reading
+  day: Day
+  max: Max
 dark_mode: Dark Mode
 default_multimedia_volume: Default Multimedia Volume
 disabled: Disabled

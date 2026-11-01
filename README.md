@@ -14,7 +14,7 @@ Seelen great — the tiling window manager, the dock, the toolbar, widgets, them
 removes everything that got in the way:
 
 - **No account.** The login flow, plan tiers and the cloud vault are gone. Every feature works offline.
-- **No ads.** No "Upgrade" banners, no news feed, no promo buttons in your Discord status.
+- **No ads.** No "Upgrade" banners, no news feed, no review nags, no Discord status.
 - **No telemetry.** Nothing is sent home on startup. The only network requests are update checks and the showcase,
   both against public GitHub URLs, plus the model provider you connect the assistant to, if any.
 - **Showcase.** Community setups from GitHub, installable and reversible in one click. Publish yours from the app
@@ -56,7 +56,6 @@ npx tauri signer generate -w kestrelui.key
 
 Set `TAURI_SIGNING_PRIVATE_KEY` (+ password) and `KESTREL_PUBKEY` (the public key, base64) as repository
 secrets; the release workflow embeds the public key into the binary for update and bundle-integrity checks.
-`KESTREL_DISCORD_ID` (optional variable) enables Discord rich presence with your own Discord application.
 
 ## License
 

@@ -56,7 +56,6 @@ impl SeelenLogger {
             .level_for("os_info", log::LevelFilter::Error)
             .level_for("notify", log::LevelFilter::Error)
             .level_for("notify_debouncer_full", log::LevelFilter::Error)
-            .level_for("discord_presence", log::LevelFilter::Error)
             .level_for("wmi", log::LevelFilter::Error)
             .level_for("tungstenite", log::LevelFilter::Error)
             .level_for("tokio_tungstenite", log::LevelFilter::Error)

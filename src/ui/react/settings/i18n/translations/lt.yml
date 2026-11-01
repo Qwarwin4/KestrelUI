@@ -118,16 +118,9 @@ devtools:
     status: Būsena
     tab: Valdikliai
     widget_id: Valdiklio ID
-discord_banner:
-  message: >-
-    Susisiekite su kitais KestrelUI naudotojais, gaukite pagalbos, bendrinkite
-    temas ir gaukite naujausias naujienas.
-  title: Prisijunkite prie mūsų bendruomenės
 extras:
   clear_icons: Išvalyti sistemos piktogramų talpyklą
   clear_icons_tooltip: Gali prireikti iš naujo paleisti, kad visi valdikliai visiškai įsigaliotų.
-  discord_rpc: Nesantaika turtingas buvimas
-  discord_rpc_description: Parodyk visiems, kad turi stilių!
   exit: Mesti/išeiti
   relaunch: Atsikrauti
   streaming_mode: Srautinio perdavimo režimas

@@ -119,18 +119,11 @@ devtools:
     status: Stare
     tab: Widgeturi
     widget_id: ID widget
-discord_banner:
-  message: >-
-    Conectați-vă cu alți utilizatori KestrelUI, obțineți ajutor, partajați teme
-    și fiți la curent cu cele mai recente știri.
-  title: Alăturați-vă comunității noastre
 extras:
   clear_icons: Ștergeți memoria cache a pictogramelor de sistem
   clear_icons_tooltip: >-
     Ar putea fi necesară o repornire pentru ca toate widget-urile să intre în
     vigoare
-  discord_rpc: Prezență bogată în discordia
-  discord_rpc_description: Arată tuturor că ai stil!
   exit: Renunță/ieșire
   relaunch: Relansare
   streaming_mode: Modul de streaming

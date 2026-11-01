@@ -119,18 +119,11 @@ devtools:
     status: Estado
     tab: widgets
     widget_id: ID del widget
-discord_banner:
-  message: >-
-    Conéctese con otros usuarios de KestrelUI, obtenga ayuda, comparta temas y
-    manténgase actualizado con las últimas noticias.
-  title: Únase a nuestra comunidad
 extras:
   clear_icons: Borrar caché de iconos del sistema
   clear_icons_tooltip: >-
     Podría ser necesario reiniciar el sistema para que surta efecto en todos los
     widgets.
-  discord_rpc: Presencia rica en discordia
-  discord_rpc_description: ¡Muéstrales a todos que tienes estilo!
   exit: Salir
   relaunch: Relanzamiento
   streaming_mode: Modo de transmisión

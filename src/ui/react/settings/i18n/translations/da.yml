@@ -117,16 +117,9 @@ devtools:
     status: Status
     tab: Widgets
     widget_id: Widget ID
-discord_banner:
-  message: >-
-    Få forbindelse til andre KestrelUI-brugere, få hjælp, del temaer, og hold
-    dig opdateret med de seneste nyheder.
-  title: Tilmeld dig vores fællesskab
 extras:
   clear_icons: Ryd cache for systemikoner
   clear_icons_tooltip: En genstart kan være nødvendig for at få fuld effekt på alle widgets
-  discord_rpc: Splid rig tilstedeværelse
-  discord_rpc_description: Vis alle, du har stil!
   exit: Afslut/exit
   relaunch: Relancering
   streaming_mode: Streaming tilstand
