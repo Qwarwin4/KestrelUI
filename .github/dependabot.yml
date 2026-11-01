@@ -1,5 +1,6 @@
 version: 2
 updates:
+  # one weekly PR per ecosystem instead of a branch per package
   - package-ecosystem: npm
     directory: /
     schedule:
@@ -8,7 +9,19 @@ updates:
     ignore:
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
+    groups:
+      npm:
+        patterns: ["*"]
   - package-ecosystem: cargo
     directory: /
     schedule:
       interval: weekly
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+      # windows-rs crates move together and break the API on every bump
+      - dependency-name: "windows*"
+        update-types: ["version-update:semver-minor"]
+    groups:
+      cargo:
+        patterns: ["*"]

@@ -17,4 +17,5 @@ rustc-ice-*.txt
 .codegraph
 CLAUDE.md
 GEMINI.md
-.claudebuild.log
+.claude
+build.log
