@@ -3,7 +3,7 @@ import { Icon } from "libs/ui/react/components/Icon/index.tsx";
 import { Button, Flex, Select, Switch, Tooltip } from "antd";
 import { useTranslation } from "react-i18next";
 
-import { EnvConfig } from "../shared/config/infra.ts";
+import { displayVersion, EnvConfig } from "../shared/config/infra.ts";
 import cs from "./infra.module.css";
 
 import {
@@ -52,7 +52,7 @@ export function Information() {
             description={isFixed ? t("extras.version_fixed") : false}
             action={
               <span className={cs.version}>
-                v{EnvConfig.version} {isDevMode && "(dev)"} {isMsixBuild && "(msix)"} {isFixed && "(fixed)"}
+                v{displayVersion(EnvConfig.version)} {isDevMode && "(dev)"} {isMsixBuild && "(msix)"} {isFixed && "(fixed)"}
               </span>
             }
           />

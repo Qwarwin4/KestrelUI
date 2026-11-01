@@ -161,8 +161,16 @@ impl SeelenUI {
                 .and_then(|definition| definition.Triggers())
                 .and_then(|triggers| triggers.get_Item(1))
                 .is_ok();
-            Ok(is_task_enabled)
+            Ok(is_task_enabled || Self::has_run_key())
         })
+    }
+
+    /// the service falls back to the HKCU Run key when it can't register the logon task
+    fn has_run_key() -> bool {
+        winreg::RegKey::predef(winreg::enums::HKEY_CURRENT_USER)
+            .open_subkey(r"Software\Microsoft\Windows\CurrentVersion\Run")
+            .and_then(|key| key.get_raw_value("KestrelUI"))
+            .is_ok()
     }
 
     pub fn set_auto_start(enabled: bool) -> Result<()> {

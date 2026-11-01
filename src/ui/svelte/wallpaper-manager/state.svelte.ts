@@ -12,6 +12,7 @@ import {
   settings as _settings,
   virtualDesktops,
   wallpapers,
+  windowsWallpaper,
 } from "./getters.svelte.ts";
 import WallpaperState from "libs/ui/svelte/components/Wallpaper/state.svelte.ts";
 import { rootEffectAsync } from "libs/ui/svelte/utils/RootEffect.svelte.ts";
@@ -127,8 +128,15 @@ class State {
     return players.value;
   }
 
+  /** shown where no collection is set, when syncing is on */
+  get windowsWallpaper(): Wallpaper | null {
+    return settings.syncWindowsWallpaper ? windowsWallpaper.value : null;
+  }
+
   findWallpaper(wallpaperId: string | null | undefined): Wallpaper | undefined {
     if (!wallpaperId) return undefined;
+    const windows = this.windowsWallpaper;
+    if (windows && windows.id === wallpaperId) return windows;
     return this.wallpapers.find((w) => w.id === wallpaperId);
   }
 }

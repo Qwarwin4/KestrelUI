@@ -54,6 +54,7 @@ pub async fn handle_console_client() -> Result<()> {
             SluServiceLogger::uninstall_old_logging()?;
             remove_installation_dir_from_path()?;
             TaskSchedulerHelper::remove_service_task()?;
+            TaskSchedulerHelper::set_run_key(false)?;
         }
         Some((ServiceSubcommands::STOP, _)) => {
             ServiceIpc::send(SvcAction::Stop).await?;

@@ -11,6 +11,7 @@ export enum SeelenCommand {
   WallpaperPrev = 'wallpaper_prev',
   WallpaperSaveThumbnail = 'wallpaper_save_thumbnail',
   SetAsWallpaper = 'set_as_wallpaper',
+  WallpaperGetWindows = 'wallpaper_get_windows',
   LogFromWebview = 'log_from_webview',
   OpenFile = 'open_file',
   SelectFileOnExplorer = 'select_file_on_explorer',

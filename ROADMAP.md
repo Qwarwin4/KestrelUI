@@ -13,7 +13,7 @@
 ## 1 — First release
 
 - [ ] Rename the GitHub repo to `Qwarwin4/KestrelUI`, create the GitHub OAuth App for publishing
-- [ ] Generate the signing key pair, add repo secrets, tag `v2.8.9-rev.1`
+- [ ] Generate the signing key pair, add repo secrets, tag `v0.1.0-a`
 - [ ] Windows smoke test: install, autostart, service, dock/toolbar/WM, settings, showcase install + undo
 - [ ] Publish the official presets from the app
 - [ ] Clean remaining Seelen-specific docs in `documentation/`

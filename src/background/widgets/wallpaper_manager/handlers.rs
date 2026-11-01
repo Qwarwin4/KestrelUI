@@ -1,9 +1,11 @@
 use windows::Win32::Foundation::{HWND, RECT};
 use windows::Win32::UI::WindowsAndMessaging::SWP_ASYNCWINDOWPOS;
 
+use seelen_core::state::Wallpaper;
+
 use crate::{error::Result, windows_api::WindowsApi};
 
-use super::SeelenWall;
+use super::{SeelenWall, windows_wallpaper};
 
 impl crate::tauri_handlers::Handlers {
     pub fn set_as_wallpaper(webview: tauri::WebviewWindow) -> Result<()> {
@@ -36,5 +38,10 @@ impl crate::tauri_handlers::Handlers {
             log::warn!("Failed to refresh desktop after wallpaper attach: {e}");
         }
         Ok(())
+    }
+
+    pub fn wallpaper_get_windows() -> Result<Option<Wallpaper>> {
+        windows_wallpaper::watch();
+        windows_wallpaper::current()
     }
 }

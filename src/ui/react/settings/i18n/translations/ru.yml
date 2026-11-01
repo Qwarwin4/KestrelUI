@@ -431,6 +431,8 @@ wall:
   seconds: секунды
   select_collection: Выбрать коллекцию
   show_paused_message: Показать приостановленное сообщение
+  sync_windows: Синхронизация с обоями Windows
+  sync_windows_description: Если коллекция не выбрана, показывать обои из параметров Windows и обновлять их при смене, включая слайд-шоу.
   thumbnail_generation_complete: Создание миниатюр завершено
   thumbnail_generation_finished: Создание миниатюр успешно завершено
   use_accent_color: Используйте акцентный цвет обоев

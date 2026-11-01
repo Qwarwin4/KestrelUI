@@ -43,7 +43,7 @@ export function ResourceCard({ resource, kind, actions, body }: ResourceCardProp
 
   const { t } = useTranslation();
 
-  const [major = 0, minor = 0, patch = 0] = EnvConfig.version.split(".").map(Number);
+  const [major = 0, minor = 0, patch = 0] = EnvConfig.seelenVersion.split(".").map(Number);
   const [majorTarget = 0, minorTarget = 0, patchTarget = 0] = resource.metadata.appTargetVersion || [];
 
   const targetIsOlder = !!resource.metadata.appTargetVersion &&

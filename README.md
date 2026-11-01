@@ -22,7 +22,7 @@ removes everything that got in the way:
 
 ## Status
 
-Early fork. The first milestone is a clean, de-branded build at feature parity with Seelen UI 2.8.9. Then: bug
+Early fork. The first milestone is a clean, de-branded build at feature parity with Seelen UI 2.8.11. Then: bug
 fixes, performance, and a KestrelUI-specific design and customization layer. See [ROADMAP.md](ROADMAP.md).
 
 Compatibility: themes, widgets, plugins and icon packs built for Seelen UI keep working — the `@seelen/*` resource

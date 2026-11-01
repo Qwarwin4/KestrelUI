@@ -1,5 +1,6 @@
 pub mod cli;
 pub mod handlers;
+pub mod windows_wallpaper;
 
 use windows::Win32::{
     Foundation::{HWND, LPARAM, WPARAM},

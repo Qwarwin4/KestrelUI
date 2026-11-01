@@ -10,10 +10,18 @@ use crate::{app::get_app_handle, error::Result, utils::constants::SEELEN_COMMON}
 
 const MARKER: &str = ".seelen-import";
 const SKIP: &[&str] = &["logs", "snapshots", MARKER];
+const IMPORTED: &str = "imported v2";
+const KESTREL_THEME: &str = "@kestrel/neon-moss";
 
 pub fn run() -> Result<()> {
     let data = SEELEN_COMMON.app_data_dir();
-    if data.join(MARKER).exists() || data.join("settings.json").exists() {
+    let marker = data.join(MARKER);
+    // the first alpha imported without re-enabling the KestrelUI theme, fix those setups once
+    if std::fs::read_to_string(&marker).is_ok_and(|m| m == "imported") {
+        enable_kestrel_theme(&data.join("settings.json"))?;
+        std::fs::write(&marker, IMPORTED)?;
+    }
+    if marker.exists() || data.join("settings.json").exists() {
         return Ok(());
     }
     let Some(src) = find_seelen_dir() else {
@@ -31,11 +39,31 @@ pub fn run() -> Result<()> {
     if accepted {
         log::info!("importing Seelen UI data from {src:?}");
         copy_dir(&src, data)?;
+        enable_kestrel_theme(&data.join("settings.json"))?;
     }
-    std::fs::write(
-        data.join(MARKER),
-        if accepted { "imported" } else { "declined" },
-    )?;
+    std::fs::write(marker, if accepted { IMPORTED } else { "declined" })?;
+    Ok(())
+}
+
+/// Seelen's settings list only Seelen themes, without this the imported setup looks exactly
+/// like Seelen UI. User themes stay active, ours goes on top of them
+fn enable_kestrel_theme(settings: &Path) -> Result<()> {
+    let Ok(text) = std::fs::read_to_string(settings) else {
+        return Ok(());
+    };
+    let mut json: serde_json::Value = serde_json::from_str(&text)?;
+    let Some(obj) = json.as_object_mut() else {
+        return Ok(());
+    };
+    let themes = obj
+        .entry("activeThemes")
+        .or_insert_with(|| serde_json::json!(["@default/theme"]));
+    if let Some(list) = themes.as_array_mut()
+        && !list.iter().any(|t| t == KESTREL_THEME)
+    {
+        list.push(KESTREL_THEME.into());
+        std::fs::write(settings, serde_json::to_string_pretty(&json)?)?;
+    }
     Ok(())
 }
 

@@ -9,21 +9,23 @@
     <div id="root"></div>
 
     <div id="splashscreen">
-      <img class="splashscreen-image" src="./splashscreen.png" />
+      <img class="splashscreen-logo" src="./logo.svg" alt="" />
+      <span class="splashscreen-name">KestrelUI</span>
     </div>
     <style>
     #splashscreen {
       position: fixed;
-      top: 0;
-      left: 0;
-
-      width: 100vw;
-      height: 100vh;
+      inset: 0;
       z-index: 1000;
 
-      will-change: contents;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
 
-      background-color: var(--color-gray-50);
+      background:
+        radial-gradient(circle at 50% 45%, rgb(94 240 160 / 0.14), transparent 55%),
+        #070b09;
       transition: opacity 300ms linear;
       opacity: 1;
 
@@ -35,10 +37,16 @@
         opacity: 0;
       }
 
-      .splashscreen-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      .splashscreen-logo {
+        width: 96px;
+        height: 96px;
+        filter: drop-shadow(0 0 24px rgb(94 240 160 / 0.35));
+      }
+
+      .splashscreen-name {
+        font: 600 56px/1 "Segoe UI Variable Display", "Segoe UI", sans-serif;
+        letter-spacing: -0.02em;
+        color: #e8fff2;
       }
     }
     </style>

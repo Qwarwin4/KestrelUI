@@ -78,6 +78,19 @@ export function WallSettings() {
 
       <SettingsGroup>
         <SettingsOption
+          label={<b>{t("wall.sync_windows")}</b>}
+          description={t("wall.sync_windows_description")}
+          action={
+            <Switch
+              value={wall.syncWindowsWallpaper}
+              onChange={(syncWindowsWallpaper) => patchWallConfig({ syncWindowsWallpaper })}
+            />
+          }
+        />
+      </SettingsGroup>
+
+      <SettingsGroup>
+        <SettingsOption
           label={<b>{t("wall.use_accent_color")}</b>}
           action={
             <Switch

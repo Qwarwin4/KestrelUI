@@ -157,6 +157,9 @@ slu_commands_declaration! {
         @webview()
         @fallible()
         set_as_wallpaper(),
+    WallpaperGetWindows =
+        @fallible()
+        wallpaper_get_windows() -> Option<Wallpaper>,
 
     // Logging
     LogFromWebview = log_from_webview(level: u8, message: String, location: String),

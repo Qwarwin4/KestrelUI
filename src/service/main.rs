@@ -1,5 +1,6 @@
-// Prevents additional console window on Windows in release
-#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
+// no console window in any build: logs go to files, and `tauri dev` still gets the
+// output through the inherited stdio handles
+#![windows_subsystem = "windows"]
 
 mod app_management;
 mod cli;
@@ -151,11 +152,12 @@ async fn main() {
     EXIT_CHANNEL.set(tx).unwrap();
 
     // registering the logon task needs admin rights. Without them (UAC declined, the app
-    // started straight from the build folder) the service still works, only autostart
-    // stays off until the next elevated start, so this must not be fatal
+    // started straight from the build folder) the service still works and autostart goes
+    // through the HKCU Run key instead, so this must not be fatal
     if let Err(err) = TaskSchedulerHelper::create_service_task() {
-        log::warn!("Could not register the startup task, autostart stays off: {err:?}");
+        log::warn!("Could not register the startup task, falling back to the Run key: {err:?}");
     }
+    log_error!(TaskSchedulerHelper::sync_run_key());
 
     let version = env!("CARGO_PKG_VERSION");
     let debug = if is_development() { " (debug)" } else { "" };

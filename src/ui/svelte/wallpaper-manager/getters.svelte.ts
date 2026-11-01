@@ -17,6 +17,12 @@ subscribe(SeelenEvent.VirtualDesktopsChanged, virtualDesktops.setByPayload);
 export const wallpapers = lazyRune(() => invoke(SeelenCommand.StateGetWallpapers));
 subscribe(SeelenEvent.StateWallpapersChanged, wallpapers.setByPayload);
 
+// fallible on the backend, a missing Windows wallpaper must not keep the widget from starting
+export const windowsWallpaper = lazyRune(() =>
+  invoke(SeelenCommand.WallpaperGetWindows).catch(() => null)
+);
+subscribe(SeelenEvent.WallpaperWindowsChanged, windowsWallpaper.setByPayload);
+
 export const performanceMode = lazyRune(() => invoke(SeelenCommand.StateGetPerformanceMode));
 subscribe(SeelenEvent.StatePerformanceModeChanged, performanceMode.setByPayload);
 
@@ -30,6 +36,7 @@ await Promise.all([
   monitors.init(),
   virtualDesktops.init(),
   wallpapers.init(),
+  windowsWallpaper.init(),
   performanceMode.init(),
   players.init(),
 ]);

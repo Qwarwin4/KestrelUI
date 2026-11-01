@@ -410,6 +410,8 @@ pub struct SeelenWallSettings {
     pub coverage_pause_threshold: f64,
     /// whether to show a message over the wallpaper when it is paused by performance mode
     pub show_paused_message: bool,
+    /// show the current Windows wallpaper (and follow its changes) where no collection is set
+    pub sync_windows_wallpaper: bool,
     /// deprecated, this field will be removed on v3
     #[serde(alias = "backgroundsV2")]
     pub deprecated_bgs: Option<Vec<WallpaperId>>,
@@ -427,6 +429,7 @@ impl Default for SeelenWallSettings {
             use_accent_color: false,
             coverage_pause_threshold: 0.8,
             show_paused_message: true,
+            sync_windows_wallpaper: true,
             deprecated_bgs: None,
         }
     }

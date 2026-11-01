@@ -1,5 +1,6 @@
-// Prevents additional console window on Windows in release
-#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
+// no console window in any build: logs go to files, and `tauri dev` still gets the
+// output through the inherited stdio handles
+#![windows_subsystem = "windows"]
 #![feature(never_type)]
 
 mod app;

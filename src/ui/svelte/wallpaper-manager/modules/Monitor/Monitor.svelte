@@ -15,15 +15,16 @@
   const player = $derived(gState.players.find((p) => p.default));
 
   const wallpaperId = $derived.by(() => {
+    const fallback = gState.windowsWallpaper?.id ?? null;
     const monitorData = gState.virtualDesktops.monitors[monitor.id];
     if (!monitorData) {
-      return null;
+      return fallback;
     }
 
     const activeWorkspace = monitorData.workspaces
       .flat()
       .find((ws) => ws.id === monitorData.active_workspace);
-    return activeWorkspace?.wallpaper || null;
+    return activeWorkspace?.wallpaper || fallback;
   });
 
   // Ping-pong: two slots alternate roles on each wallpaper change.

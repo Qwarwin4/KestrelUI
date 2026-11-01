@@ -1,5 +1,27 @@
 # Changelog
 
+## [0.1.0-a]
+
+First KestrelUI alpha, based on Seelen UI 2.8.11.
+
+### features
+
+- showcase: community setups from GitHub repositories, one-click install with undo, publishing via GitHub sign-in.
+- Neon Moss theme by default, neon and icon colors from presets, HEX, RGB or a color square.
+- wallpaper manager can show the current Windows wallpaper and follows it when it changes.
+- one-time import of an existing Seelen UI setup.
+
+### removed
+
+- accounts, plans, cloud backup, telemetry, news feed and promo content.
+
+### fix
+
+- start menu key and shortcuts stopped working after saving an empty shortcut list.
+- maximized windows going under the toolbar after explorer restarts or the work area changes.
+- autostart works without admin rights (HKCU Run key), a disabled autostart is no longer re-enabled on start.
+- no console windows in debug builds.
+
 ## [2.8.11-dev]
 
 ## [2.8.10]
