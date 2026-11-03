@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://discord.gg/YOUR_INVITE"><img src="https://img.shields.io/badge/Discord-Join_server-5ef0a0?style=for-the-badge&logo=discord&logoColor=5ef0a0&labelColor=0b1410" height="40" alt="Discord: join the server"></a>
+  <a href="https://discord.gg/ycmhfnmCqh"><img src="https://img.shields.io/badge/Discord-Join_server-5ef0a0?style=for-the-badge&logo=discord&logoColor=5ef0a0&labelColor=0b1410" height="40" alt="Discord: join the server"></a>
   <a href="https://t.me/qwarwin4git"><img src="https://img.shields.io/badge/Telegram-Follow-5ef0a0?style=for-the-badge&logo=telegram&logoColor=5ef0a0&labelColor=0b1410" height="40" alt="Telegram: follow the channel"></a>
   <a href="mailto:qwarwin@gmail.com"><img src="https://img.shields.io/badge/Gmail-Contact-5ef0a0?style=for-the-badge&logo=gmail&logoColor=5ef0a0&labelColor=0b1410" height="40" alt="Gmail: contact"></a>
 </p>
